@@ -1,0 +1,9 @@
+target/
+.idea/
+.gradle/
+build/
+out/
+*.class
+.botmaker-editing
+/.botmaker/
+*.bmk

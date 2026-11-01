@@ -1,6 +1,7 @@
 package com.swordxstaff.plugins.com_github_botmakerdev.botmaker_sdk;
 
 import com.botmaker.sdk.api.bot.SdkValue;
+import com.botmaker.sdk.api.text.Words;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -9,6 +10,8 @@ import com.botmaker.sdk.api.bot.SdkValue;
  */
 @SdkValue(SdkValue.Id.TEXTS)
 public final class Texts {
+    public static final Words USER_AGREEMENT = Words.of("User Agreement");
+
     private Texts() {
     }
 }

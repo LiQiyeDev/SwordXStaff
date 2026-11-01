@@ -1,6 +1,7 @@
 package com.swordxstaff.plugins.com_github_botmakerdev.botmaker_sdk;
 
 import com.botmaker.sdk.api.bot.SdkValue;
+import com.botmaker.sdk.api.screens.Element;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -9,6 +10,9 @@ import com.botmaker.sdk.api.bot.SdkValue;
  */
 @SdkValue(SdkValue.Id.ELEMENTS)
 public final class Elements {
+    public static final Element USER_AGREEMENT = Element.byLabel(Texts.USER_AGREEMENT)
+            .shot("elements/user_agreement.png");
+
     private Elements() {
     }
 }

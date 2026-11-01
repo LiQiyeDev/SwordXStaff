@@ -16,6 +16,23 @@
       <version>5.9.3</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.github.BotMakerDev</groupId>
+      <artifactId>botmaker-sdk</artifactId>
+      <version>v1.7.1</version>
+    </dependency>
+    <dependency>
+      <groupId>io.javalin</groupId>
+      <artifactId>javalin</artifactId>
+      <version>6.7.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>core</artifactId>
+      <version>3.5.3</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
   <repositories>
     <repository>

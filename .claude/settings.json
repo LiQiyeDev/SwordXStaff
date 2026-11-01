@@ -1,0 +1,5 @@
+{
+  "permissions" : {
+    "deny" : [ "Edit(./src/**)", "MultiEdit(./src/**)", "Write(./src/**)", "NotebookEdit(./src/**)", "Bash(sed -i *)", "Bash(sed --in-place *)", "Bash(perl -i *)", "Bash(perl -pi *)" ]
+  }
+}

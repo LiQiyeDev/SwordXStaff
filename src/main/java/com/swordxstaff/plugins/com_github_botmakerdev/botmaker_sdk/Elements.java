@@ -12,6 +12,7 @@ import com.botmaker.sdk.api.screens.Element;
 public final class Elements {
     public static final Element USER_AGREEMENT = Element.byLabel(Texts.USER_AGREEMENT)
             .shot("elements/user_agreement.png");
+    public static final Element CONFIRM = Element.byText(Texts.CONFIRM).shot("elements/confirm.png");
 
     private Elements() {
     }

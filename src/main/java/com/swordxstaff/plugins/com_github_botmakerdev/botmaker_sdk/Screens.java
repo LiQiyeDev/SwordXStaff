@@ -4,6 +4,7 @@ import com.botmaker.sdk.api.bot.SdkValue;
 import com.botmaker.sdk.api.screens.Screen;
 import com.botmaker.sdk.api.screens.Setup;
 import java.util.List;
+import com.botmaker.sdk.api.screens.Button;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -13,6 +14,8 @@ import java.util.List;
 @SdkValue(SdkValue.Id.SCREEN_MAP)
 public final class Screens {
     public static final class Consent extends Screen {
+        public final Button confirm = Button.of(Elements.CONFIRM);
+
         @Override
         public Setup setup() {
             return Setup.named("Consent").elements(List.of(Elements.USER_AGREEMENT)).start();

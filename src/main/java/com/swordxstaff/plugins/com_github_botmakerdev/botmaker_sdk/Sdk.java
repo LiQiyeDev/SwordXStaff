@@ -37,7 +37,7 @@ public final class Sdk {
     public static LaunchChoice launchTarget = LaunchChoice.of("");
     @SdkValue(SdkValue.Id.CAPTURE)
     @Param(category = "Game", visibility = Param.PUBLIC, description = "The game's window: where the bot reads pixels from")
-    public static CaptureSource capture = CaptureSource.desktop();
+    public static CaptureSource capture = CaptureSource.emulator("Waydroid");
 
     @SdkValue(SdkValue.Id.RUN)
     public static Run run() {

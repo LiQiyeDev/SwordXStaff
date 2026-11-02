@@ -862,7 +862,6 @@ public final class Screens {
     public static final World WORLD = new World();
 
     public static final class Stage extends Screen {
-        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
         public final Button stagePackage = Button.of(Pictures.STAGE_PACKAGE);
         public final Button topAvatar = Button.of(Pictures.TOP_AVATAR);
         public final Button stageDownloadReward = Button.of(Pictures.STAGE_DOWNLOAD_REWARD).occasional();

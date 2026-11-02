@@ -1267,10 +1267,16 @@ public final class Screens {
     public static final EnhancementGoals ENHANCEMENT_GOALS = new EnhancementGoals();
 
     public static final class Resonance extends Screen {
+        public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
+        public final Button resonanceStatistics = Button.of(Pictures.RESONANCE_STATISTICS);
+        public final Button resonanceRowIcon = Button.of(Pictures.RESONANCE_ROW_ICON);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Resonance")
+                    .markers(List.of(Pictures.GEAR_RESONANCE_TITLE))
+                    .back(Screens.RESONANCE.noticeBack)
                     .takes(Duration.ofMillis(2700L))
                     .shot("screens/RESONANCE.png")
                     .from(Screens.ENHANCE.enhanceResonance);

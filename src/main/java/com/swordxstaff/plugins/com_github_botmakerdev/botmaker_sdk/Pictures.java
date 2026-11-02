@@ -344,6 +344,12 @@ public final class Pictures {
             .at(new Rect(765, 290, 237, 78));
     public static final ImageTemplate ENHANCE_TAB_ENHANCE = new ImageTemplate("images/enhance_tab_enhance.png")
             .at(new Rect(235, 1784, 395, 92));
+    public static final ImageTemplate GEAR_RESONANCE_TITLE = new ImageTemplate("images/gear_resonance_title.png")
+            .at(new Rect(55, 45, 350, 75));
+    public static final ImageTemplate RESONANCE_STATISTICS = new ImageTemplate("images/resonance_statistics.png")
+            .at(new Rect(240, 1587, 605, 80));
+    public static final ImageTemplate RESONANCE_ROW_ICON = new ImageTemplate("images/resonance_row_icon.png")
+            .at(new Rect(48, 1368, 205, 155));
     private Pictures() {
     }
 }

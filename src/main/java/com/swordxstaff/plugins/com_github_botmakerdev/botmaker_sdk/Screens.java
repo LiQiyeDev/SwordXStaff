@@ -1164,6 +1164,19 @@ public final class Screens {
 
     public static final Achievement ACHIEVEMENT = new Achievement();
 
+    public static final class QuestGo extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Quest go")
+                    .takes(Duration.ofMillis(4300L))
+                    .shot("screens/QUEST_GO.png")
+                    .from(Screens.MENU_QUEST.questGo);
+        }
+    }
+
+    public static final QuestGo QUEST_GO = new QuestGo();
+
     private Screens() {
     }
 }

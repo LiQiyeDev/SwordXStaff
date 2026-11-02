@@ -1182,6 +1182,15 @@ public final class Screens {
 
     public static final ReturnHomeConfirm RETURN_HOME_CONFIRM = new ReturnHomeConfirm();
 
+    public static final class CharacterStats extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Character stats").from(Screens.TOP_AVATAR.profileStatsSearch);
+        }
+    }
+
+    public static final CharacterStats CHARACTER_STATS = new CharacterStats();
+
     private Screens() {
     }
 }

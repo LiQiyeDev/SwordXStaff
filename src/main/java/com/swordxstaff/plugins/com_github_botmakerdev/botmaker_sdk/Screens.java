@@ -1309,6 +1309,19 @@ public final class Screens {
 
     public static final SkillGoals SKILL_GOALS = new SkillGoals();
 
+    public static final class StageDownloadReward extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Stage download reward")
+                    .takes(Duration.ofMillis(3700L))
+                    .shot("screens/STAGE_DOWNLOAD_REWARD.png")
+                    .from(Screens.HOME.stageDownloadReward);
+        }
+    }
+
+    public static final StageDownloadReward STAGE_DOWNLOAD_REWARD = new StageDownloadReward();
+
     private Screens() {
     }
 }

@@ -421,6 +421,15 @@ public final class Screens {
 
     public static final ResetConfirm RESET_CONFIRM = new ResetConfirm();
 
+    public static final class CharacterName extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Character name").from(Screens.CHARACTER_CUSTOMIZATION.customizationNext);
+        }
+    }
+
+    public static final CharacterName CHARACTER_NAME = new CharacterName();
+
     private Screens() {
     }
 }

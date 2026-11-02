@@ -165,6 +165,15 @@ public final class Screens {
 
     public static final Servers SERVERS = new Servers();
 
+    public static final class Settings extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Settings").from(Screens.TITLE.titleSettings);
+        }
+    }
+
+    public static final Settings SETTINGS = new Settings();
+
     private Screens() {
     }
 }

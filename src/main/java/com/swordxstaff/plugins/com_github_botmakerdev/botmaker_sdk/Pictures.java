@@ -101,6 +101,8 @@ public final class Pictures {
             .at(new Rect(155, 1055, 370, 95));
     public static final ImageTemplate RESET_CONFIRM_OK = new ImageTemplate("images/reset_confirm_ok.png")
             .at(new Rect(560, 1055, 360, 95));
+    public static final ImageTemplate CUSTOMIZATION_HEADER = new ImageTemplate("images/customization_header.png")
+            .at(new Rect(400, 85, 280, 55));
     private Pictures() {
     }
 }

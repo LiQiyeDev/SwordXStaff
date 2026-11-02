@@ -195,6 +195,8 @@ public final class Pictures {
             .at(new Rect(918, 1878, 118, 34));
     public static final ImageTemplate WORLD_CHEST = new ImageTemplate("images/world_chest.png")
             .at(new Rect(42, 1668, 72, 62));
+    public static final ImageTemplate ISLAND_LOADING_PATTERN = new ImageTemplate("images/island_loading_pattern.png")
+            .at(new Rect(590, 1140, 160, 160));
     private Pictures() {
     }
 }

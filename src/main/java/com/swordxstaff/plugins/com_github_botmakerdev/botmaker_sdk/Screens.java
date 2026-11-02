@@ -874,12 +874,13 @@ public final class Screens {
         public final Button stageBoarIdle = Button.of(Pictures.STAGE_BOAR_IDLE).occasional();
         public final Button stageBoarCheck = Button.of(Pictures.STAGE_BOAR_CHECK).occasional();
         public final Button stagePlantIdle = Button.of(Pictures.STAGE_PLANT_IDLE).occasional();
+        public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
         @Override
         public Setup setup() {
             return Setup
                     .named("Stage")
                     .markers(List.of(Pictures.STAGE_QUEST_ICON))
-                    .back(Screens.STAGE.upgradeBack)
+                    .back(Screens.STAGE.noticeBack)
                     .notes("""
                             The island stage (Originisle I), reached from World's island card through Scene loading.
                             Stage is a window on a big tile map. A tap on a visible ground cell walks the hero there.

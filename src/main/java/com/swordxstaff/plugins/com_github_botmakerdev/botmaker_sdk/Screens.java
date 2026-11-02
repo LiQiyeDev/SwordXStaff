@@ -323,9 +323,13 @@ public final class Screens {
             return Setup
                     .named("Prologue battle")
                     .markers(List.of(Pictures.PROLOGUE_TURN_PORTRAIT))
-                    .notes(
-                            "The first scene after Tap to Play (Logging in..., then Loading..., then this): a scripted boss battle shown behind a Tutorial dialogue. Reina and Akane face a swarm and a tentacled boss; a turn-order bar runs across the top with the active portrait at its right end. The dialogue box (Reina, \"The final showdown again. Let's do this.\") has a bobbing arrow at the bottom. Nothing here was tapped yet.")
-                    .owes(List.of("dialogue box: tutorial, advance not tried yet", "every input of the battle HUD"))
+                    .notes("""
+                            The first scene after Tap to Play (Logging in..., then Loading..., then this): a scripted boss battle. Reina and Akane face a tentacled boss, Chaos Tyrant.
+                            Seen in order: Reina's dialogue; one tap at 540,1780; the fight played on its own (HUD "Round 1/25", turn-order bar with portraits at the top, boss HP bar showing x98, flame slash effects); then Akane's dialogue "Ugh, not again... We lost...". Akane is shown crying in the bottom left.
+                            No HUD button was found or tapped yet: during the fight nothing was tried.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List.of("every input of the battle HUD (none found yet)", "what follows the second dialogue"))
                     .at(new Point(2132, 1541))
                     .shot("screens/PROLOGUE_BATTLE.png")
                     .from(Screens.SCENE_LOADING.sceneLoadingText);

@@ -400,7 +400,6 @@ public final class Screens {
                     .named("Character customization")
                     .markers(List.of(Pictures.RESET_CONFIRM_TEXT))
                     .back(Screens.CHARACTER_CUSTOMIZATION.resetConfirmCancel)
-                    .popup()
                     .shot("screens/CHARACTER_CUSTOMIZATION.png")
                     .from(Screens.SELECT_BODY_TYPE.bodyTypeNext);
         }

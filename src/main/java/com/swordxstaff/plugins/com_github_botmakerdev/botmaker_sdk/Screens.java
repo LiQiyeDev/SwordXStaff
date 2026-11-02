@@ -391,13 +391,16 @@ public final class Screens {
         public final Button customizationTabTrait = Button.of(Pictures.CUSTOMIZATION_TAB_TRAIT);
         public final Button customizationShuffle = Button.of(Pictures.CUSTOMIZATION_SHUFFLE);
         public final Button customizationReset = Button.of(Pictures.CUSTOMIZATION_RESET);
+        public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
+        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Character customization")
-                    .markers(List.of(Pictures.CUSTOMIZATION_TITLE))
-                    .back(Screens.CHARACTER_CUSTOMIZATION.customizationBack)
+                    .markers(List.of(Pictures.RESET_CONFIRM_TEXT))
+                    .back(Screens.CHARACTER_CUSTOMIZATION.resetConfirmCancel)
+                    .popup()
                     .shot("screens/CHARACTER_CUSTOMIZATION.png")
                     .from(Screens.SELECT_BODY_TYPE.bodyTypeNext);
         }

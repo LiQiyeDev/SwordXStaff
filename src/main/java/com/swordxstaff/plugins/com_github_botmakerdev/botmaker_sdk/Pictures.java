@@ -219,6 +219,8 @@ public final class Pictures {
             .at(new Rect(503, 932, 70, 66));
     public static final ImageTemplate STAGE_WOOD_NODE = new ImageTemplate("images/stage_wood_node.png")
             .at(new Rect(525, 848, 76, 44));
+    public static final ImageTemplate STAGE_QUEST_TRACKER = new ImageTemplate("images/stage_quest_tracker.png")
+            .at(new Rect(36, 1474, 32, 34));
     private Pictures() {
     }
 }

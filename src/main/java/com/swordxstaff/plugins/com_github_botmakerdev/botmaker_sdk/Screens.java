@@ -269,6 +269,8 @@ public final class Screens {
     public static final UserCenter USER_CENTER = new UserCenter();
 
     public static final class SceneLoading extends Screen {
+        public final Button sceneLoadingText = Button.of(Pictures.SCENE_LOADING_TEXT);
+
         @Override
         public Setup setup() {
             return Setup
@@ -296,6 +298,15 @@ public final class Screens {
     }
 
     public static final LoggingIn LOGGING_IN = new LoggingIn();
+
+    public static final class PrologueBattle extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Prologue battle").from(Screens.SCENE_LOADING.sceneLoadingText);
+        }
+    }
+
+    public static final PrologueBattle PROLOGUE_BATTLE = new PrologueBattle();
 
     private Screens() {
     }

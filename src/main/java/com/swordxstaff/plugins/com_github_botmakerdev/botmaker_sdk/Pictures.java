@@ -131,6 +131,8 @@ public final class Pictures {
             .at(new Rect(785, 660, 200, 64));
     public static final ImageTemplate CART_CLAIM_ALL = new ImageTemplate("images/cart_claim_all.png")
             .at(new Rect(345, 1615, 390, 62));
+    public static final ImageTemplate YOU_RECEIVED_TITLE = new ImageTemplate("images/you_received_title.png")
+            .at(new Rect(300, 530, 480, 80));
     private Pictures() {
     }
 }

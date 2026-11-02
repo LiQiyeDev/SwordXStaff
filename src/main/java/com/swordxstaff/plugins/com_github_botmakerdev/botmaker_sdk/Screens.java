@@ -583,7 +583,11 @@ public final class Screens {
     public static final class YouReceived extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("You received").from(Screens.CART.cartClaimAll);
+            return Setup
+                    .named("You received")
+                    .markers(List.of(Pictures.YOU_RECEIVED_TITLE))
+                    .shot("screens/YOU_RECEIVED.png")
+                    .from(Screens.CART.cartClaimAll);
         }
     }
 

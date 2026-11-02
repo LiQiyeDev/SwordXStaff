@@ -63,11 +63,14 @@ public final class Screens {
     public static final PrivacyPolicy PRIVACY_POLICY = new PrivacyPolicy();
 
     public static final class UserAgreement extends Screen {
+        public final Button policyBackArrow = Button.of(Pictures.POLICY_BACK_ARROW);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("User Agreement")
                     .elements(List.of(Elements.BOLTRAY_GAMES_LICENSE_AGREEMENT))
+                    .back(Screens.USER_AGREEMENT.policyBackArrow)
                     .from(Screens.CONSENT.userAgreement);
         }
     }

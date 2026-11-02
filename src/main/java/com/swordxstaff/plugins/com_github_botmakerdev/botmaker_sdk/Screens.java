@@ -392,8 +392,6 @@ public final class Screens {
         public final Button customizationShuffle = Button.of(Pictures.CUSTOMIZATION_SHUFFLE);
         public final Button customizationReset = Button.of(Pictures.CUSTOMIZATION_RESET);
         public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
-        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
-
         @Override
         public Setup setup() {
             return Setup

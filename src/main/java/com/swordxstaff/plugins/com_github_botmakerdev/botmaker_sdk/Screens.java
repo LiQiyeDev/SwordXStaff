@@ -1124,10 +1124,19 @@ public final class Screens {
     public static final MenuPhoto MENU_PHOTO = new MenuPhoto();
 
     public static final class MenuUserCenter extends Screen {
+        public final Button ucAccountCenter = Button.of(Pictures.UC_ACCOUNT_CENTER);
+        public final Button ucHelpCenter = Button.of(Pictures.UC_HELP_CENTER);
+        public final Button ucSubmitLogs = Button.of(Pictures.UC_SUBMIT_LOGS);
+        public final Button ucPrivacyPolicy = Button.of(Pictures.UC_PRIVACY_POLICY);
+        public final Button ucUserAgreement = Button.of(Pictures.UC_USER_AGREEMENT);
+        public final Button ucSelfService = Button.of(Pictures.UC_SELF_SERVICE);
+        public final Button ucGiftCode = Button.of(Pictures.UC_GIFT_CODE);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Menu user center")
+                    .markers(List.of(Pictures.USER_CENTER_TITLE))
                     .takes(Duration.ofMillis(3400L))
                     .shot("screens/MENU_USER_CENTER.png")
                     .from(Screens.STAGE_PACKAGE.menuUserCenter);

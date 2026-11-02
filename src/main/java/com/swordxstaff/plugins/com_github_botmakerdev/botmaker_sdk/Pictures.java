@@ -286,6 +286,22 @@ public final class Pictures {
     public static final ImageTemplate PHOTO_ZOOM_IN = new ImageTemplate("images/photo_zoom_in.png")
             .at(new Rect(1000, 1170, 45, 45));
     public static final ImageTemplate PHOTO_ZOOM_OUT = new ImageTemplate("images/photo_zoom_out.png").at(new Rect(1000, 1652, 45, 36));
+    public static final ImageTemplate USER_CENTER_TITLE = new ImageTemplate("images/user_center_title.png")
+            .at(new Rect(395, 428, 290, 70));
+    public static final ImageTemplate UC_ACCOUNT_CENTER = new ImageTemplate("images/uc_account_center.png")
+            .at(new Rect(165, 572, 367, 98));
+    public static final ImageTemplate UC_HELP_CENTER = new ImageTemplate("images/uc_help_center.png")
+            .at(new Rect(553, 572, 367, 98));
+    public static final ImageTemplate UC_SUBMIT_LOGS = new ImageTemplate("images/uc_submit_logs.png")
+            .at(new Rect(165, 707, 367, 98));
+    public static final ImageTemplate UC_PRIVACY_POLICY = new ImageTemplate("images/uc_privacy_policy.png")
+            .at(new Rect(553, 707, 367, 98));
+    public static final ImageTemplate UC_USER_AGREEMENT = new ImageTemplate("images/uc_user_agreement.png")
+            .at(new Rect(165, 844, 367, 98));
+    public static final ImageTemplate UC_SELF_SERVICE = new ImageTemplate("images/uc_self_service.png")
+            .at(new Rect(553, 844, 367, 98));
+    public static final ImageTemplate UC_GIFT_CODE = new ImageTemplate("images/uc_gift_code.png")
+            .at(new Rect(340, 1272, 400, 86));
     private Pictures() {
     }
 }

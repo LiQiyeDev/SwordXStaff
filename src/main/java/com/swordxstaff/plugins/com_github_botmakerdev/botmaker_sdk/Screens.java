@@ -899,12 +899,14 @@ public final class Screens {
         public final Button battleLock = Button.of(Pictures.BATTLE_LOCK).tried();
         public final Button battleLoadoutSwap = Button.of(Pictures.BATTLE_LOADOUT_SWAP);
         public final Button battleCamera = Button.of(Pictures.BATTLE_CAMERA).tried();
+        public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Battle")
                     .markers(List.of(Pictures.BATTLE_CAMERA))
+                    .back(Screens.BATTLE.noticeBack)
                     .notes("""
                             The pre-fight view, reached by tapping an enemy on Stage (through the loading wallpaper).
                             Shows Round 0/15, the enemy above, the hero below, Start Battle, the camera and lock buttons, and Loadout 1 with its skill slots.

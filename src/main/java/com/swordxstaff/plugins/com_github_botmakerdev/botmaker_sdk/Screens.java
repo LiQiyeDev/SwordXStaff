@@ -740,6 +740,19 @@ public final class Screens {
 
     public static final ReplaceGear REPLACE_GEAR = new ReplaceGear();
 
+    public static final class GearDetails extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Gear details")
+                    .takes(Duration.ofMillis(10700L))
+                    .shot("screens/GEAR_DETAILS.png")
+                    .from(Screens.REPLACE_GEAR.gearNoviceStaff);
+        }
+    }
+
+    public static final GearDetails GEAR_DETAILS = new GearDetails();
+
     private Screens() {
     }
 }

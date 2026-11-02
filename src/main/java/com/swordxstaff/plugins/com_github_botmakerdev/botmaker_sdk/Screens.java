@@ -689,10 +689,13 @@ public final class Screens {
     public static final StorageChest STORAGE_CHEST = new StorageChest();
 
     public static final class Character extends Screen {
+        public final Button charGearSlot = Button.of(Pictures.CHAR_GEAR_SLOT);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Character")
+                    .markers(List.of(Pictures.CHAR_CLASS_ICON))
                     .takes(Duration.ofMillis(7600L))
                     .shot("screens/CHARACTER.png")
                     .from(Screens.HOME.navCharacter);

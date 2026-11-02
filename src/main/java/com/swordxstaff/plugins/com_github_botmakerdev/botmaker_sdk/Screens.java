@@ -1014,12 +1014,14 @@ public final class Screens {
         public final Button profileStatsSearch = Button.of(Pictures.PROFILE_STATS_SEARCH);
         public final Button profileDish = Button.of(Pictures.PROFILE_DISH);
         public final Button profileQuickHeal = Button.of(Pictures.PROFILE_QUICK_HEAL).never("Spends a healing item; the user's call");
+        public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Top avatar")
                     .markers(List.of(Pictures.PROFILE_PLAYER_ID_LABEL))
+                    .back(Screens.TOP_AVATAR.keyEsc)
                     .notes("""
                             The player's profile, opened by the avatar at the top left of Stage: power, class, player ID, rank, server (Cloudwold), stats, equipped gear, techniques and charms, HP bar.
                             No settings here: no graphics, sound or language option.

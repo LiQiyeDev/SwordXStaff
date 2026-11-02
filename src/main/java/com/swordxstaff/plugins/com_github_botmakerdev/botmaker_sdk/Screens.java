@@ -508,13 +508,13 @@ public final class Screens {
 
     public static final CartBlueprint CART_BLUEPRINT = new CartBlueprint();
 
-    public static final class UnlockCart extends Screen {
+    public static final class UnlockFurniture extends Screen {
         public final Button unlockButton = Button.of(Pictures.UNLOCK_BUTTON);
 
         @Override
         public Setup setup() {
             return Setup
-                    .named("Unlock cart")
+                    .named("Unlock furniture")
                     .markers(List.of(Pictures.UNLOCK_CART_PICTURE))
                     .notes("""
                             Cart (Resources): holds all AFK resources.
@@ -527,7 +527,7 @@ public final class Screens {
         }
     }
 
-    public static final UnlockCart UNLOCK_CART = new UnlockCart();
+    public static final UnlockFurniture UNLOCK_FURNITURE = new UnlockFurniture();
 
     public static final class FeatureUnlocked extends Screen {
         public final Button tapToContinue = Button.of(Pictures.TAP_TO_CONTINUE).tried();
@@ -544,7 +544,7 @@ public final class Screens {
                     .reached(Reached.TRIED)
                     .takes(Duration.ofMillis(7200L))
                     .shot("screens/CART_UNLOCKED.png")
-                    .from(Screens.UNLOCK_CART.unlockButton);
+                    .from(Screens.UNLOCK_FURNITURE.unlockButton);
         }
     }
 

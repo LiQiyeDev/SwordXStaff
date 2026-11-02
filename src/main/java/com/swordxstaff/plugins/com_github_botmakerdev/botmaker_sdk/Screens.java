@@ -486,6 +486,8 @@ public final class Screens {
     public static final DialogueChoice DIALOGUE_CHOICE = new DialogueChoice();
 
     public static final class CartBlueprint extends Screen {
+        public final Button cartBlueprintCard = Button.of(Pictures.CART_BLUEPRINT_CARD);
+
         @Override
         public Setup setup() {
             return Setup
@@ -497,6 +499,15 @@ public final class Screens {
     }
 
     public static final CartBlueprint CART_BLUEPRINT = new CartBlueprint();
+
+    public static final class UnlockCart extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Unlock cart").from(Screens.CART_BLUEPRINT.cartBlueprintCard);
+        }
+    }
+
+    public static final UnlockCart UNLOCK_CART = new UnlockCart();
 
     private Screens() {
     }

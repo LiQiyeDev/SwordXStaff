@@ -37,7 +37,7 @@ public final class Pictures {
     public static final ImageTemplate TITLE_REPAIR_CLIENT = new ImageTemplate("images/title_repair_client.png").at(new Rect(958, 930, 54, 44));
     public static final ImageTemplate SERVERS_TITLE = new ImageTemplate("images/servers_title.png").at(new Rect(437, 240, 200, 45));
     public static final ImageTemplate SERVERS_ROW_SELECTED = new ImageTemplate("images/servers_row_selected.png").at(new Rect(162, 525, 180, 45));
-    public static final ImageTemplate SERVERS_ROW_OTHER = new ImageTemplate("images/servers_row_other.png").at(new Rect(505, 165, 72, 22)).in(new Size(1280, 720));
+    public static final ImageTemplate SERVERS_ROW_OTHER = new ImageTemplate("images/servers_row_other.png").at(new Rect(163, 508, 180, 44));
     public static final ImageTemplate SETTINGS_TITLE = new ImageTemplate("images/settings_title.png").at(new Rect(600, 178, 80, 28)).in(new Size(1280, 720));
     public static final ImageTemplate SETTINGS_TAB_SOUND = new ImageTemplate("images/settings_tab_sound.png").at(new Rect(616, 219, 48, 22)).in(new Size(1280, 720));
     public static final ImageTemplate SETTINGS_TAB_OTHER = new ImageTemplate("images/settings_tab_other.png").at(new Rect(710, 219, 48, 22)).in(new Size(1280, 720));
@@ -56,6 +56,10 @@ public final class Pictures {
             .at(new Rect(713, 347, 150, 46));
     public static final ImageTemplate SERVERS_TAB_CHARACTERS = new ImageTemplate("images/servers_tab_characters.png")
             .at(new Rect(170, 347, 232, 46));
+    public static final ImageTemplate SERVERS_SEARCH = new ImageTemplate("images/servers_search.png")
+            .at(new Rect(100, 1572, 460, 76));
+    public static final ImageTemplate SERVERS_SEARCH_GO = new ImageTemplate("images/servers_search_go.png")
+            .at(new Rect(562, 1578, 66, 66));
 
     private Pictures() {
     }

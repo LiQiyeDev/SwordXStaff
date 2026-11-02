@@ -240,10 +240,10 @@ public final class Screens {
                     .named("User Center")
                     .elements(List.of(Elements.LT_TV_DIALOG_TITLE))
                     .back(Screens.USER_CENTER.userCenterClose)
-                    .notes("The account's page: Guest, its ID. Rows not opened: Contact Support, Terms and Conditions, Manage Cookies. Guest login lives on this device, so clearing the app's data loses the account unless linked.")
+                    .notes("The account's page: Guest, its ID. Rows not opened: Contact Support, Terms and Conditions, Manage Cookies.")
                     .owes(List
                             .of("Contact Support, Terms and Conditions, Manage Cookies not opened",
-                                    "marker: its title text also matches Consent's shot"))
+                            "marker: its title text also matches Consent's shot"))
                     .from(Screens.TITLE.titleUserCenter);
         }
     }

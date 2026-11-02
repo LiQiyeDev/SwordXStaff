@@ -998,6 +998,19 @@ public final class Screens {
 
     public static final QuitConfirm QUIT_CONFIRM = new QuitConfirm();
 
+    public static final class TopAvatar extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Top avatar")
+                    .takes(Duration.ofMillis(8400L))
+                    .shot("screens/TOP_AVATAR.png")
+                    .from(Screens.STAGE.topAvatar);
+        }
+    }
+
+    public static final TopAvatar TOP_AVATAR = new TopAvatar();
+
     private Screens() {
     }
 }

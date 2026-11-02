@@ -470,7 +470,7 @@ public final class Screens {
 
     public static final class DialogueChoice extends Screen {
         public final Button choiceStaff = Button.of(Pictures.CHOICE_STAFF);
-        public final Button choiceSword = Button.of(Pictures.CHOICE_SWORD);
+        public final Button choiceSword = Button.of(Pictures.CHOICE_SWORD).never("picks the Sword class, once per account; this account chose Staff");
 
         @Override
         public Setup setup() {

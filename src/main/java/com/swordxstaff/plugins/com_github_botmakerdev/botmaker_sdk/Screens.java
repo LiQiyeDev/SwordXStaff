@@ -516,10 +516,13 @@ public final class Screens {
     public static final UnlockCart UNLOCK_CART = new UnlockCart();
 
     public static final class CartUnlocked extends Screen {
+        public final Button tapToContinue = Button.of(Pictures.TAP_TO_CONTINUE);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Cart unlocked")
+                    .markers(List.of(Pictures.UNLOCKED_TITLE))
                     .takes(Duration.ofMillis(7200L))
                     .shot("screens/CART_UNLOCKED.png")
                     .from(Screens.UNLOCK_CART.unlockButton);

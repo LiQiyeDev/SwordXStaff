@@ -119,6 +119,10 @@ public final class Pictures {
             .at(new Rect(342, 557, 350, 213));
     public static final ImageTemplate UNLOCK_BUTTON = new ImageTemplate("images/unlock_button.png")
             .at(new Rect(380, 1400, 320, 64));
+    public static final ImageTemplate UNLOCKED_TITLE = new ImageTemplate("images/unlocked_title.png")
+            .at(new Rect(262, 465, 562, 95));
+    public static final ImageTemplate TAP_TO_CONTINUE = new ImageTemplate("images/tap_to_continue.png")
+            .at(new Rect(390, 1780, 296, 50));
     private Pictures() {
     }
 }

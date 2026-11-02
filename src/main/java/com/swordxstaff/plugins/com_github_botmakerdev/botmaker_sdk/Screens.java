@@ -177,6 +177,9 @@ public final class Screens {
             return Setup
                     .named("Settings")
                     .markers(List.of(Pictures.SETTINGS_TITLE))
+                    .notes(
+                            "Three tabs. Game: text and voice language (English), chat channels shown on Home. Sound: Master, Music, Sound, Voice Over sliders, all 100%. Other: Vibration, Network Boost, Auto-Download Resources (Off, Wi-Fi Only, Cellular Data & Wi-Fi). The game's own language setting is here, separate from Android's.")
+                    .reached(Reached.SURVEYED)
                     .shot("screens/SETTINGS.png")
                     .from(Screens.TITLE.titleSettings);
         }

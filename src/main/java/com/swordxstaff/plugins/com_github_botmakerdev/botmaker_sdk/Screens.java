@@ -49,6 +49,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Privacy Policy")
+                    .elements(List.of(Elements.BOLTRAY_GAMES_PRIVACY_POLICY))
                     .takes(Duration.ofMillis(3400L))
                     .shot("screens/PRIVACY_POLICY.png")
                     .from(Screens.CONSENT.privacyPolicy);

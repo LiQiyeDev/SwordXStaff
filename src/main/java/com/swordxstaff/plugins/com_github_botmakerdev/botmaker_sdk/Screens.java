@@ -345,7 +345,15 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup.named("Prologue narration").from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
+            return Setup
+                    .named("Prologue narration")
+                    .notes(
+                            "A dark scene of a long-haired winged figure with a quote shown in grey: \"Until / an adventurer appears, / rekindling\" (cut at that point). Seen once after the second Tutorial dialogue line \"Lord Goddess, please help us!\" was tapped and Scene loading passed. No tap was made on it: it moved on to Select body type by itself.")
+                    .reached(Reached.SURVEYED)
+                    .owes(List
+                            .of("marker — the screen changed before it could be cut, a run may need a wait",
+                                    "what a tap does here (it advanced alone)"))
+                    .from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
         }
     }
 

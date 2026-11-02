@@ -249,7 +249,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("User Center")
-                    .elements(List.of(Elements.LT_TV_DIALOG_TITLE))
+                    .elements(List.of(Elements.LT_TV_DIALOG_TITLE, Elements.SUBSCRIPTION_EMAIL))
                     .back(Screens.USER_CENTER.userCenterClose)
                     .notes("The account's page: Guest, its ID. Rows not opened: Contact Support, Terms and Conditions, Manage Cookies.")
                     .owes(List

@@ -28,6 +28,8 @@ public final class Elements {
             .shot("elements/lt_tv_dialog_title.png");
     public static final Element LINK_ACCOUNT = Element.byHolding(Texts.LINK_ACCOUNT).shot("elements/link_account.png");
     public static final Element UNLINK = Element.byHolding(Texts.UNLINK).shot("elements/unlink.png");
+    public static final Element SUBSCRIPTION_EMAIL = Element.byHolding(Texts.SUBSCRIPTION_EMAIL)
+            .shot("elements/subscription_email.png");
 
     private Elements() {
     }

@@ -1104,6 +1104,19 @@ public final class Screens {
 
     public static final MenuQuest MENU_QUEST = new MenuQuest();
 
+    public static final class MenuPhoto extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Menu photo")
+                    .takes(Duration.ofMillis(4300L))
+                    .shot("screens/MENU_PHOTO.png")
+                    .from(Screens.STAGE_PACKAGE.menuPhoto);
+        }
+    }
+
+    public static final MenuPhoto MENU_PHOTO = new MenuPhoto();
+
     private Screens() {
     }
 }

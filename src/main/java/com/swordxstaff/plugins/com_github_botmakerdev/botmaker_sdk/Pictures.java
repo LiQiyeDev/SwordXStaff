@@ -373,6 +373,14 @@ public final class Pictures {
             .at(new Rect(430, 648, 225, 54));
     public static final ImageTemplate GIFT_CODE_FIELD = new ImageTemplate("images/gift_code_field.png")
             .at(new Rect(170, 850, 720, 70));
+    public static final ImageTemplate EXPLORATION_GOALS_TITLE = new ImageTemplate("images/exploration_goals_title.png")
+            .at(new Rect(62, 59, 386, 54));
+    public static final ImageTemplate EXPLORATION_BACK = new ImageTemplate("images/exploration_back.png")
+            .at(new Rect(30, 1780, 160, 95));
+    public static final ImageTemplate EXPLORATION_PROGRESS_TAB = new ImageTemplate(
+            "images/exploration_progress_tab.png").at(new Rect(360, 1795, 160, 60));
+    public static final ImageTemplate EXPLORATION_EXPLORE_TAB = new ImageTemplate("images/exploration_explore_tab.png")
+            .at(new Rect(770, 1795, 150, 60));
     private Pictures() {
     }
 }

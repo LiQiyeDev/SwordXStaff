@@ -881,7 +881,9 @@ public final class Screens {
                     .owes(List
                             .of("minimap — its inside moves with the hero; needs a spot or a still part of its ring",
                                     "chat strip — only text; not cut",
-                                    "grid moves — cells have no picture of their own; needs a spot from the hero or a tutorial frame"))
+                                    "quest claim gift — the tutorial's highlight pulses over it; cut it after the tutorial",
+                                    "stage_quest_tracker — same icon as the marker stage_quest_icon; keep one",
+                                    "stage_plant_monster — monsters animate; cut from leaves, weak; needs a still part or several looks"))
                     .shot("screens/STAGE.png")
                     .after(Screens.SCENE_LOADING);
         }

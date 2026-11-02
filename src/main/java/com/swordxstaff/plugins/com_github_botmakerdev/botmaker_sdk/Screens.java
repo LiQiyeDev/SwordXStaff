@@ -595,11 +595,7 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup
-                    .named("Island")
-                    .alsoFrom(List.of(Way.of(Screens.HOME.homeSideIcon)))
-                    .shot("screens/ISLAND.png")
-                    .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+            return Setup.named("Island").shot("screens/ISLAND.png").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
     }
 

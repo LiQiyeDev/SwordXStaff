@@ -911,6 +911,19 @@ public final class Screens {
 
     public static final Battle BATTLE = new Battle();
 
+    public static final class StageQuestTracker extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Stage quest tracker")
+                    .takes(Duration.ofMillis(4200L))
+                    .shot("screens/STAGE_QUEST_TRACKER.png")
+                    .from(Screens.STAGE.stageQuestTracker);
+        }
+    }
+
+    public static final StageQuestTracker STAGE_QUEST_TRACKER = new StageQuestTracker();
+
     private Screens() {
     }
 }

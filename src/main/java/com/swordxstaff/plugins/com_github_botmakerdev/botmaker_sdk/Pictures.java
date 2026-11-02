@@ -149,6 +149,8 @@ public final class Pictures {
             .at(new Rect(100, 1282, 140, 106));
     public static final ImageTemplate HOUSE_STORAGE_CHEST = new ImageTemplate("images/house_storage_chest.png")
             .at(new Rect(126, 1294, 144, 94));
+    public static final ImageTemplate CHOICE_ARROW = new ImageTemplate("images/choice_arrow.png")
+            .at(new Rect(122, 1332, 62, 42));
     private Pictures() {
     }
 }

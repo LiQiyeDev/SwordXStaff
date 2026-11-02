@@ -11,6 +11,8 @@ import com.botmaker.sdk.api.screens.Way;
 import com.botmaker.sdk.api.geometry.Point;
 import com.botmaker.sdk.api.screens.Hotkey;
 import com.botmaker.sdk.api.input.Key;
+import com.botmaker.sdk.api.screens.Pick;
+import com.botmaker.sdk.api.screens.Order;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -166,8 +168,10 @@ public final class Screens {
 
     public static final class Servers extends Screen {
         public final Button serversRowSelected = Button.of(Pictures.SERVERS_ROW_SELECTED);
-        public final Button serversRowOther = Button.of(Pictures.SERVERS_ROW_OTHER).never(
-                "Picking another server moves the account to a new start; the run stays on the one the game chose");
+        public final Button serversRowOther = Button
+                .of(Pictures.SERVERS_ROW_OTHER)
+                .never(
+                        "Picking another server moves the account to a new start; the run stays on the one the game chose");
         public final Button serversTabAvailable = Button.of(Pictures.SERVERS_TAB_AVAILABLE).tried();
         public final Button serversTabCharacters = Button.of(Pictures.SERVERS_TAB_CHARACTERS).tried();
         public final Button serversSearch = Button.of(Pictures.SERVERS_SEARCH);
@@ -193,8 +197,11 @@ public final class Screens {
     public static final class Settings extends Screen {
         public final Button settingsTabSound = Button.of(Pictures.SETTINGS_TAB_SOUND).tried();
         public final Button settingsTabOther = Button.of(Pictures.SETTINGS_TAB_OTHER).tried();
-        public final Button settingsTextLanguage = Button.of(Pictures.SETTINGS_TEXT_LANGUAGE).never("Stays English: the bot reads the game's words");
-        public final Button settingsToggleServerChannel = Button.of(Pictures.SETTINGS_TOGGLE_SERVER_CHANNEL)
+        public final Button settingsTextLanguage = Button
+                .of(Pictures.SETTINGS_TEXT_LANGUAGE)
+                .never("Stays English: the bot reads the game's words");
+        public final Button settingsToggleServerChannel = Button
+                .of(Pictures.SETTINGS_TOGGLE_SERVER_CHANNEL)
                 .never("Only hides chat channels on Home; no bot use, left as the game sets it");
         public final Button settingsTabGame = Button.of(Pictures.SETTINGS_TAB_GAME).tried();
 
@@ -214,8 +221,12 @@ public final class Screens {
     public static final Settings SETTINGS = new Settings();
 
     public static final class OfficialCommunity extends Screen {
-        public final Button communityDiscord = Button.of(Pictures.COMMUNITY_DISCORD).never("Outside link, leaves the game");
-        public final Button communityFacebook = Button.of(Pictures.COMMUNITY_FACEBOOK).never("Outside link, leaves the game");
+        public final Button communityDiscord = Button
+                .of(Pictures.COMMUNITY_DISCORD)
+                .never("Outside link, leaves the game");
+        public final Button communityFacebook = Button
+                .of(Pictures.COMMUNITY_FACEBOOK)
+                .never("Outside link, leaves the game");
         public final Button communityX = Button.of(Pictures.COMMUNITY_X).never("Outside link, leaves the game");
 
         @Override
@@ -249,14 +260,19 @@ public final class Screens {
     public static final CustomerService CUSTOMER_SERVICE = new CustomerService();
 
     public static final class UserCenter extends Screen {
-        public final Button linkAccount = Button.of(Elements.LINK_ACCOUNT).never("Binds the guest account to an outside account; the user's call");
+        public final Button linkAccount = Button
+                .of(Elements.LINK_ACCOUNT)
+                .never("Binds the guest account to an outside account; the user's call");
         public final Button unlink = Button.of(Elements.UNLINK).never("Changes the account's login; the user's call");
         public final Button userCenterClose = Button.of(Pictures.USER_CENTER_CLOSE);
         public final Button contactSupport = Button.of(Elements.CONTACT_SUPPORT).tried();
         public final Button termsAndConditions = Button.of(Elements.TERMS_AND_CONDITIONS).tried();
         public final Button manageCookies = Button.of(Elements.MANAGE_COOKIES).tried();
-        public final Button deleteAccount = Button.of(Elements.DELETE_ACCOUNT).never("Deletes the account for good; the user's call");
-        public final Button switchInput = Button.of(Elements.LT_LY_SWITCH_ACCOUNT)
+        public final Button deleteAccount = Button
+                .of(Elements.DELETE_ACCOUNT)
+                .never("Deletes the account for good; the user's call");
+        public final Button switchInput = Button
+                .of(Elements.LT_LY_SWITCH_ACCOUNT)
                 .never("Switches the guest account; it warns the in-game progress is lost, the user's call");
 
         @Override
@@ -378,6 +394,7 @@ public final class Screens {
         public final Button customizationTabTrait = Button.of(Pictures.CUSTOMIZATION_TAB_TRAIT).tried();
         public final Button customizationShuffle = Button.of(Pictures.CUSTOMIZATION_SHUFFLE).tried();
         public final Button customizationReset = Button.of(Pictures.CUSTOMIZATION_RESET);
+
         @Override
         public Setup setup() {
             return Setup
@@ -470,7 +487,9 @@ public final class Screens {
 
     public static final class DialogueChoice extends Screen {
         public final Button choiceStaff = Button.of(Pictures.CHOICE_STAFF);
-        public final Button choiceSword = Button.of(Pictures.CHOICE_SWORD).never("picks the Sword class, once per account; this account chose Staff");
+        public final Button choiceSword = Button
+                .of(Pictures.CHOICE_SWORD)
+                .never("picks the Sword class, once per account; this account chose Staff");
 
         @Override
         public Setup setup() {
@@ -703,6 +722,20 @@ public final class Screens {
     }
 
     public static final Character CHARACTER = new Character();
+
+    public static final class EquipWeapon extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Equip weapon")
+                    .takes(Duration.ofMillis(5100L))
+                    .shot("screens/EQUIP_WEAPON.png")
+                    .from(Screens.CHARACTER.charGearSlot)
+                    .fromPick(Pick.nth(2, Order.NORTH));
+        }
+    }
+
+    public static final EquipWeapon EQUIP_WEAPON = new EquipWeapon();
 
     private Screens() {
     }

@@ -32,6 +32,8 @@ public final class Elements {
             .shot("elements/subscription_email.png");
     public static final Element CONTACT_SUPPORT = Element.byHolding(Texts.CONTACT_SUPPORT)
             .shot("elements/contact_support.png");
+    public static final Element TERMS_AND_CONDITIONS = Element.byHolding(Texts.TERMS_AND_CONDITIONS)
+            .shot("elements/terms_and_conditions.png");
 
     private Elements() {
     }

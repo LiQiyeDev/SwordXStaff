@@ -245,6 +245,8 @@ public final class Pictures {
             .at(new Rect(325, 1005, 115, 140)).frames(3);
     public static final ImageTemplate STAGE_BOAR_CHECK = new ImageTemplate("images/stage_boar_check.png")
             .at(new Rect(793, 1068, 108, 128)).frames(3);
+    public static final ImageTemplate QUIT_GAME_QUESTION = new ImageTemplate("images/quit_game_question.png")
+            .at(new Rect(410, 848, 265, 62));
     private Pictures() {
     }
 }

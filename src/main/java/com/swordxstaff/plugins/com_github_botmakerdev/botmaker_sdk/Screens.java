@@ -980,9 +980,17 @@ public final class Screens {
     public static final LoadoutEdit LOADOUT_EDIT = new LoadoutEdit();
 
     public static final class QuitConfirm extends Screen {
+        public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
+        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
+
         @Override
         public Setup setup() {
-            return Setup.named("Quit confirm").from(Screens.TITLE.keyEsc);
+            return Setup
+                    .named("Quit confirm")
+                    .markers(List.of(Pictures.QUIT_GAME_QUESTION))
+                    .back(Screens.QUIT_CONFIRM.resetConfirmCancel)
+                    .shot("screens/QUIT_CONFIRM.png")
+                    .from(Screens.TITLE.keyEsc);
         }
     }
 

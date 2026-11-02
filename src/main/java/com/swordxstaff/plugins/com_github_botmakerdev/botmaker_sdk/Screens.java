@@ -147,7 +147,8 @@ public final class Screens {
 
     public static final class Servers extends Screen {
         public final Button serversRowSelected = Button.of(Pictures.SERVERS_ROW_SELECTED);
-        public final Button serversRowOther = Button.of(Pictures.SERVERS_ROW_OTHER);
+        public final Button serversRowOther = Button.of(Pictures.SERVERS_ROW_OTHER).never(
+                "Picking another server moves the account to a new start; the run stays on the one the game chose");
 
         @Override
         public Setup setup() {

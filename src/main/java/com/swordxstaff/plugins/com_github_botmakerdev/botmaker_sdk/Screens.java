@@ -1247,6 +1247,19 @@ public final class Screens {
 
     public static final Enhance ENHANCE = new Enhance();
 
+    public static final class Goals extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Goals")
+                    .takes(Duration.ofMillis(2700L))
+                    .shot("screens/GOALS.png")
+                    .from(Screens.ENHANCE.enhanceTabGoals);
+        }
+    }
+
+    public static final Goals GOALS = new Goals();
+
     private Screens() {
     }
 }

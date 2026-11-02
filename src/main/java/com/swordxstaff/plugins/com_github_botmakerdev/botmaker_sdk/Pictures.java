@@ -338,6 +338,12 @@ public final class Pictures {
             .at(new Rect(805, 357, 275, 58));
     public static final ImageTemplate ENHANCE_TAB_GOALS = new ImageTemplate("images/enhance_tab_goals.png")
             .at(new Rect(690, 1792, 330, 68));
+    public static final ImageTemplate ENHANCEMENT_GOALS_TITLE = new ImageTemplate("images/enhancement_goals_title.png")
+            .at(new Rect(55, 45, 425, 75));
+    public static final ImageTemplate GOAL_INCOMPLETE = new ImageTemplate("images/goal_incomplete.png")
+            .at(new Rect(765, 290, 237, 78));
+    public static final ImageTemplate ENHANCE_TAB_ENHANCE = new ImageTemplate("images/enhance_tab_enhance.png")
+            .at(new Rect(235, 1784, 395, 92));
     private Pictures() {
     }
 }

@@ -1248,10 +1248,16 @@ public final class Screens {
     public static final Enhance ENHANCE = new Enhance();
 
     public static final class EnhancementGoals extends Screen {
+        public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
+        public final Button goalIncomplete = Button.of(Pictures.GOAL_INCOMPLETE);
+        public final Button enhanceTabEnhance = Button.of(Pictures.ENHANCE_TAB_ENHANCE);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Enhancement goals")
+                    .markers(List.of(Pictures.ENHANCEMENT_GOALS_TITLE))
+                    .back(Screens.ENHANCEMENT_GOALS.noticeBack)
                     .takes(Duration.ofMillis(2700L))
                     .shot("screens/GOALS.png")
                     .from(Screens.ENHANCE.enhanceTabGoals);

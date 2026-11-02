@@ -369,6 +369,13 @@ public final class Screens {
             return Setup
                     .named("Select body type")
                     .markers(List.of(Pictures.BODY_TYPE_TITLE))
+                    .notes("""
+                            Character creation, first step: "Select Body Type" at the top, two large figures (a short-haired one on the left, a long-haired one on the right) and, below, two head icons and a black Next bar.
+                            The picked figure is lit with a yellow outline and its head icon is in colour; the other is greyed. Opens with the left one picked.
+                            Tapping the right head icon (825,1665) picks the right figure; tapping the left one (290,1665) picks the left again. Both stay on the screen, nothing is left. Not tapped: Next.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List.of("Next (leaves, not tried yet)"))
                     .shot("screens/SELECT_BODY_TYPE.png")
                     .from(Screens.PROLOGUE_NARRATION.dialoguePanel);
         }

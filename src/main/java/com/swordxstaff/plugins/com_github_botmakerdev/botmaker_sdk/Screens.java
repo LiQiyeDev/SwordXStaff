@@ -981,7 +981,7 @@ public final class Screens {
 
     public static final class QuitConfirm extends Screen {
         public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
-        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
+        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK).never("quits the game");
 
         @Override
         public Setup setup() {

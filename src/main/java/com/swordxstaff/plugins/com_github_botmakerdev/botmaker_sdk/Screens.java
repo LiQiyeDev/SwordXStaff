@@ -564,7 +564,7 @@ public final class Screens {
     public static final Island ISLAND = new Island();
 
     public static final class Cart extends Screen {
-        public final Button cartRowUnlock = Button.of(Pictures.CART_ROW_UNLOCK);
+        public final Button cartRowUnlock = Button.of(Pictures.CART_ROW_UNLOCK).repeated();
 
         @Override
         public Setup setup() {

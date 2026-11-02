@@ -18,6 +18,7 @@ public final class Texts {
     public static final Words BOLTRAY_GAMES_LICENSE_AGREEMENT = Words
             .of("BOLTRAY GAMES License Agreement and Terms of Service");
     public static final Words LINK_ACCOUNT = Words.of("Link Account");
+    public static final Words UNLINK = Words.of("Unlink");
 
     private Texts() {
     }

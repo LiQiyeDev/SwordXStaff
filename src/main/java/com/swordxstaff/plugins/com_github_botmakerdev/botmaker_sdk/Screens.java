@@ -224,6 +224,7 @@ public final class Screens {
 
     public static final class UserCenter extends Screen {
         public final Button linkAccount = Button.of(Elements.LINK_ACCOUNT);
+        public final Button unlink = Button.of(Elements.UNLINK);
 
         @Override
         public Setup setup() {

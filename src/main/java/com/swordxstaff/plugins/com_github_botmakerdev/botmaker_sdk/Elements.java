@@ -27,6 +27,7 @@ public final class Elements {
     public static final Element LT_TV_DIALOG_TITLE = Element.byId("lt_tv_dialog_title")
             .shot("elements/lt_tv_dialog_title.png");
     public static final Element LINK_ACCOUNT = Element.byHolding(Texts.LINK_ACCOUNT).shot("elements/link_account.png");
+    public static final Element UNLINK = Element.byHolding(Texts.UNLINK).shot("elements/unlink.png");
 
     private Elements() {
     }

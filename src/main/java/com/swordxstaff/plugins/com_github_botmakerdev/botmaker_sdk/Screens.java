@@ -97,19 +97,6 @@ public final class Screens {
 
     public static final NotificationPermission NOTIFICATION_PERMISSION = new NotificationPermission();
 
-    public static final class NextAfterPermission extends Screen {
-        @Override
-        public Setup setup() {
-            return Setup
-                    .named("Next after permission")
-                    .takes(Duration.ofMillis(1400L))
-                    .shot("screens/NEXT_AFTER_PERMISSION.png")
-                    .from(Screens.NOTIFICATION_PERMISSION.donTAllow);
-        }
-    }
-
-    public static final NextAfterPermission NEXT_AFTER_PERMISSION = new NextAfterPermission();
-
     private Screens() {
     }
 }

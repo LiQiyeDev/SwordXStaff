@@ -867,9 +867,13 @@ public final class Screens {
                     .back(Screens.STAGE.upgradeBack)
                     .notes("""
                             The island stage (Originisle I), reached from World's island card through Scene loading.
-                            The map is grid cells; tapping a cell moves the hero there (Akane: "tap the map grids to move around").
-                            Quest panel bottom left: "The First Battles", Originisle I Battle Wins 0/2.
-                            Top right: a minimap with the stage name and the hero's cell (24, 23).
+                            Stage is a window on a big tile map. A tap on a visible ground cell walks the hero there.
+                            The game finds the path itself, round trees and rocks: checked from (27, 17) to (23, 21) round the tree clumps.
+                            The camera does not follow the walk. A swipe on the ground pans it.
+                            The minimap's label (about 860,399 and 877,434) says the map and the hero's cell: "Originisle I (25, 19)".
+                            One cell is about 150 px across and 170 px down; x grows to the right, y grows upward.
+                            Quest panel bottom left: "The First Battles", Originisle I Battle Wins 1/2. Its icon opens the quest's details; it does not walk there.
+                            Resource nodes (ore, wood log) show on the map; a tap on one did nothing seen in the tutorial.
                             A chat strip sits above the back button.\
                             """)
                     .reached(Reached.SURVEYED)

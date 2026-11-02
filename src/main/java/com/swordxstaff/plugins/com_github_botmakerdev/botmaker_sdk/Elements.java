@@ -13,6 +13,8 @@ public final class Elements {
     public static final Element USER_AGREEMENT = Element.byLabel(Texts.USER_AGREEMENT)
             .shot("elements/user_agreement.png");
     public static final Element CONFIRM = Element.byText(Texts.CONFIRM).shot("elements/confirm.png");
+    public static final Element PRIVACY_POLICY = Element.byLabel(Texts.PRIVACY_POLICY)
+            .shot("elements/privacy_policy.png");
 
     private Elements() {
     }

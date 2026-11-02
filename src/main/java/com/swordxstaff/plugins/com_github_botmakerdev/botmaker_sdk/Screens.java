@@ -15,6 +15,7 @@ import com.botmaker.sdk.api.screens.Button;
 public final class Screens {
     public static final class Consent extends Screen {
         public final Button confirm = Button.of(Elements.CONFIRM).tried();
+        public final Button privacyPolicy = Button.of(Elements.PRIVACY_POLICY);
 
         @Override
         public Setup setup() {

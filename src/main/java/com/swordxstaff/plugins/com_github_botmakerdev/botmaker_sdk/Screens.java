@@ -247,6 +247,7 @@ public final class Screens {
         public final Button contactSupport = Button.of(Elements.CONTACT_SUPPORT);
         public final Button termsAndConditions = Button.of(Elements.TERMS_AND_CONDITIONS);
         public final Button manageCookies = Button.of(Elements.MANAGE_COOKIES);
+        public final Button deleteAccount = Button.of(Elements.DELETE_ACCOUNT);
 
         @Override
         public Setup setup() {

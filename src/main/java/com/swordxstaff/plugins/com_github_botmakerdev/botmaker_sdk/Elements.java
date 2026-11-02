@@ -36,6 +36,8 @@ public final class Elements {
             .shot("elements/terms_and_conditions.png");
     public static final Element MANAGE_COOKIES = Element.byHolding(Texts.MANAGE_COOKIES)
             .shot("elements/manage_cookies.png");
+    public static final Element DELETE_ACCOUNT = Element.byHolding(Texts.DELETE_ACCOUNT)
+            .shot("elements/delete_account.png");
 
     private Elements() {
     }

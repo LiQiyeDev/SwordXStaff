@@ -77,19 +77,6 @@ public final class Screens {
 
     public static final UserAgreement USER_AGREEMENT = new UserAgreement();
 
-    public static final class ConsentDeclined extends Screen {
-        @Override
-        public Setup setup() {
-            return Setup
-                    .named("Consent declined")
-                    .takes(Duration.ofMillis(1200L))
-                    .shot("screens/CONSENT_DECLINED.png")
-                    .from(Screens.CONSENT.cancel);
-        }
-    }
-
-    public static final ConsentDeclined CONSENT_DECLINED = new ConsentDeclined();
-
     private Screens() {
     }
 }

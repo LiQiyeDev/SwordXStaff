@@ -30,6 +30,8 @@ public final class Elements {
     public static final Element UNLINK = Element.byHolding(Texts.UNLINK).shot("elements/unlink.png");
     public static final Element SUBSCRIPTION_EMAIL = Element.byHolding(Texts.SUBSCRIPTION_EMAIL)
             .shot("elements/subscription_email.png");
+    public static final Element CONTACT_SUPPORT = Element.byHolding(Texts.CONTACT_SUPPORT)
+            .shot("elements/contact_support.png");
 
     private Elements() {
     }

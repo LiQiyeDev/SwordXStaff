@@ -244,6 +244,7 @@ public final class Screens {
         public final Button linkAccount = Button.of(Elements.LINK_ACCOUNT).never("Binds the guest account to an outside account; the user's call");
         public final Button unlink = Button.of(Elements.UNLINK).never("Changes the account's login; the user's call");
         public final Button userCenterClose = Button.of(Pictures.USER_CENTER_CLOSE);
+        public final Button contactSupport = Button.of(Elements.CONTACT_SUPPORT);
 
         @Override
         public Setup setup() {

@@ -362,7 +362,7 @@ public final class Screens {
     public static final class SelectBodyType extends Screen {
         public final Button bodyTypeNext = Button.of(Pictures.BODY_TYPE_NEXT);
         public final Button bodyTypeA = Button.of(Pictures.BODY_TYPE_A);
-        public final Button bodyTypeB = Button.of(Pictures.BODY_TYPE_B);
+        public final Button bodyTypeB = Button.of(Pictures.BODY_TYPE_B).tried();
 
         @Override
         public Setup setup() {

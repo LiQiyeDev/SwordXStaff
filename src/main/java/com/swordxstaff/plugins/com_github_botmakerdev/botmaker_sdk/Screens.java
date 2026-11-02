@@ -952,6 +952,19 @@ public final class Screens {
 
     public static final BattleLoadoutSwap BATTLE_LOADOUT_SWAP = new BattleLoadoutSwap();
 
+    public static final class LoadoutEdit extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Loadout edit")
+                    .takes(Duration.ofMillis(4800L))
+                    .shot("screens/LOADOUT_EDIT.png")
+                    .from(Screens.BATTLE_LOADOUT_SWAP.loadoutEdit);
+        }
+    }
+
+    public static final LoadoutEdit LOADOUT_EDIT = new LoadoutEdit();
+
     private Screens() {
     }
 }

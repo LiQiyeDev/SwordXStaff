@@ -197,6 +197,10 @@ public final class Pictures {
             .at(new Rect(42, 1668, 72, 62));
     public static final ImageTemplate ISLAND_LOADING_PATTERN = new ImageTemplate("images/island_loading_pattern.png")
             .at(new Rect(590, 1140, 160, 160));
+    public static final ImageTemplate STAGE_QUEST_ICON = new ImageTemplate("images/stage_quest_icon.png")
+            .at(new Rect(36, 1482, 32, 34));
+    public static final ImageTemplate STAGE_PACKAGE = new ImageTemplate("images/stage_package.png")
+            .at(new Rect(945, 1505, 60, 55));
     private Pictures() {
     }
 }

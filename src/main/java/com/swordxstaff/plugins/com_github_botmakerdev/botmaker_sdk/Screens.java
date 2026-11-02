@@ -850,9 +850,17 @@ public final class Screens {
     public static final World WORLD = new World();
 
     public static final class Stage extends Screen {
+        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
+        public final Button stagePackage = Button.of(Pictures.STAGE_PACKAGE);
+
         @Override
         public Setup setup() {
-            return Setup.named("Stage").after(Screens.SCENE_LOADING);
+            return Setup
+                    .named("Stage")
+                    .markers(List.of(Pictures.STAGE_QUEST_ICON))
+                    .back(Screens.STAGE.upgradeBack)
+                    .shot("screens/STAGE.png")
+                    .after(Screens.SCENE_LOADING);
         }
     }
 

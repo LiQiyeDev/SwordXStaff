@@ -602,6 +602,11 @@ public final class Screens {
                     .named("You received")
                     .markers(List.of(Pictures.YOU_RECEIVED_TITLE))
                     .back(Screens.YOU_RECEIVED.youReceivedTitle)
+                    .notes("""
+                            Shows what was just claimed (Cart's Claim All: Rolla, Stone, Wood). A tap on it closes it.
+                            It opens a few seconds after the claim.\
+                            """)
+                    .reached(Reached.TRIED)
                     .shot("screens/YOU_RECEIVED.png")
                     .from(Screens.CART.cartClaimAll);
         }

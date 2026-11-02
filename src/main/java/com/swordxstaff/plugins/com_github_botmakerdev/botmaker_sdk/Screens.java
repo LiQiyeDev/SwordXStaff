@@ -41,7 +41,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Tutorial dialogue")
-                    .markers(List.of(Pictures.DIALOGUE_NEXT_ARROW))
+                    .markers(List.of(Pictures.DIALOGUE_PANEL))
                     .popup()
                     .shot("screens/TUTORIAL_DIALOGUE.png");
         }

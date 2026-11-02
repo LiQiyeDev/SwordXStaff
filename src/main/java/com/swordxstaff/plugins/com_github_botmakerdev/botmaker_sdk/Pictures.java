@@ -366,6 +366,10 @@ public final class Pictures {
             .at(new Rect(325, 525, 430, 60));
     public static final ImageTemplate RESOURCE_DOWNLOAD_CLAIM = new ImageTemplate("images/resource_download_claim.png")
             .at(new Rect(360, 1205, 360, 80));
+    public static final ImageTemplate SELF_SERVICE_TITLE = new ImageTemplate("images/self_service_title.png")
+            .at(new Rect(385, 38, 310, 44));
+    public static final ImageTemplate SELF_SERVICE_CLOSE = new ImageTemplate("images/self_service_close.png")
+            .at(new Rect(145, 35, 50, 50));
     private Pictures() {
     }
 }

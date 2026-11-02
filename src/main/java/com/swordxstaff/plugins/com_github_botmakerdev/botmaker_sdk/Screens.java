@@ -1334,10 +1334,14 @@ public final class Screens {
     public static final ResourceDownload RESOURCE_DOWNLOAD = new ResourceDownload();
 
     public static final class UcSelfService extends Screen {
+        public final Mark selfServiceTitle = Mark.of(Pictures.SELF_SERVICE_TITLE);
+        public final Button selfServiceClose = Button.of(Pictures.SELF_SERVICE_CLOSE);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Uc self service")
+                    .back(Screens.UC_SELF_SERVICE.selfServiceClose)
                     .takes(Duration.ofMillis(3500L))
                     .shot("screens/UC_SELF_SERVICE.png")
                     .from(Screens.MENU_USER_CENTER.ucSelfService);

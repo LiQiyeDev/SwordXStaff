@@ -1137,7 +1137,7 @@ public final class Screens {
         public final Button ucSubmitLogs = Button.of(Pictures.UC_SUBMIT_LOGS).never("Sends logs to the game's maker; no bot use");
         public final Button ucPrivacyPolicy = Button.of(Pictures.UC_PRIVACY_POLICY).info();
         public final Button ucUserAgreement = Button.of(Pictures.UC_USER_AGREEMENT).info();
-        public final Button ucSelfService = Button.of(Pictures.UC_SELF_SERVICE);
+        public final Button ucSelfService = Button.of(Pictures.UC_SELF_SERVICE).info();
         public final Button ucGiftCode = Button.of(Pictures.UC_GIFT_CODE);
         public final Mark userCenterTitle = Mark.of(Pictures.USER_CENTER_TITLE);
 
@@ -1332,6 +1332,19 @@ public final class Screens {
     }
 
     public static final ResourceDownload RESOURCE_DOWNLOAD = new ResourceDownload();
+
+    public static final class UcSelfService extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Uc self service")
+                    .takes(Duration.ofMillis(3500L))
+                    .shot("screens/UC_SELF_SERVICE.png")
+                    .from(Screens.MENU_USER_CENTER.ucSelfService);
+        }
+    }
+
+    public static final UcSelfService UC_SELF_SERVICE = new UcSelfService();
 
     private Screens() {
     }

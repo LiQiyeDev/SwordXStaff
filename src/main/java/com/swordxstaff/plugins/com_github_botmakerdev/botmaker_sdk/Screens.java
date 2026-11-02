@@ -70,6 +70,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Privacy Policy")
+                    .alsoFrom(List.of(Way.of(Screens.MENU_USER_CENTER.ucPrivacyPolicy)))
                     .back(Screens.PRIVACY_POLICY.policyBackArrow)
                     .takes(Duration.ofMillis(3400L))
                     .shot("screens/PRIVACY_POLICY.png")

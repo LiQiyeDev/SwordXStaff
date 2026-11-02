@@ -376,6 +376,19 @@ public final class Screens {
 
     public static final SelectBodyType SELECT_BODY_TYPE = new SelectBodyType();
 
+    public static final class BodyTypeB extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Body type b")
+                    .takes(Duration.ofMillis(2000L))
+                    .shot("screens/BODY_TYPE_B.png")
+                    .from(Screens.SELECT_BODY_TYPE.bodyTypeB);
+        }
+    }
+
+    public static final BodyTypeB BODY_TYPE_B = new BodyTypeB();
+
     private Screens() {
     }
 }

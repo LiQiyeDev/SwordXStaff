@@ -64,7 +64,7 @@ public final class Screens {
     public static final class PrivacyPolicy extends Screen {
         public final Button policyBackArrow = Button.of(Pictures.POLICY_BACK_ARROW);
         public final Mark boltrayPageLogo = Mark.of(Pictures.BOLTRAY_PAGE_LOGO);
-        public final Mark input = Mark.of(Elements.BOLTRAY_GAMES_PRIVACY_POLICY);
+        public final Mark boltrayGamesPrivacyPolicy = Mark.of(Elements.BOLTRAY_GAMES_PRIVACY_POLICY);
 
         @Override
         public Setup setup() {

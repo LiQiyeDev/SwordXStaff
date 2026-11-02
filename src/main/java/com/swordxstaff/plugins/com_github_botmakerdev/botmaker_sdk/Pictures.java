@@ -167,8 +167,7 @@ public final class Pictures {
             .at(new Rect(165, 460, 126, 128));
     public static final ImageTemplate GEAR_SHARE = new ImageTemplate("images/gear_share.png")
             .at(new Rect(783, 438, 36, 36));
-    public static final ImageTemplate GEAR_LOCK = new ImageTemplate("images/gear_lock.png")
-            .at(new Rect(849, 439, 30, 36));
+    public static final ImageTemplate GEAR_LOCK = new ImageTemplate("images/gear_lock.png").at(new Rect(852, 441, 34, 36));
     public static final ImageTemplate GEAR_EQUIP = new ImageTemplate("images/gear_equip.png")
             .at(new Rect(400, 1315, 270, 58));
     public static final ImageTemplate CHAR_SKILL_ICON = new ImageTemplate("images/char_skill_icon.png")

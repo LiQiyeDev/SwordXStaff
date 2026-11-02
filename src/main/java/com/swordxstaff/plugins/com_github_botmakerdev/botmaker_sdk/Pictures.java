@@ -33,7 +33,7 @@ public final class Pictures {
     public static final ImageTemplate TITLE_CUSTOMER_SERVICE = new ImageTemplate("images/title_customer_service.png").at(new Rect(955, 490, 60, 44));
     public static final ImageTemplate TITLE_NOTICE = new ImageTemplate("images/title_notice.png").at(new Rect(958, 640, 54, 44));
     public static final ImageTemplate TITLE_USER_CENTER = new ImageTemplate("images/title_user_center.png").at(new Rect(958, 783, 54, 44));
-    public static final ImageTemplate TITLE_SUBMIT_LOGS = new ImageTemplate("images/title_submit_logs.png").at(new Rect(782, 368, 26, 26)).in(new Size(1280, 720));
+    public static final ImageTemplate TITLE_SUBMIT_LOGS = new ImageTemplate("images/title_submit_logs.png").at(new Rect(958, 1076, 54, 44));
     public static final ImageTemplate TITLE_REPAIR_CLIENT = new ImageTemplate("images/title_repair_client.png").at(new Rect(958, 930, 54, 44));
     public static final ImageTemplate SERVERS_TITLE = new ImageTemplate("images/servers_title.png").at(new Rect(600, 104, 80, 28)).in(new Size(1280, 720));
     public static final ImageTemplate SERVERS_ROW_SELECTED = new ImageTemplate("images/servers_row_selected.png").at(new Rect(505, 226, 72, 22)).in(new Size(1280, 720));

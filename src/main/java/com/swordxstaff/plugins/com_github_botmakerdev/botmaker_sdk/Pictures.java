@@ -199,8 +199,7 @@ public final class Pictures {
             .at(new Rect(36, 1482, 32, 34));
     public static final ImageTemplate STAGE_PACKAGE = new ImageTemplate("images/stage_package.png")
             .at(new Rect(945, 1505, 60, 55));
-    public static final ImageTemplate TOP_AVATAR = new ImageTemplate("images/top_avatar.png")
-            .at(new Rect(55, 45, 85, 80));
+    public static final ImageTemplate TOP_AVATAR = new ImageTemplate("images/top_avatar.png").at(new Rect(52, 46, 85, 80));
     public static final ImageTemplate STAGE_DOWNLOAD_REWARD = new ImageTemplate("images/stage_download_reward.png")
             .at(new Rect(45, 228, 80, 78));
     public static final ImageTemplate STAGE_BOAR = new ImageTemplate("images/stage_boar.png")

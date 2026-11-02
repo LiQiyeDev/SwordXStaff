@@ -862,8 +862,6 @@ public final class Screens {
         public final Button stagePlantMonster = Button.of(Pictures.STAGE_PLANT_MONSTER).leaving().occasional();
         public final Button stageBoarIdle = Button.of(Pictures.STAGE_BOAR_IDLE).occasional();
         public final Button stageBoarCheck = Button.of(Pictures.STAGE_BOAR_CHECK).occasional();
-        public final Button stagePlantIdle = Button.of(Pictures.STAGE_PLANT_IDLE).occasional();
-
         @Override
         public Setup setup() {
             return Setup

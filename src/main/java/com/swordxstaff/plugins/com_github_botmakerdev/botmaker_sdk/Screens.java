@@ -187,6 +187,15 @@ public final class Screens {
 
     public static final Settings SETTINGS = new Settings();
 
+    public static final class OfficialCommunity extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Official Community").from(Screens.TITLE.titleFollowUs);
+        }
+    }
+
+    public static final OfficialCommunity OFFICIAL_COMMUNITY = new OfficialCommunity();
+
     private Screens() {
     }
 }

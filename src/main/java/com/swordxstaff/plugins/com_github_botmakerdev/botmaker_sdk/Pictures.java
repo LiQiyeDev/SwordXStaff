@@ -355,6 +355,14 @@ public final class Pictures {
             .at(new Rect(72, 548, 120, 98));
     public static final ImageTemplate GEAR_LOCKED = new ImageTemplate("images/gear_locked.png")
             .at(new Rect(852, 441, 34, 36));
+    public static final ImageTemplate SKILL_GOALS_TITLE = new ImageTemplate("images/skill_goals_title.png")
+            .at(new Rect(55, 50, 245, 70));
+    public static final ImageTemplate SKILL_GOALS_TAB_QUALITY = new ImageTemplate("images/skill_goals_tab_quality.png")
+            .at(new Rect(560, 1648, 260, 70));
+    public static final ImageTemplate SKILL_GOALS_TAB_LEVEL = new ImageTemplate("images/skill_goals_tab_level.png")
+            .at(new Rect(250, 1648, 280, 70));
+    public static final ImageTemplate GOALS_TAB_SKILL = new ImageTemplate("images/goals_tab_skill.png")
+            .at(new Rect(240, 1790, 390, 80));
     private Pictures() {
     }
 }

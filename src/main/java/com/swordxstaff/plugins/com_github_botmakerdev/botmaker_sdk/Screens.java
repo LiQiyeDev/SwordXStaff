@@ -18,7 +18,7 @@ public final class Screens {
         public final Button confirm = Button.of(Elements.CONFIRM).tried();
         public final Button privacyPolicy = Button.of(Elements.PRIVACY_POLICY).info();
         public final Button cancel = Button.of(Elements.CANCEL);
-        public final Button userAgreement = Button.of(Elements.USER_AGREEMENT).tried().info();
+        public final Button userAgreement = Button.of(Elements.USER_AGREEMENT).info();
 
         @Override
         public Setup setup() {
@@ -61,6 +61,15 @@ public final class Screens {
     }
 
     public static final PrivacyPolicy PRIVACY_POLICY = new PrivacyPolicy();
+
+    public static final class UserAgreement extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("User Agreement").from(Screens.CONSENT.userAgreement);
+        }
+    }
+
+    public static final UserAgreement USER_AGREEMENT = new UserAgreement();
 
     private Screens() {
     }

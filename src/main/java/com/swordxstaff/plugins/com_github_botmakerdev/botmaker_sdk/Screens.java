@@ -371,7 +371,7 @@ public final class Screens {
     public static final class CharacterCustomization extends Screen {
         public final Button customizationBack = Button.of(Pictures.CUSTOMIZATION_BACK);
         public final Button customizationNext = Button.of(Pictures.CUSTOMIZATION_NEXT);
-        public final Button customizationTabHair = Button.of(Pictures.CUSTOMIZATION_TAB_HAIR);
+        public final Button customizationTabHair = Button.of(Pictures.CUSTOMIZATION_TAB_HAIR).tried();
         public final Button customizationTabFace = Button.of(Pictures.CUSTOMIZATION_TAB_FACE);
         public final Button customizationTabTrait = Button.of(Pictures.CUSTOMIZATION_TAB_TRAIT);
         public final Button customizationShuffle = Button.of(Pictures.CUSTOMIZATION_SHUFFLE);

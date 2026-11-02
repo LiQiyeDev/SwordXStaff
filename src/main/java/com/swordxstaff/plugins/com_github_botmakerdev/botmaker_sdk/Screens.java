@@ -689,7 +689,7 @@ public final class Screens {
     public static final StorageChest STORAGE_CHEST = new StorageChest();
 
     public static final class Character extends Screen {
-        public final Button charGearSlot = Button.of(Pictures.CHAR_GEAR_SLOT);
+        public final Button charGearSlot = Button.of(Pictures.CHAR_GEAR_SLOT).repeated();
 
         @Override
         public Setup setup() {

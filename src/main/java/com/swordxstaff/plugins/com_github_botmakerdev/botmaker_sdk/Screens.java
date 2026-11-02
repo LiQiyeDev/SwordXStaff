@@ -1357,10 +1357,16 @@ public final class Screens {
     public static final SelfServiceQuery SELF_SERVICE_QUERY = new SelfServiceQuery();
 
     public static final class UcGiftCode extends Screen {
+        public final Mark giftCodeTitle = Mark.of(Pictures.GIFT_CODE_TITLE);
+        public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
+        public final Button giftCodeField = Button.of(Pictures.GIFT_CODE_FIELD);
+        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Uc gift code")
+                    .back(Screens.UC_GIFT_CODE.resetConfirmCancel)
                     .takes(Duration.ofMillis(2600L))
                     .shot("screens/UC_GIFT_CODE.png")
                     .from(Screens.MENU_USER_CENTER.ucGiftCode);

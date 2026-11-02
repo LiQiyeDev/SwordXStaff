@@ -370,6 +370,10 @@ public final class Pictures {
             .at(new Rect(385, 38, 310, 44));
     public static final ImageTemplate SELF_SERVICE_CLOSE = new ImageTemplate("images/self_service_close.png")
             .at(new Rect(145, 35, 50, 50));
+    public static final ImageTemplate GIFT_CODE_TITLE = new ImageTemplate("images/gift_code_title.png")
+            .at(new Rect(430, 648, 225, 54));
+    public static final ImageTemplate GIFT_CODE_FIELD = new ImageTemplate("images/gift_code_field.png")
+            .at(new Rect(170, 850, 720, 70));
     private Pictures() {
     }
 }

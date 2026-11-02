@@ -18,7 +18,11 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup.named("Consent").elements(List.of(Elements.USER_AGREEMENT)).start();
+            return Setup
+                    .named("Consent")
+                    .elements(List.of(Elements.USER_AGREEMENT))
+                    .start()
+                    .shot("screens/CONSENT.png");
         }
     }
 

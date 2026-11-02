@@ -548,6 +548,15 @@ public final class Screens {
 
     public static final FeatureUnlocked FEATURE_UNLOCKED = new FeatureUnlocked();
 
+    public static final class Island extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Island").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+        }
+    }
+
+    public static final Island ISLAND = new Island();
+
     private Screens() {
     }
 }

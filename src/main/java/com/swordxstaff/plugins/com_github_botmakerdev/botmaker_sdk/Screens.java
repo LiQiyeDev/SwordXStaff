@@ -706,7 +706,6 @@ public final class Screens {
     public static final StorageChest STORAGE_CHEST = new StorageChest();
 
     public static final class Character extends Screen {
-        public final Button charGearSlot = Button.of(Pictures.CHAR_GEAR_SLOT).repeated();
         public final Button charSkillIcon = Button.of(Pictures.CHAR_SKILL_ICON);
         public final Button navPortal = Button.of(Pictures.NAV_PORTAL);
         public final Mark charClassIcon = Mark.of(Pictures.CHAR_CLASS_ICON);

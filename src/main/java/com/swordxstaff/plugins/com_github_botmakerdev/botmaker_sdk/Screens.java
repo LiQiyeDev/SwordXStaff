@@ -81,6 +81,15 @@ public final class Screens {
 
     public static final UserAgreement USER_AGREEMENT = new UserAgreement();
 
+    public static final class LoadingPatch extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Loading patch").from(Screens.CONSENT.confirm);
+        }
+    }
+
+    public static final LoadingPatch LOADING_PATCH = new LoadingPatch();
+
     private Screens() {
     }
 }

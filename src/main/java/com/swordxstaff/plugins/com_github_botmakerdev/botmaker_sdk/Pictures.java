@@ -160,8 +160,7 @@ public final class Pictures {
     public static final ImageTemplate CHAR_CLASS_ICON = new ImageTemplate("images/char_class_icon.png").at(new Rect(582, 1088, 106, 80));
     public static final ImageTemplate CHAR_GEAR_SLOT = new ImageTemplate("images/char_gear_slot.png")
             .at(new Rect(98, 578, 74, 74));
-    public static final ImageTemplate REPLACE_GEAR_CORNER = new ImageTemplate("images/replace_gear_corner.png")
-            .at(new Rect(86, 266, 38, 38));
+    public static final ImageTemplate REPLACE_GEAR_CORNER = new ImageTemplate("images/replace_gear_corner.png").at(new Rect(86, 266, 38, 38));
     public static final ImageTemplate GEAR_NOVICE_STAFF = new ImageTemplate("images/gear_novice_staff.png")
             .at(new Rect(165, 460, 126, 128));
     public static final ImageTemplate GEAR_SHARE = new ImageTemplate("images/gear_share.png")

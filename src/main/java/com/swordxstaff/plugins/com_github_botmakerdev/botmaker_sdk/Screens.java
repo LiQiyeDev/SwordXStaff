@@ -730,6 +730,7 @@ public final class Screens {
             return Setup
                     .named("Character")
                     .markers(List.of(Pictures.CHAR_CLASS_ICON))
+                    .alsoFrom(List.of(Way.of(Screens.HOME.navCharacter)))
                     .notes("""
                             The character: class emblem (No Class at first), gear slots around the hero (left: weapon; right: three more), a locked slot under the weapon.
                             Skill and Class buttons under the hero; level, rank and stats (ATK, DEF, HP, SPD) below.

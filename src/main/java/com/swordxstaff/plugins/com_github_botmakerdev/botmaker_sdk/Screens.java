@@ -1309,21 +1309,21 @@ public final class Screens {
 
     public static final SkillGoals SKILL_GOALS = new SkillGoals();
 
-    public static final class StageDownloadReward extends Screen {
+    public static final class ResourceDownload extends Screen {
         public final Mark resourceDownloadTitle = Mark.of(Pictures.RESOURCE_DOWNLOAD_TITLE);
         public final Button resourceDownloadClaim = Button.of(Pictures.RESOURCE_DOWNLOAD_CLAIM);
 
         @Override
         public Setup setup() {
             return Setup
-                    .named("Stage download reward")
+                    .named("Resource download")
                     .takes(Duration.ofMillis(3700L))
                     .shot("screens/STAGE_DOWNLOAD_REWARD.png")
                     .from(Screens.HOME.stageDownloadReward);
         }
     }
 
-    public static final StageDownloadReward STAGE_DOWNLOAD_REWARD = new StageDownloadReward();
+    public static final ResourceDownload RESOURCE_DOWNLOAD = new ResourceDownload();
 
     private Screens() {
     }

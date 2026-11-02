@@ -1105,10 +1105,16 @@ public final class Screens {
     public static final MenuQuest MENU_QUEST = new MenuQuest();
 
     public static final class MenuPhoto extends Screen {
+        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
+        public final Button photoZoomIn = Button.of(Pictures.PHOTO_ZOOM_IN);
+        public final Button photoZoomOut = Button.of(Pictures.PHOTO_ZOOM_OUT);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Menu photo")
+                    .markers(List.of(Pictures.PHOTO_SHUTTER))
+                    .back(Screens.MENU_PHOTO.upgradeBack)
                     .takes(Duration.ofMillis(4300L))
                     .shot("screens/MENU_PHOTO.png")
                     .from(Screens.STAGE_PACKAGE.menuPhoto);

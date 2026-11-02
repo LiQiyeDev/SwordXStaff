@@ -186,7 +186,7 @@ public final class Screens {
                 .never("Only hides chat channels on Home; no bot use, left as the game sets it");
         public final Button settingsVoiceLanguage = Button.of(Pictures.SETTINGS_TEXT_LANGUAGE);
         public final Button settingsToggleNexusChannel = Button.of(Pictures.SETTINGS_TOGGLE_SERVER_CHANNEL);
-        public final Button settingsToggleKingdomChannel = Button.of(Pictures.SETTINGS_TOGGLE_KINGDOM_CHANNEL);
+        public final Button settingsToggleKingdomChannel = Button.of(Pictures.SETTINGS_TOGGLE_SERVER_CHANNEL);
 
         @Override
         public Setup setup() {

@@ -59,9 +59,6 @@ public final class Pictures {
             .at(new Rect(100, 1572, 460, 76));
     public static final ImageTemplate SERVERS_SEARCH_GO = new ImageTemplate("images/servers_search_go.png")
             .at(new Rect(562, 1578, 66, 66));
-    public static final ImageTemplate SETTINGS_TOGGLE_KINGDOM_CHANNEL = new ImageTemplate(
-            "images/settings_toggle_kingdom_channel.png").at(new Rect(787, 1362, 125, 50));
-
     private Pictures() {
     }
 }

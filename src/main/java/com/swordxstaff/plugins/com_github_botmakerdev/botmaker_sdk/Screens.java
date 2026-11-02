@@ -13,6 +13,8 @@ import com.botmaker.sdk.api.screens.Hotkey;
 import com.botmaker.sdk.api.input.Key;
 import com.botmaker.sdk.api.screens.Pick;
 import com.botmaker.sdk.api.screens.Order;
+import com.botmaker.sdk.api.screens.Look;
+import com.botmaker.sdk.api.screens.State;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -769,7 +771,7 @@ public final class Screens {
     public static final ReplaceGear REPLACE_GEAR = new ReplaceGear();
 
     public static final class GearDetails extends Screen {
-        public final Button gearLock = Button.of(Pictures.GEAR_LOCK).tried();
+        public final Button gearLock = Button.of(Pictures.GEAR_LOCK).tried().looks(List.of(Look.of(Pictures.GEAR_LOCKED, State.SELECTED)));
         public final Button gearEquip = Button.of(Pictures.GEAR_EQUIP).leaving();
         public final Button gearReplace = Button.of(Pictures.GEAR_REPLACE).occasional();
         public final Button gearEnhance = Button.of(Pictures.GEAR_ENHANCE).occasional();

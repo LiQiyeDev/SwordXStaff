@@ -353,6 +353,8 @@ public final class Pictures {
             .at(new Rect(392, 293, 296, 66));
     public static final ImageTemplate CHAR_WEAPON_STAFF = new ImageTemplate("images/char_weapon_staff.png")
             .at(new Rect(72, 548, 120, 98));
+    public static final ImageTemplate GEAR_LOCKED = new ImageTemplate("images/gear_locked.png")
+            .at(new Rect(852, 441, 34, 36));
     private Pictures() {
     }
 }

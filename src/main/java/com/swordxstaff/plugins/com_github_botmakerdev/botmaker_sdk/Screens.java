@@ -100,6 +100,7 @@ public final class Screens {
     public static final class StartupLoading extends Screen {
         public final Mark startupLoadingBarEnd = Mark.of(Pictures.STARTUP_LOADING_BAR_END);
         public final Mark titleUserCenter = Mark.of(Pictures.TITLE_USER_CENTER).absent();
+        public final Mark startupVersionLabel = Mark.of(Pictures.STARTUP_VERSION_LABEL);
 
         @Override
         public Setup setup() {

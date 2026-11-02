@@ -1380,7 +1380,7 @@ public final class Screens {
         public final Mark explorationGoalsTitle = Mark.of(Pictures.EXPLORATION_GOALS_TITLE);
         public final Button explorationBack = Button.of(Pictures.EXPLORATION_BACK);
         public final Button explorationProgressTab = Button.of(Pictures.EXPLORATION_PROGRESS_TAB);
-        public final Button explorationExploreTab = Button.of(Pictures.EXPLORATION_EXPLORE_TAB).tried();
+        public final Button explorationExploreTab = Button.of(Pictures.EXPLORATION_EXPLORE_TAB);
 
         @Override
         public Setup setup() {
@@ -1394,6 +1394,15 @@ public final class Screens {
     }
 
     public static final WorldChest WORLD_CHEST = new WorldChest();
+
+    public static final class DestinyExploration extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Destiny exploration").from(Screens.WORLD_CHEST.explorationExploreTab);
+        }
+    }
+
+    public static final DestinyExploration DESTINY_EXPLORATION = new DestinyExploration();
 
     private Screens() {
     }

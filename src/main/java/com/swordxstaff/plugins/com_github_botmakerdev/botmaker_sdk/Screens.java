@@ -155,6 +155,7 @@ public final class Screens {
             return Setup
                     .named("Servers")
                     .markers(List.of(Pictures.SERVERS_TITLE))
+                    .back(Screens.SERVERS.serversRowSelected)
                     .shot("screens/SERVERS.png")
                     .from(Screens.TITLE.titleServers);
         }

@@ -581,11 +581,14 @@ public final class Screens {
     public static final Cart CART = new Cart();
 
     public static final class YouReceived extends Screen {
+        public final Button youReceivedTitle = Button.of(Pictures.YOU_RECEIVED_TITLE);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("You received")
                     .markers(List.of(Pictures.YOU_RECEIVED_TITLE))
+                    .back(Screens.YOU_RECEIVED.youReceivedTitle)
                     .shot("screens/YOU_RECEIVED.png")
                     .from(Screens.CART.cartClaimAll);
         }

@@ -19,7 +19,7 @@ public final class Pictures {
     public static final ImageTemplate STARTUP_LOADING_BAR_END = new ImageTemplate("images/startup_loading_bar_end.png").at(new Rect(512, 576, 18, 22)).in(new Size(1280, 720));
     public static final ImageTemplate NOTICE_TITLE = new ImageTemplate("images/notice_title.png").at(new Rect(467, 120, 145, 45));
     public static final ImageTemplate NOTICE_BACK = new ImageTemplate("images/notice_back.png").at(new Rect(60, 1795, 90, 70));
-    public static final ImageTemplate NOTICE_TAB_SYSTEM = new ImageTemplate("images/notice_tab_system.png").at(new Rect(610, 104, 60, 24)).in(new Size(1280, 720));
+    public static final ImageTemplate NOTICE_TAB_SYSTEM = new ImageTemplate("images/notice_tab_system.png").at(new Rect(482, 237, 113, 38));
     public static final ImageTemplate NOTICE_TAB_NEWS = new ImageTemplate("images/notice_tab_news.png").at(new Rect(730, 104, 54, 24)).in(new Size(1280, 720));
     public static final ImageTemplate NOTICE_ITEM_1 = new ImageTemplate("images/notice_item_1.png").at(new Rect(471, 139, 104, 62)).in(new Size(1280, 720));
     public static final ImageTemplate NOTICE_ITEM_2 = new ImageTemplate("images/notice_item_2.png").at(new Rect(471, 207, 104, 60)).in(new Size(1280, 720));

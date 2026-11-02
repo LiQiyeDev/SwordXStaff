@@ -762,7 +762,7 @@ public final class Screens {
     public static final class GearDetails extends Screen {
         public final Button gearLock = Button.of(Pictures.GEAR_LOCK).tried().looks(List.of(Look.of(Pictures.GEAR_LOCKED, State.SELECTED)));
         public final Button gearEquip = Button.of(Pictures.GEAR_EQUIP).leaving();
-        public final Button gearReplace = Button.of(Pictures.GEAR_REPLACE).occasional();
+        public final Button gearReplace = Button.of(Pictures.GEAR_REPLACE).tried().occasional();
         public final Button gearEnhance = Button.of(Pictures.GEAR_ENHANCE).occasional();
         public final Mark gearShare = Mark.of(Pictures.GEAR_SHARE);
 
@@ -771,13 +771,12 @@ public final class Screens {
             return Setup
                     .named("Gear details")
                     .alsoFrom(List.of(Way.of(Screens.CHARACTER.slotWeapon)))
-                    .back(Screens.GEAR_DETAILS.gearReplace)
                     .notes("""
                             One piece of gear: rarity, power, level, stats; Equip puts it on and goes back to Character.
-                            Share and lock icons at the top right; what the lock does is not tried yet.\
+                            Share and lock icons at the top right; the lock toggles the gear's lock (gear_lock / gear_locked), nothing else changes.
+                            Replace (shown for worn gear) opens Replace gear for the slot; it is not a way back.\
                             """)
                     .reached(Reached.SURVEYED)
-                    .owes(List.of("gear_lock — untried while the tutorial leads"))
                     .takes(Duration.ofMillis(10700L))
                     .shot("screens/GEAR_DETAILS.png")
                     .from(Screens.REPLACE_GEAR.gearNoviceStaff);

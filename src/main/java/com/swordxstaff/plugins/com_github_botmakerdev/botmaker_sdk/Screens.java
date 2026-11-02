@@ -1359,8 +1359,8 @@ public final class Screens {
     public static final class GiftCode extends Screen {
         public final Mark giftCodeTitle = Mark.of(Pictures.GIFT_CODE_TITLE);
         public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
-        public final Button giftCodeField = Button.of(Pictures.GIFT_CODE_FIELD);
-        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
+        public final Button giftCodeField = Button.of(Pictures.GIFT_CODE_FIELD).never("Needs a gift code the game hands out; none known, the user's call");
+        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK).never("Redeems the code typed; with none typed it only refuses");
 
         @Override
         public Setup setup() {

@@ -620,6 +620,14 @@ public final class Screens {
                     .named("Furniture upgrade")
                     .markers(List.of(Pictures.UPGRADE_LEVEL_ARROW))
                     .back(Screens.FURNITURE_UPGRADE.upgradeBack)
+                    .notes("""
+                            Upgrades one Cart row: tabs Rolla, Wood, Stone along the top; shows the yield and reserve at this level and the next, and the upgrade cost (Wood, Stone, Rolla).
+                            Lv.1 to Lv.2 needs Blessing Lv. 2 first.
+                            The Rolla tab's coin shines, so it has no picture; it is the tab shown first from the Rolla row.
+                            upgrade_back also matches notice_back, name_back and customization_back (same black pill).\
+                            """)
+                    .reached(Reached.TRIED)
+                    .owes(List.of("upgrade_tab_rolla: the coin shines, so no still picture yet"))
                     .shot("screens/FURNITURE_UPGRADE.png")
                     .from(Screens.CART.cartRowUpgrade);
         }

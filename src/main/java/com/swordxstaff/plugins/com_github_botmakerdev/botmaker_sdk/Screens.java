@@ -15,6 +15,7 @@ import com.botmaker.sdk.api.screens.Pick;
 import com.botmaker.sdk.api.screens.Order;
 import com.botmaker.sdk.api.screens.Look;
 import com.botmaker.sdk.api.screens.State;
+import com.botmaker.sdk.api.screens.Mark;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -29,29 +30,24 @@ public final class Screens {
         public final Button cancel = Button
                 .of(Elements.CANCEL)
                 .never("Declines the agreement and quits the game to Android's launcher, tried 2026-11-02");
-        public final Button userAgreement = Button.of(Elements.USER_AGREEMENT).info();
+        public final Button userAgreement = Button.of(Elements.USER_AGREEMENT).info().marking();
 
         @Override
         public Setup setup() {
-            return Setup
-                    .named("Consent")
-                    .elements(List.of(Elements.USER_AGREEMENT))
-                    .start()
-                    .shot("screens/CONSENT.png");
+            return Setup.named("Consent").start().shot("screens/CONSENT.png");
         }
     }
 
     public static final Consent CONSENT = new Consent();
 
     public static final class TutorialDialogue extends Screen {
-        public final Button dialoguePanel = Button.of(Pictures.DIALOGUE_PANEL);
+        public final Button dialoguePanel = Button.of(Pictures.DIALOGUE_PANEL).marking();
         public final Button dialogueNextArrow = Button.of(Pictures.DIALOGUE_NEXT_ARROW);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Tutorial dialogue")
-                    .markers(List.of(Pictures.DIALOGUE_PANEL))
                     .back(Screens.TUTORIAL_DIALOGUE.dialoguePanel)
                     .popup()
                     .notes("""
@@ -67,13 +63,13 @@ public final class Screens {
 
     public static final class PrivacyPolicy extends Screen {
         public final Button policyBackArrow = Button.of(Pictures.POLICY_BACK_ARROW);
+        public final Mark boltrayPageLogo = Mark.of(Pictures.BOLTRAY_PAGE_LOGO);
+        public final Mark input = Mark.of(Elements.BOLTRAY_GAMES_PRIVACY_POLICY);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Privacy Policy")
-                    .markers(List.of(Pictures.BOLTRAY_PAGE_LOGO))
-                    .elements(List.of(Elements.BOLTRAY_GAMES_PRIVACY_POLICY))
                     .back(Screens.PRIVACY_POLICY.policyBackArrow)
                     .takes(Duration.ofMillis(3400L))
                     .shot("screens/PRIVACY_POLICY.png")
@@ -85,14 +81,15 @@ public final class Screens {
 
     public static final class UserAgreement extends Screen {
         public final Button policyBackArrow = Button.of(Pictures.POLICY_BACK_ARROW);
+        public final Mark input = Mark.of(Elements.BOLTRAY_GAMES_LICENSE_AGREEMENT);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("User Agreement")
-                    .elements(List.of(Elements.BOLTRAY_GAMES_LICENSE_AGREEMENT))
                     .back(Screens.USER_AGREEMENT.policyBackArrow)
-                    .notes("Legal page, no bot work. Back arrow returns to Consent; first tap on the link after returning from a page may do nothing.")
+                    .notes(
+                            "Legal page, no bot work. Back arrow returns to Consent; first tap on the link after returning from a page may do nothing.")
                     .owes(List.of("marker — the text marker also matches Consent's shot (tree holds covered views)"))
                     .from(Screens.CONSENT.userAgreement);
         }
@@ -101,11 +98,12 @@ public final class Screens {
     public static final UserAgreement USER_AGREEMENT = new UserAgreement();
 
     public static final class StartupLoading extends Screen {
+        public final Mark startupLoadingBarEnd = Mark.of(Pictures.STARTUP_LOADING_BAR_END);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Startup loading")
-                    .markers(List.of(Pictures.STARTUP_LOADING_BAR_END))
                     .loads(Duration.ofMillis(60000L))
                     .shot("screens/LOADING_PATCH.png")
                     .from(Screens.CONSENT.confirm);
@@ -124,12 +122,12 @@ public final class Screens {
         public final Button noticeItem3 = Button.of(Pictures.NOTICE_ITEM_3).tried().occasional();
         public final Button noticeItem4 = Button.of(Pictures.NOTICE_ITEM_4).tried().occasional();
         public final Button noticeTabNotice = Button.of(Pictures.NOTICE_TAB_NOTICE).tried();
+        public final Mark noticeTitle = Mark.of(Pictures.NOTICE_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Notice")
-                    .markers(List.of(Pictures.NOTICE_TITLE))
                     .back(Screens.NOTICE.noticeBack)
                     .popup()
                     .notes(
@@ -148,7 +146,7 @@ public final class Screens {
         public final Button titleFollowUs = Button.of(Pictures.TITLE_FOLLOW_US);
         public final Button titleCustomerService = Button.of(Pictures.TITLE_CUSTOMER_SERVICE);
         public final Button titleNotice = Button.of(Pictures.TITLE_NOTICE).tried();
-        public final Button titleUserCenter = Button.of(Pictures.TITLE_USER_CENTER);
+        public final Button titleUserCenter = Button.of(Pictures.TITLE_USER_CENTER).marking();
         public final Button titleSubmitLogs = Button
                 .of(Pictures.TITLE_SUBMIT_LOGS)
                 .never("Sends logs to the game's maker; no bot use");
@@ -161,7 +159,6 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Title")
-                    .markers(List.of(Pictures.TITLE_USER_CENTER))
                     .alsoFrom(List.of(Way.onItsOwn(Screens.STARTUP_LOADING)))
                     .shot("screens/TITLE.png")
                     .from(Screens.NOTICE.noticeBack);
@@ -180,14 +177,15 @@ public final class Screens {
         public final Button serversTabCharacters = Button.of(Pictures.SERVERS_TAB_CHARACTERS).tried();
         public final Button serversSearch = Button.of(Pictures.SERVERS_SEARCH);
         public final Button serversSearchGo = Button.of(Pictures.SERVERS_SEARCH_GO);
+        public final Mark serversTitle = Mark.of(Pictures.SERVERS_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Servers")
-                    .markers(List.of(Pictures.SERVERS_TITLE))
                     .back(Screens.SERVERS.serversRowSelected)
-                    .notes("Two tabs: Character List (this account's character on Cloudwold, Lv. 1, 601, tagged Recent) and Available (every server by name with a status dot, a search box and its magnifier below). Dots: green Rcmd, orange Crowded, red Full, grey Maintenance. Tapping the highlighted server closes the list and returns to Title. The account plays on Cloudwold, the game's default. The mouse wheel does not scroll the Available list (30 notches moved it 2 px); more rows sit under the sixth.")
+                    .notes(
+                            "Two tabs: Character List (this account's character on Cloudwold, Lv. 1, 601, tagged Recent) and Available (every server by name with a status dot, a search box and its magnifier below). Dots: green Rcmd, orange Crowded, red Full, grey Maintenance. Tapping the highlighted server closes the list and returns to Title. The account plays on Cloudwold, the game's default. The mouse wheel does not scroll the Available list (30 notches moved it 2 px); more rows sit under the sixth.")
                     .owes(List
                             .of("Available list: scrolling it needs a drag, the wheel does nothing",
                                     "servers_search, servers_search_go: not tried"))
@@ -209,12 +207,12 @@ public final class Screens {
                 .never("Only hides chat channels on Home; no bot use, left as the game sets it");
         public final Button settingsTabGame = Button.of(Pictures.SETTINGS_TAB_GAME).tried();
         public final Button settingsTabGraphics = Button.of(Pictures.SETTINGS_TAB_GRAPHICS).tried().occasional();
+        public final Mark settingsTitle = Mark.of(Pictures.SETTINGS_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Settings")
-                    .markers(List.of(Pictures.SETTINGS_TITLE))
                     .alsoFrom(List.of(Way.of(Screens.STAGE_PACKAGE.menuSettings)))
                     .notes("""
                             Opened from Title's Settings (tabs Game, Sound, Other) or, in game, from Stage's menu (tabs Game, Graphics, Sound, Other).
@@ -243,12 +241,12 @@ public final class Screens {
                 .of(Pictures.COMMUNITY_FACEBOOK)
                 .never("Outside link, leaves the game");
         public final Button communityX = Button.of(Pictures.COMMUNITY_X).never("Outside link, leaves the game");
+        public final Mark communityTitle = Mark.of(Pictures.COMMUNITY_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Official Community")
-                    .markers(List.of(Pictures.COMMUNITY_TITLE))
                     .shot("screens/OFFICIAL_COMMUNITY.png")
                     .from(Screens.TITLE.titleFollowUs);
         }
@@ -258,14 +256,15 @@ public final class Screens {
 
     public static final class CustomerService extends Screen {
         public final Button supportBack = Button.of(Pictures.SUPPORT_BACK);
+        public final Mark supportAvatar = Mark.of(Pictures.SUPPORT_AVATAR);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Customer Service")
-                    .markers(List.of(Pictures.SUPPORT_AVATAR))
                     .back(Screens.CUSTOMER_SERVICE.supportBack)
-                    .notes("Live chat with the game's support, full screen with Android's keyboard up. The bot never types or sends here.")
+                    .notes(
+                            "Live chat with the game's support, full screen with Android's keyboard up. The bot never types or sends here.")
                     .reached(Reached.SURVEYED)
                     .shot("screens/CUSTOMER_SERVICE.png")
                     .from(Screens.TITLE.titleCustomerService);
@@ -289,14 +288,16 @@ public final class Screens {
         public final Button switchInput = Button
                 .of(Elements.LT_LY_SWITCH_ACCOUNT)
                 .never("Switches the guest account; it warns the in-game progress is lost, the user's call");
+        public final Mark ltTvDialogTitle = Mark.of(Elements.LT_TV_DIALOG_TITLE);
+        public final Mark input = Mark.of(Elements.SUBSCRIPTION_EMAIL);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("User Center")
-                    .elements(List.of(Elements.LT_TV_DIALOG_TITLE, Elements.SUBSCRIPTION_EMAIL))
                     .back(Screens.USER_CENTER.userCenterClose)
-                    .notes("The account's page, a native Android view the tree reads whole: Guest, its ID, version, and the rows Link Account, Contact Support, Terms and Conditions, Manage Cookies, Unlink, Delete Account, Subscription Email, and a Switch button. Contact Support opens the support chat (the same page as Customer Service; two Escapes come back). Terms and Conditions and Manage Cookies raise the agreement dialog (Cancel and Confirm) over this page; Escape closes it without choosing. Subscription Email opens a web email form that the bot never fills; Escape comes back. Switch raises a guest-account warning (Reminder, \"you'll lose your in-game progress\", Confirm); Escape closes it. Link Account, Unlink and Delete Account were not pressed: the user's call.")
+                    .notes(
+                            "The account's page, a native Android view the tree reads whole: Guest, its ID, version, and the rows Link Account, Contact Support, Terms and Conditions, Manage Cookies, Unlink, Delete Account, Subscription Email, and a Switch button. Contact Support opens the support chat (the same page as Customer Service; two Escapes come back). Terms and Conditions and Manage Cookies raise the agreement dialog (Cancel and Confirm) over this page; Escape closes it without choosing. Subscription Email opens a web email form that the bot never fills; Escape comes back. Switch raises a guest-account warning (Reminder, \"you'll lose your in-game progress\", Confirm); Escape closes it. Link Account, Unlink and Delete Account were not pressed: the user's call.")
                     .owes(List
                             .of(
                                     "marker: Consent's agreement texts also show on its dialogs; need a part only User Center shows"))
@@ -309,14 +310,15 @@ public final class Screens {
 
     public static final class SceneLoading extends Screen {
         public final Button sceneLoadingText = Button.of(Pictures.SCENE_LOADING_TEXT);
+        public final Mark islandLoadingPattern = Mark.of(Pictures.ISLAND_LOADING_PATTERN);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Scene loading")
-                    .markers(List.of(Pictures.ISLAND_LOADING_PATTERN))
                     .alsoFrom(List.of(Way.of(Screens.WORLD.worldIslandOriginisle)))
-                    .notes("Shown after Logging in... while the first scene loads: a dark wallpaper of monster silhouettes, a running chibi and \"Loading...\" whose letters bounce. No inputs. The marker is the word Loading as cut; it bounces, so a run may miss it.")
+                    .notes(
+                            "Shown after Logging in... while the first scene loads: a dark wallpaper of monster silhouettes, a running chibi and \"Loading...\" whose letters bounce. No inputs. The marker is the word Loading as cut; it bounces, so a run may miss it.")
                     .owes(List.of("marker: the word bounces; a still part of the wallpaper wasn't cut in time"))
                     .shot("screens/SCENE_LOADING.png")
                     .from(Screens.TITLE.titleTapToPlay);
@@ -326,24 +328,23 @@ public final class Screens {
     public static final SceneLoading SCENE_LOADING = new SceneLoading();
 
     public static final class LoggingIn extends Screen {
+        public final Mark loggingInText = Mark.of(Pictures.LOGGING_IN_TEXT);
+
         @Override
         public Setup setup() {
-            return Setup
-                    .named("Logging in")
-                    .markers(List.of(Pictures.LOGGING_IN_TEXT))
-                    .popup()
-                    .shot("screens/LOGGING_IN.png");
+            return Setup.named("Logging in").popup().shot("screens/LOGGING_IN.png");
         }
     }
 
     public static final LoggingIn LOGGING_IN = new LoggingIn();
 
     public static final class PrologueBattle extends Screen {
+        public final Mark prologueTurnPortrait = Mark.of(Pictures.PROLOGUE_TURN_PORTRAIT);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Prologue battle")
-                    .markers(List.of(Pictures.PROLOGUE_TURN_PORTRAIT))
                     .notes("""
                             The first scene after Tap to Play (Logging in..., then Loading..., then this): a scripted boss battle. Reina and Akane face a tentacled boss, Chaos Tyrant.
                             Seen in order: Reina's dialogue; one tap at 540,1780; the fight played on its own (HUD "Round 1/25", turn-order bar with portraits at the top, boss HP bar showing x98, flame slash effects); then Akane's dialogue "Ugh, not again... We lost...". Akane is shown crying in the bottom left.
@@ -381,12 +382,12 @@ public final class Screens {
         public final Button bodyTypeNext = Button.of(Pictures.BODY_TYPE_NEXT);
         public final Button bodyTypeA = Button.of(Pictures.BODY_TYPE_A).tried();
         public final Button bodyTypeB = Button.of(Pictures.BODY_TYPE_B).tried();
+        public final Mark bodyTypeTitle = Mark.of(Pictures.BODY_TYPE_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Select body type")
-                    .markers(List.of(Pictures.BODY_TYPE_TITLE))
                     .notes("""
                             Character creation, first step: "Select Body Type" at the top, two large figures (a short-haired one on the left, a long-haired one on the right) and, below, two head icons and a black Next bar.
                             The picked figure is lit with a yellow outline and its head icon is in colour; the other is greyed. Opens with the left one picked.
@@ -409,12 +410,12 @@ public final class Screens {
         public final Button customizationTabTrait = Button.of(Pictures.CUSTOMIZATION_TAB_TRAIT).tried();
         public final Button customizationShuffle = Button.of(Pictures.CUSTOMIZATION_SHUFFLE).tried();
         public final Button customizationReset = Button.of(Pictures.CUSTOMIZATION_RESET);
+        public final Mark customizationHeader = Mark.of(Pictures.CUSTOMIZATION_HEADER);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Character customization")
-                    .markers(List.of(Pictures.CUSTOMIZATION_HEADER))
                     .back(Screens.CHARACTER_CUSTOMIZATION.customizationBack)
                     .notes("""
                             Character creation, second step, after Next on Select body type. "Customization" at the top, the character running on a meadow, an outfit strip (Visage Try-On), four tabs General / Hair / Face / Trait, a back arrow and a black Next bar at the bottom.
@@ -435,12 +436,12 @@ public final class Screens {
     public static final class ResetConfirm extends Screen {
         public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL).tried();
         public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK).tried();
+        public final Mark resetConfirmText = Mark.of(Pictures.RESET_CONFIRM_TEXT);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Reset confirm")
-                    .markers(List.of(Pictures.RESET_CONFIRM_TEXT))
                     .back(Screens.RESET_CONFIRM.resetConfirmCancel)
                     .popup()
                     .notes("""
@@ -459,12 +460,12 @@ public final class Screens {
         public final Button nameBack = Button.of(Pictures.NAME_BACK);
         public final Button nameField = Button.of(Pictures.NAME_FIELD).tried().submitting().types(Texts.BOTMAKER);
         public final Button nameLetsGo = Button.of(Pictures.NAME_LETS_GO);
+        public final Mark nameTitle = Mark.of(Pictures.NAME_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Character name")
-                    .markers(List.of(Pictures.NAME_TITLE))
                     .back(Screens.CHARACTER_NAME.nameBack)
                     .notes("""
                             Character creation, last step seen: "Character Name" at the top, the character on a meadow, a text field "Enter your name" with a 0/16 count, a back arrow and a yellow LET'S GO! bar.
@@ -505,13 +506,13 @@ public final class Screens {
         public final Button choiceSword = Button
                 .of(Pictures.CHOICE_SWORD)
                 .never("picks the Sword class, once per account; this account chose Staff");
+        public final Mark choiceArrow = Mark.of(Pictures.CHOICE_ARROW);
+        public final Mark upgradeLevelArrow = Mark.of(Pictures.UPGRADE_LEVEL_ARROW).absent();
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Dialogue choice")
-                    .markers(List.of(Pictures.CHOICE_ARROW))
-                    .absent(List.of(Pictures.UPGRADE_LEVEL_ARROW))
                     .back(Screens.DIALOGUE_CHOICE.choiceStaff)
                     .popup()
                     .notes("""
@@ -527,13 +528,12 @@ public final class Screens {
     public static final DialogueChoice DIALOGUE_CHOICE = new DialogueChoice();
 
     public static final class CartBlueprint extends Screen {
-        public final Button cartBlueprintCard = Button.of(Pictures.CART_BLUEPRINT_CARD);
+        public final Button cartBlueprintCard = Button.of(Pictures.CART_BLUEPRINT_CARD).marking();
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Cart blueprint")
-                    .markers(List.of(Pictures.CART_BLUEPRINT_CARD))
                     .notes("""
                             Tutorial: after Akane's chores line, the island shows the Cart's blueprint card with "Open" over it.
                             The red ! badge on the card is skipped by the marker.
@@ -548,13 +548,12 @@ public final class Screens {
     public static final CartBlueprint CART_BLUEPRINT = new CartBlueprint();
 
     public static final class UnlockFurniture extends Screen {
-        public final Button unlockButton = Button.of(Pictures.UNLOCK_BUTTON);
+        public final Button unlockButton = Button.of(Pictures.UNLOCK_BUTTON).marking();
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Unlock furniture")
-                    .markers(List.of(Pictures.UNLOCK_BUTTON))
                     .alsoFrom(List.of(Way.of(Screens.HOUSE.housePackageCard)))
                     .notes("""
                             Cart (Resources): holds all AFK resources.
@@ -571,12 +570,12 @@ public final class Screens {
 
     public static final class FeatureUnlocked extends Screen {
         public final Button tapToContinue = Button.of(Pictures.TAP_TO_CONTINUE).tried();
+        public final Mark unlockedTitle = Mark.of(Pictures.UNLOCKED_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Feature unlocked")
-                    .markers(List.of(Pictures.UNLOCKED_TITLE))
                     .notes("""
                             Shown after any feature is unlocked (first: Cart); the item in the middle changes, the UNLOCKED title stays.
                             Tap to Continue closes it; in the tutorial Akane's dialogue follows.\
@@ -591,15 +590,11 @@ public final class Screens {
     public static final FeatureUnlocked FEATURE_UNLOCKED = new FeatureUnlocked();
 
     public static final class Island extends Screen {
-        public final Button islandCartButton = Button.of(Pictures.ISLAND_CART_BUTTON);
+        public final Button islandCartButton = Button.of(Pictures.ISLAND_CART_BUTTON).marking();
 
         @Override
         public Setup setup() {
-            return Setup
-                    .named("Island")
-                    .markers(List.of(Pictures.ISLAND_CART_BUTTON))
-                    .shot("screens/ISLAND.png")
-                    .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+            return Setup.named("Island").shot("screens/ISLAND.png").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
     }
 
@@ -610,12 +605,12 @@ public final class Screens {
         public final Button cartClaimAll = Button.of(Pictures.CART_CLAIM_ALL);
         public final Button cartRowUpgrade = Button.of(Pictures.CART_ROW_UPGRADE).repeated();
         public final Button cartoutside = Button.beside(Pictures.CART_CLAIM_ALL, 0.0, 2.8);
+        public final Mark cartHeaderPicture = Mark.of(Pictures.CART_HEADER_PICTURE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Cart")
-                    .markers(List.of(Pictures.CART_HEADER_PICTURE))
                     .back(Screens.CART.cartoutside)
                     .notes("""
                             Cart: AFK resources pile up here. Rows: Rolla (+1000/h at Lv.1), Wood and Stone (+50/h each); Raw Ore and Battle Essence unlock at Lv. 3.
@@ -634,21 +629,14 @@ public final class Screens {
     public static final Cart CART = new Cart();
 
     public static final class YouReceived extends Screen {
-        public final Button youReceivedTitle = Button.of(Pictures.YOU_RECEIVED_TITLE);
+        public final Button youReceivedTitle = Button.of(Pictures.YOU_RECEIVED_TITLE).marking();
 
         @Override
         public Setup setup() {
-            return Setup
-                    .named("You received")
-                    .markers(List.of(Pictures.YOU_RECEIVED_TITLE))
-                    .back(Screens.YOU_RECEIVED.youReceivedTitle)
-                    .notes("""
-                            Shows what was just claimed (Cart's Claim All: Rolla, Stone, Wood). A tap on it closes it.
-                            It opens a few seconds after the claim.\
-                            """)
-                    .reached(Reached.TRIED)
-                    .shot("screens/YOU_RECEIVED.png")
-                    .from(Screens.CART.cartClaimAll);
+            return Setup.named("You received").back(Screens.YOU_RECEIVED.youReceivedTitle).notes("""
+                    Shows what was just claimed (Cart's Claim All: Rolla, Stone, Wood). A tap on it closes it.
+                    It opens a few seconds after the claim.\
+                    """).reached(Reached.TRIED).shot("screens/YOU_RECEIVED.png").from(Screens.CART.cartClaimAll);
         }
     }
 
@@ -658,12 +646,12 @@ public final class Screens {
         public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
         public final Button upgradeTabWood = Button.of(Pictures.UPGRADE_TAB_WOOD).tried();
         public final Button upgradeTabStone = Button.of(Pictures.UPGRADE_TAB_STONE).tried();
+        public final Mark upgradeLevelArrow = Mark.of(Pictures.UPGRADE_LEVEL_ARROW);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Furniture upgrade")
-                    .markers(List.of(Pictures.UPGRADE_LEVEL_ARROW))
                     .back(Screens.FURNITURE_UPGRADE.upgradeBack)
                     .notes("""
                             Upgrades one Cart row: tabs Rolla, Wood, Stone along the top; shows the yield and reserve at this level and the next, and the upgrade cost (Wood, Stone, Rolla).
@@ -683,13 +671,10 @@ public final class Screens {
     public static final class House extends Screen {
         public final Button housePackageCard = Button.of(Pictures.HOUSE_PACKAGE_CARD);
         public final Button houseStorageChest = Button.of(Pictures.HOUSE_STORAGE_CHEST);
+        public final Mark houseArchWindow = Mark.of(Pictures.HOUSE_ARCH_WINDOW);
         @Override
         public Setup setup() {
-            return Setup
-                    .named("House")
-                    .markers(List.of(Pictures.HOUSE_ARCH_WINDOW))
-                    .shot("screens/HOUSE.png")
-                    .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+            return Setup.named("House").shot("screens/HOUSE.png").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
     }
 
@@ -725,12 +710,12 @@ public final class Screens {
         public final Button charSkillIcon = Button.of(Pictures.CHAR_SKILL_ICON);
         public final Button navPortal = Button.of(Pictures.NAV_PORTAL);
         public final Button charWeaponStaff = Button.of(Pictures.CHAR_WEAPON_STAFF);
+        public final Mark charClassIcon = Mark.of(Pictures.CHAR_CLASS_ICON);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Character")
-                    .markers(List.of(Pictures.CHAR_CLASS_ICON))
                     .notes("""
                             The character: class emblem (No Class at first), gear slots around the hero (left: weapon; right: three more), a locked slot under the weapon.
                             Skill and Class buttons under the hero; level, rank and stats (ATK, DEF, HP, SPD) below.
@@ -750,12 +735,12 @@ public final class Screens {
 
     public static final class ReplaceGear extends Screen {
         public final Button gearNoviceStaff = Button.of(Pictures.GEAR_NOVICE_STAFF).occasional();
+        public final Mark replaceGearTitle = Mark.of(Pictures.REPLACE_GEAR_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Replace gear")
-                    .markers(List.of(Pictures.REPLACE_GEAR_TITLE))
                     .notes("""
                             Lists the gear that fits the slot pressed on Character; a tap on an item opens Gear details.
                             First item: Novice Staff (Common, power 81, Level 3), given for picking Staff.\
@@ -775,12 +760,12 @@ public final class Screens {
         public final Button gearEquip = Button.of(Pictures.GEAR_EQUIP).leaving();
         public final Button gearReplace = Button.of(Pictures.GEAR_REPLACE).occasional();
         public final Button gearEnhance = Button.of(Pictures.GEAR_ENHANCE).occasional();
+        public final Mark gearShare = Mark.of(Pictures.GEAR_SHARE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Gear details")
-                    .markers(List.of(Pictures.GEAR_SHARE))
                     .alsoFrom(List.of(Way.of(Screens.CHARACTER.charWeaponStaff)))
                     .back(Screens.GEAR_DETAILS.gearReplace)
                     .notes("""
@@ -802,12 +787,12 @@ public final class Screens {
         public final Button skillsLoadoutNext = Button.of(Pictures.SKILLS_LOADOUT_NEXT);
         public final Button skillsWaterShot = Button.of(Pictures.SKILLS_WATER_SHOT);
         public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK).tried();
+        public final Mark skillsLoadoutPencil = Mark.of(Pictures.SKILLS_LOADOUT_PENCIL);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Skills")
-                    .markers(List.of(Pictures.SKILLS_LOADOUT_PENCIL))
                     .back(Screens.SKILLS.upgradeBack)
                     .notes("""
                             Skill loadout: eight skill slots around the hero (four each side), loadout pages with arrows and a pencil to rename.
@@ -828,12 +813,12 @@ public final class Screens {
 
     public static final class TechniqueDetails extends Screen {
         public final Button techniqueEquip = Button.of(Pictures.TECHNIQUE_EQUIP);
+        public final Mark techniquePin = Mark.of(Pictures.TECHNIQUE_PIN);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Technique details")
-                    .markers(List.of(Pictures.TECHNIQUE_PIN))
                     .back(Screens.TECHNIQUE_DETAILS.techniqueEquip)
                     .notes("""
                             One technique: rarity, type (Water Shot: Rare, Single-Hit DMG, 43.6%+3 DMG to 1 enemy within 4 grids), its range grid and source.
@@ -853,12 +838,12 @@ public final class Screens {
     public static final class World extends Screen {
         public final Button worldIslandOriginisle = Button.of(Pictures.WORLD_ISLAND_ORIGINISLE);
         public final Button worldChest = Button.of(Pictures.WORLD_CHEST);
+        public final Mark worldTabSelected = Mark.of(Pictures.WORLD_TAB_SELECTED);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("World")
-                    .markers(List.of(Pictures.WORLD_TAB_SELECTED))
                     .takes(Duration.ofMillis(8600L))
                     .shot("screens/NAV_PORTAL.png")
                     .from(Screens.CHARACTER.navPortal);
@@ -880,11 +865,11 @@ public final class Screens {
         public final Button stageBoarCheck = Button.of(Pictures.STAGE_BOAR_CHECK).occasional();
         public final Button stagePlantIdle = Button.of(Pictures.STAGE_PLANT_IDLE).occasional();
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
+        public final Mark stageQuestIcon = Mark.of(Pictures.STAGE_QUEST_ICON);
         @Override
         public Setup setup() {
             return Setup
                     .named("Stage")
-                    .markers(List.of(Pictures.STAGE_QUEST_ICON))
                     .back(Screens.STAGE.noticeBack)
                     .notes("""
                             The island stage (Originisle I), reached from World's island card through Scene loading.
@@ -915,14 +900,13 @@ public final class Screens {
         public final Button battleStart = Button.of(Pictures.BATTLE_START).leaving();
         public final Button battleLock = Button.of(Pictures.BATTLE_LOCK).tried();
         public final Button battleLoadoutSwap = Button.of(Pictures.BATTLE_LOADOUT_SWAP);
-        public final Button battleCamera = Button.of(Pictures.BATTLE_CAMERA).tried();
+        public final Button battleCamera = Button.of(Pictures.BATTLE_CAMERA).tried().marking();
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Battle")
-                    .markers(List.of(Pictures.BATTLE_CAMERA))
                     .back(Screens.BATTLE.noticeBack)
                     .notes("""
                             The pre-fight view, reached by tapping an enemy on Stage (through the loading wallpaper).
@@ -944,12 +928,12 @@ public final class Screens {
     public static final class StageQuestTracker extends Screen {
         public final Button questClaimButton = Button.of(Pictures.QUEST_CLAIM_BUTTON).tried();
         public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
+        public final Mark questGoalLabel = Mark.of(Pictures.QUEST_GOAL_LABEL);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Stage quest tracker")
-                    .markers(List.of(Pictures.QUEST_GOAL_LABEL))
                     .back(Screens.STAGE_QUEST_TRACKER.keyEsc)
                     .takes(Duration.ofMillis(4200L))
                     .shot("screens/STAGE_QUEST_TRACKER.png")
@@ -962,12 +946,12 @@ public final class Screens {
     public static final class BattleLoadoutSwap extends Screen {
         public final Button loadoutEdit = Button.of(Pictures.LOADOUT_EDIT);
         public final Button loadoutOk = Button.of(Pictures.LOADOUT_OK);
+        public final Mark loadoutRadioEmpty = Mark.of(Pictures.LOADOUT_RADIO_EMPTY);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Battle loadout swap")
-                    .markers(List.of(Pictures.LOADOUT_RADIO_EMPTY))
                     .back(Screens.BATTLE_LOADOUT_SWAP.loadoutOk)
                     .takes(Duration.ofMillis(5900L))
                     .shot("screens/BATTLE_LOADOUT_SWAP.png")
@@ -983,12 +967,12 @@ public final class Screens {
         public final Button loadoutEditEmptySlot = Button.of(Pictures.LOADOUT_EDIT_EMPTY_SLOT).tried();
         public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE).tried();
         public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
+        public final Mark loadoutEditHeader = Mark.of(Pictures.LOADOUT_EDIT_HEADER);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Loadout edit")
-                    .markers(List.of(Pictures.LOADOUT_EDIT_HEADER))
                     .back(Screens.LOADOUT_EDIT.upgradeBack)
                     .takes(Duration.ofMillis(4800L))
                     .shot("screens/LOADOUT_EDIT.png")
@@ -1001,12 +985,12 @@ public final class Screens {
     public static final class QuitConfirm extends Screen {
         public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
         public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK).never("quits the game");
+        public final Mark quitGameQuestion = Mark.of(Pictures.QUIT_GAME_QUESTION);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Quit confirm")
-                    .markers(List.of(Pictures.QUIT_GAME_QUESTION))
                     .back(Screens.QUIT_CONFIRM.resetConfirmCancel)
                     .shot("screens/QUIT_CONFIRM.png")
                     .from(Screens.TITLE.keyEsc);
@@ -1021,12 +1005,12 @@ public final class Screens {
         public final Button profileDish = Button.of(Pictures.PROFILE_DISH);
         public final Button profileQuickHeal = Button.of(Pictures.PROFILE_QUICK_HEAL).never("Spends a healing item; the user's call");
         public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
+        public final Mark profilePlayerIdLabel = Mark.of(Pictures.PROFILE_PLAYER_ID_LABEL);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Top avatar")
-                    .markers(List.of(Pictures.PROFILE_PLAYER_ID_LABEL))
                     .back(Screens.TOP_AVATAR.keyEsc)
                     .notes("""
                             The player's profile, opened by the avatar at the top left of Stage: power, class, player ID, rank, server (Cloudwold), stats, equipped gear, techniques and charms, HP bar.
@@ -1049,11 +1033,12 @@ public final class Screens {
     public static final TopAvatar TOP_AVATAR = new TopAvatar();
 
     public static final class ProfilePowerSearch extends Screen {
+        public final Mark powerBreakdownTitle = Mark.of(Pictures.POWER_BREAKDOWN_TITLE);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Profile power search")
-                    .markers(List.of(Pictures.POWER_BREAKDOWN_TITLE))
                     .takes(Duration.ofMillis(2500L))
                     .shot("screens/PROFILE_POWER_SEARCH.png")
                     .from(Screens.TOP_AVATAR.profilePowerSearch);
@@ -1069,12 +1054,12 @@ public final class Screens {
         public final Button menuUserCenter = Button.of(Pictures.MENU_USER_CENTER);
         public final Button menuSettings = Button.of(Pictures.MENU_SETTINGS);
         public final Button menuNotice = Button.of(Pictures.MENU_NOTICE).tried();
+        public final Mark menuServerTimeLabel = Mark.of(Pictures.MENU_SERVER_TIME_LABEL);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Stage package")
-                    .markers(List.of(Pictures.MENU_SERVER_TIME_LABEL))
                     .back(Screens.STAGE_PACKAGE.upgradeBack)
                     .takes(Duration.ofMillis(6600L))
                     .shot("screens/STAGE_PACKAGE.png")
@@ -1088,12 +1073,12 @@ public final class Screens {
         public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
         public final Button questGo = Button.of(Pictures.QUEST_GO);
         public final Button questTabAchievement = Button.of(Pictures.QUEST_TAB_ACHIEVEMENT);
+        public final Mark guidanceQuestTitle = Mark.of(Pictures.GUIDANCE_QUEST_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Menu quest")
-                    .markers(List.of(Pictures.GUIDANCE_QUEST_TITLE))
                     .back(Screens.MENU_QUEST.upgradeBack)
                     .notes("""
                             Guidance Quest: the quest list, opened by Quest on Stage's menu. Tabs Quest and Achievement at the bottom, back arrow at the bottom left.
@@ -1116,12 +1101,12 @@ public final class Screens {
         public final Button photoZoomIn = Button.of(Pictures.PHOTO_ZOOM_IN).tried();
         public final Button photoZoomOut = Button.of(Pictures.PHOTO_ZOOM_OUT).tried();
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
+        public final Mark photoShutter = Mark.of(Pictures.PHOTO_SHUTTER);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Menu photo")
-                    .markers(List.of(Pictures.PHOTO_SHUTTER))
                     .back(Screens.MENU_PHOTO.noticeBack)
                     .takes(Duration.ofMillis(4300L))
                     .shot("screens/MENU_PHOTO.png")
@@ -1139,12 +1124,12 @@ public final class Screens {
         public final Button ucUserAgreement = Button.of(Pictures.UC_USER_AGREEMENT);
         public final Button ucSelfService = Button.of(Pictures.UC_SELF_SERVICE);
         public final Button ucGiftCode = Button.of(Pictures.UC_GIFT_CODE);
+        public final Mark userCenterTitle = Mark.of(Pictures.USER_CENTER_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Menu user center")
-                    .markers(List.of(Pictures.USER_CENTER_TITLE))
                     .takes(Duration.ofMillis(3400L))
                     .shot("screens/MENU_USER_CENTER.png")
                     .from(Screens.STAGE_PACKAGE.menuUserCenter);
@@ -1157,12 +1142,12 @@ public final class Screens {
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
         public final Button questTabQuest = Button.of(Pictures.QUEST_TAB_QUEST);
         public final Button achievementCard = Button.of(Pictures.ACHIEVEMENT_CARD);
+        public final Mark achievementTitle = Mark.of(Pictures.ACHIEVEMENT_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Achievement")
-                    .markers(List.of(Pictures.ACHIEVEMENT_TITLE))
                     .back(Screens.ACHIEVEMENT.noticeBack)
                     .takes(Duration.ofMillis(4200L))
                     .shot("screens/ACHIEVEMENT.png")
@@ -1175,12 +1160,12 @@ public final class Screens {
     public static final class ReturnHomeConfirm extends Screen {
         public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
         public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
+        public final Mark returnHomeText = Mark.of(Pictures.RETURN_HOME_TEXT);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Return home confirm")
-                    .markers(List.of(Pictures.RETURN_HOME_TEXT))
                     .back(Screens.RETURN_HOME_CONFIRM.resetConfirmCancel)
                     .takes(Duration.ofMillis(4300L))
                     .shot("screens/QUEST_GO.png")
@@ -1195,12 +1180,12 @@ public final class Screens {
         public final Button statsTabDetails = Button.of(Pictures.STATS_TAB_DETAILS);
         public final Button statsMainHeading = Button.of(Pictures.STATS_MAIN_HEADING);
         public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
+        public final Mark characterStatsTitle = Mark.of(Pictures.CHARACTER_STATS_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Character stats")
-                    .markers(List.of(Pictures.CHARACTER_STATS_TITLE))
                     .back(Screens.CHARACTER_STATS.keyEsc)
                     .shot("screens/CHARACTER_STATS.png")
                     .from(Screens.TOP_AVATAR.profileStatsSearch);
@@ -1219,14 +1204,11 @@ public final class Screens {
         public final Button stagePackage = Button.of(Pictures.STAGE_PACKAGE);
         public final Button homeSideIcon = Button.of(Pictures.HOME_SIDE_ICON);
         public final Button stageDownloadReward = Button.of(Pictures.STAGE_DOWNLOAD_REWARD).occasional();
+        public final Mark navHomeSelected = Mark.of(Pictures.NAV_HOME_SELECTED);
 
         @Override
         public Setup setup() {
-            return Setup
-                    .named("Home")
-                    .markers(List.of(Pictures.NAV_HOME_SELECTED))
-                    .shot("screens/HOME.png")
-                    .from(Screens.STAGE.noticeBack);
+            return Setup.named("Home").shot("screens/HOME.png").from(Screens.STAGE.noticeBack);
         }
     }
 
@@ -1237,12 +1219,12 @@ public final class Screens {
         public final Button enhanceDo = Button.of(Pictures.ENHANCE_DO).tried();
         public final Button enhanceResonance = Button.of(Pictures.ENHANCE_RESONANCE);
         public final Button enhanceTabGoals = Button.of(Pictures.ENHANCE_TAB_GOALS);
+        public final Mark enhanceGearTitle = Mark.of(Pictures.ENHANCE_GEAR_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Enhance")
-                    .markers(List.of(Pictures.ENHANCE_GEAR_TITLE))
                     .back(Screens.ENHANCE.noticeBack)
                     .takes(Duration.ofMillis(7100L))
                     .shot("screens/ENHANCE.png")
@@ -1256,12 +1238,12 @@ public final class Screens {
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
         public final Button goalIncomplete = Button.of(Pictures.GOAL_INCOMPLETE);
         public final Button enhanceTabEnhance = Button.of(Pictures.ENHANCE_TAB_ENHANCE).leaving();
+        public final Mark enhancementGoalsTitle = Mark.of(Pictures.ENHANCEMENT_GOALS_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Enhancement goals")
-                    .markers(List.of(Pictures.ENHANCEMENT_GOALS_TITLE))
                     .back(Screens.ENHANCEMENT_GOALS.noticeBack)
                     .takes(Duration.ofMillis(2700L))
                     .shot("screens/GOALS.png")
@@ -1275,12 +1257,12 @@ public final class Screens {
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
         public final Button resonanceStatistics = Button.of(Pictures.RESONANCE_STATISTICS);
         public final Button resonanceRowIcon = Button.of(Pictures.RESONANCE_ROW_ICON);
+        public final Mark gearResonanceTitle = Mark.of(Pictures.GEAR_RESONANCE_TITLE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Resonance")
-                    .markers(List.of(Pictures.GEAR_RESONANCE_TITLE))
                     .back(Screens.RESONANCE.noticeBack)
                     .takes(Duration.ofMillis(2700L))
                     .shot("screens/RESONANCE.png")

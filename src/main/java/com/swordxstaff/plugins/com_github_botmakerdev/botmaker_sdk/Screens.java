@@ -1146,10 +1146,16 @@ public final class Screens {
     public static final MenuUserCenter MENU_USER_CENTER = new MenuUserCenter();
 
     public static final class Achievement extends Screen {
+        public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
+        public final Button questTabQuest = Button.of(Pictures.QUEST_TAB_QUEST);
+        public final Button achievementCard = Button.of(Pictures.ACHIEVEMENT_CARD);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Achievement")
+                    .markers(List.of(Pictures.ACHIEVEMENT_TITLE))
+                    .back(Screens.ACHIEVEMENT.noticeBack)
                     .takes(Duration.ofMillis(4200L))
                     .shot("screens/ACHIEVEMENT.png")
                     .from(Screens.MENU_QUEST.questTabAchievement);

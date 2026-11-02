@@ -302,6 +302,12 @@ public final class Pictures {
             .at(new Rect(553, 844, 367, 98));
     public static final ImageTemplate UC_GIFT_CODE = new ImageTemplate("images/uc_gift_code.png")
             .at(new Rect(340, 1272, 400, 86));
+    public static final ImageTemplate ACHIEVEMENT_TITLE = new ImageTemplate("images/achievement_title.png")
+            .at(new Rect(55, 45, 425, 75));
+    public static final ImageTemplate QUEST_TAB_QUEST = new ImageTemplate("images/quest_tab_quest.png")
+            .at(new Rect(235, 1782, 395, 96));
+    public static final ImageTemplate ACHIEVEMENT_CARD = new ImageTemplate("images/achievement_card.png")
+            .at(new Rect(90, 220, 740, 330));
     private Pictures() {
     }
 }

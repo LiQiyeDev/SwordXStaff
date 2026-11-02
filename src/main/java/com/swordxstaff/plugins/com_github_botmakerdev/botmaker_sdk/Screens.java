@@ -1229,7 +1229,7 @@ public final class Screens {
 
     public static final class Enhance extends Screen {
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
-        public final Button enhanceDo = Button.of(Pictures.ENHANCE_DO);
+        public final Button enhanceDo = Button.of(Pictures.ENHANCE_DO).tried();
         public final Button enhanceResonance = Button.of(Pictures.ENHANCE_RESONANCE);
         public final Button enhanceTabGoals = Button.of(Pictures.ENHANCE_TAB_GOALS);
 

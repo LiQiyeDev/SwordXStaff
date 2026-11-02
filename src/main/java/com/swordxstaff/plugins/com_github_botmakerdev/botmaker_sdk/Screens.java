@@ -432,6 +432,14 @@ public final class Screens {
                     .named("Character name")
                     .markers(List.of(Pictures.NAME_TITLE))
                     .back(Screens.CHARACTER_NAME.nameBack)
+                    .notes("""
+                            Character creation, last step seen: "Character Name" at the top, the character on a meadow, a text field "Enter your name" with a 0/16 count, a back arrow and a yellow LET'S GO! bar.
+                            Tapping the field opens Android's keyboard (the frame shrinks to about 1006 px tall; the field becomes a white bar above the keys) and hides LET'S GO!. The game's key tool typed lowercase and mangled "BotMaker" (shift taps landed wrong); text sent by adb "input text BotMaker" was typed correctly. Enter closed the keyboard and the name showed in the game's field.
+                            The back arrow looks like customization_back and both are found here.
+                            Pressing LET'S GO! commits the name on the account (name BotMaker, chosen by the user).\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List.of("LET'S GO! (leaves, about to be pressed)", "the back arrow (untried)"))
                     .shot("screens/CHARACTER_NAME.png")
                     .from(Screens.CHARACTER_CUSTOMIZATION.customizationNext);
         }

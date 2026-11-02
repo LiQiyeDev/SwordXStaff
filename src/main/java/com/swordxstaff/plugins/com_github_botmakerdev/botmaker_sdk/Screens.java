@@ -39,6 +39,8 @@ public final class Screens {
     public static final Consent CONSENT = new Consent();
 
     public static final class TutorialDialogue extends Screen {
+        public final Button dialoguePanel = Button.of(Pictures.DIALOGUE_PANEL);
+
         @Override
         public Setup setup() {
             return Setup
@@ -337,6 +339,15 @@ public final class Screens {
     }
 
     public static final PrologueBattle PROLOGUE_BATTLE = new PrologueBattle();
+
+    public static final class PrologueNarration extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Prologue narration").from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
+        }
+    }
+
+    public static final PrologueNarration PROLOGUE_NARRATION = new PrologueNarration();
 
     private Screens() {
     }

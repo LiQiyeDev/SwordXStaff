@@ -225,6 +225,8 @@ public final class Pictures {
             .at(new Rect(172, 700, 84, 40));
     public static final ImageTemplate QUEST_CLAIM_BUTTON = new ImageTemplate("images/quest_claim_button.png")
             .at(new Rect(140, 1302, 800, 62));
+    public static final ImageTemplate STAGE_PLANT_MONSTER = new ImageTemplate("images/stage_plant_monster.png")
+            .at(new Rect(528, 1372, 66, 26));
     private Pictures() {
     }
 }

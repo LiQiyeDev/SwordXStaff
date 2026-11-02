@@ -999,6 +999,11 @@ public final class Screens {
     public static final QuitConfirm QUIT_CONFIRM = new QuitConfirm();
 
     public static final class TopAvatar extends Screen {
+        public final Button profilePowerSearch = Button.of(Pictures.PROFILE_POWER_SEARCH);
+        public final Button profileStatsSearch = Button.of(Pictures.PROFILE_STATS_SEARCH);
+        public final Button profileDish = Button.of(Pictures.PROFILE_DISH);
+        public final Button profileQuickHeal = Button.of(Pictures.PROFILE_QUICK_HEAL);
+
         @Override
         public Setup setup() {
             return Setup

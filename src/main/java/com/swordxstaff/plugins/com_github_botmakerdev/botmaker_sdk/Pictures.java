@@ -248,6 +248,16 @@ public final class Pictures {
             .at(new Rect(410, 848, 265, 62));
     public static final ImageTemplate STAGE_PLANT_IDLE = new ImageTemplate("images/stage_plant_idle.png")
             .at(new Rect(928, 915, 125, 112)).frames(5);
+    public static final ImageTemplate PROFILE_STATS_LABEL = new ImageTemplate("images/profile_stats_label.png")
+            .at(new Rect(102, 850, 110, 36));
+    public static final ImageTemplate PROFILE_POWER_SEARCH = new ImageTemplate("images/profile_power_search.png")
+            .at(new Rect(195, 282, 40, 40));
+    public static final ImageTemplate PROFILE_STATS_SEARCH = new ImageTemplate("images/profile_stats_search.png")
+            .at(new Rect(938, 848, 40, 40));
+    public static final ImageTemplate PROFILE_DISH = new ImageTemplate("images/profile_dish.png")
+            .at(new Rect(130, 1555, 380, 80));
+    public static final ImageTemplate PROFILE_QUICK_HEAL = new ImageTemplate("images/profile_quick_heal.png")
+            .at(new Rect(575, 1555, 380, 80));
     private Pictures() {
     }
 }

@@ -935,6 +935,19 @@ public final class Screens {
 
     public static final StageQuestTracker STAGE_QUEST_TRACKER = new StageQuestTracker();
 
+    public static final class BattleLoadoutSwap extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Battle loadout swap")
+                    .takes(Duration.ofMillis(5900L))
+                    .shot("screens/BATTLE_LOADOUT_SWAP.png")
+                    .from(Screens.BATTLE.battleLoadoutSwap);
+        }
+    }
+
+    public static final BattleLoadoutSwap BATTLE_LOADOUT_SWAP = new BattleLoadoutSwap();
+
     private Screens() {
     }
 }

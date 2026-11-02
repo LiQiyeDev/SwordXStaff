@@ -17,7 +17,8 @@ public final class Screens {
     public static final class Consent extends Screen {
         public final Button confirm = Button.of(Elements.CONFIRM).tried();
         public final Button privacyPolicy = Button.of(Elements.PRIVACY_POLICY).info();
-        public final Button cancel = Button.of(Elements.CANCEL);
+        public final Button cancel = Button.of(Elements.CANCEL)
+                .never("Declines the agreement and quits the game to Android's launcher, tried 2026-11-02");
         public final Button userAgreement = Button.of(Elements.USER_AGREEMENT).info();
 
         @Override

@@ -81,18 +81,18 @@ public final class Screens {
 
     public static final UserAgreement USER_AGREEMENT = new UserAgreement();
 
-    public static final class LoadingPatch extends Screen {
+    public static final class StartupLoading extends Screen {
         @Override
         public Setup setup() {
             return Setup
-                    .named("Loading patch")
+                    .named("Startup loading")
                     .markers(List.of(Pictures.STARTUP_LOADING_BAR_END))
                     .shot("screens/LOADING_PATCH.png")
                     .from(Screens.CONSENT.confirm);
         }
     }
 
-    public static final LoadingPatch LOADING_PATCH = new LoadingPatch();
+    public static final StartupLoading STARTUP_LOADING = new StartupLoading();
 
     private Screens() {
     }

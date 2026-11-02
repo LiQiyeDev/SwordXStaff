@@ -167,8 +167,10 @@ public final class Screens {
                     .named("Servers")
                     .markers(List.of(Pictures.SERVERS_TITLE))
                     .back(Screens.SERVERS.serversRowSelected)
-                    .notes("Tapping the highlighted server closes the list and returns to Title. Green dot Rcmd, orange Crowded, red Full, grey Maintenance. Account plays on Cloudwold, the game's default.")
-                    .owes(List.of("servers_search: cut failed, panel was still moving"))
+                    .notes("Two tabs: Character List (this account's character on Cloudwold, Lv. 1, 601, tagged Recent) and Available (every server by name with a status dot, a search box and its magnifier below). Dots: green Rcmd, orange Crowded, red Full, grey Maintenance. Tapping the highlighted server closes the list and returns to Title. The account plays on Cloudwold, the game's default. The mouse wheel does not scroll the Available list (30 notches moved it 2 px); more rows sit under the sixth.")
+                    .owes(List
+                            .of("Available list: scrolling it needs a drag, the wheel does nothing",
+                                    "servers_search, servers_search_go: not tried"))
                     .shot("screens/SERVERS.png")
                     .from(Screens.TITLE.titleServers);
         }

@@ -111,6 +111,8 @@ public final class Pictures {
             .at(new Rect(215, 1765, 835, 110));
     public static final ImageTemplate NAME_BACK = new ImageTemplate("images/name_back.png")
             .at(new Rect(20, 1765, 150, 110));
+    public static final ImageTemplate CHOICE_BAR = new ImageTemplate("images/choice_bar.png")
+            .at(new Rect(85, 1430, 910, 100));
     private Pictures() {
     }
 }

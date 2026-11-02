@@ -469,7 +469,12 @@ public final class Screens {
     public static final class DialogueChoice extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("Dialogue choice").from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
+            return Setup
+                    .named("Dialogue choice")
+                    .markers(List.of(Pictures.CHOICE_BAR))
+                    .popup()
+                    .shot("screens/DIALOGUE_CHOICE.png")
+                    .from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
         }
     }
 

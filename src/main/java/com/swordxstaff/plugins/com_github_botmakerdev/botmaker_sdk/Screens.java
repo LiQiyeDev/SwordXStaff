@@ -1209,7 +1209,7 @@ public final class Screens {
         public final Button navLockedLeft = Button.of(Pictures.NAV_LOCKED_LEFT).locked(Pictures.NAV_LOCKED_LEFT);
         public final Button navLockedRight = Button.of(Pictures.NAV_LOCKED_RIGHT).locked(Pictures.NAV_LOCKED_RIGHT);
         public final Button navPortal = Button.of(Pictures.NAV_PORTAL);
-        public final Button topAvatar = Button.of(Pictures.TOP_AVATAR);
+        public final Button topAvatar = Button.of(Pictures.TOP_AVATAR).tried();
         public final Button stageQuestTracker = Button.of(Pictures.STAGE_QUEST_TRACKER);
         public final Button stagePackage = Button.of(Pictures.STAGE_PACKAGE);
         public final Button homeSideIcon = Button.of(Pictures.HOME_SIDE_ICON).tried();

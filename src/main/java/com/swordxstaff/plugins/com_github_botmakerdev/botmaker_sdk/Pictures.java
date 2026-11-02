@@ -317,8 +317,7 @@ public final class Pictures {
             .at(new Rect(265, 1748, 135, 145));
     public static final ImageTemplate NAV_LOCKED_RIGHT = new ImageTemplate("images/nav_locked_right.png")
             .at(new Rect(692, 1748, 140, 145));
-    public static final ImageTemplate HOME_SIDE_ICON = new ImageTemplate("images/home_side_icon.png")
-            .at(new Rect(12, 1035, 128, 128));
+    public static final ImageTemplate HOME_SIDE_ICON = new ImageTemplate("images/home_side_icon.png").at(new Rect(57, 1080, 40, 40));
     public static final ImageTemplate GEAR_REPLACE = new ImageTemplate("images/gear_replace.png").at(new Rect(230, 1298, 240, 55));
     public static final ImageTemplate GEAR_ENHANCE = new ImageTemplate("images/gear_enhance.png")
             .at(new Rect(560, 1295, 310, 68));

@@ -403,6 +403,15 @@ public final class Screens {
 
     public static final CharacterCustomization CHARACTER_CUSTOMIZATION = new CharacterCustomization();
 
+    public static final class ResetConfirm extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Reset confirm").from(Screens.CHARACTER_CUSTOMIZATION.customizationReset);
+        }
+    }
+
+    public static final ResetConfirm RESET_CONFIRM = new ResetConfirm();
+
     private Screens() {
     }
 }

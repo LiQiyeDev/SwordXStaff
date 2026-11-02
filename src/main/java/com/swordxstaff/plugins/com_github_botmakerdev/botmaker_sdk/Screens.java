@@ -852,10 +852,7 @@ public final class Screens {
     public static final class Stage extends Screen {
         @Override
         public Setup setup() {
-            return Setup
-                    .named("Stage")
-                    .alsoFrom(List.of(Way.onItsOwn(Screens.SCENE_LOADING)))
-                    .from(Screens.WORLD.worldIslandOriginisle);
+            return Setup.named("Stage").after(Screens.SCENE_LOADING);
         }
     }
 

@@ -128,7 +128,7 @@ public final class Screens {
         public final Button titleSettings = Button.of(Pictures.TITLE_SETTINGS);
         public final Button titleFollowUs = Button.of(Pictures.TITLE_FOLLOW_US);
         public final Button titleCustomerService = Button.of(Pictures.TITLE_CUSTOMER_SERVICE);
-        public final Button titleNotice = Button.of(Pictures.TITLE_NOTICE);
+        public final Button titleNotice = Button.of(Pictures.TITLE_NOTICE).tried();
         public final Button titleUserCenter = Button.of(Pictures.TITLE_USER_CENTER);
         public final Button titleSubmitLogs = Button.of(Pictures.TITLE_SUBMIT_LOGS).never("Sends logs to the game's maker; no bot use");
         public final Button titleRepairClient = Button.of(Pictures.TITLE_REPAIR_CLIENT).never("Can re-download the game's files; only for a broken install");

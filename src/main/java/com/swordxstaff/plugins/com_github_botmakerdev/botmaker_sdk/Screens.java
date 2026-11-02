@@ -447,6 +447,15 @@ public final class Screens {
 
     public static final CharacterName CHARACTER_NAME = new CharacterName();
 
+    public static final class AethyrisArrival extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Aethyris arrival").from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
+        }
+    }
+
+    public static final AethyrisArrival AETHYRIS_ARRIVAL = new AethyrisArrival();
+
     private Screens() {
     }
 }

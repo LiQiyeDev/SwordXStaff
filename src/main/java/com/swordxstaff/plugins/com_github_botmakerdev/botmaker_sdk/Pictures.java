@@ -21,6 +21,24 @@ public final class Pictures {
             "images/notification_permission_bell.png").at(new Rect(615, 208, 50, 38));
     public static final ImageTemplate STARTUP_LOADING_BAR_END = new ImageTemplate("images/startup_loading_bar_end.png")
             .at(new Rect(512, 576, 18, 22));
+    public static final ImageTemplate NOTICE_TITLE = new ImageTemplate("images/notice_title.png")
+            .at(new Rect(600, 62, 80, 28));
+    public static final ImageTemplate NOTICE_BACK = new ImageTemplate("images/notice_back.png")
+            .at(new Rect(462, 669, 60, 38));
+    public static final ImageTemplate NOTICE_TAB_SYSTEM = new ImageTemplate("images/notice_tab_system.png")
+            .at(new Rect(610, 104, 60, 24));
+    public static final ImageTemplate NOTICE_TAB_NEWS = new ImageTemplate("images/notice_tab_news.png")
+            .at(new Rect(730, 104, 54, 24));
+    public static final ImageTemplate NOTICE_ITEM_1 = new ImageTemplate("images/notice_item_1.png")
+            .at(new Rect(471, 139, 104, 62));
+    public static final ImageTemplate NOTICE_ITEM_2 = new ImageTemplate("images/notice_item_2.png")
+            .at(new Rect(471, 207, 104, 60));
+    public static final ImageTemplate NOTICE_ITEM_3 = new ImageTemplate("images/notice_item_3.png")
+            .at(new Rect(471, 275, 104, 60));
+    public static final ImageTemplate NOTICE_ITEM_4 = new ImageTemplate("images/notice_item_4.png")
+            .at(new Rect(471, 342, 104, 60));
+    public static final ImageTemplate NOTICE_HIDE_TODAY = new ImageTemplate("images/notice_hide_today.png")
+            .at(new Rect(572, 604, 138, 20));
 
     private Pictures() {
     }

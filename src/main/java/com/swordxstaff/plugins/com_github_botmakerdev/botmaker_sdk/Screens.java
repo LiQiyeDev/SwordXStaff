@@ -94,6 +94,29 @@ public final class Screens {
 
     public static final StartupLoading STARTUP_LOADING = new StartupLoading();
 
+    public static final class Notice extends Screen {
+        public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
+        public final Button noticeTabSystem = Button.of(Pictures.NOTICE_TAB_SYSTEM);
+        public final Button noticeTabNews = Button.of(Pictures.NOTICE_TAB_NEWS);
+        public final Button noticeHideToday = Button.of(Pictures.NOTICE_HIDE_TODAY);
+        public final Button noticeItem1 = Button.of(Pictures.NOTICE_ITEM_1).occasional();
+        public final Button noticeItem2 = Button.of(Pictures.NOTICE_ITEM_2).occasional();
+        public final Button noticeItem3 = Button.of(Pictures.NOTICE_ITEM_3).occasional();
+        public final Button noticeItem4 = Button.of(Pictures.NOTICE_ITEM_4).occasional();
+
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Notice")
+                    .markers(List.of(Pictures.NOTICE_TITLE))
+                    .back(Screens.NOTICE.noticeBack)
+                    .popup()
+                    .shot("screens/NOTICE.png");
+        }
+    }
+
+    public static final Notice NOTICE = new Notice();
+
     private Screens() {
     }
 }

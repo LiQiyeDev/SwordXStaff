@@ -891,6 +891,15 @@ public final class Screens {
             return Setup
                     .named("Battle")
                     .markers(List.of(Pictures.BATTLE_CAMERA))
+                    .notes("""
+                            The pre-fight view, reached by tapping an enemy on Stage (through the loading wallpaper).
+                            Shows Round 0/15, the enemy above, the hero below, Start Battle, the camera and lock buttons, and Loadout 1 with its skill slots.
+                            Start Battle plays the fight by itself: the first boar fight was won in about 5 s, then the game loaded back to Stage.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List
+                            .of("fight screens — the running fight and any result screen went by inside the loading; not seen",
+                                    "battle_camera, battle_lock, battle_loadout_swap — untried"))
                     .takes(Duration.ofMillis(4500L))
                     .shot("screens/BATTLE.png")
                     .from(Screens.STAGE.stageBoar);

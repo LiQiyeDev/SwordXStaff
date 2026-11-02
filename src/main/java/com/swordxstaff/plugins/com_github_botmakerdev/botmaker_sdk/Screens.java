@@ -713,6 +713,7 @@ public final class Screens {
         public final Button slotRightTop = Button.beside(Pictures.CHAR_SKILL_ICON, 8.61, -10.66);
         public final Button slotRightMiddle = Button.beside(Pictures.CHAR_SKILL_ICON, 9.36, -6.96);
         public final Button slotRightBottom = Button.beside(Pictures.CHAR_SKILL_ICON, 8.61, -3.21);
+        public final Button charClassIcon2 = Button.of(Pictures.CHAR_CLASS_ICON).tried();
 
         @Override
         public Setup setup() {

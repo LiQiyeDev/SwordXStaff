@@ -299,7 +299,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Scene loading")
-                    .markers(List.of(Pictures.SCENE_LOADING_TEXT))
+                    .markers(List.of(Pictures.SCENE_LOADING_TEXT, Pictures.ISLAND_LOADING_PATTERN))
                     .alsoFrom(List.of(Way.of(Screens.WORLD.worldIslandOriginisle)))
                     .notes("Shown after Logging in... while the first scene loads: a dark wallpaper of monster silhouettes, a running chibi and \"Loading...\" whose letters bounce. No inputs. The marker is the word Loading as cut; it bounces, so a run may miss it.")
                     .owes(List.of("marker: the word bounces; a still part of the wallpaper wasn't cut in time"))

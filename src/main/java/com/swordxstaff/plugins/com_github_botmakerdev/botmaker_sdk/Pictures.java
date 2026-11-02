@@ -1,6 +1,8 @@
 package com.swordxstaff.plugins.com_github_botmakerdev.botmaker_sdk;
 
 import com.botmaker.sdk.api.bot.SdkValue;
+import com.botmaker.sdk.api.vision.ImageTemplate;
+import com.botmaker.sdk.api.geometry.Rect;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -9,6 +11,9 @@ import com.botmaker.sdk.api.bot.SdkValue;
  */
 @SdkValue(SdkValue.Id.PICTURES)
 public final class Pictures {
+    public static final ImageTemplate DIALOGUE_NEXT_ARROW = new ImageTemplate("images/dialogue_next_arrow.png")
+            .at(new Rect(632, 699, 17, 16));
+
     private Pictures() {
     }
 }

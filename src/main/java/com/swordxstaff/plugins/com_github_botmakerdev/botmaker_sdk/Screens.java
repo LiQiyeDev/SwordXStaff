@@ -28,6 +28,19 @@ public final class Screens {
 
     public static final Consent CONSENT = new Consent();
 
+    public static final class TutorialDialogue extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Tutorial dialogue")
+                    .markers(List.of(Pictures.DIALOGUE_NEXT_ARROW))
+                    .popup()
+                    .shot("screens/TUTORIAL_DIALOGUE.png");
+        }
+    }
+
+    public static final TutorialDialogue TUTORIAL_DIALOGUE = new TutorialDialogue();
+
     private Screens() {
     }
 }

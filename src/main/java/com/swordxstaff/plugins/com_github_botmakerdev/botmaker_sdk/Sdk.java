@@ -56,7 +56,7 @@ public final class Sdk {
 
     @SdkValue(SdkValue.Id.SCREEN)
     public static Size screen() {
-        return new Size(0, 0);
+        return new Size(1280, 720);
     }
 
     private Sdk() {

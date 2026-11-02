@@ -45,6 +45,12 @@ public final class Screens {
                     .named("Tutorial dialogue")
                     .markers(List.of(Pictures.DIALOGUE_PANEL))
                     .popup()
+                    .notes("""
+                            A speech box over the scene: name tag, one line of text, a bobbing arrow at the bottom centre. Seen over the Prologue battle at 1080x1920: first Reina "The final showdown again. Let's do this.", then Akane "Ugh, not again... We lost...".
+                            Marker: dialogue_panel at 60,1730 (900x110); the arrow bobs and matches only at 0.91.
+                            One tap at 540,1780 moved on from the first line (seen once; not tried at the second).\
+                            """)
+                    .reached(Reached.SURVEYED)
                     .at(new Point(340, 0))
                     .shot("screens/TUTORIAL_DIALOGUE.png");
         }

@@ -82,7 +82,7 @@ public final class Screens {
     public static final UserAgreement USER_AGREEMENT = new UserAgreement();
 
     public static final class NotificationPermission extends Screen {
-        public final Button allow = Button.of(Elements.PERMISSION_ALLOW_BUTTON);
+        public final Button allow = Button.of(Elements.PERMISSION_ALLOW_BUTTON).never("The bot wants no notifications; Don't allow is its answer");
         public final Button donTAllow = Button.of(Elements.PERMISSION_DENY_BUTTON);
 
         @Override

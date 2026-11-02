@@ -849,6 +849,15 @@ public final class Screens {
 
     public static final World WORLD = new World();
 
+    public static final class Stage extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Stage").from(Screens.WORLD.worldIslandOriginisle);
+        }
+    }
+
+    public static final Stage STAGE = new Stage();
+
     private Screens() {
     }
 }

@@ -19,6 +19,8 @@ public final class Pictures {
             .at(new Rect(698, 12, 110, 42));
     public static final ImageTemplate NOTIFICATION_PERMISSION_BELL = new ImageTemplate(
             "images/notification_permission_bell.png").at(new Rect(615, 208, 50, 38));
+    public static final ImageTemplate STARTUP_LOADING_BAR_END = new ImageTemplate("images/startup_loading_bar_end.png")
+            .at(new Rect(512, 576, 18, 22));
 
     private Pictures() {
     }

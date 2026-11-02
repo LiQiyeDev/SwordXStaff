@@ -84,7 +84,11 @@ public final class Screens {
     public static final class LoadingPatch extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("Loading patch").from(Screens.CONSENT.confirm);
+            return Setup
+                    .named("Loading patch")
+                    .markers(List.of(Pictures.STARTUP_LOADING_BAR_END))
+                    .shot("screens/LOADING_PATCH.png")
+                    .from(Screens.CONSENT.confirm);
         }
     }
 

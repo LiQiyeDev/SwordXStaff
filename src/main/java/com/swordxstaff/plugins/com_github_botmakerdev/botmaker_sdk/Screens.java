@@ -405,9 +405,16 @@ public final class Screens {
     public static final CharacterCustomization CHARACTER_CUSTOMIZATION = new CharacterCustomization();
 
     public static final class ResetConfirm extends Screen {
+        public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
+        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
+
         @Override
         public Setup setup() {
-            return Setup.named("Reset confirm").from(Screens.CHARACTER_CUSTOMIZATION.customizationReset);
+            return Setup
+                    .named("Reset confirm")
+                    .back(Screens.RESET_CONFIRM.resetConfirmCancel)
+                    .popup()
+                    .from(Screens.CHARACTER_CUSTOMIZATION.customizationReset);
         }
     }
 

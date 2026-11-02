@@ -185,6 +185,8 @@ public final class Pictures {
             .at(new Rect(870, 366, 30, 32));
     public static final ImageTemplate TECHNIQUE_EQUIP = new ImageTemplate("images/technique_equip.png")
             .at(new Rect(200, 1372, 290, 56));
+    public static final ImageTemplate TECHNIQUE_HEADER_ICONS = new ImageTemplate("images/technique_header_icons.png")
+            .at(new Rect(798, 364, 104, 36));
     private Pictures() {
     }
 }

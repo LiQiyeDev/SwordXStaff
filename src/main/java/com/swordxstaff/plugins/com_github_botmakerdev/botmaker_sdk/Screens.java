@@ -745,6 +745,9 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Replace gear")
+                    .alsoFrom(List
+                            .of(Way.of(Screens.CHARACTER.slotRightTop), Way.of(Screens.CHARACTER.slotRightMiddle),
+                                    Way.of(Screens.CHARACTER.slotRightBottom)))
                     .notes("""
                             Lists the gear that fits the slot pressed on Character; a tap on an item opens Gear details.
                             First item: Novice Staff (Common, power 81, Level 3), given for picking Staff.\
@@ -770,7 +773,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Gear details")
-                    .alsoFrom(List.of(Way.of(Screens.CHARACTER.charWeaponStaff)))
+                    .alsoFrom(List.of(Way.of(Screens.CHARACTER.charWeaponStaff), Way.of(Screens.CHARACTER.slotWeapon)))
                     .notes("""
                             One piece of gear: rarity, power, level, stats; Equip puts it on and goes back to Character.
                             Share and lock icons at the top right; what the lock does is not tried yet.\

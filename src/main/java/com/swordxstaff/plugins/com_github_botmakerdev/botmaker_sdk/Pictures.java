@@ -97,8 +97,7 @@ public final class Pictures {
             .at(new Rect(965, 835, 90, 85));
     public static final ImageTemplate RESET_CONFIRM_TEXT = new ImageTemplate("images/reset_confirm_text.png")
             .at(new Rect(250, 855, 580, 55));
-    public static final ImageTemplate RESET_CONFIRM_CANCEL = new ImageTemplate("images/reset_confirm_cancel.png")
-            .at(new Rect(155, 1055, 370, 95));
+    public static final ImageTemplate RESET_CONFIRM_CANCEL = new ImageTemplate("images/reset_confirm_cancel.png").at(new Rect(255, 1066, 135, 44));
     public static final ImageTemplate RESET_CONFIRM_OK = new ImageTemplate("images/reset_confirm_ok.png")
             .at(new Rect(560, 1055, 360, 95));
     public static final ImageTemplate CUSTOMIZATION_HEADER = new ImageTemplate("images/customization_header.png")

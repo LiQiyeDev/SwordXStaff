@@ -350,6 +350,8 @@ public final class Pictures {
             .at(new Rect(240, 1587, 605, 80));
     public static final ImageTemplate RESONANCE_ROW_ICON = new ImageTemplate("images/resonance_row_icon.png")
             .at(new Rect(48, 1368, 205, 155));
+    public static final ImageTemplate REPLACE_GEAR_TITLE = new ImageTemplate("images/replace_gear_title.png")
+            .at(new Rect(392, 293, 296, 66));
     private Pictures() {
     }
 }

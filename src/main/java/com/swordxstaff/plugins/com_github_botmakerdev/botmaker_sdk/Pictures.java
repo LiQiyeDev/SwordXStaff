@@ -241,6 +241,8 @@ public final class Pictures {
             "images/loadout_edit_technique_tab.png").at(new Rect(145, 1178, 160, 40));
     public static final ImageTemplate LOADOUT_EDIT_EMPTY_SLOT = new ImageTemplate("images/loadout_edit_empty_slot.png")
             .at(new Rect(868, 333, 144, 144));
+    public static final ImageTemplate STAGE_BOAR_IDLE = new ImageTemplate("images/stage_boar_idle.png")
+            .at(new Rect(325, 1005, 115, 140)).frames(3);
     private Pictures() {
     }
 }

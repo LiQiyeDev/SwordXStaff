@@ -212,6 +212,9 @@ public final class Screens {
             return Setup
                     .named("Customer Service")
                     .back(Screens.CUSTOMER_SERVICE.supportBack)
+                    .notes(
+                            "Live chat with the game's support, full screen with Android's keyboard up. The bot never types or sends here.")
+                    .reached(Reached.SURVEYED)
                     .from(Screens.TITLE.titleCustomerService);
         }
     }

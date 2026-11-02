@@ -124,7 +124,7 @@ public final class Screens {
 
     public static final class Title extends Screen {
         public final Button titleTapToPlay = Button.of(Pictures.TITLE_TAP_TO_PLAY);
-        public final Button titleServers = Button.of(Pictures.TITLE_SERVERS);
+        public final Button titleServers = Button.of(Pictures.TITLE_SERVERS).tried();
         public final Button titleSettings = Button.of(Pictures.TITLE_SETTINGS);
         public final Button titleFollowUs = Button.of(Pictures.TITLE_FOLLOW_US);
         public final Button titleCustomerService = Button.of(Pictures.TITLE_CUSTOMER_SERVICE);

@@ -223,6 +223,8 @@ public final class Screens {
     public static final CustomerService CUSTOMER_SERVICE = new CustomerService();
 
     public static final class UserCenter extends Screen {
+        public final Button linkAccount = Button.of(Elements.LINK_ACCOUNT);
+
         @Override
         public Setup setup() {
             return Setup

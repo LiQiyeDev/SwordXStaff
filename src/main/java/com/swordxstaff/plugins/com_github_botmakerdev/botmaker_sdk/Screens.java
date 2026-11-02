@@ -1212,7 +1212,7 @@ public final class Screens {
         public final Button topAvatar = Button.of(Pictures.TOP_AVATAR);
         public final Button stageQuestTracker = Button.of(Pictures.STAGE_QUEST_TRACKER);
         public final Button stagePackage = Button.of(Pictures.STAGE_PACKAGE);
-        public final Button homeSideIcon = Button.of(Pictures.HOME_SIDE_ICON).tried();
+        public final Button homeSideIcon = Button.of(Pictures.HOME_SIDE_ICON);
         public final Button stageDownloadReward = Button.of(Pictures.STAGE_DOWNLOAD_REWARD).occasional();
 
         @Override

@@ -61,6 +61,8 @@ public final class Pictures {
             .at(new Rect(562, 1578, 66, 66));
     public static final ImageTemplate SETTINGS_TAB_GAME = new ImageTemplate("images/settings_tab_game.png")
             .at(new Rect(230, 567, 82, 36));
+    public static final ImageTemplate SUPPORT_AVATAR = new ImageTemplate("images/support_avatar.png")
+            .at(new Rect(12, 170, 45, 55));
     private Pictures() {
     }
 }

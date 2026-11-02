@@ -228,7 +228,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Customer Service")
-                    .markers(List.of(Pictures.SUPPORT_SEND))
+                    .markers(List.of(Pictures.SUPPORT_AVATAR))
                     .back(Screens.CUSTOMER_SERVICE.supportBack)
                     .notes("Live chat with the game's support, full screen with Android's keyboard up. The bot never types or sends here.")
                     .reached(Reached.SURVEYED)

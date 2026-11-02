@@ -7,6 +7,7 @@ import java.util.List;
 import com.botmaker.sdk.api.screens.Button;
 import java.time.Duration;
 import com.botmaker.sdk.api.screens.Reached;
+import com.botmaker.sdk.api.screens.Way;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -89,6 +90,7 @@ public final class Screens {
             return Setup
                     .named("Startup loading")
                     .markers(List.of(Pictures.STARTUP_LOADING_BAR_END))
+                    .loads(Duration.ofMillis(60000L))
                     .shot("screens/LOADING_PATCH.png")
                     .from(Screens.CONSENT.confirm);
         }
@@ -130,14 +132,19 @@ public final class Screens {
         public final Button titleCustomerService = Button.of(Pictures.TITLE_CUSTOMER_SERVICE);
         public final Button titleNotice = Button.of(Pictures.TITLE_NOTICE).tried();
         public final Button titleUserCenter = Button.of(Pictures.TITLE_USER_CENTER);
-        public final Button titleSubmitLogs = Button.of(Pictures.TITLE_SUBMIT_LOGS).never("Sends logs to the game's maker; no bot use");
-        public final Button titleRepairClient = Button.of(Pictures.TITLE_REPAIR_CLIENT).never("Can re-download the game's files; only for a broken install");
+        public final Button titleSubmitLogs = Button
+                .of(Pictures.TITLE_SUBMIT_LOGS)
+                .never("Sends logs to the game's maker; no bot use");
+        public final Button titleRepairClient = Button
+                .of(Pictures.TITLE_REPAIR_CLIENT)
+                .never("Can re-download the game's files; only for a broken install");
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Title")
                     .markers(List.of(Pictures.TITLE_USER_CENTER))
+                    .alsoFrom(List.of(Way.onItsOwn(Screens.STARTUP_LOADING)))
                     .shot("screens/TITLE.png")
                     .from(Screens.NOTICE.noticeBack);
         }

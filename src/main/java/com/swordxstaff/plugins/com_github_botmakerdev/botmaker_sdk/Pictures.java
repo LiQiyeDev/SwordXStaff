@@ -15,6 +15,8 @@ public final class Pictures {
             .at(new Rect(632, 699, 17, 16));
     public static final ImageTemplate POLICY_BACK_ARROW = new ImageTemplate("images/policy_back_arrow.png")
             .at(new Rect(472, 14, 40, 40));
+    public static final ImageTemplate BOLTRAY_PAGE_LOGO = new ImageTemplate("images/boltray_page_logo.png")
+            .at(new Rect(698, 12, 110, 42));
 
     private Pictures() {
     }

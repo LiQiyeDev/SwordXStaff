@@ -53,6 +53,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Privacy Policy")
+                    .markers(List.of(Pictures.BOLTRAY_PAGE_LOGO))
                     .elements(List.of(Elements.BOLTRAY_GAMES_PRIVACY_POLICY))
                     .back(Screens.PRIVACY_POLICY.policyBackArrow)
                     .takes(Duration.ofMillis(3400L))

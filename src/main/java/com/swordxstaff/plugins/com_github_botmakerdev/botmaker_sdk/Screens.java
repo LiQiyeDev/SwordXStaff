@@ -87,7 +87,11 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup.named("Notification permission").from(Screens.CONSENT.confirm);
+            return Setup
+                    .named("Notification permission")
+                    .markers(List.of(Pictures.NOTIFICATION_PERMISSION_BELL))
+                    .shot("screens/NOTIFICATION_PERMISSION.png")
+                    .from(Screens.CONSENT.confirm);
         }
     }
 

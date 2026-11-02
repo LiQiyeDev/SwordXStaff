@@ -711,7 +711,7 @@ public final class Screens {
         public final Button navPortal = Button.of(Pictures.NAV_PORTAL);
         public final Button charWeaponStaff = Button.of(Pictures.CHAR_WEAPON_STAFF);
         public final Mark charClassIcon = Mark.of(Pictures.CHAR_CLASS_ICON);
-        public final Button slotweapon = Button.beside(Pictures.CHAR_SKILL_ICON, -5.64, -9.46);
+        public final Button slotWeapon = Button.beside(Pictures.CHAR_SKILL_ICON, -5.64, -9.46);
 
         @Override
         public Setup setup() {

@@ -1287,6 +1287,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Skill Goals")
+                    .back(Screens.SKILL_GOALS.goalsTabSkill)
                     .takes(Duration.ofMillis(3800L))
                     .shot("screens/SKILL_GOALS.png")
                     .from(Screens.SKILLS.enhanceTabGoals);

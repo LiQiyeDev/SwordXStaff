@@ -577,6 +577,7 @@ public final class Screens {
             return Setup
                     .named("Cart")
                     .markers(List.of(Pictures.CART_HEADER_PICTURE))
+                    .back(Screens.CART.cartoutside)
                     .notes("""
                             Cart: AFK resources pile up here. Rows: Rolla (+1000/h at Lv.1), Wood and Stone (+50/h each); Raw Ore and Battle Essence unlock at Lv. 3.
                             Tutorial: each row is unlocked free with its Unlock button, then Claim All gives what piled up (You received).

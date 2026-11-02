@@ -75,6 +75,10 @@ public final class Pictures {
             .at(new Rect(328, 80, 360, 57));
     public static final ImageTemplate BODY_TYPE_NEXT = new ImageTemplate("images/body_type_next.png")
             .at(new Rect(100, 1770, 880, 100));
+    public static final ImageTemplate BODY_TYPE_A = new ImageTemplate("images/body_type_a.png")
+            .at(new Rect(215, 1590, 150, 150));
+    public static final ImageTemplate BODY_TYPE_B = new ImageTemplate("images/body_type_b.png")
+            .at(new Rect(750, 1590, 150, 150));
     private Pictures() {
     }
 }

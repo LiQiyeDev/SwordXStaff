@@ -50,6 +50,7 @@ public final class Screens {
             return Setup
                     .named("Tutorial dialogue")
                     .markers(List.of(Pictures.DIALOGUE_PANEL))
+                    .back(Screens.TUTORIAL_DIALOGUE.dialoguePanel)
                     .popup()
                     .notes("""
                             A speech box over the scene: name tag, one or two lines of text, a bobbing arrow at the bottom centre. Marker: dialogue_panel at 60,1730 (900x110); the arrow bobs and matches only at 0.91. Its text types in letter by letter, so describe right after a tap reads garbage: wait for it.

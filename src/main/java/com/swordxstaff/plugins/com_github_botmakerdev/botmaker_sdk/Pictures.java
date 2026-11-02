@@ -117,6 +117,8 @@ public final class Pictures {
             .at(new Rect(72, 1245, 284, 196));
     public static final ImageTemplate UNLOCK_CART_PICTURE = new ImageTemplate("images/unlock_cart_picture.png")
             .at(new Rect(342, 557, 350, 213));
+    public static final ImageTemplate UNLOCK_BUTTON = new ImageTemplate("images/unlock_button.png")
+            .at(new Rect(380, 1400, 320, 64));
     private Pictures() {
     }
 }

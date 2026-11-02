@@ -501,6 +501,8 @@ public final class Screens {
     public static final CartBlueprint CART_BLUEPRINT = new CartBlueprint();
 
     public static final class UnlockCart extends Screen {
+        public final Button unlockButton = Button.of(Pictures.UNLOCK_BUTTON);
+
         @Override
         public Setup setup() {
             return Setup

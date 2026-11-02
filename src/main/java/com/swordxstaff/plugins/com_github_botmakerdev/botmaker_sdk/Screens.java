@@ -776,6 +776,19 @@ public final class Screens {
 
     public static final Skills SKILLS = new Skills();
 
+    public static final class TechniqueDetails extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Technique details")
+                    .takes(Duration.ofMillis(5500L))
+                    .shot("screens/TECHNIQUE_DETAILS.png")
+                    .from(Screens.SKILLS.skillsWaterShot);
+        }
+    }
+
+    public static final TechniqueDetails TECHNIQUE_DETAILS = new TechniqueDetails();
+
     private Screens() {
     }
 }

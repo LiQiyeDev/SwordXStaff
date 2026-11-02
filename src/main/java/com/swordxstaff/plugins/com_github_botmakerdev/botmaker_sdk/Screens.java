@@ -1076,6 +1076,19 @@ public final class Screens {
 
     public static final StagePackage STAGE_PACKAGE = new StagePackage();
 
+    public static final class MenuQuest extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Menu quest")
+                    .takes(Duration.ofMillis(7100L))
+                    .shot("screens/MENU_QUEST.png")
+                    .from(Screens.STAGE_PACKAGE.menuQuest);
+        }
+    }
+
+    public static final MenuQuest MENU_QUEST = new MenuQuest();
+
     private Screens() {
     }
 }

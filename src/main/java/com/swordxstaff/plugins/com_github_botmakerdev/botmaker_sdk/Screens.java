@@ -1087,6 +1087,15 @@ public final class Screens {
                     .named("Menu quest")
                     .markers(List.of(Pictures.GUIDANCE_QUEST_TITLE))
                     .back(Screens.MENU_QUEST.upgradeBack)
+                    .notes("""
+                            Guidance Quest: the quest list, opened by Quest on Stage's menu. Tabs Quest and Achievement at the bottom, back arrow at the bottom left.
+                            Main Quest: Wild Isle Trek I (the one tracked on Stage, reward 30), then Warrior's Equipment (50), Combat Beginner (15), Polish Up (10 + 80), Skill Honing (1K), each with Go >> on the right.
+                            Go >> appears once per quest row (4 copies here); each likely walks to that quest's place.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List
+                            .of("quest_go: one per row, each leads elsewhere; try one",
+                                    "quest_tab_achievement: untried"))
                     .takes(Duration.ofMillis(7100L))
                     .shot("screens/MENU_QUEST.png")
                     .from(Screens.STAGE_PACKAGE.menuQuest);

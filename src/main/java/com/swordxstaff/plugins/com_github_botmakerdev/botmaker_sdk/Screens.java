@@ -189,7 +189,7 @@ public final class Screens {
 
     public static final class OfficialCommunity extends Screen {
         public final Button communityDiscord = Button.of(Pictures.COMMUNITY_DISCORD).never("Outside link, leaves the game");
-        public final Button communityFacebook = Button.of(Pictures.COMMUNITY_FACEBOOK);
+        public final Button communityFacebook = Button.of(Pictures.COMMUNITY_FACEBOOK).never("Outside link, leaves the game");
         public final Button communityX = Button.of(Pictures.COMMUNITY_X);
 
         @Override

@@ -171,8 +171,7 @@ public final class Pictures {
             .at(new Rect(400, 1315, 270, 58));
     public static final ImageTemplate CHAR_SKILL_ICON = new ImageTemplate("images/char_skill_icon.png")
             .at(new Rect(418, 1112, 56, 56));
-    public static final ImageTemplate SKILLS_LOADOUT_PENCIL = new ImageTemplate("images/skills_loadout_pencil.png")
-            .at(new Rect(428, 1030, 36, 32));
+    public static final ImageTemplate SKILLS_LOADOUT_PENCIL = new ImageTemplate("images/skills_loadout_pencil.png").at(new Rect(428, 1030, 36, 32));
     public static final ImageTemplate SKILLS_LOADOUT_PREV = new ImageTemplate("images/skills_loadout_prev.png").at(new Rect(346, 1032, 34, 36));
     public static final ImageTemplate SKILLS_LOADOUT_NEXT = new ImageTemplate("images/skills_loadout_next.png").at(new Rect(701, 1032, 34, 36));
     public static final ImageTemplate SKILLS_WATER_SHOT = new ImageTemplate("images/skills_water_shot.png")

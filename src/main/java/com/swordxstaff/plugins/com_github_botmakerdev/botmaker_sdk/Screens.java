@@ -473,6 +473,11 @@ public final class Screens {
                     .named("Dialogue choice")
                     .markers(List.of(Pictures.CHOICE_BAR))
                     .popup()
+                    .notes("""
+                            A reply bar over the dialogue: an arrow, one line "I'm here to save the world...", a star at the right. Seen once, over Akane's "Hey, you're awake!" in Aethyris. Only one reply was offered.
+                            Tapping it (540,1480) sent the reply: the bar went and Akane answered "Whoa! The Goddess made the perfect pick, and that's exactly why I'm here, too!".\
+                            """)
+                    .reached(Reached.SURVEYED)
                     .shot("screens/DIALOGUE_CHOICE.png")
                     .from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
         }

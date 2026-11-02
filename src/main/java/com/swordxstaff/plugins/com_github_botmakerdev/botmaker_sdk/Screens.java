@@ -45,11 +45,14 @@ public final class Screens {
     public static final TutorialDialogue TUTORIAL_DIALOGUE = new TutorialDialogue();
 
     public static final class PrivacyPolicy extends Screen {
+        public final Button policyBackArrow = Button.of(Pictures.POLICY_BACK_ARROW);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Privacy Policy")
                     .elements(List.of(Elements.BOLTRAY_GAMES_PRIVACY_POLICY))
+                    .back(Screens.PRIVACY_POLICY.policyBackArrow)
                     .takes(Duration.ofMillis(3400L))
                     .shot("screens/PRIVACY_POLICY.png")
                     .from(Screens.CONSENT.privacyPolicy);

@@ -13,6 +13,8 @@ import com.botmaker.sdk.api.geometry.Rect;
 public final class Pictures {
     public static final ImageTemplate DIALOGUE_NEXT_ARROW = new ImageTemplate("images/dialogue_next_arrow.png")
             .at(new Rect(632, 699, 17, 16));
+    public static final ImageTemplate POLICY_BACK_ARROW = new ImageTemplate("images/policy_back_arrow.png")
+            .at(new Rect(472, 14, 40, 40));
 
     private Pictures() {
     }

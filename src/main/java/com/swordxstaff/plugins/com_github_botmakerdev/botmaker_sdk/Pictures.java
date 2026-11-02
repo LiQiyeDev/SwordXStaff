@@ -69,6 +69,8 @@ public final class Pictures {
             .at(new Rect(795, 1750, 125, 40));
     public static final ImageTemplate DIALOGUE_PANEL = new ImageTemplate("images/dialogue_panel.png")
             .at(new Rect(60, 1730, 900, 110));
+    public static final ImageTemplate PROLOGUE_TURN_PORTRAIT = new ImageTemplate("images/prologue_turn_portrait.png")
+            .at(new Rect(835, 130, 130, 110));
     private Pictures() {
     }
 }

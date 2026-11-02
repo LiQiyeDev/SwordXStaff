@@ -302,7 +302,11 @@ public final class Screens {
     public static final class PrologueBattle extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("Prologue battle").from(Screens.SCENE_LOADING.sceneLoadingText);
+            return Setup
+                    .named("Prologue battle")
+                    .markers(List.of(Pictures.PROLOGUE_TURN_PORTRAIT))
+                    .shot("screens/PROLOGUE_BATTLE.png")
+                    .from(Screens.SCENE_LOADING.sceneLoadingText);
         }
     }
 

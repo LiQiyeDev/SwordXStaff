@@ -1107,7 +1107,7 @@ public final class Screens {
     public static final class MenuPhoto extends Screen {
         public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
         public final Button photoZoomIn = Button.of(Pictures.PHOTO_ZOOM_IN);
-        public final Button photoZoomOut = Button.of(Pictures.PHOTO_ZOOM_OUT);
+        public final Button photoZoomOut = Button.of(Pictures.PHOTO_ZOOM_OUT).tried();
 
         @Override
         public Setup setup() {

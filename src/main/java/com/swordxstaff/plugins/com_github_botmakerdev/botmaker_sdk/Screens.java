@@ -899,19 +899,6 @@ public final class Screens {
 
     public static final Battle BATTLE = new Battle();
 
-    public static final class BattleRunning extends Screen {
-        @Override
-        public Setup setup() {
-            return Setup
-                    .named("Battle running")
-                    .takes(Duration.ofMillis(5500L))
-                    .shot("screens/BATTLE_RUNNING.png")
-                    .from(Screens.BATTLE.battleStart);
-        }
-    }
-
-    public static final BattleRunning BATTLE_RUNNING = new BattleRunning();
-
     private Screens() {
     }
 }

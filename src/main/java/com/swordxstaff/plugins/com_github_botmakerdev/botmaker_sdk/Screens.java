@@ -15,7 +15,7 @@ import java.time.Duration;
 @SdkValue(SdkValue.Id.SCREEN_MAP)
 public final class Screens {
     public static final class Consent extends Screen {
-        public final Button confirm = Button.of(Elements.CONFIRM).tried();
+        public final Button confirm = Button.of(Elements.CONFIRM);
         public final Button privacyPolicy = Button.of(Elements.PRIVACY_POLICY).info();
         public final Button cancel = Button.of(Elements.CANCEL)
                 .never("Declines the agreement and quits the game to Android's launcher, tried 2026-11-02");
@@ -80,6 +80,15 @@ public final class Screens {
     }
 
     public static final UserAgreement USER_AGREEMENT = new UserAgreement();
+
+    public static final class NotificationPermission extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Notification permission").from(Screens.CONSENT.confirm);
+        }
+    }
+
+    public static final NotificationPermission NOTIFICATION_PERMISSION = new NotificationPermission();
 
     private Screens() {
     }

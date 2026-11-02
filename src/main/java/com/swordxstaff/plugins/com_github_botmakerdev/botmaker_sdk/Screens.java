@@ -833,6 +833,8 @@ public final class Screens {
     public static final TechniqueDetails TECHNIQUE_DETAILS = new TechniqueDetails();
 
     public static final class World extends Screen {
+        public final Button worldIslandOriginisle = Button.of(Pictures.WORLD_ISLAND_ORIGINISLE);
+
         @Override
         public Setup setup() {
             return Setup

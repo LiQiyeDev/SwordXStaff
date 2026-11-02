@@ -189,6 +189,8 @@ public final class Pictures {
             .at(new Rect(798, 364, 104, 36));
     public static final ImageTemplate NAV_PORTAL = new ImageTemplate("images/nav_portal.png")
             .at(new Rect(918, 1805, 94, 40));
+    public static final ImageTemplate WORLD_ISLAND_ORIGINISLE = new ImageTemplate("images/world_island_originisle.png")
+            .at(new Rect(340, 660, 360, 220));
     private Pictures() {
     }
 }

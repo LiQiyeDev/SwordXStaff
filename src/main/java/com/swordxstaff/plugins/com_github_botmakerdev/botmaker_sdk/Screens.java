@@ -566,7 +566,7 @@ public final class Screens {
     public static final class Cart extends Screen {
         public final Button cartRowUnlock = Button.of(Pictures.CART_ROW_UNLOCK).tried().repeated();
         public final Button cartClaimAll = Button.of(Pictures.CART_CLAIM_ALL);
-        public final Button cartRowUpgrade = Button.of(Pictures.CART_ROW_UPGRADE);
+        public final Button cartRowUpgrade = Button.of(Pictures.CART_ROW_UPGRADE).repeated();
 
         @Override
         public Setup setup() {

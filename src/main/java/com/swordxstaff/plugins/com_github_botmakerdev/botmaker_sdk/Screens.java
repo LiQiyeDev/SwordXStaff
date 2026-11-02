@@ -649,6 +649,7 @@ public final class Screens {
     public static final class Home extends Screen {
         public final Button housePackageCard = Button.of(Pictures.HOUSE_PACKAGE_CARD);
         public final Button houseStorageChest = Button.of(Pictures.HOUSE_STORAGE_CHEST);
+        public final Button navCharacter = Button.of(Pictures.NAV_CHARACTER);
 
         @Override
         public Setup setup() {

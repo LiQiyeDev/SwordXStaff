@@ -155,6 +155,8 @@ public final class Pictures {
             .at(new Rect(456, 1322, 56, 56));
     public static final ImageTemplate CHOICE_SWORD = new ImageTemplate("images/choice_sword.png")
             .at(new Rect(450, 1447, 56, 56));
+    public static final ImageTemplate NAV_CHARACTER = new ImageTemplate("images/nav_character.png")
+            .at(new Rect(86, 1810, 78, 84));
     private Pictures() {
     }
 }

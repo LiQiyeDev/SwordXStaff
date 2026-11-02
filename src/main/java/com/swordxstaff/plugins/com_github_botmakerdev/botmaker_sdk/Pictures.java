@@ -79,6 +79,12 @@ public final class Pictures {
             .at(new Rect(215, 1590, 150, 150));
     public static final ImageTemplate BODY_TYPE_B = new ImageTemplate("images/body_type_b.png")
             .at(new Rect(750, 1590, 150, 150));
+    public static final ImageTemplate CUSTOMIZATION_TITLE = new ImageTemplate("images/customization_title.png")
+            .at(new Rect(400, 85, 280, 55));
+    public static final ImageTemplate CUSTOMIZATION_BACK = new ImageTemplate("images/customization_back.png")
+            .at(new Rect(25, 1765, 175, 110));
+    public static final ImageTemplate CUSTOMIZATION_NEXT = new ImageTemplate("images/customization_next.png")
+            .at(new Rect(215, 1765, 835, 110));
     private Pictures() {
     }
 }

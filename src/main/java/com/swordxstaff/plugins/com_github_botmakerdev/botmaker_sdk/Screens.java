@@ -384,9 +384,17 @@ public final class Screens {
     public static final SelectBodyType SELECT_BODY_TYPE = new SelectBodyType();
 
     public static final class CharacterCustomization extends Screen {
+        public final Button customizationBack = Button.of(Pictures.CUSTOMIZATION_BACK);
+        public final Button customizationNext = Button.of(Pictures.CUSTOMIZATION_NEXT);
+
         @Override
         public Setup setup() {
-            return Setup.named("Character customization").from(Screens.SELECT_BODY_TYPE.bodyTypeNext);
+            return Setup
+                    .named("Character customization")
+                    .markers(List.of(Pictures.CUSTOMIZATION_TITLE))
+                    .back(Screens.CHARACTER_CUSTOMIZATION.customizationBack)
+                    .shot("screens/CHARACTER_CUSTOMIZATION.png")
+                    .from(Screens.SELECT_BODY_TYPE.bodyTypeNext);
         }
     }
 

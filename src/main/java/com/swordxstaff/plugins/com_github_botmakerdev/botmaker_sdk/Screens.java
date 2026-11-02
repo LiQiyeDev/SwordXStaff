@@ -300,8 +300,8 @@ public final class Screens {
             return Setup
                     .named("Scene loading")
                     .markers(List.of(Pictures.SCENE_LOADING_TEXT))
-                    .notes(
-                            "Shown after Logging in... while the first scene loads: a dark wallpaper of monster silhouettes, a running chibi and \"Loading...\" whose letters bounce. No inputs. The marker is the word Loading as cut; it bounces, so a run may miss it.")
+                    .alsoFrom(List.of(Way.of(Screens.WORLD.worldIslandOriginisle)))
+                    .notes("Shown after Logging in... while the first scene loads: a dark wallpaper of monster silhouettes, a running chibi and \"Loading...\" whose letters bounce. No inputs. The marker is the word Loading as cut; it bounces, so a run may miss it.")
                     .owes(List.of("marker: the word bounces; a still part of the wallpaper wasn't cut in time"))
                     .shot("screens/SCENE_LOADING.png")
                     .from(Screens.TITLE.titleTapToPlay);

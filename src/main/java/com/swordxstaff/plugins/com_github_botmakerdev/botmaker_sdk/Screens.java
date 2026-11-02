@@ -1332,19 +1332,6 @@ public final class Screens {
 
     public static final ResourceDownload RESOURCE_DOWNLOAD = new ResourceDownload();
 
-    public static final class UcHelpCenter extends Screen {
-        @Override
-        public Setup setup() {
-            return Setup
-                    .named("Uc help center")
-                    .takes(Duration.ofMillis(2000L))
-                    .shot("screens/UC_HELP_CENTER.png")
-                    .from(Screens.MENU_USER_CENTER.ucHelpCenter);
-        }
-    }
-
-    public static final UcHelpCenter UC_HELP_CENTER = new UcHelpCenter();
-
     private Screens() {
     }
 }

@@ -310,6 +310,14 @@ public final class Pictures {
             .at(new Rect(90, 220, 740, 330));
     public static final ImageTemplate RETURN_HOME_TEXT = new ImageTemplate("images/return_home_text.png")
             .at(new Rect(400, 852, 282, 56));
+    public static final ImageTemplate CHARACTER_STATS_TITLE = new ImageTemplate("images/character_stats_title.png")
+            .at(new Rect(350, 190, 380, 62));
+    public static final ImageTemplate STATS_TAB_GENERAL = new ImageTemplate("images/stats_tab_general.png")
+            .at(new Rect(100, 292, 435, 75));
+    public static final ImageTemplate STATS_TAB_DETAILS = new ImageTemplate("images/stats_tab_details.png")
+            .at(new Rect(552, 292, 435, 75));
+    public static final ImageTemplate STATS_MAIN_HEADING = new ImageTemplate("images/stats_main_heading.png")
+            .at(new Rect(430, 422, 220, 50));
     private Pictures() {
     }
 }

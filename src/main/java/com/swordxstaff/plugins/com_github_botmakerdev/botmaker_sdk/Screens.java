@@ -858,7 +858,7 @@ public final class Screens {
         public final Button stageOreNode = Button.of(Pictures.STAGE_ORE_NODE).tried().occasional();
         public final Button stageWoodNode = Button.of(Pictures.STAGE_WOOD_NODE).tried().occasional();
         public final Button stageQuestTracker = Button.of(Pictures.STAGE_QUEST_TRACKER);
-        public final Button stagePlantMonster = Button.of(Pictures.STAGE_PLANT_MONSTER).occasional();
+        public final Button stagePlantMonster = Button.of(Pictures.STAGE_PLANT_MONSTER).leaving().occasional();
 
         @Override
         public Setup setup() {

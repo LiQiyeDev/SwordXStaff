@@ -256,8 +256,8 @@ public final class Screens {
             return Setup
                     .named("Scene loading")
                     .notes(
-                            "Shown after Tap to Play while the world loads. No inputs. Its Loading letters bounce; the pattern behind holds still.")
-                    .reached(Reached.SURVEYED)
+                            "Shown after Tap to Play while the world loads. No inputs. Background, letters and runner all move.")
+                    .owes(List.of("marker: no still part found; the one crop tried was refused as animated"))
                     .from(Screens.TITLE.titleTapToPlay);
         }
     }

@@ -5,6 +5,7 @@ import com.botmaker.sdk.api.screens.Screen;
 import com.botmaker.sdk.api.screens.Setup;
 import java.util.List;
 import com.botmaker.sdk.api.screens.Button;
+import java.time.Duration;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -15,7 +16,7 @@ import com.botmaker.sdk.api.screens.Button;
 public final class Screens {
     public static final class Consent extends Screen {
         public final Button confirm = Button.of(Elements.CONFIRM).tried();
-        public final Button privacyPolicy = Button.of(Elements.PRIVACY_POLICY);
+        public final Button privacyPolicy = Button.of(Elements.PRIVACY_POLICY).info();
         public final Button cancel = Button.of(Elements.CANCEL);
 
         @Override
@@ -42,6 +43,19 @@ public final class Screens {
     }
 
     public static final TutorialDialogue TUTORIAL_DIALOGUE = new TutorialDialogue();
+
+    public static final class PrivacyPolicy extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Privacy Policy")
+                    .takes(Duration.ofMillis(3400L))
+                    .shot("screens/PRIVACY_POLICY.png")
+                    .from(Screens.CONSENT.privacyPolicy);
+        }
+    }
+
+    public static final PrivacyPolicy PRIVACY_POLICY = new PrivacyPolicy();
 
     private Screens() {
     }

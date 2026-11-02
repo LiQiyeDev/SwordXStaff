@@ -18,6 +18,8 @@ public final class Elements {
     public static final Element CANCEL = Element.byText(Texts.CANCEL).shot("elements/cancel.png");
     public static final Element BOLTRAY_GAMES_PRIVACY_POLICY = Element.byText(Texts.BOLTRAY_GAMES_PRIVACY_POLICY)
             .shot("elements/boltray_games_privacy_policy.png");
+    public static final Element BOLTRAY_GAMES_LICENSE_AGREEMENT = Element.byText(Texts.BOLTRAY_GAMES_LICENSE_AGREEMENT)
+            .shot("elements/boltray_games_license_agreement.png");
 
     private Elements() {
     }

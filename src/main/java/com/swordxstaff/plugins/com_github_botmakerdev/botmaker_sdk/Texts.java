@@ -15,6 +15,8 @@ public final class Texts {
     public static final Words PRIVACY_POLICY = Words.of("Privacy Policy");
     public static final Words CANCEL = Words.of("Cancel");
     public static final Words BOLTRAY_GAMES_PRIVACY_POLICY = Words.of("BOLTRAY GAMES Privacy Policy");
+    public static final Words BOLTRAY_GAMES_LICENSE_AGREEMENT = Words
+            .of("BOLTRAY GAMES License Agreement and Terms of Service");
 
     private Texts() {
     }

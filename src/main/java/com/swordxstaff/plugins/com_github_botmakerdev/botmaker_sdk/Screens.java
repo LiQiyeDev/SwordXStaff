@@ -65,7 +65,10 @@ public final class Screens {
     public static final class UserAgreement extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("User Agreement").from(Screens.CONSENT.userAgreement);
+            return Setup
+                    .named("User Agreement")
+                    .elements(List.of(Elements.BOLTRAY_GAMES_LICENSE_AGREEMENT))
+                    .from(Screens.CONSENT.userAgreement);
         }
     }
 

@@ -61,6 +61,8 @@ public final class Pictures {
             .at(new Rect(230, 567, 82, 36));
     public static final ImageTemplate SUPPORT_AVATAR = new ImageTemplate("images/support_avatar.png")
             .at(new Rect(12, 170, 45, 55));
+    public static final ImageTemplate NOTICE_TAB_NOTICE = new ImageTemplate("images/notice_tab_notice.png")
+            .at(new Rect(150, 237, 110, 38));
     private Pictures() {
     }
 }

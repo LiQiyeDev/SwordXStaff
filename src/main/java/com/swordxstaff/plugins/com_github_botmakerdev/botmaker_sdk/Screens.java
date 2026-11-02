@@ -723,11 +723,11 @@ public final class Screens {
 
     public static final Character CHARACTER = new Character();
 
-    public static final class EquipWeapon extends Screen {
+    public static final class ReplaceGear extends Screen {
         @Override
         public Setup setup() {
             return Setup
-                    .named("Equip weapon")
+                    .named("Replace gear")
                     .takes(Duration.ofMillis(5100L))
                     .shot("screens/EQUIP_WEAPON.png")
                     .from(Screens.CHARACTER.charGearSlot)
@@ -735,7 +735,7 @@ public final class Screens {
         }
     }
 
-    public static final EquipWeapon EQUIP_WEAPON = new EquipWeapon();
+    public static final ReplaceGear REPLACE_GEAR = new ReplaceGear();
 
     private Screens() {
     }

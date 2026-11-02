@@ -1060,7 +1060,7 @@ public final class Screens {
         public final Button menuPhoto = Button.of(Pictures.MENU_PHOTO);
         public final Button menuUserCenter = Button.of(Pictures.MENU_USER_CENTER);
         public final Button menuSettings = Button.of(Pictures.MENU_SETTINGS);
-        public final Button menuNotice = Button.of(Pictures.MENU_NOTICE);
+        public final Button menuNotice = Button.of(Pictures.MENU_NOTICE).tried();
 
         @Override
         public Setup setup() {

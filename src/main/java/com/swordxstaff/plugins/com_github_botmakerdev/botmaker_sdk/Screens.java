@@ -640,6 +640,15 @@ public final class Screens {
 
     public static final FurnitureUpgrade FURNITURE_UPGRADE = new FurnitureUpgrade();
 
+    public static final class House extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("House").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+        }
+    }
+
+    public static final House HOUSE = new House();
+
     private Screens() {
     }
 }

@@ -1204,6 +1204,15 @@ public final class Screens {
 
     public static final CharacterStats CHARACTER_STATS = new CharacterStats();
 
+    public static final class Home extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Home").from(Screens.STAGE.noticeBack);
+        }
+    }
+
+    public static final Home HOME = new Home();
+
     private Screens() {
     }
 }

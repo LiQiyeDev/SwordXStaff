@@ -782,7 +782,7 @@ public final class Screens {
         public final Button skillsLoadoutPrev = Button.of(Pictures.SKILLS_LOADOUT_PREV);
         public final Button skillsLoadoutNext = Button.of(Pictures.SKILLS_LOADOUT_NEXT);
         public final Button skillsWaterShot = Button.of(Pictures.SKILLS_WATER_SHOT);
-        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
+        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK).tried();
 
         @Override
         public Setup setup() {

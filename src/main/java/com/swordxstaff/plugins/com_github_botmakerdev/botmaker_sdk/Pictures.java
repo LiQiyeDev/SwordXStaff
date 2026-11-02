@@ -352,6 +352,8 @@ public final class Pictures {
             .at(new Rect(48, 1368, 205, 155));
     public static final ImageTemplate REPLACE_GEAR_TITLE = new ImageTemplate("images/replace_gear_title.png")
             .at(new Rect(392, 293, 296, 66));
+    public static final ImageTemplate CHAR_WEAPON_STAFF = new ImageTemplate("images/char_weapon_staff.png")
+            .at(new Rect(72, 548, 120, 98));
     private Pictures() {
     }
 }

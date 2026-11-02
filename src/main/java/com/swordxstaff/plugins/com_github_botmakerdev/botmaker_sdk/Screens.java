@@ -722,6 +722,7 @@ public final class Screens {
         public final Button charGearSlot = Button.of(Pictures.CHAR_GEAR_SLOT).repeated();
         public final Button charSkillIcon = Button.of(Pictures.CHAR_SKILL_ICON);
         public final Button navPortal = Button.of(Pictures.NAV_PORTAL);
+        public final Button charWeaponStaff = Button.of(Pictures.CHAR_WEAPON_STAFF);
 
         @Override
         public Setup setup() {

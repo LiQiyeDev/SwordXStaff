@@ -285,8 +285,7 @@ public final class Pictures {
             .at(new Rect(465, 1728, 150, 145));
     public static final ImageTemplate PHOTO_ZOOM_IN = new ImageTemplate("images/photo_zoom_in.png")
             .at(new Rect(1000, 1170, 45, 45));
-    public static final ImageTemplate PHOTO_ZOOM_OUT = new ImageTemplate("images/photo_zoom_out.png")
-            .at(new Rect(1000, 1640, 45, 45));
+    public static final ImageTemplate PHOTO_ZOOM_OUT = new ImageTemplate("images/photo_zoom_out.png").at(new Rect(1000, 1670, 45, 36));
     private Pictures() {
     }
 }

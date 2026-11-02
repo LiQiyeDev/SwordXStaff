@@ -273,9 +273,11 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Scene loading")
+                    .markers(List.of(Pictures.SCENE_LOADING_TEXT))
                     .notes(
                             "Shown after Tap to Play while the world loads. No inputs. Background, letters and runner all move.")
                     .owes(List.of("marker: no still part found; the one crop tried was refused as animated"))
+                    .shot("screens/SCENE_LOADING.png")
                     .from(Screens.TITLE.titleTapToPlay);
         }
     }

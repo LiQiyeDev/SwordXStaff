@@ -65,6 +65,8 @@ public final class Pictures {
             .at(new Rect(150, 237, 110, 38));
     public static final ImageTemplate LOGGING_IN_TEXT = new ImageTemplate("images/logging_in_text.png")
             .at(new Rect(452, 940, 176, 44));
+    public static final ImageTemplate SCENE_LOADING_TEXT = new ImageTemplate("images/scene_loading_text.png")
+            .at(new Rect(795, 1750, 125, 40));
     private Pictures() {
     }
 }

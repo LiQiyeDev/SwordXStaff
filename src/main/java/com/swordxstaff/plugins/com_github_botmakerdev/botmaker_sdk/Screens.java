@@ -503,7 +503,11 @@ public final class Screens {
     public static final class UnlockCart extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("Unlock cart").from(Screens.CART_BLUEPRINT.cartBlueprintCard);
+            return Setup
+                    .named("Unlock cart")
+                    .markers(List.of(Pictures.UNLOCK_CART_PICTURE))
+                    .shot("screens/UNLOCK_CART.png")
+                    .from(Screens.CART_BLUEPRINT.cartBlueprintCard);
         }
     }
 

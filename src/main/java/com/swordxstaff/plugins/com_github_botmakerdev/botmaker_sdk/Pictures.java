@@ -115,6 +115,8 @@ public final class Pictures {
             .at(new Rect(85, 1430, 910, 100));
     public static final ImageTemplate CART_BLUEPRINT_CARD = new ImageTemplate("images/cart_blueprint_card.png")
             .at(new Rect(72, 1245, 284, 196));
+    public static final ImageTemplate UNLOCK_CART_PICTURE = new ImageTemplate("images/unlock_cart_picture.png")
+            .at(new Rect(342, 557, 350, 213));
     private Pictures() {
     }
 }

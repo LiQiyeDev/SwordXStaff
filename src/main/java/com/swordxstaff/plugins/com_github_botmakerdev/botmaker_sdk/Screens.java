@@ -1376,6 +1376,19 @@ public final class Screens {
 
     public static final GiftCode GIFT_CODE = new GiftCode();
 
+    public static final class WorldChest extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("World chest")
+                    .takes(Duration.ofMillis(3800L))
+                    .shot("screens/WORLD_CHEST.png")
+                    .from(Screens.WORLD.worldChest);
+        }
+    }
+
+    public static final WorldChest WORLD_CHEST = new WorldChest();
+
     private Screens() {
     }
 }

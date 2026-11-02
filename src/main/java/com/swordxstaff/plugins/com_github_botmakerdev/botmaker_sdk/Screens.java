@@ -549,6 +549,8 @@ public final class Screens {
     public static final FeatureUnlocked FEATURE_UNLOCKED = new FeatureUnlocked();
 
     public static final class Island extends Screen {
+        public final Button islandCartButton = Button.of(Pictures.ISLAND_CART_BUTTON);
+
         @Override
         public Setup setup() {
             return Setup
@@ -560,6 +562,19 @@ public final class Screens {
     }
 
     public static final Island ISLAND = new Island();
+
+    public static final class Cart extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Cart")
+                    .takes(Duration.ofMillis(5900L))
+                    .shot("screens/CART.png")
+                    .from(Screens.ISLAND.islandCartButton);
+        }
+    }
+
+    public static final Cart CART = new Cart();
 
     private Screens() {
     }

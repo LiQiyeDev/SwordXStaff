@@ -165,7 +165,7 @@ public final class Screens {
         public final Button serversRowSelected = Button.of(Pictures.SERVERS_ROW_SELECTED);
         public final Button serversRowOther = Button.of(Pictures.SERVERS_ROW_OTHER).never(
                 "Picking another server moves the account to a new start; the run stays on the one the game chose");
-        public final Button serversTabAvailable = Button.of(Pictures.SERVERS_TAB_AVAILABLE);
+        public final Button serversTabAvailable = Button.of(Pictures.SERVERS_TAB_AVAILABLE).tried();
         public final Button serversTabCharacters = Button.of(Pictures.SERVERS_TAB_CHARACTERS);
         public final Button serversSearch = Button.of(Pictures.SERVERS_SEARCH);
         public final Button serversSearchGo = Button.of(Pictures.SERVERS_SEARCH_GO);

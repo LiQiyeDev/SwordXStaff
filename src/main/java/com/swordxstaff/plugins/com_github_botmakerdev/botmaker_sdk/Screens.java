@@ -113,7 +113,7 @@ public final class Screens {
         public final Button noticeItem2 = Button.of(Pictures.NOTICE_ITEM_2).tried().occasional();
         public final Button noticeItem3 = Button.of(Pictures.NOTICE_ITEM_3).tried().occasional();
         public final Button noticeItem4 = Button.of(Pictures.NOTICE_ITEM_4).tried().occasional();
-        public final Button noticeTabNotice = Button.of(Pictures.NOTICE_TAB_NOTICE);
+        public final Button noticeTabNotice = Button.of(Pictures.NOTICE_TAB_NOTICE).tried();
 
         @Override
         public Setup setup() {

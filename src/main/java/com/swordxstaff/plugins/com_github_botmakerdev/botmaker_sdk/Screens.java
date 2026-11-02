@@ -82,6 +82,8 @@ public final class Screens {
     public static final UserAgreement USER_AGREEMENT = new UserAgreement();
 
     public static final class NotificationPermission extends Screen {
+        public final Button allow = Button.of(Elements.PERMISSION_ALLOW_BUTTON);
+
         @Override
         public Setup setup() {
             return Setup.named("Notification permission").from(Screens.CONSENT.confirm);

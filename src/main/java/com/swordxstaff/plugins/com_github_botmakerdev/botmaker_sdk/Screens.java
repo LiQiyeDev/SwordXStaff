@@ -1145,6 +1145,19 @@ public final class Screens {
 
     public static final MenuUserCenter MENU_USER_CENTER = new MenuUserCenter();
 
+    public static final class Achievement extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Achievement")
+                    .takes(Duration.ofMillis(4200L))
+                    .shot("screens/ACHIEVEMENT.png")
+                    .from(Screens.MENU_QUEST.questTabAchievement);
+        }
+    }
+
+    public static final Achievement ACHIEVEMENT = new Achievement();
+
     private Screens() {
     }
 }

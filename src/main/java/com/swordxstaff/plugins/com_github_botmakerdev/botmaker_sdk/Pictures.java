@@ -14,7 +14,7 @@ import com.botmaker.sdk.api.geometry.Size;
 public final class Pictures {
     public static final ImageTemplate DIALOGUE_NEXT_ARROW = new ImageTemplate("images/dialogue_next_arrow.png").at(new Rect(632, 699, 17, 16)).in(new Size(1280, 720));
     public static final ImageTemplate POLICY_BACK_ARROW = new ImageTemplate("images/policy_back_arrow.png").at(new Rect(472, 14, 40, 40)).in(new Size(1280, 720));
-    public static final ImageTemplate BOLTRAY_PAGE_LOGO = new ImageTemplate("images/boltray_page_logo.png").at(new Rect(698, 12, 110, 42)).in(new Size(1280, 720));
+    public static final ImageTemplate BOLTRAY_PAGE_LOGO = new ImageTemplate("images/boltray_page_logo.png").at(new Rect(948, 14, 110, 46));
     public static final ImageTemplate NOTIFICATION_PERMISSION_BELL = new ImageTemplate("images/notification_permission_bell.png").at(new Rect(615, 208, 50, 38)).in(new Size(1280, 720));
     public static final ImageTemplate STARTUP_LOADING_BAR_END = new ImageTemplate("images/startup_loading_bar_end.png").at(new Rect(512, 576, 18, 22)).in(new Size(1280, 720));
     public static final ImageTemplate NOTICE_TITLE = new ImageTemplate("images/notice_title.png").at(new Rect(467, 120, 145, 45));

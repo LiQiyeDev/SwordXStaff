@@ -16,6 +16,7 @@ public final class Screens {
     public static final class Consent extends Screen {
         public final Button confirm = Button.of(Elements.CONFIRM).tried();
         public final Button privacyPolicy = Button.of(Elements.PRIVACY_POLICY);
+        public final Button cancel = Button.of(Elements.CANCEL);
 
         @Override
         public Setup setup() {

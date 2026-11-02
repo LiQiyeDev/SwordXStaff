@@ -13,6 +13,7 @@ public final class Texts {
     public static final Words USER_AGREEMENT = Words.of("User Agreement");
     public static final Words CONFIRM = Words.of("Confirm");
     public static final Words PRIVACY_POLICY = Words.of("Privacy Policy");
+    public static final Words CANCEL = Words.of("Cancel");
 
     private Texts() {
     }

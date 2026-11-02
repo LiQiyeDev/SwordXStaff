@@ -15,6 +15,7 @@ public final class Elements {
     public static final Element CONFIRM = Element.byText(Texts.CONFIRM).shot("elements/confirm.png");
     public static final Element PRIVACY_POLICY = Element.byLabel(Texts.PRIVACY_POLICY)
             .shot("elements/privacy_policy.png");
+    public static final Element CANCEL = Element.byText(Texts.CANCEL).shot("elements/cancel.png");
 
     private Elements() {
     }

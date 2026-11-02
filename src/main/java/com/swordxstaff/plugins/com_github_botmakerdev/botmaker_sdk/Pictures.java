@@ -227,6 +227,12 @@ public final class Pictures {
             .at(new Rect(140, 1302, 800, 62));
     public static final ImageTemplate STAGE_PLANT_MONSTER = new ImageTemplate("images/stage_plant_monster.png")
             .at(new Rect(528, 1372, 66, 26));
+    public static final ImageTemplate LOADOUT_RADIO_EMPTY = new ImageTemplate("images/loadout_radio_empty.png")
+            .at(new Rect(928, 720, 44, 44));
+    public static final ImageTemplate LOADOUT_EDIT = new ImageTemplate("images/loadout_edit.png")
+            .at(new Rect(255, 1525, 115, 46));
+    public static final ImageTemplate LOADOUT_OK = new ImageTemplate("images/loadout_ok.png")
+            .at(new Rect(715, 1525, 95, 46));
     private Pictures() {
     }
 }

@@ -936,10 +936,14 @@ public final class Screens {
     public static final StageQuestTracker STAGE_QUEST_TRACKER = new StageQuestTracker();
 
     public static final class BattleLoadoutSwap extends Screen {
+        public final Button loadoutEdit = Button.of(Pictures.LOADOUT_EDIT);
+        public final Button loadoutOk = Button.of(Pictures.LOADOUT_OK);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Battle loadout swap")
+                    .markers(List.of(Pictures.LOADOUT_RADIO_EMPTY))
                     .takes(Duration.ofMillis(5900L))
                     .shot("screens/BATTLE_LOADOUT_SWAP.png")
                     .from(Screens.BATTLE.battleLoadoutSwap);

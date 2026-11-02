@@ -207,6 +207,14 @@ public final class Pictures {
             .at(new Rect(45, 228, 80, 78));
     public static final ImageTemplate STAGE_BOAR = new ImageTemplate("images/stage_boar.png")
             .at(new Rect(505, 925, 70, 70));
+    public static final ImageTemplate BATTLE_CAMERA = new ImageTemplate("images/battle_camera.png")
+            .at(new Rect(47, 1360, 62, 56));
+    public static final ImageTemplate BATTLE_START = new ImageTemplate("images/battle_start.png")
+            .at(new Rect(370, 1400, 340, 66));
+    public static final ImageTemplate BATTLE_LOCK = new ImageTemplate("images/battle_lock.png")
+            .at(new Rect(47, 1477, 62, 60));
+    public static final ImageTemplate BATTLE_LOADOUT_SWAP = new ImageTemplate("images/battle_loadout_swap.png")
+            .at(new Rect(458, 1803, 42, 42));
     private Pictures() {
     }
 }

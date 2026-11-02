@@ -882,10 +882,15 @@ public final class Screens {
     public static final Stage STAGE = new Stage();
 
     public static final class Battle extends Screen {
+        public final Button battleStart = Button.of(Pictures.BATTLE_START);
+        public final Button battleLock = Button.of(Pictures.BATTLE_LOCK);
+        public final Button battleLoadoutSwap = Button.of(Pictures.BATTLE_LOADOUT_SWAP);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Battle")
+                    .markers(List.of(Pictures.BATTLE_CAMERA))
                     .alsoFrom(List.of(Way.onItsOwn(Screens.SCENE_LOADING)))
                     .takes(Duration.ofMillis(4500L))
                     .shot("screens/BATTLE.png")

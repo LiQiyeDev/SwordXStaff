@@ -85,6 +85,16 @@ public final class Pictures {
             .at(new Rect(25, 1765, 175, 110));
     public static final ImageTemplate CUSTOMIZATION_NEXT = new ImageTemplate("images/customization_next.png")
             .at(new Rect(215, 1765, 835, 110));
+    public static final ImageTemplate CUSTOMIZATION_TAB_HAIR = new ImageTemplate("images/customization_tab_hair.png")
+            .at(new Rect(340, 985, 150, 55));
+    public static final ImageTemplate CUSTOMIZATION_TAB_FACE = new ImageTemplate("images/customization_tab_face.png")
+            .at(new Rect(610, 985, 150, 55));
+    public static final ImageTemplate CUSTOMIZATION_TAB_TRAIT = new ImageTemplate("images/customization_tab_trait.png")
+            .at(new Rect(840, 985, 150, 55));
+    public static final ImageTemplate CUSTOMIZATION_SHUFFLE = new ImageTemplate("images/customization_shuffle.png")
+            .at(new Rect(965, 735, 90, 85));
+    public static final ImageTemplate CUSTOMIZATION_RESET = new ImageTemplate("images/customization_reset.png")
+            .at(new Rect(965, 835, 90, 85));
     private Pictures() {
     }
 }

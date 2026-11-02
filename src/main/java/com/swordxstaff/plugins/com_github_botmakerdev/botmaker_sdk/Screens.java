@@ -754,6 +754,8 @@ public final class Screens {
             return Setup
                     .named("Replace gear")
                     .markers(List.of(Pictures.REPLACE_GEAR_CORNER))
+                    .alsoFrom(List
+                            .of(Way.of(Screens.TOP_AVATAR.profileDish), Way.of(Screens.TOP_AVATAR.profileStatsSearch)))
                     .notes("""
                             Lists the gear that fits the slot pressed on Character; a tap on an item opens Gear details.
                             First item: Novice Staff (Common, power 81, Level 3), given for picking Staff.\
@@ -1013,7 +1015,7 @@ public final class Screens {
         public final Button profilePowerSearch = Button.of(Pictures.PROFILE_POWER_SEARCH).info();
         public final Button profileStatsSearch = Button.of(Pictures.PROFILE_STATS_SEARCH);
         public final Button profileDish = Button.of(Pictures.PROFILE_DISH);
-        public final Button profileQuickHeal = Button.of(Pictures.PROFILE_QUICK_HEAL);
+        public final Button profileQuickHeal = Button.of(Pictures.PROFILE_QUICK_HEAL).never("Spends a healing item; the user's call");
 
         @Override
         public Setup setup() {

@@ -999,7 +999,7 @@ public final class Screens {
     public static final QuitConfirm QUIT_CONFIRM = new QuitConfirm();
 
     public static final class TopAvatar extends Screen {
-        public final Button profilePowerSearch = Button.of(Pictures.PROFILE_POWER_SEARCH);
+        public final Button profilePowerSearch = Button.of(Pictures.PROFILE_POWER_SEARCH).info();
         public final Button profileStatsSearch = Button.of(Pictures.PROFILE_STATS_SEARCH);
         public final Button profileDish = Button.of(Pictures.PROFILE_DISH);
         public final Button profileQuickHeal = Button.of(Pictures.PROFILE_QUICK_HEAL);
@@ -1016,6 +1016,19 @@ public final class Screens {
     }
 
     public static final TopAvatar TOP_AVATAR = new TopAvatar();
+
+    public static final class ProfilePowerSearch extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Profile power search")
+                    .takes(Duration.ofMillis(2500L))
+                    .shot("screens/PROFILE_POWER_SEARCH.png")
+                    .from(Screens.TOP_AVATAR.profilePowerSearch);
+        }
+    }
+
+    public static final ProfilePowerSearch PROFILE_POWER_SEARCH = new ProfilePowerSearch();
 
     private Screens() {
     }

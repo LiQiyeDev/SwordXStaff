@@ -156,6 +156,8 @@ public final class Screens {
                     .named("Servers")
                     .markers(List.of(Pictures.SERVERS_TITLE))
                     .back(Screens.SERVERS.serversRowSelected)
+                    .notes("Tapping the highlighted server closes the list and returns to Title. Green dot Rcmd, orange Crowded, red Full, grey Maintenance. Account plays on Cloudwold, the game's default.")
+                    .owes(List.of("servers_search: cut failed, panel was still moving"))
                     .shot("screens/SERVERS.png")
                     .from(Screens.TITLE.titleServers);
         }

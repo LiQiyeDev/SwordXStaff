@@ -851,6 +851,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("World")
+                    .alsoFrom(List.of(Way.of(Screens.HOME.navPortal)))
                     .takes(Duration.ofMillis(8600L))
                     .shot("screens/NAV_PORTAL.png")
                     .from(Screens.CHARACTER.navPortal);

@@ -157,8 +157,7 @@ public final class Pictures {
             .at(new Rect(450, 1447, 56, 56));
     public static final ImageTemplate NAV_CHARACTER = new ImageTemplate("images/nav_character.png")
             .at(new Rect(86, 1810, 78, 84));
-    public static final ImageTemplate CHAR_CLASS_ICON = new ImageTemplate("images/char_class_icon.png")
-            .at(new Rect(582, 1088, 106, 80));
+    public static final ImageTemplate CHAR_CLASS_ICON = new ImageTemplate("images/char_class_icon.png").at(new Rect(582, 1088, 106, 80));
     public static final ImageTemplate CHAR_GEAR_SLOT = new ImageTemplate("images/char_gear_slot.png")
             .at(new Rect(98, 578, 74, 74));
     public static final ImageTemplate REPLACE_GEAR_CORNER = new ImageTemplate("images/replace_gear_corner.png")

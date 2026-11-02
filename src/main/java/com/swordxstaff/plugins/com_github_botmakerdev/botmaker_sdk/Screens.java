@@ -535,6 +535,11 @@ public final class Screens {
             return Setup
                     .named("Feature unlocked")
                     .markers(List.of(Pictures.UNLOCKED_TITLE))
+                    .notes("""
+                            Shown after any feature is unlocked (first: Cart); the item in the middle changes, the UNLOCKED title stays.
+                            Tap to Continue closes it; in the tutorial Akane's dialogue follows.\
+                            """)
+                    .reached(Reached.TRIED)
                     .takes(Duration.ofMillis(7200L))
                     .shot("screens/CART_UNLOCKED.png")
                     .from(Screens.UNLOCK_CART.unlockButton);

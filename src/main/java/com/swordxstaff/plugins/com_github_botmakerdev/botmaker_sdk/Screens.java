@@ -1342,6 +1342,12 @@ public final class Screens {
             return Setup
                     .named("Self-service query")
                     .back(Screens.SELF_SERVICE_QUERY.selfServiceClose)
+                    .notes("""
+                            A web page of the account's logs: player ID, time zone, and rows Item Log, Login Log, Timed Pack Log, Top-Up/Purchase History, plus Instructions. Read only; no bot work.
+                            The X at the top left closes it back to the User Center menu.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List.of("log rows and Instructions: not cut, read only"))
                     .takes(Duration.ofMillis(3500L))
                     .shot("screens/UC_SELF_SERVICE.png")
                     .from(Screens.MENU_USER_CENTER.ucSelfService);

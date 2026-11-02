@@ -709,7 +709,6 @@ public final class Screens {
         public final Button charGearSlot = Button.of(Pictures.CHAR_GEAR_SLOT).repeated();
         public final Button charSkillIcon = Button.of(Pictures.CHAR_SKILL_ICON);
         public final Button navPortal = Button.of(Pictures.NAV_PORTAL);
-        public final Button charWeaponStaff = Button.of(Pictures.CHAR_WEAPON_STAFF);
         public final Mark charClassIcon = Mark.of(Pictures.CHAR_CLASS_ICON);
         public final Button slotWeapon = Button.beside(Pictures.CHAR_SKILL_ICON, -5.64, -9.46);
         public final Button slotRightTop = Button.beside(Pictures.CHAR_SKILL_ICON, 8.61, -10.66);

@@ -122,6 +122,15 @@ public final class Screens {
 
     public static final Notice NOTICE = new Notice();
 
+    public static final class Title extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Title").from(Screens.NOTICE.noticeBack);
+        }
+    }
+
+    public static final Title TITLE = new Title();
+
     private Screens() {
     }
 }

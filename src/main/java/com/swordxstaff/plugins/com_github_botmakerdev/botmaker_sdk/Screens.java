@@ -204,6 +204,15 @@ public final class Screens {
 
     public static final OfficialCommunity OFFICIAL_COMMUNITY = new OfficialCommunity();
 
+    public static final class CustomerService extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Customer Service").from(Screens.TITLE.titleCustomerService);
+        }
+    }
+
+    public static final CustomerService CUSTOMER_SERVICE = new CustomerService();
+
     private Screens() {
     }
 }

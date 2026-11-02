@@ -909,19 +909,6 @@ public final class Screens {
 
     public static final Battle BATTLE = new Battle();
 
-    public static final class Gathering extends Screen {
-        @Override
-        public Setup setup() {
-            return Setup
-                    .named("Gathering")
-                    .takes(Duration.ofMillis(5200L))
-                    .shot("screens/GATHERING.png")
-                    .from(Screens.STAGE.stageOreNode);
-        }
-    }
-
-    public static final Gathering GATHERING = new Gathering();
-
     private Screens() {
     }
 }

@@ -1356,6 +1356,19 @@ public final class Screens {
 
     public static final SelfServiceQuery SELF_SERVICE_QUERY = new SelfServiceQuery();
 
+    public static final class UcGiftCode extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Uc gift code")
+                    .takes(Duration.ofMillis(2600L))
+                    .shot("screens/UC_GIFT_CODE.png")
+                    .from(Screens.MENU_USER_CENTER.ucGiftCode);
+        }
+    }
+
+    public static final UcGiftCode UC_GIFT_CODE = new UcGiftCode();
+
     private Screens() {
     }
 }

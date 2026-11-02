@@ -318,6 +318,14 @@ public final class Pictures {
             .at(new Rect(552, 292, 435, 75));
     public static final ImageTemplate STATS_MAIN_HEADING = new ImageTemplate("images/stats_main_heading.png")
             .at(new Rect(430, 422, 220, 50));
+    public static final ImageTemplate NAV_HOME_SELECTED = new ImageTemplate("images/nav_home_selected.png")
+            .at(new Rect(465, 1795, 160, 120));
+    public static final ImageTemplate NAV_LOCKED_LEFT = new ImageTemplate("images/nav_locked_left.png")
+            .at(new Rect(265, 1748, 135, 145));
+    public static final ImageTemplate NAV_LOCKED_RIGHT = new ImageTemplate("images/nav_locked_right.png")
+            .at(new Rect(692, 1748, 140, 145));
+    public static final ImageTemplate HOME_SIDE_ICON = new ImageTemplate("images/home_side_icon.png")
+            .at(new Rect(12, 1035, 128, 128));
     private Pictures() {
     }
 }

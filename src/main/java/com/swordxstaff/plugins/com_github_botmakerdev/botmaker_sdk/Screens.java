@@ -1205,9 +1205,23 @@ public final class Screens {
     public static final CharacterStats CHARACTER_STATS = new CharacterStats();
 
     public static final class Home extends Screen {
+        public final Button navCharacter = Button.of(Pictures.NAV_CHARACTER);
+        public final Button navLockedLeft = Button.of(Pictures.NAV_LOCKED_LEFT);
+        public final Button navLockedRight = Button.of(Pictures.NAV_LOCKED_RIGHT);
+        public final Button navPortal = Button.of(Pictures.NAV_PORTAL);
+        public final Button topAvatar = Button.of(Pictures.TOP_AVATAR);
+        public final Button stageQuestTracker = Button.of(Pictures.STAGE_QUEST_TRACKER);
+        public final Button stagePackage = Button.of(Pictures.STAGE_PACKAGE);
+        public final Button homeSideIcon = Button.of(Pictures.HOME_SIDE_ICON);
+        public final Button stageDownloadReward = Button.of(Pictures.STAGE_DOWNLOAD_REWARD).occasional();
+
         @Override
         public Setup setup() {
-            return Setup.named("Home").from(Screens.STAGE.noticeBack);
+            return Setup
+                    .named("Home")
+                    .markers(List.of(Pictures.NAV_HOME_SELECTED))
+                    .shot("screens/HOME.png")
+                    .from(Screens.STAGE.noticeBack);
         }
     }
 

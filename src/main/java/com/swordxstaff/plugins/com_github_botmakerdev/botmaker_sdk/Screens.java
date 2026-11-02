@@ -166,9 +166,18 @@ public final class Screens {
     public static final Servers SERVERS = new Servers();
 
     public static final class Settings extends Screen {
+        public final Button settingsTabSound = Button.of(Pictures.SETTINGS_TAB_SOUND);
+        public final Button settingsTabOther = Button.of(Pictures.SETTINGS_TAB_OTHER);
+        public final Button settingsTextLanguage = Button.of(Pictures.SETTINGS_TEXT_LANGUAGE);
+        public final Button settingsToggleServerChannel = Button.of(Pictures.SETTINGS_TOGGLE_SERVER_CHANNEL);
+
         @Override
         public Setup setup() {
-            return Setup.named("Settings").from(Screens.TITLE.titleSettings);
+            return Setup
+                    .named("Settings")
+                    .markers(List.of(Pictures.SETTINGS_TITLE))
+                    .shot("screens/SETTINGS.png")
+                    .from(Screens.TITLE.titleSettings);
         }
     }
 

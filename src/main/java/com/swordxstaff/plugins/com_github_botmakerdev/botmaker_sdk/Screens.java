@@ -1105,7 +1105,6 @@ public final class Screens {
     public static final MenuQuest MENU_QUEST = new MenuQuest();
 
     public static final class MenuPhoto extends Screen {
-        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
         public final Button photoZoomIn = Button.of(Pictures.PHOTO_ZOOM_IN).tried();
         public final Button photoZoomOut = Button.of(Pictures.PHOTO_ZOOM_OUT).tried();
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);

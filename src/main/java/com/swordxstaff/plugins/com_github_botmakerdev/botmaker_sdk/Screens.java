@@ -912,13 +912,15 @@ public final class Screens {
     public static final Battle BATTLE = new Battle();
 
     public static final class StageQuestTracker extends Screen {
-        public final Button questClaimButton = Button.of(Pictures.QUEST_CLAIM_BUTTON);
+        public final Button questClaimButton = Button.of(Pictures.QUEST_CLAIM_BUTTON).tried();
+        public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Stage quest tracker")
                     .markers(List.of(Pictures.QUEST_GOAL_LABEL))
+                    .back(Screens.STAGE_QUEST_TRACKER.keyEsc)
                     .takes(Duration.ofMillis(4200L))
                     .shot("screens/STAGE_QUEST_TRACKER.png")
                     .from(Screens.STAGE.stageQuestTracker);

@@ -1280,7 +1280,8 @@ public final class Screens {
         public final Button skillGoalsTabQuality = Button.of(Pictures.SKILL_GOALS_TAB_QUALITY).tried()
                 .looks(List.of(Look.of(Pictures.SKILL_GOALS_QUALITY_SELECTED, State.SELECTED)));
         public final Button goalsTabSkill = Button.of(Pictures.GOALS_TAB_SKILL).marking();
-        public final Button skillGoalsLevel = Button.of(Pictures.SKILL_GOALS_LEVEL).tried();
+        public final Button skillGoalsLevel = Button.of(Pictures.SKILL_GOALS_LEVEL).tried()
+                .looks(List.of(Look.of(Pictures.SKILL_GOALS_TAB_LEVEL, State.SELECTED)));
 
         @Override
         public Setup setup() {

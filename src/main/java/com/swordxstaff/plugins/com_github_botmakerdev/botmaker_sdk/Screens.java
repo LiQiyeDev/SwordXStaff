@@ -187,6 +187,7 @@ public final class Screens {
         public final Button settingsVoiceLanguage = Button.of(Pictures.SETTINGS_TEXT_LANGUAGE);
         public final Button settingsToggleNexusChannel = Button.of(Pictures.SETTINGS_TOGGLE_SERVER_CHANNEL);
         public final Button settingsToggleKingdomChannel = Button.of(Pictures.SETTINGS_TOGGLE_SERVER_CHANNEL);
+        public final Button settingsTabGame = Button.of(Pictures.SETTINGS_TAB_GAME);
 
         @Override
         public Setup setup() {

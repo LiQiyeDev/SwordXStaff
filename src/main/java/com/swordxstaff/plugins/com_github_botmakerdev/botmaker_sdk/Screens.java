@@ -784,6 +784,7 @@ public final class Screens {
             return Setup
                     .named("Technique details")
                     .markers(List.of(Pictures.TECHNIQUE_PIN))
+                    .back(Screens.TECHNIQUE_DETAILS.techniqueEquip)
                     .takes(Duration.ofMillis(5500L))
                     .shot("screens/TECHNIQUE_DETAILS.png")
                     .from(Screens.SKILLS.skillsWaterShot);

@@ -73,6 +73,8 @@ public final class Screens {
                     .named("User Agreement")
                     .elements(List.of(Elements.BOLTRAY_GAMES_LICENSE_AGREEMENT))
                     .back(Screens.USER_AGREEMENT.policyBackArrow)
+                    .notes("Legal page, no bot work. Back arrow returns to Consent; first tap on the link after returning from a page may do nothing.")
+                    .owes(List.of("marker — the text marker also matches Consent's shot (tree holds covered views)"))
                     .from(Screens.CONSENT.userAgreement);
         }
     }

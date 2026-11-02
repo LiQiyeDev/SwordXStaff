@@ -849,6 +849,19 @@ public final class Screens {
 
     public static final World WORLD = new World();
 
+    public static final class WorldIslandOriginisle extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("World island originisle")
+                    .takes(Duration.ofMillis(5400L))
+                    .shot("screens/WORLD_ISLAND_ORIGINISLE.png")
+                    .from(Screens.WORLD.worldIslandOriginisle);
+        }
+    }
+
+    public static final WorldIslandOriginisle WORLD_ISLAND_ORIGINISLE = new WorldIslandOriginisle();
+
     private Screens() {
     }
 }

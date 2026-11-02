@@ -595,7 +595,11 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup.named("Island").shot("screens/ISLAND.png").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+            return Setup
+                    .named("Island")
+                    .alsoFrom(List.of(Way.of(Screens.HOME.homeSideIcon)))
+                    .shot("screens/ISLAND.png")
+                    .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
     }
 
@@ -1210,7 +1214,7 @@ public final class Screens {
         public final Button topAvatar = Button.of(Pictures.TOP_AVATAR);
         public final Button stageQuestTracker = Button.of(Pictures.STAGE_QUEST_TRACKER);
         public final Button stagePackage = Button.of(Pictures.STAGE_PACKAGE);
-        public final Button homeSideIcon = Button.of(Pictures.HOME_SIDE_ICON).tried();
+        public final Button homeSideIcon = Button.of(Pictures.HOME_SIDE_ICON);
         public final Button stageDownloadReward = Button.of(Pictures.STAGE_DOWNLOAD_REWARD).occasional();
         public final Mark navHomeSelected = Mark.of(Pictures.NAV_HOME_SELECTED);
 

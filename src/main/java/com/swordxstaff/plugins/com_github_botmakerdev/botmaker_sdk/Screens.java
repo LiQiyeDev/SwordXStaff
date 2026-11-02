@@ -493,6 +493,12 @@ public final class Screens {
             return Setup
                     .named("Cart blueprint")
                     .markers(List.of(Pictures.CART_BLUEPRINT_CARD))
+                    .notes("""
+                            Tutorial: after Akane's chores line, the island shows the Cart's blueprint card with "Open" over it.
+                            The red ! badge on the card is skipped by the marker.
+                            Tapping the card opens Unlock cart.\
+                            """)
+                    .reached(Reached.TRIED)
                     .shot("screens/CART_BLUEPRINT.png")
                     .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }

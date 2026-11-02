@@ -565,7 +565,7 @@ public final class Screens {
 
     public static final class Cart extends Screen {
         public final Button cartRowUnlock = Button.of(Pictures.CART_ROW_UNLOCK).tried().repeated();
-        public final Button cartClaimAll = Button.of(Pictures.CART_CLAIM_ALL).tried();
+        public final Button cartClaimAll = Button.of(Pictures.CART_CLAIM_ALL);
 
         @Override
         public Setup setup() {
@@ -579,6 +579,15 @@ public final class Screens {
     }
 
     public static final Cart CART = new Cart();
+
+    public static final class YouReceived extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("You received").from(Screens.CART.cartClaimAll);
+        }
+    }
+
+    public static final YouReceived YOU_RECEIVED = new YouReceived();
 
     private Screens() {
     }

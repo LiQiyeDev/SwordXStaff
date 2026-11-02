@@ -1380,7 +1380,7 @@ public final class Screens {
         public final Mark explorationGoalsTitle = Mark.of(Pictures.EXPLORATION_GOALS_TITLE);
         public final Button explorationBack = Button.of(Pictures.EXPLORATION_BACK);
         public final Button explorationProgressTab = Button.of(Pictures.EXPLORATION_PROGRESS_TAB);
-        public final Button explorationExploreTab = Button.of(Pictures.EXPLORATION_EXPLORE_TAB);
+        public final Button explorationExploreTab = Button.of(Pictures.EXPLORATION_EXPLORE_TAB).tried();
 
         @Override
         public Setup setup() {

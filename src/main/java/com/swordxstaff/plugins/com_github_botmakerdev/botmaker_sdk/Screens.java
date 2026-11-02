@@ -253,7 +253,12 @@ public final class Screens {
     public static final class SceneLoading extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("Scene loading").from(Screens.TITLE.titleTapToPlay);
+            return Setup
+                    .named("Scene loading")
+                    .notes(
+                            "Shown after Tap to Play while the world loads. No inputs. Its background scrolls and its Loading letters bounce.")
+                    .owes(List.of("marker: background and text all move, nothing still to cut"))
+                    .from(Screens.TITLE.titleTapToPlay);
         }
     }
 

@@ -1009,6 +1009,18 @@ public final class Screens {
             return Setup
                     .named("Top avatar")
                     .markers(List.of(Pictures.PROFILE_PLAYER_ID_LABEL))
+                    .notes("""
+                            The player's profile, opened by the avatar at the top left of Stage: power, class, player ID, rank, server (Cloudwold), stats, equipped gear, techniques and charms, HP bar.
+                            No settings here: no graphics, sound or language option.
+                            Escape closes it back to Stage.
+                            The power magnifier opens Character Power (power by source); Escape closes it.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List
+                            .of("Escape as its way back (works, not recorded as an input)",
+                                    "profile_stats_search, profile_dish: untried",
+                                    "profile_quick_heal: spends a healing item, the user's call",
+                                    "gear, technique and charm slots, like thumb, player ID copy: not cut"))
                     .takes(Duration.ofMillis(8400L))
                     .shot("screens/TOP_AVATAR.png")
                     .from(Screens.STAGE.topAvatar);

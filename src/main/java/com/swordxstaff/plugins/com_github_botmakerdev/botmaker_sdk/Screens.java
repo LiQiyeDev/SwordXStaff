@@ -724,10 +724,13 @@ public final class Screens {
     public static final Character CHARACTER = new Character();
 
     public static final class ReplaceGear extends Screen {
+        public final Button gearNoviceStaff = Button.of(Pictures.GEAR_NOVICE_STAFF);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Replace gear")
+                    .markers(List.of(Pictures.REPLACE_GEAR_CORNER))
                     .takes(Duration.ofMillis(5100L))
                     .shot("screens/EQUIP_WEAPON.png")
                     .from(Screens.CHARACTER.charGearSlot)

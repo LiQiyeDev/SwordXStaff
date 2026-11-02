@@ -1123,19 +1123,6 @@ public final class Screens {
 
     public static final MenuPhoto MENU_PHOTO = new MenuPhoto();
 
-    public static final class PhotoZoomOut extends Screen {
-        @Override
-        public Setup setup() {
-            return Setup
-                    .named("Photo zoom out")
-                    .takes(Duration.ofMillis(3100L))
-                    .shot("screens/PHOTO_ZOOM_OUT.png")
-                    .from(Screens.MENU_PHOTO.photoZoomOut);
-        }
-    }
-
-    public static final PhotoZoomOut PHOTO_ZOOM_OUT = new PhotoZoomOut();
-
     private Screens() {
     }
 }

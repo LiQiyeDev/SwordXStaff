@@ -450,7 +450,17 @@ public final class Screens {
     public static final class AethyrisArrival extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("Aethyris arrival").from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
+            return Setup
+                    .named("Aethyris arrival")
+                    .notes("""
+                            The first scene of the world after naming the character: a meadow with a large cherry tree, a cat-eared girl, a crate with a bobbing "Open" label and a red ! badge, a white-haired character lying on the grass. The scene moves by itself (the crate view was gone seconds later) and Akane's dialogue ("Hey, you're awake! I'm Akane, your trusty guide! Nice to meet ya!") covers it.
+                            Before it: Reina's dialogue "This world faces a grave crisis. We need your strength." and "Come to Aethyris. Only then can we save..." over black.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List
+                            .of("marker — the scene moves on by itself before a still part can be cut",
+                                    "the crate (Open) not tried"))
+                    .from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
         }
     }
 

@@ -374,7 +374,7 @@ public final class Screens {
         public final Button customizationTabHair = Button.of(Pictures.CUSTOMIZATION_TAB_HAIR).tried();
         public final Button customizationTabFace = Button.of(Pictures.CUSTOMIZATION_TAB_FACE).tried();
         public final Button customizationTabTrait = Button.of(Pictures.CUSTOMIZATION_TAB_TRAIT).tried();
-        public final Button customizationShuffle = Button.of(Pictures.CUSTOMIZATION_SHUFFLE);
+        public final Button customizationShuffle = Button.of(Pictures.CUSTOMIZATION_SHUFFLE).tried();
         public final Button customizationReset = Button.of(Pictures.CUSTOMIZATION_RESET);
         @Override
         public Setup setup() {

@@ -942,6 +942,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Stage quest tracker")
+                    .alsoFrom(List.of(Way.of(Screens.HOME.stageQuestTracker)))
                     .back(Screens.STAGE_QUEST_TRACKER.keyEsc)
                     .takes(Duration.ofMillis(4200L))
                     .shot("screens/STAGE_QUEST_TRACKER.png")
@@ -1020,6 +1021,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Top avatar")
+                    .alsoFrom(List.of(Way.of(Screens.HOME.topAvatar)))
                     .back(Screens.TOP_AVATAR.keyEsc)
                     .notes("""
                             The player's profile, opened by the avatar at the top left of Stage: power, class, player ID, rank, server (Cloudwold), stats, equipped gear, techniques and charms, HP bar.
@@ -1069,6 +1071,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Stage package")
+                    .alsoFrom(List.of(Way.of(Screens.HOME.stagePackage)))
                     .back(Screens.STAGE_PACKAGE.upgradeBack)
                     .takes(Duration.ofMillis(6600L))
                     .shot("screens/STAGE_PACKAGE.png")

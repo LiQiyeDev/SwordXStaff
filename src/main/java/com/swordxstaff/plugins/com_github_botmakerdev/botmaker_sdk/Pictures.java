@@ -308,6 +308,8 @@ public final class Pictures {
             .at(new Rect(235, 1782, 395, 96));
     public static final ImageTemplate ACHIEVEMENT_CARD = new ImageTemplate("images/achievement_card.png")
             .at(new Rect(90, 220, 740, 330));
+    public static final ImageTemplate RETURN_HOME_TEXT = new ImageTemplate("images/return_home_text.png")
+            .at(new Rect(400, 852, 282, 56));
     private Pictures() {
     }
 }

@@ -1165,10 +1165,15 @@ public final class Screens {
     public static final Achievement ACHIEVEMENT = new Achievement();
 
     public static final class ReturnHomeConfirm extends Screen {
+        public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
+        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Return home confirm")
+                    .markers(List.of(Pictures.RETURN_HOME_TEXT))
+                    .back(Screens.RETURN_HOME_CONFIRM.resetConfirmCancel)
                     .takes(Duration.ofMillis(4300L))
                     .shot("screens/QUEST_GO.png")
                     .from(Screens.MENU_QUEST.questGo);

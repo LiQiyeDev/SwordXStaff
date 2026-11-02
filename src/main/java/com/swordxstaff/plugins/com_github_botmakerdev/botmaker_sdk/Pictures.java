@@ -26,7 +26,7 @@ public final class Pictures {
     public static final ImageTemplate NOTICE_ITEM_3 = new ImageTemplate("images/notice_item_3.png").at(new Rect(471, 275, 104, 60)).in(new Size(1280, 720));
     public static final ImageTemplate NOTICE_ITEM_4 = new ImageTemplate("images/notice_item_4.png").at(new Rect(471, 342, 104, 60)).in(new Size(1280, 720));
     public static final ImageTemplate NOTICE_HIDE_TODAY = new ImageTemplate("images/notice_hide_today.png").at(new Rect(572, 604, 138, 20)).in(new Size(1280, 720));
-    public static final ImageTemplate TITLE_TAP_TO_PLAY = new ImageTemplate("images/title_tap_to_play.png").at(new Rect(606, 596, 70, 18)).in(new Size(1280, 720));
+    public static final ImageTemplate TITLE_TAP_TO_PLAY = new ImageTemplate("images/title_tap_to_play.png").at(new Rect(383, 1574, 26, 26));
     public static final ImageTemplate TITLE_SERVERS = new ImageTemplate("images/title_servers.png").at(new Rect(937, 42, 96, 96));
     public static final ImageTemplate TITLE_SETTINGS = new ImageTemplate("images/title_settings.png").at(new Rect(937, 185, 96, 96));
     public static final ImageTemplate TITLE_FOLLOW_US = new ImageTemplate("images/title_follow_us.png").at(new Rect(937, 330, 96, 96));
@@ -35,8 +35,8 @@ public final class Pictures {
     public static final ImageTemplate TITLE_USER_CENTER = new ImageTemplate("images/title_user_center.png").at(new Rect(958, 783, 54, 44));
     public static final ImageTemplate TITLE_SUBMIT_LOGS = new ImageTemplate("images/title_submit_logs.png").at(new Rect(958, 1076, 54, 44));
     public static final ImageTemplate TITLE_REPAIR_CLIENT = new ImageTemplate("images/title_repair_client.png").at(new Rect(958, 930, 54, 44));
-    public static final ImageTemplate SERVERS_TITLE = new ImageTemplate("images/servers_title.png").at(new Rect(600, 104, 80, 28)).in(new Size(1280, 720));
-    public static final ImageTemplate SERVERS_ROW_SELECTED = new ImageTemplate("images/servers_row_selected.png").at(new Rect(505, 226, 72, 22)).in(new Size(1280, 720));
+    public static final ImageTemplate SERVERS_TITLE = new ImageTemplate("images/servers_title.png").at(new Rect(437, 240, 200, 45));
+    public static final ImageTemplate SERVERS_ROW_SELECTED = new ImageTemplate("images/servers_row_selected.png").at(new Rect(162, 525, 180, 45));
     public static final ImageTemplate SERVERS_ROW_OTHER = new ImageTemplate("images/servers_row_other.png").at(new Rect(505, 165, 72, 22)).in(new Size(1280, 720));
     public static final ImageTemplate SETTINGS_TITLE = new ImageTemplate("images/settings_title.png").at(new Rect(600, 178, 80, 28)).in(new Size(1280, 720));
     public static final ImageTemplate SETTINGS_TAB_SOUND = new ImageTemplate("images/settings_tab_sound.png").at(new Rect(616, 219, 48, 22)).in(new Size(1280, 720));

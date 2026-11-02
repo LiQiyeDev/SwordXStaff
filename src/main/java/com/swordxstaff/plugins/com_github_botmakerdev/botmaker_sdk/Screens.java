@@ -382,6 +382,15 @@ public final class Screens {
                     .named("Character customization")
                     .markers(List.of(Pictures.CUSTOMIZATION_HEADER))
                     .back(Screens.CHARACTER_CUSTOMIZATION.customizationBack)
+                    .notes("""
+                            Character creation, second step, after Next on Select body type. "Customization" at the top, the character running on a meadow, an outfit strip (Visage Try-On), four tabs General / Hair / Face / Trait, a back arrow and a black Next bar at the bottom.
+                            Opens on General (Skin Tone swatches). Tapping Hair shows Hairstyle / Hair Color; Face shows Eyebrows / Eyes / Pupil Color / Lips / Makeup; Trait shows a grid of options. The screen stays the same, only the panel changes.
+                            Shuffle (round arrows, right side) changed the character's hair and skin at once. Reset (circle arrows below it) opens Reset confirm.
+                            Not tried: Next, the back arrow, the swatches, the outfit icons.
+                            The notice_back and dialogue_next_arrow pictures also score as found on this screen: they clash with the bottom bar.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List.of("Next (leaves)", "the back arrow (untried)", "swatches and outfit try-on icons"))
                     .shot("screens/CHARACTER_CUSTOMIZATION.png")
                     .from(Screens.SELECT_BODY_TYPE.bodyTypeNext);
         }

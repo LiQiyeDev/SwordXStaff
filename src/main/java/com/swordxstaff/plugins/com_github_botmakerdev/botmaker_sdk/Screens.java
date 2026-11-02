@@ -352,9 +352,15 @@ public final class Screens {
     public static final PrologueNarration PROLOGUE_NARRATION = new PrologueNarration();
 
     public static final class SelectBodyType extends Screen {
+        public final Button bodyTypeNext = Button.of(Pictures.BODY_TYPE_NEXT);
+
         @Override
         public Setup setup() {
-            return Setup.named("Select body type").from(Screens.PROLOGUE_NARRATION.dialoguePanel);
+            return Setup
+                    .named("Select body type")
+                    .markers(List.of(Pictures.BODY_TYPE_TITLE))
+                    .shot("screens/SELECT_BODY_TYPE.png")
+                    .from(Screens.PROLOGUE_NARRATION.dialoguePanel);
         }
     }
 

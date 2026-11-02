@@ -564,10 +564,13 @@ public final class Screens {
     public static final Island ISLAND = new Island();
 
     public static final class Cart extends Screen {
+        public final Button cartRowUnlock = Button.of(Pictures.CART_ROW_UNLOCK);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Cart")
+                    .markers(List.of(Pictures.CART_HEADER_PICTURE))
                     .takes(Duration.ofMillis(5900L))
                     .shot("screens/CART.png")
                     .from(Screens.ISLAND.islandCartButton);

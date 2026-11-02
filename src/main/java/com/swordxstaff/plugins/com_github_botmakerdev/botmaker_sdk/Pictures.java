@@ -125,6 +125,10 @@ public final class Pictures {
             .at(new Rect(390, 1780, 296, 50));
     public static final ImageTemplate ISLAND_CART_BUTTON = new ImageTemplate("images/island_cart_button.png")
             .at(new Rect(120, 1290, 190, 100));
+    public static final ImageTemplate CART_HEADER_PICTURE = new ImageTemplate("images/cart_header_picture.png")
+            .at(new Rect(330, 270, 410, 260));
+    public static final ImageTemplate CART_ROW_UNLOCK = new ImageTemplate("images/cart_row_unlock.png")
+            .at(new Rect(785, 660, 200, 64));
     private Pictures() {
     }
 }

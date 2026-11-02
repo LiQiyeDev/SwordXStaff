@@ -786,8 +786,8 @@ public final class Screens {
     public static final GearDetails GEAR_DETAILS = new GearDetails();
 
     public static final class Skills extends Screen {
-        public final Button skillsLoadoutPrev = Button.of(Pictures.SKILLS_LOADOUT_PREV);
-        public final Button skillsLoadoutNext = Button.of(Pictures.SKILLS_LOADOUT_NEXT);
+        public final Button skillsLoadoutPrev = Button.of(Pictures.SKILLS_LOADOUT_PREV).tried();
+        public final Button skillsLoadoutNext = Button.of(Pictures.SKILLS_LOADOUT_NEXT).tried();
         public final Button skillsWaterShot = Button.of(Pictures.SKILLS_WATER_SHOT);
         public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK).tried();
         public final Mark skillsLoadoutPencil = Mark.of(Pictures.SKILLS_LOADOUT_PENCIL);

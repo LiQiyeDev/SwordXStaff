@@ -1279,7 +1279,6 @@ public final class Screens {
     public static final class SkillGoals extends Screen {
         public final Button skillGoalsTabQuality = Button.of(Pictures.SKILL_GOALS_TAB_QUALITY).tried()
                 .looks(List.of(Look.of(Pictures.SKILL_GOALS_QUALITY_SELECTED, State.SELECTED)));
-        public final Button skillGoalsTabLevel = Button.of(Pictures.SKILL_GOALS_TAB_LEVEL);
         public final Button goalsTabSkill = Button.of(Pictures.GOALS_TAB_SKILL).marking();
         public final Button skillGoalsLevel = Button.of(Pictures.SKILL_GOALS_LEVEL);
 

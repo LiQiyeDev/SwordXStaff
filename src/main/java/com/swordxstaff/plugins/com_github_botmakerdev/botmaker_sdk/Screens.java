@@ -152,6 +152,7 @@ public final class Screens {
         public final Button titleRepairClient = Button
                 .of(Pictures.TITLE_REPAIR_CLIENT)
                 .never("Can re-download the game's files; only for a broken install");
+        public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
 
         @Override
         public Setup setup() {
@@ -977,6 +978,15 @@ public final class Screens {
     }
 
     public static final LoadoutEdit LOADOUT_EDIT = new LoadoutEdit();
+
+    public static final class QuitConfirm extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Quit confirm").from(Screens.TITLE.keyEsc);
+        }
+    }
+
+    public static final QuitConfirm QUIT_CONFIRM = new QuitConfirm();
 
     private Screens() {
     }

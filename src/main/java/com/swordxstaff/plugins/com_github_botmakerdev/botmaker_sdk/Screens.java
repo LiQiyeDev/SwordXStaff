@@ -396,7 +396,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Character customization")
-                    .markers(List.of(Pictures.RESET_CONFIRM_TEXT, Pictures.CUSTOMIZATION_TITLE))
+                    .markers(List.of(Pictures.CUSTOMIZATION_TITLE))
                     .back(Screens.CHARACTER_CUSTOMIZATION.resetConfirmCancel)
                     .shot("screens/CHARACTER_CUSTOMIZATION.png")
                     .from(Screens.SELECT_BODY_TYPE.bodyTypeNext);

@@ -1123,19 +1123,6 @@ public final class Screens {
 
     public static final MenuPhoto MENU_PHOTO = new MenuPhoto();
 
-    public static final class PhotoZoomIn extends Screen {
-        @Override
-        public Setup setup() {
-            return Setup
-                    .named("Photo zoom in")
-                    .takes(Duration.ofMillis(3900L))
-                    .shot("screens/PHOTO_ZOOM_IN.png")
-                    .from(Screens.MENU_PHOTO.photoZoomIn);
-        }
-    }
-
-    public static final PhotoZoomIn PHOTO_ZOOM_IN = new PhotoZoomIn();
-
     private Screens() {
     }
 }

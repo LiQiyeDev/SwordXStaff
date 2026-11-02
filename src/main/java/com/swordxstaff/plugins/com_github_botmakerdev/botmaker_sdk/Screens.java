@@ -383,6 +383,15 @@ public final class Screens {
 
     public static final SelectBodyType SELECT_BODY_TYPE = new SelectBodyType();
 
+    public static final class CharacterCustomization extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Character customization").from(Screens.SELECT_BODY_TYPE.bodyTypeNext);
+        }
+    }
+
+    public static final CharacterCustomization CHARACTER_CUSTOMIZATION = new CharacterCustomization();
+
     private Screens() {
     }
 }

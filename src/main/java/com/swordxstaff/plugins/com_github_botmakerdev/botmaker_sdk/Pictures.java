@@ -217,6 +217,8 @@ public final class Pictures {
             .at(new Rect(458, 1803, 42, 42));
     public static final ImageTemplate STAGE_ORE_NODE = new ImageTemplate("images/stage_ore_node.png")
             .at(new Rect(503, 932, 70, 66));
+    public static final ImageTemplate STAGE_WOOD_NODE = new ImageTemplate("images/stage_wood_node.png")
+            .at(new Rect(525, 848, 76, 44));
     private Pictures() {
     }
 }

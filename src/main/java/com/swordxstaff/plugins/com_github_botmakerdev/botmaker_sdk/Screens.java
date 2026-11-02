@@ -856,6 +856,7 @@ public final class Screens {
         public final Button stageDownloadReward = Button.of(Pictures.STAGE_DOWNLOAD_REWARD).occasional();
         public final Button stageBoar = Button.of(Pictures.STAGE_BOAR);
         public final Button stageOreNode = Button.of(Pictures.STAGE_ORE_NODE).tried().occasional();
+        public final Button stageWoodNode = Button.of(Pictures.STAGE_WOOD_NODE).occasional();
 
         @Override
         public Setup setup() {

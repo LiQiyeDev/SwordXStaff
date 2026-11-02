@@ -205,9 +205,14 @@ public final class Screens {
     public static final OfficialCommunity OFFICIAL_COMMUNITY = new OfficialCommunity();
 
     public static final class CustomerService extends Screen {
+        public final Button supportBack = Button.of(Pictures.SUPPORT_BACK);
+
         @Override
         public Setup setup() {
-            return Setup.named("Customer Service").from(Screens.TITLE.titleCustomerService);
+            return Setup
+                    .named("Customer Service")
+                    .back(Screens.CUSTOMER_SERVICE.supportBack)
+                    .from(Screens.TITLE.titleCustomerService);
         }
     }
 

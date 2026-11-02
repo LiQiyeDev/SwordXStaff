@@ -81,6 +81,8 @@ public final class Pictures {
             .at(new Rect(611, 318, 58, 60));
     public static final ImageTemplate COMMUNITY_X = new ImageTemplate("images/community_x.png")
             .at(new Rect(694, 318, 58, 60));
+    public static final ImageTemplate SUPPORT_BACK = new ImageTemplate("images/support_back.png")
+            .at(new Rect(12, 12, 22, 26));
 
     private Pictures() {
     }

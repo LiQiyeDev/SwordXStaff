@@ -45,7 +45,7 @@ public final class Screens {
     public static final TutorialDialogue TUTORIAL_DIALOGUE = new TutorialDialogue();
 
     public static final class PrivacyPolicy extends Screen {
-        public final Button policyBackArrow = Button.of(Pictures.POLICY_BACK_ARROW);
+        public final Button policyBackArrow = Button.of(Pictures.POLICY_BACK_ARROW).tried();
 
         @Override
         public Setup setup() {

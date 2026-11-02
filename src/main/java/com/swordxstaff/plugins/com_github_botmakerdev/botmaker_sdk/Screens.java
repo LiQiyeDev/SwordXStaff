@@ -299,12 +299,13 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("User Center")
+                    .alsoFrom(List.of(Way.of(Screens.MENU_USER_CENTER.ucAccountCenter)))
                     .back(Screens.USER_CENTER.userCenterClose)
-                    .notes(
-                            "The account's page, a native Android view the tree reads whole: Guest, its ID, version, and the rows Link Account, Contact Support, Terms and Conditions, Manage Cookies, Unlink, Delete Account, Subscription Email, and a Switch button. Contact Support opens the support chat (the same page as Customer Service; two Escapes come back). Terms and Conditions and Manage Cookies raise the agreement dialog (Cancel and Confirm) over this page; Escape closes it without choosing. Subscription Email opens a web email form that the bot never fills; Escape comes back. Switch raises a guest-account warning (Reminder, \"you'll lose your in-game progress\", Confirm); Escape closes it. Link Account, Unlink and Delete Account were not pressed: the user's call.")
+                    .notes("The account's page, a native Android view the tree reads whole: Guest, its ID, version, and the rows Link Account, Contact Support, Terms and Conditions, Manage Cookies, Unlink, Delete Account, Subscription Email, and a Switch button. Contact Support opens the support chat (the same page as Customer Service; two Escapes come back). Terms and Conditions and Manage Cookies raise the agreement dialog (Cancel and Confirm) over this page; Escape closes it without choosing. Subscription Email opens a web email form that the bot never fills; Escape comes back. Switch raises a guest-account warning (Reminder, \"you'll lose your in-game progress\", Confirm); Escape closes it. Link Account, Unlink and Delete Account were not pressed: the user's call.")
                     .owes(List
                             .of(
                                     "marker: Consent's agreement texts also show on its dialogs; need a part only User Center shows"))
+                    .takes(Duration.ofMillis(2300L))
                     .shot("screens/USER_CENTER.png")
                     .from(Screens.TITLE.titleUserCenter);
         }

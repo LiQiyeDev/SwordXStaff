@@ -123,6 +123,8 @@ public final class Pictures {
             .at(new Rect(262, 465, 562, 95));
     public static final ImageTemplate TAP_TO_CONTINUE = new ImageTemplate("images/tap_to_continue.png")
             .at(new Rect(390, 1780, 296, 50));
+    public static final ImageTemplate ISLAND_CART_BUTTON = new ImageTemplate("images/island_cart_button.png")
+            .at(new Rect(120, 1290, 190, 100));
     private Pictures() {
     }
 }

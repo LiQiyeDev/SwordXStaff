@@ -551,7 +551,11 @@ public final class Screens {
     public static final class Island extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("Island").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+            return Setup
+                    .named("Island")
+                    .markers(List.of(Pictures.ISLAND_CART_BUTTON))
+                    .shot("screens/ISLAND.png")
+                    .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
     }
 

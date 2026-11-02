@@ -85,6 +85,8 @@ public final class Pictures {
             .at(new Rect(12, 12, 22, 26));
     public static final ImageTemplate SUPPORT_LOGO = new ImageTemplate("images/support_logo.png")
             .at(new Rect(620, 2, 40, 40));
+    public static final ImageTemplate SUPPORT_SEND = new ImageTemplate("images/support_send.png")
+            .at(new Rect(1212, 262, 58, 34));
 
     private Pictures() {
     }

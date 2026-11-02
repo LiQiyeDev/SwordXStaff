@@ -1333,22 +1333,22 @@ public final class Screens {
 
     public static final ResourceDownload RESOURCE_DOWNLOAD = new ResourceDownload();
 
-    public static final class UcSelfService extends Screen {
+    public static final class SelfServiceQuery extends Screen {
         public final Mark selfServiceTitle = Mark.of(Pictures.SELF_SERVICE_TITLE);
         public final Button selfServiceClose = Button.of(Pictures.SELF_SERVICE_CLOSE);
 
         @Override
         public Setup setup() {
             return Setup
-                    .named("Uc self service")
-                    .back(Screens.UC_SELF_SERVICE.selfServiceClose)
+                    .named("Self-service query")
+                    .back(Screens.SELF_SERVICE_QUERY.selfServiceClose)
                     .takes(Duration.ofMillis(3500L))
                     .shot("screens/UC_SELF_SERVICE.png")
                     .from(Screens.MENU_USER_CENTER.ucSelfService);
         }
     }
 
-    public static final UcSelfService UC_SELF_SERVICE = new UcSelfService();
+    public static final SelfServiceQuery SELF_SERVICE_QUERY = new SelfServiceQuery();
 
     private Screens() {
     }

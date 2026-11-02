@@ -816,6 +816,13 @@ public final class Screens {
                     .named("Technique details")
                     .markers(List.of(Pictures.TECHNIQUE_PIN))
                     .back(Screens.TECHNIQUE_DETAILS.techniqueEquip)
+                    .notes("""
+                            One technique: rarity, type (Water Shot: Rare, Single-Hit DMG, 43.6%+3 DMG to 1 enemy within 4 grids), its range grid and source.
+                            Equip, then a slot on Skills; Enhance levels it up (not tried).
+                            Its share icon also matches Gear details' header; the pin icon tells them apart.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List.of("technique_enhance — its frame moved when cut; cut and try after the tutorial"))
                     .takes(Duration.ofMillis(5500L))
                     .shot("screens/TECHNIQUE_DETAILS.png")
                     .from(Screens.SKILLS.skillsWaterShot);

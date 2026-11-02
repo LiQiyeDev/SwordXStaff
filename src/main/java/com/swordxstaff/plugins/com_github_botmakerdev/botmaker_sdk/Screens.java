@@ -665,6 +665,15 @@ public final class Screens {
             return Setup
                     .named("Storage chest")
                     .back(Screens.STORAGE_CHEST.upgradeBack)
+                    .notes("""
+                            The bag ("Item"): what the AFK Cart gathered (Wood 50, Stone 50 after the tutorial claim). Currencies along the top: Rolla and two others at 0.
+                            A Type filter at the top right; tabs along the bottom: bag, gear, gem, pot.
+                            Tutorial: opened from the House's storage chest; it dims all but Back.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List
+                            .of("marker: the screen was dimmed by the tutorial; cut the Type filter or the bag tab when it is not",
+                                    "inputs: Type filter and the bottom tabs, untried"))
                     .takes(Duration.ofMillis(12100L))
                     .shot("screens/STORAGE_CHEST.png")
                     .from(Screens.HOUSE.houseStorageChest);

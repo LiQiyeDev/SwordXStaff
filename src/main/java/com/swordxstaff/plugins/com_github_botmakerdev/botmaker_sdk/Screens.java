@@ -1396,9 +1396,17 @@ public final class Screens {
     public static final WorldChest WORLD_CHEST = new WorldChest();
 
     public static final class DestinyExploration extends Screen {
+        public final Mark destinyExplorationTitle = Mark.of(Pictures.DESTINY_EXPLORATION_TITLE);
+        public final Button explorationBack = Button.of(Pictures.EXPLORATION_BACK);
+        public final Button destinyProgressTab = Button.of(Pictures.DESTINY_PROGRESS_TAB);
+
         @Override
         public Setup setup() {
-            return Setup.named("Destiny exploration").from(Screens.WORLD_CHEST.explorationExploreTab);
+            return Setup
+                    .named("Destiny exploration")
+                    .back(Screens.DESTINY_EXPLORATION.explorationBack)
+                    .shot("screens/DESTINY_EXPLORATION.png")
+                    .from(Screens.WORLD_CHEST.explorationExploreTab);
         }
     }
 

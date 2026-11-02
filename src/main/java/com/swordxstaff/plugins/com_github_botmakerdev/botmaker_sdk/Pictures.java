@@ -381,6 +381,10 @@ public final class Pictures {
             "images/exploration_progress_tab.png").at(new Rect(360, 1795, 160, 60));
     public static final ImageTemplate EXPLORATION_EXPLORE_TAB = new ImageTemplate("images/exploration_explore_tab.png")
             .at(new Rect(770, 1795, 150, 60));
+    public static final ImageTemplate DESTINY_EXPLORATION_TITLE = new ImageTemplate(
+            "images/destiny_exploration_title.png").at(new Rect(58, 55, 490, 52));
+    public static final ImageTemplate DESTINY_PROGRESS_TAB = new ImageTemplate("images/destiny_progress_tab.png")
+            .at(new Rect(360, 1795, 160, 60));
     private Pictures() {
     }
 }

@@ -754,7 +754,6 @@ public final class Screens {
             return Setup
                     .named("Replace gear")
                     .markers(List.of(Pictures.REPLACE_GEAR_CORNER))
-                    .alsoFrom(List.of(Way.of(Screens.TOP_AVATAR.profileDish)))
                     .notes("""
                             Lists the gear that fits the slot pressed on Character; a tap on an item opens Gear details.
                             First item: Novice Staff (Common, power 81, Level 3), given for picking Staff.\

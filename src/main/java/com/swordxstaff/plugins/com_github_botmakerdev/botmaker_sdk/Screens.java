@@ -397,8 +397,10 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Reset confirm")
+                    .markers(List.of(Pictures.RESET_CONFIRM_TEXT))
                     .back(Screens.RESET_CONFIRM.resetConfirmCancel)
                     .popup()
+                    .shot("screens/RESET_CONFIRM.png")
                     .from(Screens.CHARACTER_CUSTOMIZATION.customizationReset);
         }
     }

@@ -103,6 +103,14 @@ public final class Pictures {
             .at(new Rect(560, 1055, 360, 95));
     public static final ImageTemplate CUSTOMIZATION_HEADER = new ImageTemplate("images/customization_header.png")
             .at(new Rect(400, 85, 280, 55));
+    public static final ImageTemplate NAME_TITLE = new ImageTemplate("images/name_title.png")
+            .at(new Rect(390, 85, 300, 55));
+    public static final ImageTemplate NAME_FIELD = new ImageTemplate("images/name_field.png")
+            .at(new Rect(35, 1565, 1010, 110));
+    public static final ImageTemplate NAME_LETS_GO = new ImageTemplate("images/name_lets_go.png")
+            .at(new Rect(215, 1765, 835, 110));
+    public static final ImageTemplate NAME_BACK = new ImageTemplate("images/name_back.png")
+            .at(new Rect(20, 1765, 150, 110));
     private Pictures() {
     }
 }

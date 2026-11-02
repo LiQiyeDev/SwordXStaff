@@ -422,9 +422,18 @@ public final class Screens {
     public static final ResetConfirm RESET_CONFIRM = new ResetConfirm();
 
     public static final class CharacterName extends Screen {
+        public final Button nameBack = Button.of(Pictures.NAME_BACK);
+        public final Button nameField = Button.of(Pictures.NAME_FIELD);
+        public final Button nameLetsGo = Button.of(Pictures.NAME_LETS_GO);
+
         @Override
         public Setup setup() {
-            return Setup.named("Character name").from(Screens.CHARACTER_CUSTOMIZATION.customizationNext);
+            return Setup
+                    .named("Character name")
+                    .markers(List.of(Pictures.NAME_TITLE))
+                    .back(Screens.CHARACTER_NAME.nameBack)
+                    .shot("screens/CHARACTER_NAME.png")
+                    .from(Screens.CHARACTER_CUSTOMIZATION.customizationNext);
         }
     }
 

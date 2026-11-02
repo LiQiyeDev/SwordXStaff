@@ -38,6 +38,8 @@ public final class Elements {
             .shot("elements/manage_cookies.png");
     public static final Element DELETE_ACCOUNT = Element.byHolding(Texts.DELETE_ACCOUNT)
             .shot("elements/delete_account.png");
+    public static final Element LT_LY_SWITCH_ACCOUNT = Element.byId("lt_ly_switch_account")
+            .shot("elements/lt_ly_switch_account.png");
 
     private Elements() {
     }

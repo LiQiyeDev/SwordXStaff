@@ -256,10 +256,10 @@ public final class Screens {
                     .named("User Center")
                     .elements(List.of(Elements.LT_TV_DIALOG_TITLE, Elements.SUBSCRIPTION_EMAIL))
                     .back(Screens.USER_CENTER.userCenterClose)
-                    .notes("The account's page, a native Android view the tree reads whole: Guest, its ID, version, and the rows Link Account, Contact Support, Terms and Conditions, Manage Cookies, Unlink, Delete Account, Subscription Email, and a Switch button. Contact Support opens the support chat (the same page as Customer Service). Terms and Conditions and Manage Cookies raise the agreement dialog (Cancel and Confirm) over this page; Escape closes it without choosing. Subscription Email opens a web email form that the bot never fills. Link Account, Unlink and Switch ask for a guest-account warning (Confirm) and are never pressed. The Terms dialog shares its texts with Consent, so a text marker alone cannot tell them apart.")
+                    .notes("The account's page, a native Android view the tree reads whole: Guest, its ID, version, and the rows Link Account, Contact Support, Terms and Conditions, Manage Cookies, Unlink, Delete Account, Subscription Email, and a Switch button. Contact Support opens the support chat (the same page as Customer Service; two Escapes come back). Terms and Conditions and Manage Cookies raise the agreement dialog (Cancel and Confirm) over this page; Escape closes it without choosing. Subscription Email opens a web email form that the bot never fills; Escape comes back. Switch raises a guest-account warning (Reminder, \"you'll lose your in-game progress\", Confirm); Escape closes it. Link Account, Unlink and Delete Account were not pressed: the user's call.")
                     .owes(List
                             .of(
-                                    "marker: Consent's agreement texts also show on its dialogs; use Subscription Email together with the Guest row"))
+                                    "marker: Consent's agreement texts also show on its dialogs; need a part only User Center shows"))
                     .from(Screens.TITLE.titleUserCenter);
         }
     }

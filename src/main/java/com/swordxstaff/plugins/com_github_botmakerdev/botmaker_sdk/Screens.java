@@ -205,15 +205,26 @@ public final class Screens {
                 .of(Pictures.SETTINGS_TOGGLE_SERVER_CHANNEL)
                 .never("Only hides chat channels on Home; no bot use, left as the game sets it");
         public final Button settingsTabGame = Button.of(Pictures.SETTINGS_TAB_GAME).tried();
+        public final Button settingsTabGraphics = Button.of(Pictures.SETTINGS_TAB_GRAPHICS).tried().occasional();
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Settings")
                     .markers(List.of(Pictures.SETTINGS_TITLE))
-                    .notes(
-                            "Three tabs. Game: text and voice language (English), chat channels shown on Home. Sound: Master, Music, Sound, Voice Over sliders, all 100%. Other: Vibration, Network Boost, Auto-Download Resources (Off, Wi-Fi Only, Cellular Data & Wi-Fi). The game's own language setting is here, separate from Android's.")
+                    .alsoFrom(List.of(Way.of(Screens.STAGE_PACKAGE.menuSettings)))
+                    .notes("""
+                            Opened from Title's Settings (tabs Game, Sound, Other) or, in game, from Stage's menu (tabs Game, Graphics, Sound, Other).
+                            Game: text and voice language (English), chat channels shown on Home.
+                            Graphics (in game only): Quality Low/Med./High/Ultra, Frame Rate 30/60, Visible Players Few/Med./Many, Bloom Off/Low/Med./High.
+                            Every picture was cut at Quality Med., Frame Rate 60, Visible Players Few, Bloom Off (2026-11-02): Quality and Bloom change how everything is drawn, Visible Players how many other heroes cover the map. Keep them so; the bot changes none of them.
+                            Sound: Master, Music, Sound, Voice Over sliders, all 100%.
+                            Other: Vibration, Network Boost, Auto-Download Resources (Off, Wi-Fi Only, Cellular Data &amp; Wi-Fi).
+                            The game's own language setting is here, separate from Android's.\
+                            """)
                     .reached(Reached.SURVEYED)
+                    .owes(List.of("graphics options: not cut; never changed by the bot"))
+                    .takes(Duration.ofMillis(4700L))
                     .shot("screens/SETTINGS.png")
                     .from(Screens.TITLE.titleSettings);
         }
@@ -1042,6 +1053,28 @@ public final class Screens {
     }
 
     public static final ProfilePowerSearch PROFILE_POWER_SEARCH = new ProfilePowerSearch();
+
+    public static final class StagePackage extends Screen {
+        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
+        public final Button menuQuest = Button.of(Pictures.MENU_QUEST);
+        public final Button menuPhoto = Button.of(Pictures.MENU_PHOTO);
+        public final Button menuUserCenter = Button.of(Pictures.MENU_USER_CENTER);
+        public final Button menuSettings = Button.of(Pictures.MENU_SETTINGS);
+        public final Button menuNotice = Button.of(Pictures.MENU_NOTICE);
+
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Stage package")
+                    .markers(List.of(Pictures.MENU_SERVER_TIME_LABEL))
+                    .back(Screens.STAGE_PACKAGE.upgradeBack)
+                    .takes(Duration.ofMillis(6600L))
+                    .shot("screens/STAGE_PACKAGE.png")
+                    .from(Screens.STAGE.stagePackage);
+        }
+    }
+
+    public static final StagePackage STAGE_PACKAGE = new StagePackage();
 
     private Screens() {
     }

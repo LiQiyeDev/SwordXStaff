@@ -261,6 +261,20 @@ public final class Pictures {
     public static final ImageTemplate PROFILE_PLAYER_ID_LABEL = new ImageTemplate("images/profile_player_id_label.png").at(new Rect(600, 462, 140, 42));
     public static final ImageTemplate POWER_BREAKDOWN_TITLE = new ImageTemplate("images/power_breakdown_title.png")
             .at(new Rect(345, 205, 390, 52));
+    public static final ImageTemplate MENU_SERVER_TIME_LABEL = new ImageTemplate("images/menu_server_time_label.png")
+            .at(new Rect(543, 1800, 175, 42));
+    public static final ImageTemplate MENU_QUEST = new ImageTemplate("images/menu_quest.png")
+            .at(new Rect(72, 1352, 450, 170));
+    public static final ImageTemplate MENU_PHOTO = new ImageTemplate("images/menu_photo.png")
+            .at(new Rect(72, 1560, 160, 170));
+    public static final ImageTemplate MENU_USER_CENTER = new ImageTemplate("images/menu_user_center.png")
+            .at(new Rect(460, 1560, 160, 170));
+    public static final ImageTemplate MENU_SETTINGS = new ImageTemplate("images/menu_settings.png")
+            .at(new Rect(652, 1560, 160, 170));
+    public static final ImageTemplate MENU_NOTICE = new ImageTemplate("images/menu_notice.png")
+            .at(new Rect(275, 1605, 140, 120));
+    public static final ImageTemplate SETTINGS_TAB_GRAPHICS = new ImageTemplate("images/settings_tab_graphics.png")
+            .at(new Rect(350, 556, 175, 52));
     private Pictures() {
     }
 }

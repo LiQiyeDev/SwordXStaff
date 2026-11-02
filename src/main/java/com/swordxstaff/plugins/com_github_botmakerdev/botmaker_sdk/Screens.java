@@ -957,12 +957,14 @@ public final class Screens {
         public final Button loadoutEditTechniqueTab = Button.of(Pictures.LOADOUT_EDIT_TECHNIQUE_TAB);
         public final Button loadoutEditEmptySlot = Button.of(Pictures.LOADOUT_EDIT_EMPTY_SLOT).tried();
         public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE).tried();
+        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Loadout edit")
                     .markers(List.of(Pictures.LOADOUT_EDIT_HEADER))
+                    .back(Screens.LOADOUT_EDIT.upgradeBack)
                     .takes(Duration.ofMillis(4800L))
                     .shot("screens/LOADOUT_EDIT.png")
                     .from(Screens.BATTLE_LOADOUT_SWAP.loadoutEdit);

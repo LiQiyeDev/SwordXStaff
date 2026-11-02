@@ -1132,7 +1132,7 @@ public final class Screens {
 
     public static final class MenuUserCenter extends Screen {
         public final Button ucAccountCenter = Button.of(Pictures.UC_ACCOUNT_CENTER);
-        public final Button ucHelpCenter = Button.of(Pictures.UC_HELP_CENTER);
+        public final Button ucHelpCenter = Button.of(Pictures.UC_HELP_CENTER).info();
         public final Button ucSubmitLogs = Button.of(Pictures.UC_SUBMIT_LOGS).never("Sends logs to the game's maker; no bot use");
         public final Button ucPrivacyPolicy = Button.of(Pictures.UC_PRIVACY_POLICY).info();
         public final Button ucUserAgreement = Button.of(Pictures.UC_USER_AGREEMENT).info();
@@ -1331,6 +1331,19 @@ public final class Screens {
     }
 
     public static final ResourceDownload RESOURCE_DOWNLOAD = new ResourceDownload();
+
+    public static final class UcHelpCenter extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Uc help center")
+                    .takes(Duration.ofMillis(2000L))
+                    .shot("screens/UC_HELP_CENTER.png")
+                    .from(Screens.MENU_USER_CENTER.ucHelpCenter);
+        }
+    }
+
+    public static final UcHelpCenter UC_HELP_CENTER = new UcHelpCenter();
 
     private Screens() {
     }

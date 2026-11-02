@@ -488,7 +488,11 @@ public final class Screens {
     public static final class CartBlueprint extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("Cart blueprint").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+            return Setup
+                    .named("Cart blueprint")
+                    .markers(List.of(Pictures.CART_BLUEPRINT_CARD))
+                    .shot("screens/CART_BLUEPRINT.png")
+                    .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
     }
 

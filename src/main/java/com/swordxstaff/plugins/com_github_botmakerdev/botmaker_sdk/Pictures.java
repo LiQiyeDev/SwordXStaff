@@ -113,6 +113,8 @@ public final class Pictures {
             .at(new Rect(20, 1765, 150, 110));
     public static final ImageTemplate CHOICE_BAR = new ImageTemplate("images/choice_bar.png")
             .at(new Rect(85, 1430, 910, 100));
+    public static final ImageTemplate CART_BLUEPRINT_CARD = new ImageTemplate("images/cart_blueprint_card.png")
+            .at(new Rect(72, 1245, 284, 196));
     private Pictures() {
     }
 }

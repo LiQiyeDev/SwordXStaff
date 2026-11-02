@@ -151,6 +151,10 @@ public final class Pictures {
             .at(new Rect(126, 1294, 144, 94));
     public static final ImageTemplate CHOICE_ARROW = new ImageTemplate("images/choice_arrow.png")
             .at(new Rect(122, 1332, 62, 42));
+    public static final ImageTemplate CHOICE_STAFF = new ImageTemplate("images/choice_staff.png")
+            .at(new Rect(456, 1322, 56, 56));
+    public static final ImageTemplate CHOICE_SWORD = new ImageTemplate("images/choice_sword.png")
+            .at(new Rect(450, 1447, 56, 56));
     private Pictures() {
     }
 }

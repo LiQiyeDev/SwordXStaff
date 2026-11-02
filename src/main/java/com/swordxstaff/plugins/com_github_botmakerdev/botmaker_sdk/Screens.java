@@ -469,6 +469,9 @@ public final class Screens {
     public static final AethyrisArrival AETHYRIS_ARRIVAL = new AethyrisArrival();
 
     public static final class DialogueChoice extends Screen {
+        public final Button choiceStaff = Button.of(Pictures.CHOICE_STAFF);
+        public final Button choiceSword = Button.of(Pictures.CHOICE_SWORD);
+
         @Override
         public Setup setup() {
             return Setup

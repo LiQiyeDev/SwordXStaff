@@ -18,7 +18,7 @@ public final class Screens {
         public final Button confirm = Button.of(Elements.CONFIRM).tried();
         public final Button privacyPolicy = Button.of(Elements.PRIVACY_POLICY).info();
         public final Button cancel = Button.of(Elements.CANCEL);
-        public final Button userAgreement = Button.of(Elements.USER_AGREEMENT);
+        public final Button userAgreement = Button.of(Elements.USER_AGREEMENT).tried().info();
 
         @Override
         public Setup setup() {

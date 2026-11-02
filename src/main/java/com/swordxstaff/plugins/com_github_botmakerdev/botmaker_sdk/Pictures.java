@@ -366,6 +366,8 @@ public final class Pictures {
     public static final ImageTemplate SKILL_GOALS_LEVEL = new ImageTemplate("images/skill_goals_level.png").at(new Rect(300, 1660, 170, 48));
     public static final ImageTemplate SKILL_GOALS_QUALITY_SELECTED = new ImageTemplate(
             "images/skill_goals_quality_selected.png").at(new Rect(560, 1648, 260, 70));
+    public static final ImageTemplate STARTUP_VERSION_LABEL = new ImageTemplate("images/startup_version_label.png")
+            .at(new Rect(36, 33, 118, 26));
     private Pictures() {
     }
 }

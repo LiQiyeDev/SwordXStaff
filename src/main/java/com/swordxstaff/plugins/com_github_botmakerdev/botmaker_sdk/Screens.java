@@ -223,7 +223,7 @@ public final class Screens {
     public static final CustomerService CUSTOMER_SERVICE = new CustomerService();
 
     public static final class UserCenter extends Screen {
-        public final Button linkAccount = Button.of(Elements.LINK_ACCOUNT);
+        public final Button linkAccount = Button.of(Elements.LINK_ACCOUNT).never("Binds the guest account to an outside account; the user's call");
         public final Button unlink = Button.of(Elements.UNLINK);
         public final Button userCenterClose = Button.of(Pictures.USER_CENTER_CLOSE);
 

@@ -577,6 +577,14 @@ public final class Screens {
             return Setup
                     .named("Cart")
                     .markers(List.of(Pictures.CART_HEADER_PICTURE))
+                    .notes("""
+                            Cart: AFK resources pile up here. Rows: Rolla (+1000/h at Lv.1), Wood and Stone (+50/h each); Raw Ore and Battle Essence unlock at Lv. 3.
+                            Tutorial: each row is unlocked free with its Unlock button, then Claim All gives what piled up (You received).
+                            Each unlocked row has an upgrade arrow, opening Furniture upgrade.
+                            No close button: a tap below the panel closes it (cartOutside); Back does nothing.
+                            The tutorial dims all but the highlighted button, so pictures cut then score low after it.\
+                            """)
+                    .reached(Reached.TRIED)
                     .takes(Duration.ofMillis(5900L))
                     .shot("screens/CART.png")
                     .from(Screens.ISLAND.islandCartButton);

@@ -326,6 +326,10 @@ public final class Pictures {
             .at(new Rect(692, 1748, 140, 145));
     public static final ImageTemplate HOME_SIDE_ICON = new ImageTemplate("images/home_side_icon.png")
             .at(new Rect(12, 1035, 128, 128));
+    public static final ImageTemplate GEAR_REPLACE = new ImageTemplate("images/gear_replace.png")
+            .at(new Rect(168, 1284, 355, 78));
+    public static final ImageTemplate GEAR_ENHANCE = new ImageTemplate("images/gear_enhance.png")
+            .at(new Rect(560, 1295, 310, 68));
     private Pictures() {
     }
 }

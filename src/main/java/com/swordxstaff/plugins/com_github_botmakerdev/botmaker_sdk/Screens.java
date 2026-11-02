@@ -770,6 +770,8 @@ public final class Screens {
     public static final class GearDetails extends Screen {
         public final Button gearLock = Button.of(Pictures.GEAR_LOCK);
         public final Button gearEquip = Button.of(Pictures.GEAR_EQUIP).leaving();
+        public final Button gearReplace = Button.of(Pictures.GEAR_REPLACE).occasional();
+        public final Button gearEnhance = Button.of(Pictures.GEAR_ENHANCE).occasional();
 
         @Override
         public Setup setup() {

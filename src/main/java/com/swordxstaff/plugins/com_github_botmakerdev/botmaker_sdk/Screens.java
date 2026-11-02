@@ -47,9 +47,8 @@ public final class Screens {
                     .markers(List.of(Pictures.DIALOGUE_PANEL))
                     .popup()
                     .notes("""
-                            A speech box over the scene: name tag, one line of text, a bobbing arrow at the bottom centre. Seen over the Prologue battle at 1080x1920: first Reina "The final showdown again. Let's do this.", then Akane "Ugh, not again... We lost...".
-                            Marker: dialogue_panel at 60,1730 (900x110); the arrow bobs and matches only at 0.91.
-                            One tap at 540,1780 moved on from the first line (seen once; not tried at the second).\
+                            A speech box over the scene: name tag, one or two lines of text, a bobbing arrow at the bottom centre. Marker: dialogue_panel at 60,1730 (900x110); the arrow bobs and matches only at 0.91. Its text types in letter by letter, so describe right after a tap reads garbage: wait for it.
+                            One tap at 540,1780 moves to the next line, or closes the box on the last one. Seen over the Prologue battle (Reina "The final showdown again. Let's do this."; Akane "Ugh, not again... We lost..."; "Lord Goddess, please help us!"), over black after Character name (Reina "This world faces a grave crisis. We need your strength.", "Come to Aethyris. Only then can we save...") and over Aethyris arrival (Akane's lines, and a reply choice).\
                             """)
                     .reached(Reached.SURVEYED)
                     .shot("screens/TUTORIAL_DIALOGUE.png");

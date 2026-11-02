@@ -1288,6 +1288,15 @@ public final class Screens {
             return Setup
                     .named("Skill Goals")
                     .back(Screens.SKILL_GOALS.goalsTabSkill)
+                    .notes("""
+                            Skill goals with rewards, opened by Goals on Skills' bottom bar; Skill goes back.
+                            Two tabs: Level ("Skill Goals", Battle Essence Used 0/500 to 0/13.1K) and Quality ("Quality Goals", Skill Quality Pts 10/200 to 10/1K).
+                            Each row has a reward chest, a reward icon and a greyed Incomplete button; a met goal likely lights it to claim (not seen yet).
+                            The title changes with the tab, so the marker is the bottom bar's unselected Skill pill.
+                            An Android "Ask Gemini" overlay once covered the right of the tabs; the first tap closed it instead of switching.\
+                            """)
+                    .reached(Reached.TRIED)
+                    .owes(List.of("claim look of the goal button: only greyed Incomplete seen"))
                     .takes(Duration.ofMillis(3800L))
                     .shot("screens/SKILL_GOALS.png")
                     .from(Screens.SKILLS.enhanceTabGoals);

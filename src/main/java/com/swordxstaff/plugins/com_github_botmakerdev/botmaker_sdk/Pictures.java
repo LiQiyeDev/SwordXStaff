@@ -233,6 +233,14 @@ public final class Pictures {
             .at(new Rect(255, 1525, 115, 46));
     public static final ImageTemplate LOADOUT_OK = new ImageTemplate("images/loadout_ok.png")
             .at(new Rect(715, 1525, 95, 46));
+    public static final ImageTemplate LOADOUT_EDIT_HEADER = new ImageTemplate("images/loadout_edit_header.png")
+            .at(new Rect(50, 45, 120, 75));
+    public static final ImageTemplate LOADOUT_EDIT_CHARM_TAB = new ImageTemplate("images/loadout_edit_charm_tab.png")
+            .at(new Rect(545, 1178, 112, 40));
+    public static final ImageTemplate LOADOUT_EDIT_TECHNIQUE_TAB = new ImageTemplate(
+            "images/loadout_edit_technique_tab.png").at(new Rect(145, 1178, 160, 40));
+    public static final ImageTemplate LOADOUT_EDIT_EMPTY_SLOT = new ImageTemplate("images/loadout_edit_empty_slot.png")
+            .at(new Rect(868, 333, 144, 144));
     private Pictures() {
     }
 }

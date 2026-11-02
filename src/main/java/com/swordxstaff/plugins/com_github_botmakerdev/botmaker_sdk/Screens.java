@@ -953,10 +953,15 @@ public final class Screens {
     public static final BattleLoadoutSwap BATTLE_LOADOUT_SWAP = new BattleLoadoutSwap();
 
     public static final class LoadoutEdit extends Screen {
+        public final Button loadoutEditCharmTab = Button.of(Pictures.LOADOUT_EDIT_CHARM_TAB);
+        public final Button loadoutEditTechniqueTab = Button.of(Pictures.LOADOUT_EDIT_TECHNIQUE_TAB);
+        public final Button loadoutEditEmptySlot = Button.of(Pictures.LOADOUT_EDIT_EMPTY_SLOT);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Loadout edit")
+                    .markers(List.of(Pictures.LOADOUT_EDIT_HEADER))
                     .takes(Duration.ofMillis(4800L))
                     .shot("screens/LOADOUT_EDIT.png")
                     .from(Screens.BATTLE_LOADOUT_SWAP.loadoutEdit);

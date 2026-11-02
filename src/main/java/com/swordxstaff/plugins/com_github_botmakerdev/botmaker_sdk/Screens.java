@@ -1317,6 +1317,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Resource download")
+                    .back(Screens.RESOURCE_DOWNLOAD.resourceDownloadClaim)
                     .takes(Duration.ofMillis(3700L))
                     .shot("screens/STAGE_DOWNLOAD_REWARD.png")
                     .from(Screens.HOME.stageDownloadReward);

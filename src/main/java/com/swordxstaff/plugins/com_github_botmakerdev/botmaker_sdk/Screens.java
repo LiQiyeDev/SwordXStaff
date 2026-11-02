@@ -1186,12 +1186,14 @@ public final class Screens {
         public final Button statsTabGeneral = Button.of(Pictures.STATS_TAB_GENERAL);
         public final Button statsTabDetails = Button.of(Pictures.STATS_TAB_DETAILS);
         public final Button statsMainHeading = Button.of(Pictures.STATS_MAIN_HEADING);
+        public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Character stats")
                     .markers(List.of(Pictures.CHARACTER_STATS_TITLE))
+                    .back(Screens.CHARACTER_STATS.keyEsc)
                     .shot("screens/CHARACTER_STATS.png")
                     .from(Screens.TOP_AVATAR.profileStatsSearch);
         }

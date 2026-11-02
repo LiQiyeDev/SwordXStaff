@@ -881,6 +881,19 @@ public final class Screens {
 
     public static final Stage STAGE = new Stage();
 
+    public static final class Battle extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Battle")
+                    .takes(Duration.ofMillis(4500L))
+                    .shot("screens/BATTLE.png")
+                    .from(Screens.STAGE.stageBoar);
+        }
+    }
+
+    public static final Battle BATTLE = new Battle();
+
     private Screens() {
     }
 }

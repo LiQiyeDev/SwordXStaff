@@ -854,6 +854,7 @@ public final class Screens {
         public final Button stagePackage = Button.of(Pictures.STAGE_PACKAGE);
         public final Button topAvatar = Button.of(Pictures.TOP_AVATAR);
         public final Button stageDownloadReward = Button.of(Pictures.STAGE_DOWNLOAD_REWARD).occasional();
+        public final Button stageBoar = Button.of(Pictures.STAGE_BOAR);
 
         @Override
         public Setup setup() {

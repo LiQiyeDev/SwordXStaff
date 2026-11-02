@@ -57,6 +57,12 @@ public final class Pictures {
             .at(new Rect(782, 368, 26, 26));
     public static final ImageTemplate TITLE_REPAIR_CLIENT = new ImageTemplate("images/title_repair_client.png")
             .at(new Rect(784, 321, 22, 22));
+    public static final ImageTemplate SERVERS_TITLE = new ImageTemplate("images/servers_title.png")
+            .at(new Rect(600, 104, 80, 28));
+    public static final ImageTemplate SERVERS_ROW_SELECTED = new ImageTemplate("images/servers_row_selected.png")
+            .at(new Rect(505, 226, 72, 22));
+    public static final ImageTemplate SERVERS_ROW_OTHER = new ImageTemplate("images/servers_row_other.png")
+            .at(new Rect(505, 165, 72, 22));
 
     private Pictures() {
     }

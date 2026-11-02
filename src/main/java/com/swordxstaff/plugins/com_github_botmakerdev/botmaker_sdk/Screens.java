@@ -146,9 +146,16 @@ public final class Screens {
     public static final Title TITLE = new Title();
 
     public static final class Servers extends Screen {
+        public final Button serversRowSelected = Button.of(Pictures.SERVERS_ROW_SELECTED);
+        public final Button serversRowOther = Button.of(Pictures.SERVERS_ROW_OTHER);
+
         @Override
         public Setup setup() {
-            return Setup.named("Servers").from(Screens.TITLE.titleServers);
+            return Setup
+                    .named("Servers")
+                    .markers(List.of(Pictures.SERVERS_TITLE))
+                    .shot("screens/SERVERS.png")
+                    .from(Screens.TITLE.titleServers);
         }
     }
 

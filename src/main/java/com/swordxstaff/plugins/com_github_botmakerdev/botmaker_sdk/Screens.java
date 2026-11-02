@@ -113,7 +113,7 @@ public final class Screens {
     public static final StartupLoading STARTUP_LOADING = new StartupLoading();
 
     public static final class Notice extends Screen {
-        public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
+        public final Button noticeBack = Button.of(Pictures.NOTICE_BACK).tried();
         public final Button noticeTabSystem = Button.of(Pictures.NOTICE_TAB_SYSTEM).tried();
         public final Button noticeTabNews = Button.of(Pictures.NOTICE_TAB_NEWS).tried();
         public final Button noticeHideToday = Button.of(Pictures.NOTICE_HIDE_TODAY).tried();

@@ -277,8 +277,8 @@ public final class Screens {
                     .named("Scene loading")
                     .markers(List.of(Pictures.SCENE_LOADING_TEXT))
                     .notes(
-                            "Shown after Tap to Play while the world loads. No inputs. Background, letters and runner all move.")
-                    .owes(List.of("marker: no still part found; the one crop tried was refused as animated"))
+                            "Shown after Logging in... while the first scene loads: a dark wallpaper of monster silhouettes, a running chibi and \"Loading...\" whose letters bounce. No inputs. The marker is the word Loading as cut; it bounces, so a run may miss it.")
+                    .owes(List.of("marker: the word bounces; a still part of the wallpaper wasn't cut in time"))
                     .shot("screens/SCENE_LOADING.png")
                     .from(Screens.TITLE.titleTapToPlay);
         }

@@ -247,7 +247,7 @@ public final class Screens {
         public final Button contactSupport = Button.of(Elements.CONTACT_SUPPORT).tried();
         public final Button termsAndConditions = Button.of(Elements.TERMS_AND_CONDITIONS).tried();
         public final Button manageCookies = Button.of(Elements.MANAGE_COOKIES).tried();
-        public final Button deleteAccount = Button.of(Elements.DELETE_ACCOUNT);
+        public final Button deleteAccount = Button.of(Elements.DELETE_ACCOUNT).never("Deletes the account for good; the user's call");
         public final Button switchInput = Button.of(Elements.LT_LY_SWITCH_ACCOUNT);
 
         @Override

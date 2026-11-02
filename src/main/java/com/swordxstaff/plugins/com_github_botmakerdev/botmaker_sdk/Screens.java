@@ -1398,7 +1398,7 @@ public final class Screens {
     public static final class DestinyExploration extends Screen {
         public final Mark destinyExplorationTitle = Mark.of(Pictures.DESTINY_EXPLORATION_TITLE);
         public final Button explorationBack = Button.of(Pictures.EXPLORATION_BACK);
-        public final Button destinyProgressTab = Button.of(Pictures.DESTINY_PROGRESS_TAB);
+        public final Button destinyProgressTab = Button.of(Pictures.DESTINY_PROGRESS_TAB).tried();
 
         @Override
         public Setup setup() {

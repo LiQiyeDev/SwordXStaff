@@ -221,6 +221,10 @@ public final class Pictures {
             .at(new Rect(525, 848, 76, 44));
     public static final ImageTemplate STAGE_QUEST_TRACKER = new ImageTemplate("images/stage_quest_tracker.png")
             .at(new Rect(36, 1474, 32, 34));
+    public static final ImageTemplate QUEST_GOAL_LABEL = new ImageTemplate("images/quest_goal_label.png")
+            .at(new Rect(172, 700, 84, 40));
+    public static final ImageTemplate QUEST_CLAIM_BUTTON = new ImageTemplate("images/quest_claim_button.png")
+            .at(new Rect(140, 1302, 800, 62));
     private Pictures() {
     }
 }

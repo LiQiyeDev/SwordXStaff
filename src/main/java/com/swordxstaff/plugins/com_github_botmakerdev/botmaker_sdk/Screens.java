@@ -1266,6 +1266,19 @@ public final class Screens {
 
     public static final EnhancementGoals ENHANCEMENT_GOALS = new EnhancementGoals();
 
+    public static final class Resonance extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Resonance")
+                    .takes(Duration.ofMillis(2700L))
+                    .shot("screens/RESONANCE.png")
+                    .from(Screens.ENHANCE.enhanceResonance);
+        }
+    }
+
+    public static final Resonance RESONANCE = new Resonance();
+
     private Screens() {
     }
 }

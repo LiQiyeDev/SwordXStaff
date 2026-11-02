@@ -34,6 +34,8 @@ public final class Elements {
             .shot("elements/contact_support.png");
     public static final Element TERMS_AND_CONDITIONS = Element.byHolding(Texts.TERMS_AND_CONDITIONS)
             .shot("elements/terms_and_conditions.png");
+    public static final Element MANAGE_COOKIES = Element.byHolding(Texts.MANAGE_COOKIES)
+            .shot("elements/manage_cookies.png");
 
     private Elements() {
     }

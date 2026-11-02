@@ -22,6 +22,7 @@ public final class Texts {
     public static final Words SUBSCRIPTION_EMAIL = Words.of("Subscription Email");
     public static final Words CONTACT_SUPPORT = Words.of("Contact Support");
     public static final Words TERMS_AND_CONDITIONS = Words.of("Terms and Conditions");
+    public static final Words MANAGE_COOKIES = Words.of("Manage Cookies");
 
     private Texts() {
     }

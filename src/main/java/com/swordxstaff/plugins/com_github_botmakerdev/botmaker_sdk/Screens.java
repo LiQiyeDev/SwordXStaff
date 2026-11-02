@@ -246,6 +246,7 @@ public final class Screens {
         public final Button userCenterClose = Button.of(Pictures.USER_CENTER_CLOSE);
         public final Button contactSupport = Button.of(Elements.CONTACT_SUPPORT);
         public final Button termsAndConditions = Button.of(Elements.TERMS_AND_CONDITIONS);
+        public final Button manageCookies = Button.of(Elements.MANAGE_COOKIES);
 
         @Override
         public Setup setup() {

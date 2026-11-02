@@ -886,6 +886,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Battle")
+                    .alsoFrom(List.of(Way.onItsOwn(Screens.SCENE_LOADING)))
                     .takes(Duration.ofMillis(4500L))
                     .shot("screens/BATTLE.png")
                     .from(Screens.STAGE.stageBoar);

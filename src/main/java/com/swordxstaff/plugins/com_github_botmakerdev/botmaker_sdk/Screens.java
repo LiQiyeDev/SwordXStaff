@@ -341,6 +341,8 @@ public final class Screens {
     public static final PrologueBattle PROLOGUE_BATTLE = new PrologueBattle();
 
     public static final class PrologueNarration extends Screen {
+        public final Button dialoguePanel = Button.of(Pictures.DIALOGUE_PANEL);
+
         @Override
         public Setup setup() {
             return Setup.named("Prologue narration").from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
@@ -348,6 +350,15 @@ public final class Screens {
     }
 
     public static final PrologueNarration PROLOGUE_NARRATION = new PrologueNarration();
+
+    public static final class SelectBodyType extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Select body type").from(Screens.PROLOGUE_NARRATION.dialoguePanel);
+        }
+    }
+
+    public static final SelectBodyType SELECT_BODY_TYPE = new SelectBodyType();
 
     private Screens() {
     }

@@ -1247,18 +1247,18 @@ public final class Screens {
 
     public static final Enhance ENHANCE = new Enhance();
 
-    public static final class Goals extends Screen {
+    public static final class EnhancementGoals extends Screen {
         @Override
         public Setup setup() {
             return Setup
-                    .named("Goals")
+                    .named("Enhancement goals")
                     .takes(Duration.ofMillis(2700L))
                     .shot("screens/GOALS.png")
                     .from(Screens.ENHANCE.enhanceTabGoals);
         }
     }
 
-    public static final Goals GOALS = new Goals();
+    public static final EnhancementGoals ENHANCEMENT_GOALS = new EnhancementGoals();
 
     private Screens() {
     }

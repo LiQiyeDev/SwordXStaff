@@ -758,6 +758,19 @@ public final class Screens {
 
     public static final GearDetails GEAR_DETAILS = new GearDetails();
 
+    public static final class Skills extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Skills")
+                    .takes(Duration.ofMillis(7900L))
+                    .shot("screens/SKILLS.png")
+                    .from(Screens.CHARACTER.charSkillIcon);
+        }
+    }
+
+    public static final Skills SKILLS = new Skills();
+
     private Screens() {
     }
 }

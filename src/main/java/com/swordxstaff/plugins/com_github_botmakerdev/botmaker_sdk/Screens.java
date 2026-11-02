@@ -515,13 +515,13 @@ public final class Screens {
 
     public static final UnlockCart UNLOCK_CART = new UnlockCart();
 
-    public static final class CartUnlocked extends Screen {
+    public static final class FeatureUnlocked extends Screen {
         public final Button tapToContinue = Button.of(Pictures.TAP_TO_CONTINUE);
 
         @Override
         public Setup setup() {
             return Setup
-                    .named("Cart unlocked")
+                    .named("Feature unlocked")
                     .markers(List.of(Pictures.UNLOCKED_TITLE))
                     .takes(Duration.ofMillis(7200L))
                     .shot("screens/CART_UNLOCKED.png")
@@ -529,7 +529,7 @@ public final class Screens {
         }
     }
 
-    public static final CartUnlocked CART_UNLOCKED = new CartUnlocked();
+    public static final FeatureUnlocked FEATURE_UNLOCKED = new FeatureUnlocked();
 
     private Screens() {
     }

@@ -1310,6 +1310,9 @@ public final class Screens {
     public static final SkillGoals SKILL_GOALS = new SkillGoals();
 
     public static final class StageDownloadReward extends Screen {
+        public final Mark resourceDownloadTitle = Mark.of(Pictures.RESOURCE_DOWNLOAD_TITLE);
+        public final Button resourceDownloadClaim = Button.of(Pictures.RESOURCE_DOWNLOAD_CLAIM);
+
         @Override
         public Setup setup() {
             return Setup

@@ -363,6 +363,10 @@ public final class Pictures {
             .at(new Rect(36, 33, 118, 26));
     public static final ImageTemplate NAV_HOME = new ImageTemplate("images/nav_home.png")
             .at(new Rect(492, 1800, 100, 100));
+    public static final ImageTemplate RESOURCE_DOWNLOAD_TITLE = new ImageTemplate("images/resource_download_title.png")
+            .at(new Rect(325, 525, 430, 60));
+    public static final ImageTemplate RESOURCE_DOWNLOAD_CLAIM = new ImageTemplate("images/resource_download_claim.png")
+            .at(new Rect(360, 1205, 360, 80));
     private Pictures() {
     }
 }

@@ -39,6 +39,7 @@ public final class Screens {
 
     public static final class TutorialDialogue extends Screen {
         public final Button dialoguePanel = Button.of(Pictures.DIALOGUE_PANEL);
+        public final Button dialogueNextArrow = Button.of(Pictures.DIALOGUE_NEXT_ARROW);
 
         @Override
         public Setup setup() {
@@ -483,6 +484,15 @@ public final class Screens {
     }
 
     public static final DialogueChoice DIALOGUE_CHOICE = new DialogueChoice();
+
+    public static final class CartBlueprint extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Cart blueprint").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+        }
+    }
+
+    public static final CartBlueprint CART_BLUEPRINT = new CartBlueprint();
 
     private Screens() {
     }

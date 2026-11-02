@@ -135,6 +135,14 @@ public final class Pictures {
             .at(new Rect(300, 530, 480, 80));
     public static final ImageTemplate CART_ROW_UPGRADE = new ImageTemplate("images/cart_row_upgrade.png")
             .at(new Rect(928, 664, 36, 46));
+    public static final ImageTemplate UPGRADE_LEVEL_ARROW = new ImageTemplate("images/upgrade_level_arrow.png")
+            .at(new Rect(496, 636, 96, 56));
+    public static final ImageTemplate UPGRADE_BACK = new ImageTemplate("images/upgrade_back.png")
+            .at(new Rect(30, 1782, 166, 94));
+    public static final ImageTemplate UPGRADE_TAB_WOOD = new ImageTemplate("images/upgrade_tab_wood.png")
+            .at(new Rect(262, 186, 108, 84));
+    public static final ImageTemplate UPGRADE_TAB_STONE = new ImageTemplate("images/upgrade_tab_stone.png")
+            .at(new Rect(432, 186, 108, 84));
     private Pictures() {
     }
 }

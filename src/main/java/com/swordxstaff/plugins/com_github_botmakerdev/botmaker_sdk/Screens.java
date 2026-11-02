@@ -598,9 +598,18 @@ public final class Screens {
     public static final YouReceived YOU_RECEIVED = new YouReceived();
 
     public static final class FurnitureUpgrade extends Screen {
+        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
+        public final Button upgradeTabWood = Button.of(Pictures.UPGRADE_TAB_WOOD);
+        public final Button upgradeTabStone = Button.of(Pictures.UPGRADE_TAB_STONE);
+
         @Override
         public Setup setup() {
-            return Setup.named("Furniture upgrade").from(Screens.CART.cartRowUpgrade);
+            return Setup
+                    .named("Furniture upgrade")
+                    .markers(List.of(Pictures.UPGRADE_LEVEL_ARROW))
+                    .back(Screens.FURNITURE_UPGRADE.upgradeBack)
+                    .shot("screens/FURNITURE_UPGRADE.png")
+                    .from(Screens.CART.cartRowUpgrade);
         }
     }
 

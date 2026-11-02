@@ -688,6 +688,19 @@ public final class Screens {
 
     public static final StorageChest STORAGE_CHEST = new StorageChest();
 
+    public static final class Character extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Character")
+                    .takes(Duration.ofMillis(7600L))
+                    .shot("screens/CHARACTER.png")
+                    .from(Screens.HOME.navCharacter);
+        }
+    }
+
+    public static final Character CHARACTER = new Character();
+
     private Screens() {
     }
 }

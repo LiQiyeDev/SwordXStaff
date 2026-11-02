@@ -259,6 +259,8 @@ public final class Pictures {
     public static final ImageTemplate PROFILE_QUICK_HEAL = new ImageTemplate("images/profile_quick_heal.png")
             .at(new Rect(575, 1555, 380, 80));
     public static final ImageTemplate PROFILE_PLAYER_ID_LABEL = new ImageTemplate("images/profile_player_id_label.png").at(new Rect(600, 462, 140, 42));
+    public static final ImageTemplate POWER_BREAKDOWN_TITLE = new ImageTemplate("images/power_breakdown_title.png")
+            .at(new Rect(345, 205, 390, 52));
     private Pictures() {
     }
 }

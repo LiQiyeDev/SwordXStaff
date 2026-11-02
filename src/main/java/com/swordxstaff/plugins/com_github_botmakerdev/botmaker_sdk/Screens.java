@@ -1022,6 +1022,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Profile power search")
+                    .markers(List.of(Pictures.POWER_BREAKDOWN_TITLE))
                     .takes(Duration.ofMillis(2500L))
                     .shot("screens/PROFILE_POWER_SEARCH.png")
                     .from(Screens.TOP_AVATAR.profilePowerSearch);

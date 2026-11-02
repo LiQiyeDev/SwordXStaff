@@ -129,6 +129,8 @@ public final class Pictures {
             .at(new Rect(330, 270, 410, 260));
     public static final ImageTemplate CART_ROW_UNLOCK = new ImageTemplate("images/cart_row_unlock.png")
             .at(new Rect(785, 660, 200, 64));
+    public static final ImageTemplate CART_CLAIM_ALL = new ImageTemplate("images/cart_claim_all.png")
+            .at(new Rect(345, 1615, 390, 62));
     private Pictures() {
     }
 }

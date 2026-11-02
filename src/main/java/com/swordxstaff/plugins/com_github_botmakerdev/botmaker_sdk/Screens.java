@@ -1164,18 +1164,18 @@ public final class Screens {
 
     public static final Achievement ACHIEVEMENT = new Achievement();
 
-    public static final class QuestGo extends Screen {
+    public static final class ReturnHomeConfirm extends Screen {
         @Override
         public Setup setup() {
             return Setup
-                    .named("Quest go")
+                    .named("Return home confirm")
                     .takes(Duration.ofMillis(4300L))
                     .shot("screens/QUEST_GO.png")
                     .from(Screens.MENU_QUEST.questGo);
         }
     }
 
-    public static final QuestGo QUEST_GO = new QuestGo();
+    public static final ReturnHomeConfirm RETURN_HOME_CONFIRM = new ReturnHomeConfirm();
 
     private Screens() {
     }

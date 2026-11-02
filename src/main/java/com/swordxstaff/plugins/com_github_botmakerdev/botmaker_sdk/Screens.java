@@ -791,6 +791,7 @@ public final class Screens {
         public final Button skillsWaterShot = Button.of(Pictures.SKILLS_WATER_SHOT);
         public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK).tried();
         public final Mark skillsLoadoutPencil = Mark.of(Pictures.SKILLS_LOADOUT_PENCIL);
+        public final Button enhanceTabGoals = Button.of(Pictures.ENHANCE_TAB_GOALS);
 
         @Override
         public Setup setup() {
@@ -1274,6 +1275,19 @@ public final class Screens {
     }
 
     public static final Resonance RESONANCE = new Resonance();
+
+    public static final class SkillGoals extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Skill Goals")
+                    .takes(Duration.ofMillis(3800L))
+                    .shot("screens/SKILL_GOALS.png")
+                    .from(Screens.SKILLS.enhanceTabGoals);
+        }
+    }
+
+    public static final SkillGoals SKILL_GOALS = new SkillGoals();
 
     private Screens() {
     }

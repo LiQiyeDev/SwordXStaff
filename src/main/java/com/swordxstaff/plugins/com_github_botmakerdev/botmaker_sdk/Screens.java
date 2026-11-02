@@ -265,9 +265,9 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Customer Service")
+                    .alsoFrom(List.of(Way.of(Screens.MENU_USER_CENTER.ucHelpCenter)))
                     .back(Screens.CUSTOMER_SERVICE.supportBack)
-                    .notes(
-                            "Live chat with the game's support, full screen with Android's keyboard up. The bot never types or sends here.")
+                    .notes("Live chat with the game's support, full screen with Android's keyboard up. The bot never types or sends here.")
                     .reached(Reached.SURVEYED)
                     .shot("screens/CUSTOMER_SERVICE.png")
                     .from(Screens.TITLE.titleCustomerService);

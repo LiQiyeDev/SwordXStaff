@@ -999,6 +999,7 @@ public final class Screens {
             return Setup
                     .named("Quit confirm")
                     .back(Screens.QUIT_CONFIRM.resetConfirmCancel)
+                    .popup()
                     .shot("screens/QUIT_CONFIRM.png")
                     .from(Screens.TITLE.keyEsc);
         }

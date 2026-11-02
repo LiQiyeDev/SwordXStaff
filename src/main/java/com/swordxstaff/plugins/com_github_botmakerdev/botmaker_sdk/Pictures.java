@@ -52,6 +52,10 @@ public final class Pictures {
     public static final ImageTemplate SUPPORT_LOGO = new ImageTemplate("images/support_logo.png").at(new Rect(620, 2, 40, 40)).in(new Size(1280, 720));
     public static final ImageTemplate SUPPORT_SEND = new ImageTemplate("images/support_send.png").at(new Rect(1212, 262, 58, 34)).in(new Size(1280, 720));
     public static final ImageTemplate USER_CENTER_CLOSE = new ImageTemplate("images/user_center_close.png").at(new Rect(468, 10, 32, 32)).in(new Size(1280, 720));
+    public static final ImageTemplate SERVERS_TAB_AVAILABLE = new ImageTemplate("images/servers_tab_available.png")
+            .at(new Rect(713, 347, 150, 46));
+    public static final ImageTemplate SERVERS_TAB_CHARACTERS = new ImageTemplate("images/servers_tab_characters.png")
+            .at(new Rect(170, 347, 232, 46));
 
     private Pictures() {
     }

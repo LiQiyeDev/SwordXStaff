@@ -46,9 +46,9 @@ public final class Pictures {
     public static final ImageTemplate COMMUNITY_TITLE = new ImageTemplate("images/community_title.png").at(new Rect(325, 648, 430, 50));
     public static final ImageTemplate COMMUNITY_DISCORD = new ImageTemplate("images/community_discord.png").at(new Rect(222, 845, 164, 160));
     public static final ImageTemplate COMMUNITY_FACEBOOK = new ImageTemplate("images/community_facebook.png").at(new Rect(459, 845, 164, 160));
-    public static final ImageTemplate COMMUNITY_X = new ImageTemplate("images/community_x.png").at(new Rect(694, 318, 58, 60)).in(new Size(1280, 720));
-    public static final ImageTemplate SUPPORT_BACK = new ImageTemplate("images/support_back.png").at(new Rect(12, 12, 22, 26)).in(new Size(1280, 720));
-    public static final ImageTemplate SUPPORT_LOGO = new ImageTemplate("images/support_logo.png").at(new Rect(620, 2, 40, 40)).in(new Size(1280, 720));
+    public static final ImageTemplate COMMUNITY_X = new ImageTemplate("images/community_x.png").at(new Rect(694, 845, 164, 160));
+    public static final ImageTemplate SUPPORT_BACK = new ImageTemplate("images/support_back.png").at(new Rect(12, 10, 24, 30));
+    public static final ImageTemplate SUPPORT_LOGO = new ImageTemplate("images/support_logo.png").at(new Rect(12, 170, 45, 55));
     public static final ImageTemplate SUPPORT_SEND = new ImageTemplate("images/support_send.png").at(new Rect(1212, 262, 58, 34)).in(new Size(1280, 720));
     public static final ImageTemplate USER_CENTER_CLOSE = new ImageTemplate("images/user_center_close.png").at(new Rect(468, 10, 32, 32)).in(new Size(1280, 720));
     public static final ImageTemplate SERVERS_TAB_AVAILABLE = new ImageTemplate("images/servers_tab_available.png")

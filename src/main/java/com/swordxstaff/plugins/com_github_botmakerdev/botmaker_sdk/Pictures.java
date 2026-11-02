@@ -258,8 +258,7 @@ public final class Pictures {
             .at(new Rect(130, 1555, 380, 80));
     public static final ImageTemplate PROFILE_QUICK_HEAL = new ImageTemplate("images/profile_quick_heal.png")
             .at(new Rect(575, 1555, 380, 80));
-    public static final ImageTemplate PROFILE_PLAYER_ID_LABEL = new ImageTemplate("images/profile_player_id_label.png")
-            .at(new Rect(605, 468, 150, 32));
+    public static final ImageTemplate PROFILE_PLAYER_ID_LABEL = new ImageTemplate("images/profile_player_id_label.png").at(new Rect(600, 462, 140, 42));
     private Pictures() {
     }
 }

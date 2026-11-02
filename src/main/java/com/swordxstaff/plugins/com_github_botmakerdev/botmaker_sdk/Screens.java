@@ -516,7 +516,7 @@ public final class Screens {
     public static final UnlockCart UNLOCK_CART = new UnlockCart();
 
     public static final class FeatureUnlocked extends Screen {
-        public final Button tapToContinue = Button.of(Pictures.TAP_TO_CONTINUE);
+        public final Button tapToContinue = Button.of(Pictures.TAP_TO_CONTINUE).tried();
 
         @Override
         public Setup setup() {

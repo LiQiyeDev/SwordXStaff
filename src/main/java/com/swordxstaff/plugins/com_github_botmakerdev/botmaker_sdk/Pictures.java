@@ -49,6 +49,12 @@ public final class Pictures {
             .at(new Rect(778, 115, 34, 32));
     public static final ImageTemplate TITLE_CUSTOMER_SERVICE = new ImageTemplate("images/title_customer_service.png")
             .at(new Rect(778, 165, 34, 30));
+    public static final ImageTemplate TITLE_NOTICE = new ImageTemplate("images/title_notice.png")
+            .at(new Rect(782, 218, 26, 26));
+    public static final ImageTemplate TITLE_USER_CENTER = new ImageTemplate("images/title_user_center.png")
+            .at(new Rect(782, 268, 26, 26));
+    public static final ImageTemplate TITLE_SUBMIT_LOGS = new ImageTemplate("images/title_submit_logs.png")
+            .at(new Rect(782, 368, 26, 26));
 
     private Pictures() {
     }

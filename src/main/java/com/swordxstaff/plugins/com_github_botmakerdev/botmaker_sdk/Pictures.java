@@ -363,8 +363,7 @@ public final class Pictures {
             .at(new Rect(250, 1648, 280, 70));
     public static final ImageTemplate GOALS_TAB_SKILL = new ImageTemplate("images/goals_tab_skill.png")
             .at(new Rect(240, 1790, 390, 80));
-    public static final ImageTemplate SKILL_GOALS_LEVEL = new ImageTemplate("images/skill_goals_level.png")
-            .at(new Rect(250, 1648, 270, 70));
+    public static final ImageTemplate SKILL_GOALS_LEVEL = new ImageTemplate("images/skill_goals_level.png").at(new Rect(300, 1660, 170, 48));
     public static final ImageTemplate SKILL_GOALS_QUALITY_SELECTED = new ImageTemplate(
             "images/skill_goals_quality_selected.png").at(new Rect(560, 1648, 260, 70));
     private Pictures() {

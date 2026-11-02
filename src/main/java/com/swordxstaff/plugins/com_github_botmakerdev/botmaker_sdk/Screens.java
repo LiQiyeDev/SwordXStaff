@@ -782,6 +782,7 @@ public final class Screens {
                     .named("Gear details")
                     .markers(List.of(Pictures.GEAR_SHARE))
                     .alsoFrom(List.of(Way.of(Screens.CHARACTER.charWeaponStaff)))
+                    .back(Screens.GEAR_DETAILS.gearReplace)
                     .notes("""
                             One piece of gear: rarity, power, level, stats; Equip puts it on and goes back to Character.
                             Share and lock icons at the top right; what the lock does is not tried yet.\

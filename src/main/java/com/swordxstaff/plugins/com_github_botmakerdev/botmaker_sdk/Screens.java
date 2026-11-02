@@ -641,9 +641,15 @@ public final class Screens {
     public static final FurnitureUpgrade FURNITURE_UPGRADE = new FurnitureUpgrade();
 
     public static final class House extends Screen {
+        public final Button housePackageCard = Button.of(Pictures.HOUSE_PACKAGE_CARD);
+
         @Override
         public Setup setup() {
-            return Setup.named("House").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+            return Setup
+                    .named("House")
+                    .markers(List.of(Pictures.HOUSE_ARCH_WINDOW))
+                    .shot("screens/HOUSE.png")
+                    .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
     }
 

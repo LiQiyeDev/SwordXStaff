@@ -143,6 +143,10 @@ public final class Pictures {
             .at(new Rect(262, 186, 108, 84));
     public static final ImageTemplate UPGRADE_TAB_STONE = new ImageTemplate("images/upgrade_tab_stone.png")
             .at(new Rect(432, 186, 108, 84));
+    public static final ImageTemplate HOUSE_ARCH_WINDOW = new ImageTemplate("images/house_arch_window.png")
+            .at(new Rect(636, 672, 184, 176));
+    public static final ImageTemplate HOUSE_PACKAGE_CARD = new ImageTemplate("images/house_package_card.png")
+            .at(new Rect(100, 1282, 140, 106));
     private Pictures() {
     }
 }

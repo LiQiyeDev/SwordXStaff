@@ -305,6 +305,9 @@ public final class Screens {
             return Setup
                     .named("Prologue battle")
                     .markers(List.of(Pictures.PROLOGUE_TURN_PORTRAIT))
+                    .notes(
+                            "The first scene after Tap to Play (Logging in..., then Loading..., then this): a scripted boss battle shown behind a Tutorial dialogue. Reina and Akane face a swarm and a tentacled boss; a turn-order bar runs across the top with the active portrait at its right end. The dialogue box (Reina, \"The final showdown again. Let's do this.\") has a bobbing arrow at the bottom. Nothing here was tapped yet.")
+                    .owes(List.of("dialogue box: tutorial, advance not tried yet", "every input of the battle HUD"))
                     .shot("screens/PROLOGUE_BATTLE.png")
                     .from(Screens.SCENE_LOADING.sceneLoadingText);
         }

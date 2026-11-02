@@ -188,9 +188,17 @@ public final class Screens {
     public static final Settings SETTINGS = new Settings();
 
     public static final class OfficialCommunity extends Screen {
+        public final Button communityDiscord = Button.of(Pictures.COMMUNITY_DISCORD);
+        public final Button communityFacebook = Button.of(Pictures.COMMUNITY_FACEBOOK);
+        public final Button communityX = Button.of(Pictures.COMMUNITY_X);
+
         @Override
         public Setup setup() {
-            return Setup.named("Official Community").from(Screens.TITLE.titleFollowUs);
+            return Setup
+                    .named("Official Community")
+                    .markers(List.of(Pictures.COMMUNITY_TITLE))
+                    .shot("screens/OFFICIAL_COMMUNITY.png")
+                    .from(Screens.TITLE.titleFollowUs);
         }
     }
 

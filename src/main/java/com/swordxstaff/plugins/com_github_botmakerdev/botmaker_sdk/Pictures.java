@@ -73,6 +73,14 @@ public final class Pictures {
             .at(new Rect(657, 293, 114, 20));
     public static final ImageTemplate SETTINGS_TOGGLE_SERVER_CHANNEL = new ImageTemplate(
             "images/settings_toggle_server_channel.png").at(new Rect(726, 440, 46, 19));
+    public static final ImageTemplate COMMUNITY_TITLE = new ImageTemplate("images/community_title.png")
+            .at(new Rect(562, 248, 156, 24));
+    public static final ImageTemplate COMMUNITY_DISCORD = new ImageTemplate("images/community_discord.png")
+            .at(new Rect(530, 318, 58, 60));
+    public static final ImageTemplate COMMUNITY_FACEBOOK = new ImageTemplate("images/community_facebook.png")
+            .at(new Rect(611, 318, 58, 60));
+    public static final ImageTemplate COMMUNITY_X = new ImageTemplate("images/community_x.png")
+            .at(new Rect(694, 318, 58, 60));
 
     private Pictures() {
     }

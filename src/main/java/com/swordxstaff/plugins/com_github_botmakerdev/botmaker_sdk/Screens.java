@@ -569,7 +569,6 @@ public final class Screens {
         public final Button cartRowUnlock = Button.of(Pictures.CART_ROW_UNLOCK).tried().repeated();
         public final Button cartClaimAll = Button.of(Pictures.CART_CLAIM_ALL);
         public final Button cartRowUpgrade = Button.of(Pictures.CART_ROW_UPGRADE).repeated();
-        public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE).tried();
         public final Button cartoutside = Button.beside(Pictures.CART_CLAIM_ALL, 0.0, 2.8);
 
         @Override

@@ -832,6 +832,19 @@ public final class Screens {
 
     public static final TechniqueDetails TECHNIQUE_DETAILS = new TechniqueDetails();
 
+    public static final class NavPortal extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Nav portal")
+                    .takes(Duration.ofMillis(8600L))
+                    .shot("screens/NAV_PORTAL.png")
+                    .from(Screens.CHARACTER.navPortal);
+        }
+    }
+
+    public static final NavPortal NAV_PORTAL = new NavPortal();
+
     private Screens() {
     }
 }

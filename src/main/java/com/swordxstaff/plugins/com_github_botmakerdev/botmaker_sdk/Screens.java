@@ -261,6 +261,7 @@ public final class Screens {
                     .owes(List
                             .of(
                                     "marker: Consent's agreement texts also show on its dialogs; need a part only User Center shows"))
+                    .shot("screens/USER_CENTER.png")
                     .from(Screens.TITLE.titleUserCenter);
         }
     }

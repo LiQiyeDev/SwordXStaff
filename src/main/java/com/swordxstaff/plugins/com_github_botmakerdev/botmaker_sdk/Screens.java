@@ -956,6 +956,7 @@ public final class Screens {
         public final Button loadoutEditCharmTab = Button.of(Pictures.LOADOUT_EDIT_CHARM_TAB).tried();
         public final Button loadoutEditTechniqueTab = Button.of(Pictures.LOADOUT_EDIT_TECHNIQUE_TAB);
         public final Button loadoutEditEmptySlot = Button.of(Pictures.LOADOUT_EDIT_EMPTY_SLOT).tried();
+        public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE).tried();
 
         @Override
         public Setup setup() {

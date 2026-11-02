@@ -215,6 +215,8 @@ public final class Pictures {
             .at(new Rect(47, 1477, 62, 60));
     public static final ImageTemplate BATTLE_LOADOUT_SWAP = new ImageTemplate("images/battle_loadout_swap.png")
             .at(new Rect(458, 1803, 42, 42));
+    public static final ImageTemplate STAGE_ORE_NODE = new ImageTemplate("images/stage_ore_node.png")
+            .at(new Rect(503, 932, 70, 66));
     private Pictures() {
     }
 }

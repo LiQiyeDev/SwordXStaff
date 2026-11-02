@@ -133,6 +133,8 @@ public final class Pictures {
             .at(new Rect(345, 1615, 390, 62));
     public static final ImageTemplate YOU_RECEIVED_TITLE = new ImageTemplate("images/you_received_title.png")
             .at(new Rect(300, 530, 480, 80));
+    public static final ImageTemplate CART_ROW_UPGRADE = new ImageTemplate("images/cart_row_upgrade.png")
+            .at(new Rect(928, 664, 36, 46));
     private Pictures() {
     }
 }

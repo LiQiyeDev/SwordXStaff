@@ -599,8 +599,8 @@ public final class Screens {
 
     public static final class FurnitureUpgrade extends Screen {
         public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
-        public final Button upgradeTabWood = Button.of(Pictures.UPGRADE_TAB_WOOD);
-        public final Button upgradeTabStone = Button.of(Pictures.UPGRADE_TAB_STONE);
+        public final Button upgradeTabWood = Button.of(Pictures.UPGRADE_TAB_WOOD).tried();
+        public final Button upgradeTabStone = Button.of(Pictures.UPGRADE_TAB_STONE).tried();
 
         @Override
         public Setup setup() {

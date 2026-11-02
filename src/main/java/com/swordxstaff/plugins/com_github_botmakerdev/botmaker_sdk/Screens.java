@@ -746,7 +746,7 @@ public final class Screens {
     public static final Character CHARACTER = new Character();
 
     public static final class ReplaceGear extends Screen {
-        public final Button gearNoviceStaff = Button.of(Pictures.GEAR_NOVICE_STAFF);
+        public final Button gearNoviceStaff = Button.of(Pictures.GEAR_NOVICE_STAFF).occasional();
 
         @Override
         public Setup setup() {

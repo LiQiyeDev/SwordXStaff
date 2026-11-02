@@ -225,7 +225,10 @@ public final class Screens {
     public static final class UserCenter extends Screen {
         @Override
         public Setup setup() {
-            return Setup.named("User Center").from(Screens.TITLE.titleUserCenter);
+            return Setup
+                    .named("User Center")
+                    .elements(List.of(Elements.LT_TV_DIALOG_TITLE))
+                    .from(Screens.TITLE.titleUserCenter);
         }
     }
 

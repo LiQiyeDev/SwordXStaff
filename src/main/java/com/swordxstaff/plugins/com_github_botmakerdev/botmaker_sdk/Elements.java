@@ -24,6 +24,8 @@ public final class Elements {
             .shot("elements/permission_allow_button.png");
     public static final Element PERMISSION_DENY_BUTTON = Element.byId("permission_deny_button")
             .shot("elements/permission_deny_button.png");
+    public static final Element LT_TV_DIALOG_TITLE = Element.byId("lt_tv_dialog_title")
+            .shot("elements/lt_tv_dialog_title.png");
 
     private Elements() {
     }

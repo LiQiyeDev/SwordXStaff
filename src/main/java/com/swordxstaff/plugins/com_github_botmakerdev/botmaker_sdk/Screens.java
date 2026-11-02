@@ -676,8 +676,8 @@ public final class Screens {
                             """)
                     .reached(Reached.SURVEYED)
                     .owes(List
-                            .of("marker: the screen was dimmed by the tutorial; cut the Type filter or the bag tab when it is not",
-                                    "inputs: Type filter and the bottom tabs, untried"))
+                            .of("marker — the tutorial dimmed the screen; cut the Type filter or the bag tab when it is not",
+                                    "inputs — Type filter and the bottom tabs, untried"))
                     .takes(Duration.ofMillis(12100L))
                     .shot("screens/STORAGE_CHEST.png")
                     .from(Screens.HOUSE.houseStorageChest);

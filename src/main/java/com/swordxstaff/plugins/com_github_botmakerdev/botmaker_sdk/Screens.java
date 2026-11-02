@@ -891,7 +891,7 @@ public final class Screens {
 
     public static final class Battle extends Screen {
         public final Button battleStart = Button.of(Pictures.BATTLE_START).leaving();
-        public final Button battleLock = Button.of(Pictures.BATTLE_LOCK);
+        public final Button battleLock = Button.of(Pictures.BATTLE_LOCK).tried();
         public final Button battleLoadoutSwap = Button.of(Pictures.BATTLE_LOADOUT_SWAP);
         public final Button battleCamera = Button.of(Pictures.BATTLE_CAMERA).tried();
 

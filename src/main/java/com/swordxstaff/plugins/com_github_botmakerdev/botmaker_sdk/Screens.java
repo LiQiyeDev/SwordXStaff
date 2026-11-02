@@ -256,8 +256,8 @@ public final class Screens {
             return Setup
                     .named("Scene loading")
                     .notes(
-                            "Shown after Tap to Play while the world loads. No inputs. Its background scrolls and its Loading letters bounce.")
-                    .owes(List.of("marker: background and text all move, nothing still to cut"))
+                            "Shown after Tap to Play while the world loads. No inputs. Its Loading letters bounce; the pattern behind holds still.")
+                    .reached(Reached.SURVEYED)
                     .from(Screens.TITLE.titleTapToPlay);
         }
     }

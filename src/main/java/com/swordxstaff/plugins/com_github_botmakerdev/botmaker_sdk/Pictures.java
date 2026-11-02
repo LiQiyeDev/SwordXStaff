@@ -40,7 +40,7 @@ public final class Pictures {
     public static final ImageTemplate SERVERS_ROW_OTHER = new ImageTemplate("images/servers_row_other.png").at(new Rect(163, 508, 180, 44));
     public static final ImageTemplate SETTINGS_TITLE = new ImageTemplate("images/settings_title.png").at(new Rect(443, 450, 194, 50));
     public static final ImageTemplate SETTINGS_TAB_SOUND = new ImageTemplate("images/settings_tab_sound.png").at(new Rect(492, 567, 96, 36));
-    public static final ImageTemplate SETTINGS_TAB_OTHER = new ImageTemplate("images/settings_tab_other.png").at(new Rect(710, 219, 48, 22)).in(new Size(1280, 720));
+    public static final ImageTemplate SETTINGS_TAB_OTHER = new ImageTemplate("images/settings_tab_other.png").at(new Rect(762, 567, 93, 36));
     public static final ImageTemplate SETTINGS_TEXT_LANGUAGE = new ImageTemplate("images/settings_text_language.png").at(new Rect(657, 293, 114, 20)).in(new Size(1280, 720));
     public static final ImageTemplate SETTINGS_TOGGLE_SERVER_CHANNEL = new ImageTemplate("images/settings_toggle_server_channel.png").at(new Rect(726, 440, 46, 19))
             .in(new Size(1280, 720));

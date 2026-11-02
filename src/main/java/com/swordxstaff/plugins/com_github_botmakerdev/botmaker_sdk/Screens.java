@@ -882,7 +882,7 @@ public final class Screens {
     public static final Stage STAGE = new Stage();
 
     public static final class Battle extends Screen {
-        public final Button battleStart = Button.of(Pictures.BATTLE_START);
+        public final Button battleStart = Button.of(Pictures.BATTLE_START).leaving();
         public final Button battleLock = Button.of(Pictures.BATTLE_LOCK);
         public final Button battleLoadoutSwap = Button.of(Pictures.BATTLE_LOADOUT_SWAP);
 

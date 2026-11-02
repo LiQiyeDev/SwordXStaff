@@ -391,7 +391,7 @@ public final class Screens {
 
     public static final class ResetConfirm extends Screen {
         public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
-        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
+        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK).tried();
 
         @Override
         public Setup setup() {

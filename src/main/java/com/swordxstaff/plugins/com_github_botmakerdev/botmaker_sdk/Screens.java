@@ -8,6 +8,7 @@ import com.botmaker.sdk.api.screens.Button;
 import java.time.Duration;
 import com.botmaker.sdk.api.screens.Reached;
 import com.botmaker.sdk.api.screens.Way;
+import com.botmaker.sdk.api.geometry.Point;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -30,6 +31,7 @@ public final class Screens {
                     .named("Consent")
                     .elements(List.of(Elements.USER_AGREEMENT))
                     .start()
+                    .at(new Point(1651, 0))
                     .shot("screens/CONSENT.png");
         }
     }
@@ -43,6 +45,7 @@ public final class Screens {
                     .named("Tutorial dialogue")
                     .markers(List.of(Pictures.DIALOGUE_PANEL))
                     .popup()
+                    .at(new Point(340, 0))
                     .shot("screens/TUTORIAL_DIALOGUE.png");
         }
     }
@@ -59,6 +62,7 @@ public final class Screens {
                     .markers(List.of(Pictures.BOLTRAY_PAGE_LOGO))
                     .elements(List.of(Elements.BOLTRAY_GAMES_PRIVACY_POLICY))
                     .back(Screens.PRIVACY_POLICY.policyBackArrow)
+                    .at(new Point(1905, 318))
                     .takes(Duration.ofMillis(3400L))
                     .shot("screens/PRIVACY_POLICY.png")
                     .from(Screens.CONSENT.privacyPolicy);
@@ -78,6 +82,7 @@ public final class Screens {
                     .back(Screens.USER_AGREEMENT.policyBackArrow)
                     .notes("Legal page, no bot work. Back arrow returns to Consent; first tap on the link after returning from a page may do nothing.")
                     .owes(List.of("marker — the text marker also matches Consent's shot (tree holds covered views)"))
+                    .at(new Point(1349, 318))
                     .from(Screens.CONSENT.userAgreement);
         }
     }
@@ -91,6 +96,7 @@ public final class Screens {
                     .named("Startup loading")
                     .markers(List.of(Pictures.STARTUP_LOADING_BAR_END))
                     .loads(Duration.ofMillis(60000L))
+                    .at(new Point(1627, 318))
                     .shot("screens/LOADING_PATCH.png")
                     .from(Screens.CONSENT.confirm);
         }
@@ -119,6 +125,7 @@ public final class Screens {
                     .notes(
                             "Opens by itself after startup loading. Only news: no rewards, no bot work. Tabs Notice, System, News; each lists changing articles, so items come and go. Don't show again today hides it for the day. News holds outside links (Discord, X, Facebook, YouTube), not clicked.")
                     .reached(Reached.SURVEYED)
+                    .at(new Point(0, 0))
                     .shot("screens/NOTICE.png");
         }
     }
@@ -146,6 +153,7 @@ public final class Screens {
                     .named("Title")
                     .markers(List.of(Pictures.TITLE_USER_CENTER))
                     .alsoFrom(List.of(Way.onItsOwn(Screens.STARTUP_LOADING)))
+                    .at(new Point(1627, 621))
                     .shot("screens/TITLE.png")
                     .from(Screens.NOTICE.noticeBack);
         }
@@ -172,6 +180,7 @@ public final class Screens {
                     .owes(List
                             .of("Available list: scrolling it needs a drag, the wheel does nothing",
                                     "servers_search, servers_search_go: not tried"))
+                    .at(new Point(1298, 924))
                     .shot("screens/SERVERS.png")
                     .from(Screens.TITLE.titleServers);
         }
@@ -198,6 +207,7 @@ public final class Screens {
                     .notes(
                             "Three tabs. Game: text and voice language (English), chat channels shown on Home. Sound: Master, Music, Sound, Voice Over sliders, all 100%. Other: Vibration, Network Boost, Auto-Download Resources (Off, Wi-Fi Only, Cellular Data & Wi-Fi). The game's own language setting is here, separate from Android's.")
                     .reached(Reached.SURVEYED)
+                    .at(new Point(1020, 924))
                     .shot("screens/SETTINGS.png")
                     .from(Screens.TITLE.titleSettings);
         }
@@ -215,6 +225,7 @@ public final class Screens {
             return Setup
                     .named("Official Community")
                     .markers(List.of(Pictures.COMMUNITY_TITLE))
+                    .at(new Point(2410, 924))
                     .shot("screens/OFFICIAL_COMMUNITY.png")
                     .from(Screens.TITLE.titleFollowUs);
         }
@@ -233,6 +244,7 @@ public final class Screens {
                     .back(Screens.CUSTOMER_SERVICE.supportBack)
                     .notes("Live chat with the game's support, full screen with Android's keyboard up. The bot never types or sends here.")
                     .reached(Reached.SURVEYED)
+                    .at(new Point(1854, 924))
                     .shot("screens/CUSTOMER_SERVICE.png")
                     .from(Screens.TITLE.titleCustomerService);
         }
@@ -261,6 +273,7 @@ public final class Screens {
                     .owes(List
                             .of(
                                     "marker: Consent's agreement texts also show on its dialogs; need a part only User Center shows"))
+                    .at(new Point(1576, 924))
                     .shot("screens/USER_CENTER.png")
                     .from(Screens.TITLE.titleUserCenter);
         }
@@ -279,6 +292,7 @@ public final class Screens {
                     .notes(
                             "Shown after Logging in... while the first scene loads: a dark wallpaper of monster silhouettes, a running chibi and \"Loading...\" whose letters bounce. No inputs. The marker is the word Loading as cut; it bounces, so a run may miss it.")
                     .owes(List.of("marker: the word bounces; a still part of the wallpaper wasn't cut in time"))
+                    .at(new Point(2132, 932))
                     .shot("screens/SCENE_LOADING.png")
                     .from(Screens.TITLE.titleTapToPlay);
         }
@@ -293,6 +307,7 @@ public final class Screens {
                     .named("Logging in")
                     .markers(List.of(Pictures.LOGGING_IN_TEXT))
                     .popup()
+                    .at(new Point(743, 16))
                     .shot("screens/LOGGING_IN.png");
         }
     }
@@ -308,6 +323,7 @@ public final class Screens {
                     .notes(
                             "The first scene after Tap to Play (Logging in..., then Loading..., then this): a scripted boss battle shown behind a Tutorial dialogue. Reina and Akane face a swarm and a tentacled boss; a turn-order bar runs across the top with the active portrait at its right end. The dialogue box (Reina, \"The final showdown again. Let's do this.\") has a bobbing arrow at the bottom. Nothing here was tapped yet.")
                     .owes(List.of("dialogue box: tutorial, advance not tried yet", "every input of the battle HUD"))
+                    .at(new Point(2132, 1541))
                     .shot("screens/PROLOGUE_BATTLE.png")
                     .from(Screens.SCENE_LOADING.sceneLoadingText);
         }

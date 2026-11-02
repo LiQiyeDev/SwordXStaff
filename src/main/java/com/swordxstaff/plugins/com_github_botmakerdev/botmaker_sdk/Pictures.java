@@ -171,6 +171,8 @@ public final class Pictures {
             .at(new Rect(849, 439, 30, 36));
     public static final ImageTemplate GEAR_EQUIP = new ImageTemplate("images/gear_equip.png")
             .at(new Rect(400, 1315, 270, 58));
+    public static final ImageTemplate CHAR_SKILL_ICON = new ImageTemplate("images/char_skill_icon.png")
+            .at(new Rect(418, 1112, 56, 56));
     private Pictures() {
     }
 }

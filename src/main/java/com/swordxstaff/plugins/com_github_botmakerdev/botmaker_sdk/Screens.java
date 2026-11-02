@@ -709,6 +709,7 @@ public final class Screens {
 
     public static final class Character extends Screen {
         public final Button charGearSlot = Button.of(Pictures.CHAR_GEAR_SLOT).repeated();
+        public final Button charSkillIcon = Button.of(Pictures.CHAR_SKILL_ICON);
 
         @Override
         public Setup setup() {

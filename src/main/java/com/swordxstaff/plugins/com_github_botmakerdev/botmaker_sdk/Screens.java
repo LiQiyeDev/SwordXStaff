@@ -390,7 +390,7 @@ public final class Screens {
     public static final CharacterCustomization CHARACTER_CUSTOMIZATION = new CharacterCustomization();
 
     public static final class ResetConfirm extends Screen {
-        public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
+        public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL).tried();
         public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK).tried();
 
         @Override

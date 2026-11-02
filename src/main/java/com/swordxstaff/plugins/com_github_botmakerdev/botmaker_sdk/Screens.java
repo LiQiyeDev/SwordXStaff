@@ -903,12 +903,12 @@ public final class Screens {
                     .notes("""
                             The pre-fight view, reached by tapping an enemy on Stage (through the loading wallpaper).
                             Shows Round 0/15, the enemy above, the hero below, Start Battle, the camera and lock buttons, and Loadout 1 with its skill slots.
-                            Start Battle plays the fight by itself: the first boar fight was won in about 5 s, then the game loaded back to Stage.\
+                            Start Battle plays the fight by itself: Start Battle and the loadout label go, the round counter runs (Round 1/15).
+                            A won fight returns to Stage in about 5 s with no result screen.
+                            The camera button changes the view in place; the lock button showed no change.
+                            The loadout swap opens Skill Loadout (4 loadouts, Edit, OK). Edit opens the loadout editor, where Escape is refused: "Cannot return while in battle".\
                             """)
                     .reached(Reached.SURVEYED)
-                    .owes(List
-                            .of("fight screens — the running fight and any result screen went by inside the loading; not seen",
-                                    "battle_camera, battle_lock, battle_loadout_swap — untried"))
                     .takes(Duration.ofMillis(4500L))
                     .shot("screens/BATTLE.png")
                     .from(Screens.STAGE.stageBoar);

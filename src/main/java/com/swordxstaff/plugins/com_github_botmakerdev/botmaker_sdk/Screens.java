@@ -409,6 +409,11 @@ public final class Screens {
                     .markers(List.of(Pictures.RESET_CONFIRM_TEXT))
                     .back(Screens.RESET_CONFIRM.resetConfirmCancel)
                     .popup()
+                    .notes("""
+                            A "Confirm" box: "Reset your character customization?" with Cancel and OK. Opened by the reset icon on Character customization.
+                            Cancel closed it and kept the look. OK closed it too: the screen below came back (the look was not checked to have changed).\
+                            """)
+                    .reached(Reached.TRIED)
                     .shot("screens/RESET_CONFIRM.png")
                     .from(Screens.CHARACTER_CUSTOMIZATION.customizationReset);
         }

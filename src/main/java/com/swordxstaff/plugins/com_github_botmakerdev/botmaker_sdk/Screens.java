@@ -715,11 +715,13 @@ public final class Screens {
         public final Button slotRightMiddle = Button.beside(Pictures.CHAR_SKILL_ICON, 9.36, -6.96);
         public final Button slotRightBottom = Button.beside(Pictures.CHAR_SKILL_ICON, 8.61, -3.21);
         public final Button charClassIcon2 = Button.of(Pictures.CHAR_CLASS_ICON).tried();
+        public final Button navHome = Button.of(Pictures.NAV_HOME);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Character")
+                    .back(Screens.CHARACTER.navHome)
                     .notes("""
                             The character: class emblem (No Class at first), gear slots around the hero (left: weapon; right: three more), a locked slot under the weapon.
                             Skill and Class buttons under the hero; level, rank and stats (ATK, DEF, HP, SPD) below.

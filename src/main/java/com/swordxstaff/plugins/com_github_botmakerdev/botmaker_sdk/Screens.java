@@ -764,6 +764,12 @@ public final class Screens {
             return Setup
                     .named("Gear details")
                     .markers(List.of(Pictures.GEAR_SHARE))
+                    .notes("""
+                            One piece of gear: rarity, power, level, stats; Equip puts it on and goes back to Character.
+                            Share and lock icons at the top right; the lock keeps the gear from being sold or used up (not tried).\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List.of("gear_lock — untried while the tutorial leads"))
                     .takes(Duration.ofMillis(10700L))
                     .shot("screens/GEAR_DETAILS.png")
                     .from(Screens.REPLACE_GEAR.gearNoviceStaff);

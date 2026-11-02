@@ -515,6 +515,19 @@ public final class Screens {
 
     public static final UnlockCart UNLOCK_CART = new UnlockCart();
 
+    public static final class CartUnlocked extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Cart unlocked")
+                    .takes(Duration.ofMillis(7200L))
+                    .shot("screens/CART_UNLOCKED.png")
+                    .from(Screens.UNLOCK_CART.unlockButton);
+        }
+    }
+
+    public static final CartUnlocked CART_UNLOCKED = new CartUnlocked();
+
     private Screens() {
     }
 }

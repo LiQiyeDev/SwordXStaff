@@ -643,6 +643,7 @@ public final class Screens {
 
     public static final class House extends Screen {
         public final Button housePackageCard = Button.of(Pictures.HOUSE_PACKAGE_CARD);
+        public final Button houseStorageChest = Button.of(Pictures.HOUSE_STORAGE_CHEST);
 
         @Override
         public Setup setup() {

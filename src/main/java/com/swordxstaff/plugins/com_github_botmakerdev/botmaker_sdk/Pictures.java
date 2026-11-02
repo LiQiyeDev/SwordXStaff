@@ -147,6 +147,8 @@ public final class Pictures {
             .at(new Rect(636, 672, 184, 176));
     public static final ImageTemplate HOUSE_PACKAGE_CARD = new ImageTemplate("images/house_package_card.png")
             .at(new Rect(100, 1282, 140, 106));
+    public static final ImageTemplate HOUSE_STORAGE_CHEST = new ImageTemplate("images/house_storage_chest.png")
+            .at(new Rect(126, 1294, 144, 94));
     private Pictures() {
     }
 }

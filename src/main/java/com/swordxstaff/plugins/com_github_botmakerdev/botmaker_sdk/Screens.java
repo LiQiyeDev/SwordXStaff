@@ -741,10 +741,13 @@ public final class Screens {
     public static final ReplaceGear REPLACE_GEAR = new ReplaceGear();
 
     public static final class GearDetails extends Screen {
+        public final Button gearLock = Button.of(Pictures.GEAR_LOCK);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Gear details")
+                    .markers(List.of(Pictures.GEAR_SHARE))
                     .takes(Duration.ofMillis(10700L))
                     .shot("screens/GEAR_DETAILS.png")
                     .from(Screens.REPLACE_GEAR.gearNoviceStaff);

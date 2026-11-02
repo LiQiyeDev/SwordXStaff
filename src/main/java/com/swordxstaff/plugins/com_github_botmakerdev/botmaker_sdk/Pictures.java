@@ -165,6 +165,10 @@ public final class Pictures {
             .at(new Rect(86, 266, 38, 38));
     public static final ImageTemplate GEAR_NOVICE_STAFF = new ImageTemplate("images/gear_novice_staff.png")
             .at(new Rect(165, 460, 126, 128));
+    public static final ImageTemplate GEAR_SHARE = new ImageTemplate("images/gear_share.png")
+            .at(new Rect(783, 438, 36, 36));
+    public static final ImageTemplate GEAR_LOCK = new ImageTemplate("images/gear_lock.png")
+            .at(new Rect(849, 439, 30, 36));
     private Pictures() {
     }
 }

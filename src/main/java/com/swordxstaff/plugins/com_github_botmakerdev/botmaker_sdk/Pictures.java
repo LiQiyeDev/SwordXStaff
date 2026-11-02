@@ -330,6 +330,14 @@ public final class Pictures {
             .at(new Rect(168, 1284, 355, 78));
     public static final ImageTemplate GEAR_ENHANCE = new ImageTemplate("images/gear_enhance.png")
             .at(new Rect(560, 1295, 310, 68));
+    public static final ImageTemplate ENHANCE_GEAR_TITLE = new ImageTemplate("images/enhance_gear_title.png")
+            .at(new Rect(55, 45, 310, 75));
+    public static final ImageTemplate ENHANCE_DO = new ImageTemplate("images/enhance_do.png")
+            .at(new Rect(320, 1600, 400, 70));
+    public static final ImageTemplate ENHANCE_RESONANCE = new ImageTemplate("images/enhance_resonance.png")
+            .at(new Rect(805, 357, 275, 58));
+    public static final ImageTemplate ENHANCE_TAB_GOALS = new ImageTemplate("images/enhance_tab_goals.png")
+            .at(new Rect(690, 1792, 330, 68));
     private Pictures() {
     }
 }

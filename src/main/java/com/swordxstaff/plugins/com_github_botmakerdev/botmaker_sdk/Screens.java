@@ -1228,10 +1228,17 @@ public final class Screens {
     public static final Home HOME = new Home();
 
     public static final class Enhance extends Screen {
+        public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
+        public final Button enhanceDo = Button.of(Pictures.ENHANCE_DO);
+        public final Button enhanceResonance = Button.of(Pictures.ENHANCE_RESONANCE);
+        public final Button enhanceTabGoals = Button.of(Pictures.ENHANCE_TAB_GOALS);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Enhance")
+                    .markers(List.of(Pictures.ENHANCE_GEAR_TITLE))
+                    .back(Screens.ENHANCE.noticeBack)
                     .takes(Duration.ofMillis(7100L))
                     .shot("screens/ENHANCE.png")
                     .from(Screens.GEAR_DETAILS.gearEnhance);

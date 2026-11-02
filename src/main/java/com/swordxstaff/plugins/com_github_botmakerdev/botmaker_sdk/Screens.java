@@ -423,7 +423,7 @@ public final class Screens {
 
     public static final class CharacterName extends Screen {
         public final Button nameBack = Button.of(Pictures.NAME_BACK);
-        public final Button nameField = Button.of(Pictures.NAME_FIELD);
+        public final Button nameField = Button.of(Pictures.NAME_FIELD).tried().submitting().types(Texts.BOTMAKER);
         public final Button nameLetsGo = Button.of(Pictures.NAME_LETS_GO);
 
         @Override

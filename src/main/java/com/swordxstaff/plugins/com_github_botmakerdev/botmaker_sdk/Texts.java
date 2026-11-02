@@ -24,6 +24,7 @@ public final class Texts {
     public static final Words TERMS_AND_CONDITIONS = Words.of("Terms and Conditions");
     public static final Words MANAGE_COOKIES = Words.of("Manage Cookies");
     public static final Words DELETE_ACCOUNT = Words.of("Delete Account");
+    public static final Words BOTMAKER = Words.of("BotMaker");
 
     private Texts() {
     }

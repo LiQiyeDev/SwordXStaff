@@ -790,6 +790,15 @@ public final class Screens {
                     .named("Skills")
                     .markers(List.of(Pictures.SKILLS_LOADOUT_PENCIL))
                     .back(Screens.SKILLS.upgradeBack)
+                    .notes("""
+                            Skill loadout: eight skill slots around the hero (four each side), loadout pages with arrows and a pencil to rename.
+                            Tabs Technique, Charm, Shard, an All box; the bottom bar has Skill and Goals.
+                            A technique pressed opens Technique details; its Equip asks for a slot, then fills it.
+                            Tutorial: Water Shot (the Staff's first technique) goes in the top-left slot.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List
+                            .of("inputs — loadout arrows, Charm and Shard tabs, All, Goals: untried while the tutorial leads"))
                     .takes(Duration.ofMillis(7900L))
                     .shot("screens/SKILLS.png")
                     .from(Screens.CHARACTER.charSkillIcon);

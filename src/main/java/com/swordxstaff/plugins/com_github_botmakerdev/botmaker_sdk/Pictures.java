@@ -243,8 +243,7 @@ public final class Pictures {
             .at(new Rect(868, 333, 144, 144));
     public static final ImageTemplate STAGE_BOAR_IDLE = new ImageTemplate("images/stage_boar_idle.png")
             .at(new Rect(325, 1005, 115, 140)).frames(3);
-    public static final ImageTemplate STAGE_BOAR_CHECK = new ImageTemplate("images/stage_boar_check.png")
-            .at(new Rect(793, 1068, 108, 128)).frames(3);
+    public static final ImageTemplate STAGE_BOAR_CHECK = new ImageTemplate("images/stage_boar_check.png").at(new Rect(797, 1090, 103, 88));
     public static final ImageTemplate QUIT_GAME_QUESTION = new ImageTemplate("images/quit_game_question.png")
             .at(new Rect(410, 848, 265, 62));
     public static final ImageTemplate STAGE_PLANT_IDLE = new ImageTemplate("images/stage_plant_idle.png")

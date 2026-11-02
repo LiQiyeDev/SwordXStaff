@@ -514,6 +514,12 @@ public final class Screens {
             return Setup
                     .named("Unlock cart")
                     .markers(List.of(Pictures.UNLOCK_CART_PICTURE))
+                    .notes("""
+                            Cart (Resources): holds all AFK resources.
+                            Unlock is free in the tutorial; its glowing frame pulses, so the picture is the pill's inside.
+                            Unlock opens Feature unlocked.\
+                            """)
+                    .reached(Reached.TRIED)
                     .shot("screens/UNLOCK_CART.png")
                     .from(Screens.CART_BLUEPRINT.cartBlueprintCard);
         }

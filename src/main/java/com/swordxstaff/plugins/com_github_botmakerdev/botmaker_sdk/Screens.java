@@ -9,6 +9,8 @@ import java.time.Duration;
 import com.botmaker.sdk.api.screens.Reached;
 import com.botmaker.sdk.api.screens.Way;
 import com.botmaker.sdk.api.geometry.Point;
+import com.botmaker.sdk.api.screens.Hotkey;
+import com.botmaker.sdk.api.input.Key;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -567,6 +569,7 @@ public final class Screens {
         public final Button cartRowUnlock = Button.of(Pictures.CART_ROW_UNLOCK).tried().repeated();
         public final Button cartClaimAll = Button.of(Pictures.CART_CLAIM_ALL);
         public final Button cartRowUpgrade = Button.of(Pictures.CART_ROW_UPGRADE).repeated();
+        public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE).tried();
 
         @Override
         public Setup setup() {

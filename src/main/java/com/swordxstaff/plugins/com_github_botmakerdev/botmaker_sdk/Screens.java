@@ -658,10 +658,13 @@ public final class Screens {
     public static final House HOUSE = new House();
 
     public static final class StorageChest extends Screen {
+        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Storage chest")
+                    .back(Screens.STORAGE_CHEST.upgradeBack)
                     .takes(Duration.ofMillis(12100L))
                     .shot("screens/STORAGE_CHEST.png")
                     .from(Screens.HOUSE.houseStorageChest);

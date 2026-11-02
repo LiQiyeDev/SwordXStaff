@@ -88,10 +88,11 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("User Agreement")
+                    .alsoFrom(List.of(Way.of(Screens.MENU_USER_CENTER.ucUserAgreement)))
                     .back(Screens.USER_AGREEMENT.policyBackArrow)
-                    .notes(
-                            "Legal page, no bot work. Back arrow returns to Consent; first tap on the link after returning from a page may do nothing.")
+                    .notes("Legal page, no bot work. Back arrow returns to Consent; first tap on the link after returning from a page may do nothing.")
                     .owes(List.of("marker — the text marker also matches Consent's shot (tree holds covered views)"))
+                    .takes(Duration.ofMillis(2000L))
                     .from(Screens.CONSENT.userAgreement);
         }
     }
@@ -1133,8 +1134,8 @@ public final class Screens {
         public final Button ucAccountCenter = Button.of(Pictures.UC_ACCOUNT_CENTER);
         public final Button ucHelpCenter = Button.of(Pictures.UC_HELP_CENTER);
         public final Button ucSubmitLogs = Button.of(Pictures.UC_SUBMIT_LOGS).never("Sends logs to the game's maker; no bot use");
-        public final Button ucPrivacyPolicy = Button.of(Pictures.UC_PRIVACY_POLICY);
-        public final Button ucUserAgreement = Button.of(Pictures.UC_USER_AGREEMENT);
+        public final Button ucPrivacyPolicy = Button.of(Pictures.UC_PRIVACY_POLICY).info();
+        public final Button ucUserAgreement = Button.of(Pictures.UC_USER_AGREEMENT).info();
         public final Button ucSelfService = Button.of(Pictures.UC_SELF_SERVICE);
         public final Button ucGiftCode = Button.of(Pictures.UC_GIFT_CODE);
         public final Mark userCenterTitle = Mark.of(Pictures.USER_CENTER_TITLE);

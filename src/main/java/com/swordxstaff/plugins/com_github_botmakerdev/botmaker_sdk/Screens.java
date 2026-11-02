@@ -219,7 +219,7 @@ public final class Screens {
                             Graphics (in game only): Quality Low/Med./High/Ultra, Frame Rate 30/60, Visible Players Few/Med./Many, Bloom Off/Low/Med./High.
                             Every picture was cut at Quality Med., Frame Rate 60, Visible Players Few, Bloom Off (2026-11-02): Quality and Bloom change how everything is drawn, Visible Players how many other heroes cover the map. Keep them so; the bot changes none of them.
                             Sound: Master, Music, Sound, Voice Over sliders, all 100%.
-                            Other: Vibration, Network Boost, Auto-Download Resources (Off, Wi-Fi Only, Cellular Data &amp; Wi-Fi).
+                            Other: Vibration, Network Boost, Auto-Download Resources (Off, Wi-Fi Only, Cellular Data & Wi-Fi).
                             The game's own language setting is here, separate from Android's.\
                             """)
                     .reached(Reached.SURVEYED)

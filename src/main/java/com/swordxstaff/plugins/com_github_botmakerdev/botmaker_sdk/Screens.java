@@ -716,6 +716,15 @@ public final class Screens {
             return Setup
                     .named("Character")
                     .markers(List.of(Pictures.CHAR_CLASS_ICON))
+                    .notes("""
+                            The character: class emblem (No Class at first), gear slots around the hero (left: weapon; right: three more), a locked slot under the weapon.
+                            Skill and Class buttons under the hero; level, rank and stats (ATK, DEF, HP, SPD) below.
+                            Opened from the bottom bar's first tab (the hero's face).
+                            Tutorial: equip the Novice Staff from the left slot (ATK 60 to 84, SPD 48 to 55), then Skill.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List
+                            .of("inputs — Class button, the right gear slots and the rank, untried while the tutorial leads"))
                     .takes(Duration.ofMillis(7600L))
                     .shot("screens/CHARACTER.png")
                     .from(Screens.HOME.navCharacter);

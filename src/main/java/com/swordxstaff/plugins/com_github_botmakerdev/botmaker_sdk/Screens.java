@@ -891,7 +891,6 @@ public final class Screens {
             return Setup
                     .named("Battle")
                     .markers(List.of(Pictures.BATTLE_CAMERA))
-                    .alsoFrom(List.of(Way.onItsOwn(Screens.SCENE_LOADING)))
                     .takes(Duration.ofMillis(4500L))
                     .shot("screens/BATTLE.png")
                     .from(Screens.STAGE.stageBoar);

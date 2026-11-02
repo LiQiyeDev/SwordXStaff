@@ -282,6 +282,19 @@ public final class Screens {
 
     public static final SceneLoading SCENE_LOADING = new SceneLoading();
 
+    public static final class LoggingIn extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Logging in")
+                    .markers(List.of(Pictures.LOGGING_IN_TEXT))
+                    .popup()
+                    .shot("screens/LOGGING_IN.png");
+        }
+    }
+
+    public static final LoggingIn LOGGING_IN = new LoggingIn();
+
     private Screens() {
     }
 }

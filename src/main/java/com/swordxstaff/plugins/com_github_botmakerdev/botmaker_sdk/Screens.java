@@ -289,7 +289,7 @@ public final class Screens {
                 .of(Elements.LT_LY_SWITCH_ACCOUNT)
                 .never("Switches the guest account; it warns the in-game progress is lost, the user's call");
         public final Mark ltTvDialogTitle = Mark.of(Elements.LT_TV_DIALOG_TITLE);
-        public final Mark input = Mark.of(Elements.SUBSCRIPTION_EMAIL);
+        public final Mark subscriptionEmail = Mark.of(Elements.SUBSCRIPTION_EMAIL);
 
         @Override
         public Setup setup() {

@@ -1123,6 +1123,19 @@ public final class Screens {
 
     public static final MenuPhoto MENU_PHOTO = new MenuPhoto();
 
+    public static final class MenuUserCenter extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Menu user center")
+                    .takes(Duration.ofMillis(3400L))
+                    .shot("screens/MENU_USER_CENTER.png")
+                    .from(Screens.STAGE_PACKAGE.menuUserCenter);
+        }
+    }
+
+    public static final MenuUserCenter MENU_USER_CENTER = new MenuUserCenter();
+
     private Screens() {
     }
 }

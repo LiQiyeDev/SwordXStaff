@@ -1008,6 +1008,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Top avatar")
+                    .markers(List.of(Pictures.PROFILE_PLAYER_ID_LABEL))
                     .takes(Duration.ofMillis(8400L))
                     .shot("screens/TOP_AVATAR.png")
                     .from(Screens.STAGE.topAvatar);

@@ -83,6 +83,7 @@ public final class Screens {
 
     public static final class NotificationPermission extends Screen {
         public final Button allow = Button.of(Elements.PERMISSION_ALLOW_BUTTON);
+        public final Button donTAllow = Button.of(Elements.PERMISSION_DENY_BUTTON);
 
         @Override
         public Setup setup() {

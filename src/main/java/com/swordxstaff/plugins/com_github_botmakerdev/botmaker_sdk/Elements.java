@@ -22,6 +22,8 @@ public final class Elements {
             .shot("elements/boltray_games_license_agreement.png");
     public static final Element PERMISSION_ALLOW_BUTTON = Element.byId("permission_allow_button")
             .shot("elements/permission_allow_button.png");
+    public static final Element PERMISSION_DENY_BUTTON = Element.byId("permission_deny_button")
+            .shot("elements/permission_deny_button.png");
 
     private Elements() {
     }

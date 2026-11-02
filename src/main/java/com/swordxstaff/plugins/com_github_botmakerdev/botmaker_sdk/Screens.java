@@ -1250,7 +1250,7 @@ public final class Screens {
     public static final class EnhancementGoals extends Screen {
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
         public final Button goalIncomplete = Button.of(Pictures.GOAL_INCOMPLETE);
-        public final Button enhanceTabEnhance = Button.of(Pictures.ENHANCE_TAB_ENHANCE);
+        public final Button enhanceTabEnhance = Button.of(Pictures.ENHANCE_TAB_ENHANCE).leaving();
 
         @Override
         public Setup setup() {

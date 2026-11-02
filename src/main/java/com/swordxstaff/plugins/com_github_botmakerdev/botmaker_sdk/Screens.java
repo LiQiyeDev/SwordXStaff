@@ -521,7 +521,7 @@ public final class Screens {
             return Setup
                     .named("Unlock furniture")
                     .markers(List.of(Pictures.UNLOCK_BUTTON))
-                    .alsoFrom(List.of(Way.of(Screens.HOUSE.housePackageCard)))
+                    .alsoFrom(List.of(Way.of(Screens.HOME.housePackageCard)))
                     .notes("""
                             Cart (Resources): holds all AFK resources.
                             Unlock is free in the tutorial; its glowing frame pulses, so the picture is the pill's inside.
@@ -646,21 +646,21 @@ public final class Screens {
 
     public static final FurnitureUpgrade FURNITURE_UPGRADE = new FurnitureUpgrade();
 
-    public static final class House extends Screen {
+    public static final class Home extends Screen {
         public final Button housePackageCard = Button.of(Pictures.HOUSE_PACKAGE_CARD);
         public final Button houseStorageChest = Button.of(Pictures.HOUSE_STORAGE_CHEST);
 
         @Override
         public Setup setup() {
             return Setup
-                    .named("House")
+                    .named("Home")
                     .markers(List.of(Pictures.HOUSE_ARCH_WINDOW))
                     .shot("screens/HOUSE.png")
                     .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
     }
 
-    public static final House HOUSE = new House();
+    public static final Home HOME = new Home();
 
     public static final class StorageChest extends Screen {
         public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
@@ -681,7 +681,7 @@ public final class Screens {
                                     "inputs — Type filter and the bottom tabs, untried"))
                     .takes(Duration.ofMillis(12100L))
                     .shot("screens/STORAGE_CHEST.png")
-                    .from(Screens.HOUSE.houseStorageChest);
+                    .from(Screens.HOME.houseStorageChest);
         }
     }
 

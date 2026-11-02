@@ -657,6 +657,19 @@ public final class Screens {
 
     public static final House HOUSE = new House();
 
+    public static final class StorageChest extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Storage chest")
+                    .takes(Duration.ofMillis(12100L))
+                    .shot("screens/STORAGE_CHEST.png")
+                    .from(Screens.HOUSE.houseStorageChest);
+        }
+    }
+
+    public static final StorageChest STORAGE_CHEST = new StorageChest();
+
     private Screens() {
     }
 }

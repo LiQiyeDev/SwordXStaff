@@ -834,11 +834,13 @@ public final class Screens {
 
     public static final class World extends Screen {
         public final Button worldIslandOriginisle = Button.of(Pictures.WORLD_ISLAND_ORIGINISLE);
+        public final Button worldChest = Button.of(Pictures.WORLD_CHEST);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("World")
+                    .markers(List.of(Pictures.WORLD_TAB_SELECTED))
                     .takes(Duration.ofMillis(8600L))
                     .shot("screens/NAV_PORTAL.png")
                     .from(Screens.CHARACTER.navPortal);

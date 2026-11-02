@@ -466,6 +466,15 @@ public final class Screens {
 
     public static final AethyrisArrival AETHYRIS_ARRIVAL = new AethyrisArrival();
 
+    public static final class DialogueChoice extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("Dialogue choice").from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
+        }
+    }
+
+    public static final DialogueChoice DIALOGUE_CHOICE = new DialogueChoice();
+
     private Screens() {
     }
 }

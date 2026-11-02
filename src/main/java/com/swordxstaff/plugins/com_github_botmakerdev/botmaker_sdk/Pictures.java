@@ -28,7 +28,7 @@ public final class Pictures {
     public static final ImageTemplate NOTICE_HIDE_TODAY = new ImageTemplate("images/notice_hide_today.png").at(new Rect(572, 604, 138, 20)).in(new Size(1280, 720));
     public static final ImageTemplate TITLE_TAP_TO_PLAY = new ImageTemplate("images/title_tap_to_play.png").at(new Rect(606, 596, 70, 18)).in(new Size(1280, 720));
     public static final ImageTemplate TITLE_SERVERS = new ImageTemplate("images/title_servers.png").at(new Rect(937, 42, 96, 96));
-    public static final ImageTemplate TITLE_SETTINGS = new ImageTemplate("images/title_settings.png").at(new Rect(778, 65, 34, 32)).in(new Size(1280, 720));
+    public static final ImageTemplate TITLE_SETTINGS = new ImageTemplate("images/title_settings.png").at(new Rect(937, 185, 96, 96));
     public static final ImageTemplate TITLE_FOLLOW_US = new ImageTemplate("images/title_follow_us.png").at(new Rect(778, 115, 34, 32)).in(new Size(1280, 720));
     public static final ImageTemplate TITLE_CUSTOMER_SERVICE = new ImageTemplate("images/title_customer_service.png").at(new Rect(778, 165, 34, 30)).in(new Size(1280, 720));
     public static final ImageTemplate TITLE_NOTICE = new ImageTemplate("images/title_notice.png").at(new Rect(782, 218, 26, 26)).in(new Size(1280, 720));

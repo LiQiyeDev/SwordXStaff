@@ -944,6 +944,7 @@ public final class Screens {
             return Setup
                     .named("Battle loadout swap")
                     .markers(List.of(Pictures.LOADOUT_RADIO_EMPTY))
+                    .back(Screens.BATTLE_LOADOUT_SWAP.loadoutOk)
                     .takes(Duration.ofMillis(5900L))
                     .shot("screens/BATTLE_LOADOUT_SWAP.png")
                     .from(Screens.BATTLE.battleLoadoutSwap);

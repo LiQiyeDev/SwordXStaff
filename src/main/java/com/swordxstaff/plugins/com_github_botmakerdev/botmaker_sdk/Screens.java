@@ -516,6 +516,7 @@ public final class Screens {
             return Setup
                     .named("Unlock furniture")
                     .markers(List.of(Pictures.UNLOCK_BUTTON))
+                    .alsoFrom(List.of(Way.of(Screens.HOUSE.housePackageCard)))
                     .notes("""
                             Cart (Resources): holds all AFK resources.
                             Unlock is free in the tutorial; its glowing frame pulses, so the picture is the pill's inside.

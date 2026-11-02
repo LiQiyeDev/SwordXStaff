@@ -759,10 +759,15 @@ public final class Screens {
     public static final GearDetails GEAR_DETAILS = new GearDetails();
 
     public static final class Skills extends Screen {
+        public final Button skillsLoadoutPrev = Button.of(Pictures.SKILLS_LOADOUT_PREV);
+        public final Button skillsLoadoutNext = Button.of(Pictures.SKILLS_LOADOUT_NEXT);
+        public final Button skillsWaterShot = Button.of(Pictures.SKILLS_WATER_SHOT);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Skills")
+                    .markers(List.of(Pictures.SKILLS_LOADOUT_PENCIL))
                     .takes(Duration.ofMillis(7900L))
                     .shot("screens/SKILLS.png")
                     .from(Screens.CHARACTER.charSkillIcon);

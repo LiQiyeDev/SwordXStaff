@@ -1227,6 +1227,19 @@ public final class Screens {
 
     public static final Home HOME = new Home();
 
+    public static final class Enhance extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Enhance")
+                    .takes(Duration.ofMillis(7100L))
+                    .shot("screens/ENHANCE.png")
+                    .from(Screens.GEAR_DETAILS.gearEnhance);
+        }
+    }
+
+    public static final Enhance ENHANCE = new Enhance();
+
     private Screens() {
     }
 }

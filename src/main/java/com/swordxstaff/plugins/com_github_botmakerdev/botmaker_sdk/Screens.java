@@ -1277,7 +1277,6 @@ public final class Screens {
     public static final Resonance RESONANCE = new Resonance();
 
     public static final class SkillGoals extends Screen {
-        public final Mark skillGoalsTitle = Mark.of(Pictures.SKILL_GOALS_TITLE);
         public final Button skillGoalsTabQuality = Button.of(Pictures.SKILL_GOALS_TAB_QUALITY).tried();
         public final Button skillGoalsTabLevel = Button.of(Pictures.SKILL_GOALS_TAB_LEVEL);
         public final Button goalsTabSkill = Button.of(Pictures.GOALS_TAB_SKILL).marking();

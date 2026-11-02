@@ -275,6 +275,12 @@ public final class Pictures {
             .at(new Rect(275, 1605, 140, 120));
     public static final ImageTemplate SETTINGS_TAB_GRAPHICS = new ImageTemplate("images/settings_tab_graphics.png")
             .at(new Rect(350, 556, 175, 52));
+    public static final ImageTemplate GUIDANCE_QUEST_TITLE = new ImageTemplate("images/guidance_quest_title.png")
+            .at(new Rect(55, 50, 345, 60));
+    public static final ImageTemplate QUEST_GO = new ImageTemplate("images/quest_go.png")
+            .at(new Rect(850, 1243, 105, 55));
+    public static final ImageTemplate QUEST_TAB_ACHIEVEMENT = new ImageTemplate("images/quest_tab_achievement.png")
+            .at(new Rect(680, 1800, 340, 60));
     private Pictures() {
     }
 }

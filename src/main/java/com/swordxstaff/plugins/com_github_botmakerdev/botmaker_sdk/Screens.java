@@ -1077,10 +1077,16 @@ public final class Screens {
     public static final StagePackage STAGE_PACKAGE = new StagePackage();
 
     public static final class MenuQuest extends Screen {
+        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
+        public final Button questGo = Button.of(Pictures.QUEST_GO);
+        public final Button questTabAchievement = Button.of(Pictures.QUEST_TAB_ACHIEVEMENT);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Menu quest")
+                    .markers(List.of(Pictures.GUIDANCE_QUEST_TITLE))
+                    .back(Screens.MENU_QUEST.upgradeBack)
                     .takes(Duration.ofMillis(7100L))
                     .shot("screens/MENU_QUEST.png")
                     .from(Screens.STAGE_PACKAGE.menuQuest);

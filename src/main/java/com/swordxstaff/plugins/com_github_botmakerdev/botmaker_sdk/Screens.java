@@ -655,19 +655,6 @@ public final class Screens {
 
     public static final House HOUSE = new House();
 
-    public static final class UnlockFurniture extends Screen {
-        @Override
-        public Setup setup() {
-            return Setup
-                    .named("Unlock furniture")
-                    .takes(Duration.ofMillis(6500L))
-                    .shot("screens/UNLOCK_FURNITURE.png")
-                    .from(Screens.HOUSE.housePackageCard);
-        }
-    }
-
-    public static final UnlockFurniture UNLOCK_FURNITURE = new UnlockFurniture();
-
     private Screens() {
     }
 }

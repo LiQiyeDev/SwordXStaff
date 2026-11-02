@@ -777,10 +777,13 @@ public final class Screens {
     public static final Skills SKILLS = new Skills();
 
     public static final class TechniqueDetails extends Screen {
+        public final Button techniqueEquip = Button.of(Pictures.TECHNIQUE_EQUIP);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Technique details")
+                    .markers(List.of(Pictures.TECHNIQUE_PIN))
                     .takes(Duration.ofMillis(5500L))
                     .shot("screens/TECHNIQUE_DETAILS.png")
                     .from(Screens.SKILLS.skillsWaterShot);

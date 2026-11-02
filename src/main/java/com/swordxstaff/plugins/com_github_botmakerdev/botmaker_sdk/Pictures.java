@@ -181,6 +181,10 @@ public final class Pictures {
             .at(new Rect(701, 1032, 34, 36));
     public static final ImageTemplate SKILLS_WATER_SHOT = new ImageTemplate("images/skills_water_shot.png")
             .at(new Rect(98, 1296, 116, 104));
+    public static final ImageTemplate TECHNIQUE_PIN = new ImageTemplate("images/technique_pin.png")
+            .at(new Rect(870, 366, 30, 32));
+    public static final ImageTemplate TECHNIQUE_EQUIP = new ImageTemplate("images/technique_equip.png")
+            .at(new Rect(200, 1372, 290, 56));
     private Pictures() {
     }
 }

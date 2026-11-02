@@ -1108,13 +1108,14 @@ public final class Screens {
         public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
         public final Button photoZoomIn = Button.of(Pictures.PHOTO_ZOOM_IN).tried();
         public final Button photoZoomOut = Button.of(Pictures.PHOTO_ZOOM_OUT).tried();
+        public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Menu photo")
                     .markers(List.of(Pictures.PHOTO_SHUTTER))
-                    .back(Screens.MENU_PHOTO.upgradeBack)
+                    .back(Screens.MENU_PHOTO.noticeBack)
                     .takes(Duration.ofMillis(4300L))
                     .shot("screens/MENU_PHOTO.png")
                     .from(Screens.STAGE_PACKAGE.menuPhoto);

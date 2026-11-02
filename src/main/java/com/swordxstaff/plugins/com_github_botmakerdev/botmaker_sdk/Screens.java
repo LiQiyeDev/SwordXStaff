@@ -167,7 +167,7 @@ public final class Screens {
 
     public static final class Settings extends Screen {
         public final Button settingsTabSound = Button.of(Pictures.SETTINGS_TAB_SOUND).tried();
-        public final Button settingsTabOther = Button.of(Pictures.SETTINGS_TAB_OTHER);
+        public final Button settingsTabOther = Button.of(Pictures.SETTINGS_TAB_OTHER).tried();
         public final Button settingsTextLanguage = Button.of(Pictures.SETTINGS_TEXT_LANGUAGE).never("Stays English: the bot reads the game's words");
         public final Button settingsToggleServerChannel = Button.of(Pictures.SETTINGS_TOGGLE_SERVER_CHANNEL)
                 .never("Only hides chat channels on Home; no bot use, left as the game sets it");

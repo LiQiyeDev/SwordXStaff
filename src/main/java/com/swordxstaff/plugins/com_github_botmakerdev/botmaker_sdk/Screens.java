@@ -222,6 +222,15 @@ public final class Screens {
 
     public static final CustomerService CUSTOMER_SERVICE = new CustomerService();
 
+    public static final class UserCenter extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup.named("User Center").from(Screens.TITLE.titleUserCenter);
+        }
+    }
+
+    public static final UserCenter USER_CENTER = new UserCenter();
+
     private Screens() {
     }
 }

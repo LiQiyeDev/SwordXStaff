@@ -861,6 +861,18 @@ public final class Screens {
                     .named("Stage")
                     .markers(List.of(Pictures.STAGE_QUEST_ICON))
                     .back(Screens.STAGE.upgradeBack)
+                    .notes("""
+                            The island stage (Originisle I), reached from World's island card through Scene loading.
+                            The map is grid cells; tapping a cell moves the hero there (Akane: "tap the map grids to move around").
+                            Quest panel bottom left: "The First Battles", Originisle I Battle Wins 0/2.
+                            Top right: a minimap with the stage name and the hero's cell (24, 23).
+                            A chat strip sits above the back button.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List
+                            .of("minimap — its inside moves with the hero; needs a spot or a still part of its ring",
+                                    "chat strip — only text; not cut",
+                                    "grid moves — cells have no picture of their own; needs a spot from the hero or a tutorial frame"))
                     .shot("screens/STAGE.png")
                     .after(Screens.SCENE_LOADING);
         }

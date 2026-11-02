@@ -81,7 +81,7 @@ public final class Screens {
 
     public static final class UserAgreement extends Screen {
         public final Button policyBackArrow = Button.of(Pictures.POLICY_BACK_ARROW);
-        public final Mark input = Mark.of(Elements.BOLTRAY_GAMES_LICENSE_AGREEMENT);
+        public final Mark boltrayGamesLicenseAgreement = Mark.of(Elements.BOLTRAY_GAMES_LICENSE_AGREEMENT);
 
         @Override
         public Setup setup() {

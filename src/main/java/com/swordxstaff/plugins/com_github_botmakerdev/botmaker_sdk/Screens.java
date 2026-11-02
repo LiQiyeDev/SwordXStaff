@@ -6,6 +6,7 @@ import com.botmaker.sdk.api.screens.Setup;
 import java.util.List;
 import com.botmaker.sdk.api.screens.Button;
 import java.time.Duration;
+import com.botmaker.sdk.api.screens.Reached;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -17,7 +18,8 @@ public final class Screens {
     public static final class Consent extends Screen {
         public final Button confirm = Button.of(Elements.CONFIRM);
         public final Button privacyPolicy = Button.of(Elements.PRIVACY_POLICY).info();
-        public final Button cancel = Button.of(Elements.CANCEL)
+        public final Button cancel = Button
+                .of(Elements.CANCEL)
                 .never("Declines the agreement and quits the game to Android's launcher, tried 2026-11-02");
         public final Button userAgreement = Button.of(Elements.USER_AGREEMENT).info();
 
@@ -111,6 +113,9 @@ public final class Screens {
                     .markers(List.of(Pictures.NOTICE_TITLE))
                     .back(Screens.NOTICE.noticeBack)
                     .popup()
+                    .notes(
+                            "Opens by itself after startup loading. Only news: no rewards, no bot work. Tabs Notice, System, News; each lists changing articles, so items come and go. Don't show again today hides it for the day. News holds outside links (Discord, X, Facebook, YouTube), not clicked.")
+                    .reached(Reached.SURVEYED)
                     .shot("screens/NOTICE.png");
         }
     }

@@ -44,9 +44,9 @@ public final class Pictures {
     public static final ImageTemplate SETTINGS_TEXT_LANGUAGE = new ImageTemplate("images/settings_text_language.png").at(new Rect(587, 770, 325, 55));
     public static final ImageTemplate SETTINGS_TOGGLE_SERVER_CHANNEL = new ImageTemplate("images/settings_toggle_server_channel.png").at(new Rect(787, 1192, 125, 50));
     public static final ImageTemplate COMMUNITY_TITLE = new ImageTemplate("images/community_title.png").at(new Rect(325, 648, 430, 50));
-    public static final ImageTemplate COMMUNITY_DISCORD = new ImageTemplate("images/community_discord.png").at(new Rect(222, 845, 164, 160));
-    public static final ImageTemplate COMMUNITY_FACEBOOK = new ImageTemplate("images/community_facebook.png").at(new Rect(459, 845, 164, 160));
-    public static final ImageTemplate COMMUNITY_X = new ImageTemplate("images/community_x.png").at(new Rect(694, 845, 164, 160));
+    public static final ImageTemplate COMMUNITY_DISCORD = new ImageTemplate("images/community_discord.png").at(new Rect(530, 318, 58, 60)).in(new Size(1280, 720));
+    public static final ImageTemplate COMMUNITY_FACEBOOK = new ImageTemplate("images/community_facebook.png").at(new Rect(611, 318, 58, 60)).in(new Size(1280, 720));
+    public static final ImageTemplate COMMUNITY_X = new ImageTemplate("images/community_x.png").at(new Rect(694, 318, 58, 60)).in(new Size(1280, 720));
     public static final ImageTemplate SUPPORT_BACK = new ImageTemplate("images/support_back.png").at(new Rect(12, 12, 22, 26)).in(new Size(1280, 720));
     public static final ImageTemplate SUPPORT_LOGO = new ImageTemplate("images/support_logo.png").at(new Rect(620, 2, 40, 40)).in(new Size(1280, 720));
     public static final ImageTemplate SUPPORT_SEND = new ImageTemplate("images/support_send.png").at(new Rect(1212, 262, 58, 34)).in(new Size(1280, 720));

@@ -131,10 +131,15 @@ public final class Screens {
         public final Button titleNotice = Button.of(Pictures.TITLE_NOTICE);
         public final Button titleUserCenter = Button.of(Pictures.TITLE_USER_CENTER);
         public final Button titleSubmitLogs = Button.of(Pictures.TITLE_SUBMIT_LOGS);
+        public final Button titleRepairClient = Button.of(Pictures.TITLE_REPAIR_CLIENT);
 
         @Override
         public Setup setup() {
-            return Setup.named("Title").from(Screens.NOTICE.noticeBack);
+            return Setup
+                    .named("Title")
+                    .markers(List.of(Pictures.TITLE_USER_CENTER))
+                    .shot("screens/TITLE.png")
+                    .from(Screens.NOTICE.noticeBack);
         }
     }
 

@@ -55,6 +55,8 @@ public final class Pictures {
             .at(new Rect(782, 268, 26, 26));
     public static final ImageTemplate TITLE_SUBMIT_LOGS = new ImageTemplate("images/title_submit_logs.png")
             .at(new Rect(782, 368, 26, 26));
+    public static final ImageTemplate TITLE_REPAIR_CLIENT = new ImageTemplate("images/title_repair_client.png")
+            .at(new Rect(784, 321, 22, 22));
 
     private Pictures() {
     }

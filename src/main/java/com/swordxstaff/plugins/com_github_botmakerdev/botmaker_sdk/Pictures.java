@@ -17,14 +17,14 @@ public final class Pictures {
     public static final ImageTemplate BOLTRAY_PAGE_LOGO = new ImageTemplate("images/boltray_page_logo.png").at(new Rect(698, 12, 110, 42)).in(new Size(1280, 720));
     public static final ImageTemplate NOTIFICATION_PERMISSION_BELL = new ImageTemplate("images/notification_permission_bell.png").at(new Rect(615, 208, 50, 38)).in(new Size(1280, 720));
     public static final ImageTemplate STARTUP_LOADING_BAR_END = new ImageTemplate("images/startup_loading_bar_end.png").at(new Rect(512, 576, 18, 22)).in(new Size(1280, 720));
-    public static final ImageTemplate NOTICE_TITLE = new ImageTemplate("images/notice_title.png").at(new Rect(600, 62, 80, 28)).in(new Size(1280, 720));
-    public static final ImageTemplate NOTICE_BACK = new ImageTemplate("images/notice_back.png").at(new Rect(462, 669, 60, 38)).in(new Size(1280, 720));
-    public static final ImageTemplate NOTICE_TAB_SYSTEM = new ImageTemplate("images/notice_tab_system.png").at(new Rect(610, 104, 60, 24)).in(new Size(1280, 720));
-    public static final ImageTemplate NOTICE_TAB_NEWS = new ImageTemplate("images/notice_tab_news.png").at(new Rect(730, 104, 54, 24)).in(new Size(1280, 720));
-    public static final ImageTemplate NOTICE_ITEM_1 = new ImageTemplate("images/notice_item_1.png").at(new Rect(471, 139, 104, 62)).in(new Size(1280, 720));
-    public static final ImageTemplate NOTICE_ITEM_2 = new ImageTemplate("images/notice_item_2.png").at(new Rect(471, 207, 104, 60)).in(new Size(1280, 720));
-    public static final ImageTemplate NOTICE_ITEM_3 = new ImageTemplate("images/notice_item_3.png").at(new Rect(471, 275, 104, 60)).in(new Size(1280, 720));
-    public static final ImageTemplate NOTICE_ITEM_4 = new ImageTemplate("images/notice_item_4.png").at(new Rect(471, 342, 104, 60)).in(new Size(1280, 720));
+    public static final ImageTemplate NOTICE_TITLE = new ImageTemplate("images/notice_title.png").at(new Rect(467, 120, 145, 45));
+    public static final ImageTemplate NOTICE_BACK = new ImageTemplate("images/notice_back.png").at(new Rect(60, 1795, 90, 70));
+    public static final ImageTemplate NOTICE_TAB_SYSTEM = new ImageTemplate("images/notice_tab_system.png").at(new Rect(482, 237, 113, 38));
+    public static final ImageTemplate NOTICE_TAB_NEWS = new ImageTemplate("images/notice_tab_news.png").at(new Rect(830, 237, 88, 38));
+    public static final ImageTemplate NOTICE_ITEM_1 = new ImageTemplate("images/notice_item_1.png").at(new Rect(60, 330, 280, 165));
+    public static final ImageTemplate NOTICE_ITEM_2 = new ImageTemplate("images/notice_item_2.png").at(new Rect(60, 522, 280, 165));
+    public static final ImageTemplate NOTICE_ITEM_3 = new ImageTemplate("images/notice_item_3.png").at(new Rect(60, 718, 280, 165));
+    public static final ImageTemplate NOTICE_ITEM_4 = new ImageTemplate("images/notice_item_4.png").at(new Rect(60, 912, 280, 160));
     public static final ImageTemplate NOTICE_HIDE_TODAY = new ImageTemplate("images/notice_hide_today.png").at(new Rect(572, 604, 138, 20)).in(new Size(1280, 720));
     public static final ImageTemplate TITLE_TAP_TO_PLAY = new ImageTemplate("images/title_tap_to_play.png").at(new Rect(383, 1574, 26, 26));
     public static final ImageTemplate TITLE_SERVERS = new ImageTemplate("images/title_servers.png").at(new Rect(937, 42, 96, 96));
@@ -48,7 +48,6 @@ public final class Pictures {
     public static final ImageTemplate COMMUNITY_FACEBOOK = new ImageTemplate("images/community_facebook.png").at(new Rect(459, 845, 164, 160));
     public static final ImageTemplate COMMUNITY_X = new ImageTemplate("images/community_x.png").at(new Rect(694, 845, 164, 160));
     public static final ImageTemplate SUPPORT_BACK = new ImageTemplate("images/support_back.png").at(new Rect(12, 10, 24, 30));
-    public static final ImageTemplate SUPPORT_SEND = new ImageTemplate("images/support_send.png").at(new Rect(1212, 262, 58, 34)).in(new Size(1280, 720));
     public static final ImageTemplate USER_CENTER_CLOSE = new ImageTemplate("images/user_center_close.png").at(new Rect(468, 10, 32, 32)).in(new Size(1280, 720));
     public static final ImageTemplate SERVERS_TAB_AVAILABLE = new ImageTemplate("images/servers_tab_available.png")
             .at(new Rect(713, 347, 150, 46));

@@ -478,6 +478,7 @@ public final class Screens {
                     .named("Dialogue choice")
                     .markers(List.of(Pictures.CHOICE_ARROW))
                     .absent(List.of(Pictures.UPGRADE_LEVEL_ARROW))
+                    .back(Screens.DIALOGUE_CHOICE.choiceStaff)
                     .popup()
                     .notes("""
                             A reply bar over the dialogue: an arrow, one line "I'm here to save the world...", a star at the right. Seen once, over Akane's "Hey, you're awake!" in Aethyris. Only one reply was offered.

@@ -727,6 +727,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Character")
+                    .alsoFrom(List.of(Way.of(Screens.CHARACTER_STATS.statsOutside)))
                     .back(Screens.CHARACTER.navHome)
                     .notes("""
                             The character: class emblem (No Class at first), gear slots around the hero (left: weapon; right: three more), a locked slot under the weapon.

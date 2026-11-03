@@ -952,7 +952,7 @@ public final class Screens {
             return Setup
                     .named("Stage quest tracker")
                     .alsoFrom(List.of(Way.of(Screens.HOME.stageQuestTracker)))
-                    .back(Screens.STAGE_QUEST_TRACKER.keyEsc)
+                    .back(Screens.STAGE_QUEST_TRACKER.questTrackerOutside)
                     .takes(Duration.ofMillis(4200L))
                     .shot("screens/STAGE_QUEST_TRACKER.png")
                     .from(Screens.STAGE.stageQuestTracker);

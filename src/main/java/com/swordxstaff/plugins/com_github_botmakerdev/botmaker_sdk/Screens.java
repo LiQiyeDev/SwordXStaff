@@ -1453,6 +1453,12 @@ public final class Screens {
             return Setup
                     .named("Rank Goals")
                     .back(Screens.RANK_GOALS.rankGoalsTabRank2)
+                    .notes("""
+                            Level Goals (Character Level 1/12 to 1/20) and Power Goals tabs, each row a chest, a reward and a greyed Incomplete button.
+                            The Rank pill goes back to Rank Advancement.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List.of("claim look of a met goal: only greyed Incomplete seen"))
                     .takes(Duration.ofMillis(3200L))
                     .shot("screens/RANK_TAB_GOALS.png")
                     .from(Screens.RANK_ADVANCEMENT.rankTabGoals);

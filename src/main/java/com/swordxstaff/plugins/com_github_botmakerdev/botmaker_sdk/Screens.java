@@ -1513,6 +1513,19 @@ public final class Screens {
 
     public static final TravelConfirm TRAVEL_CONFIRM = new TravelConfirm();
 
+    public static final class AchievementCard extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Achievement card")
+                    .takes(Duration.ofMillis(5600L))
+                    .shot("screens/ACHIEVEMENT_CARD.png")
+                    .from(Screens.ACHIEVEMENT.achievementCard);
+        }
+    }
+
+    public static final AchievementCard ACHIEVEMENT_CARD = new AchievementCard();
+
     private Screens() {
     }
 }

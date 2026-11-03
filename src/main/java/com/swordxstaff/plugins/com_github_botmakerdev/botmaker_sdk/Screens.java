@@ -1253,6 +1253,7 @@ public final class Screens {
         public final Button homeSideIcon = Button.of(Pictures.HOME_SIDE_ICON).tried();
         public final Button stageDownloadReward = Button.of(Pictures.STAGE_DOWNLOAD_REWARD).occasional();
         public final Mark navHomeSelected = Mark.of(Pictures.NAV_HOME_SELECTED);
+        public final Button topPowerIcon = Button.of(Pictures.TOP_POWER_ICON);
 
         @Override
         public Setup setup() {

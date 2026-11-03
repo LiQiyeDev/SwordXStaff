@@ -1521,6 +1521,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Visage details")
+                    .back(Screens.VISAGE_DETAILS.visageOutside)
                     .takes(Duration.ofMillis(5600L))
                     .shot("screens/ACHIEVEMENT_CARD.png")
                     .from(Screens.ACHIEVEMENT.achievementCard);

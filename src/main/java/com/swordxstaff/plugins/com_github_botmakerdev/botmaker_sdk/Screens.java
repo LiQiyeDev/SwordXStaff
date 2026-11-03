@@ -1196,7 +1196,6 @@ public final class Screens {
 
     public static final class CharacterStats extends Screen {
         public final Button statsTabDetails = Button.of(Pictures.STATS_TAB_DETAILS).tried();
-        public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
         public final Mark characterStatsTitle = Mark.of(Pictures.CHARACTER_STATS_TITLE);
         public final Button statsTabGeneralOff = Button.of(Pictures.STATS_TAB_GENERAL_OFF).tried()
                 .looks(List.of(Look.of(Pictures.STATS_TAB_GENERAL, State.SELECTED)));

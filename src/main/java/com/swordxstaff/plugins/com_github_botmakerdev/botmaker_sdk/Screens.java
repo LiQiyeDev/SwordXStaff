@@ -34,7 +34,7 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup.named("Consent").start().shot("screens/CONSENT.png");
+            return Setup.named("Consent").start().at(new Point(8709, 0)).shot("screens/CONSENT.png");
         }
     }
 
@@ -55,6 +55,7 @@ public final class Screens {
                             One tap at 540,1780 moves to the next line, or closes the box on the last one. Seen over the Prologue battle (Reina "The final showdown again. Let's do this."; Akane "Ugh, not again... We lost..."; "Lord Goddess, please help us!"), over black after Character name (Reina "This world faces a grave crisis. We need your strength.", "Come to Aethyris. Only then can we save...") and over Aethyris arrival (Akane's lines, and a reply choice).\
                             """)
                     .reached(Reached.SURVEYED)
+                    .at(new Point(1020, 0))
                     .shot("screens/TUTORIAL_DIALOGUE.png");
         }
     }
@@ -72,6 +73,7 @@ public final class Screens {
                     .named("Privacy Policy")
                     .alsoFrom(List.of(Way.of(Screens.MENU_USER_CENTER.ucPrivacyPolicy)))
                     .back(Screens.PRIVACY_POLICY.policyBackArrow)
+                    .at(new Point(4276, 4136))
                     .takes(Duration.ofMillis(3400L))
                     .shot("screens/PRIVACY_POLICY.png")
                     .from(Screens.CONSENT.privacyPolicy);
@@ -92,6 +94,7 @@ public final class Screens {
                     .back(Screens.USER_AGREEMENT.policyBackArrow)
                     .notes("Legal page, no bot work. Back arrow returns to Consent; first tap on the link after returning from a page may do nothing.")
                     .owes(List.of("marker — the text marker also matches Consent's shot (tree holds covered views)"))
+                    .at(new Point(8763, 4136))
                     .takes(Duration.ofMillis(2000L))
                     .from(Screens.CONSENT.userAgreement);
         }
@@ -108,6 +111,7 @@ public final class Screens {
             return Setup
                     .named("Startup loading")
                     .loads(Duration.ofMillis(60000L))
+                    .at(new Point(8620, 318))
                     .shot("screens/LOADING_PATCH.png")
                     .from(Screens.CONSENT.confirm);
         }
@@ -136,6 +140,7 @@ public final class Screens {
                     .notes(
                             "Opens by itself after startup loading. Only news: no rewards, no bot work. Tabs Notice, System, News; each lists changing articles, so items come and go. Don't show again today hides it for the day. News holds outside links (Discord, X, Facebook, YouTube), not clicked.")
                     .reached(Reached.SURVEYED)
+                    .at(new Point(1360, 0))
                     .shot("screens/NOTICE.png");
         }
     }
@@ -163,6 +168,7 @@ public final class Screens {
             return Setup
                     .named("Title")
                     .alsoFrom(List.of(Way.onItsOwn(Screens.STARTUP_LOADING)))
+                    .at(new Point(8620, 920))
                     .shot("screens/TITLE.png")
                     .from(Screens.NOTICE.noticeBack);
         }
@@ -192,6 +198,7 @@ public final class Screens {
                     .owes(List
                             .of("Available list: scrolling it needs a drag, the wheel does nothing",
                                     "servers_search, servers_search_go: not tried"))
+                    .at(new Point(8177, 1578))
                     .shot("screens/SERVERS.png")
                     .from(Screens.TITLE.titleServers);
         }
@@ -228,6 +235,7 @@ public final class Screens {
                             """)
                     .reached(Reached.SURVEYED)
                     .owes(List.of("graphics options: not cut; never changed by the bot"))
+                    .at(new Point(8320, 3513))
                     .takes(Duration.ofMillis(4700L))
                     .shot("screens/SETTINGS.png")
                     .from(Screens.TITLE.titleSettings);
@@ -250,6 +258,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Official Community")
+                    .at(new Point(7621, 1578))
                     .shot("screens/OFFICIAL_COMMUNITY.png")
                     .from(Screens.TITLE.titleFollowUs);
         }
@@ -269,6 +278,7 @@ public final class Screens {
                     .back(Screens.CUSTOMER_SERVICE.supportBack)
                     .notes("Live chat with the game's support, full screen with Android's keyboard up. The bot never types or sends here.")
                     .reached(Reached.SURVEYED)
+                    .at(new Point(7830, 4136))
                     .takes(Duration.ofMillis(1800L))
                     .shot("screens/CUSTOMER_SERVICE.png")
                     .from(Screens.TITLE.titleCustomerService);
@@ -305,6 +315,7 @@ public final class Screens {
                     .owes(List
                             .of(
                                     "marker: Consent's agreement texts also show on its dialogs; need a part only User Center shows"))
+                    .at(new Point(8485, 4136))
                     .takes(Duration.ofMillis(2300L))
                     .shot("screens/USER_CENTER.png")
                     .from(Screens.TITLE.titleUserCenter);
@@ -325,6 +336,7 @@ public final class Screens {
                     .notes(
                             "Shown after Logging in... while the first scene loads: a dark wallpaper of monster silhouettes, a running chibi and \"Loading...\" whose letters bounce. No inputs. The marker is the word Loading as cut; it bounces, so a run may miss it.")
                     .owes(List.of("marker: the word bounces; a still part of the wallpaper wasn't cut in time"))
+                    .at(new Point(3998, 4141))
                     .shot("screens/SCENE_LOADING.png")
                     .from(Screens.TITLE.titleTapToPlay);
         }
@@ -337,7 +349,7 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup.named("Logging in").popup().shot("screens/LOGGING_IN.png");
+            return Setup.named("Logging in").popup().at(new Point(340, 0)).shot("screens/LOGGING_IN.png");
         }
     }
 
@@ -357,6 +369,7 @@ public final class Screens {
                             """)
                     .reached(Reached.SURVEYED)
                     .owes(List.of("every input of the battle HUD (none found yet)", "what follows the second dialogue"))
+                    .at(new Point(3998, 4753))
                     .shot("screens/PROLOGUE_BATTLE.png")
                     .from(Screens.SCENE_LOADING.sceneLoadingText);
         }
@@ -377,6 +390,7 @@ public final class Screens {
                     .owes(List
                             .of("marker — the screen changed before it could be cut, a run may need a wait",
                                     "what a tap does here (it advanced alone)"))
+                    .at(new Point(2380, 0))
                     .from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
         }
     }
@@ -400,6 +414,7 @@ public final class Screens {
                             """)
                     .reached(Reached.SURVEYED)
                     .owes(List.of("Next (leaves, not tried yet)"))
+                    .at(new Point(2380, 180))
                     .shot("screens/SELECT_BODY_TYPE.png")
                     .from(Screens.PROLOGUE_NARRATION.dialoguePanel);
         }
@@ -431,6 +446,7 @@ public final class Screens {
                             """)
                     .reached(Reached.SURVEYED)
                     .owes(List.of("Next (leaves)", "the back arrow (untried)", "swatches and outfit try-on icons"))
+                    .at(new Point(2380, 797))
                     .shot("screens/CHARACTER_CUSTOMIZATION.png")
                     .from(Screens.SELECT_BODY_TYPE.bodyTypeNext);
         }
@@ -454,6 +470,7 @@ public final class Screens {
                             Cancel closed it and kept the look. OK closed it too: the screen below came back (the look was not checked to have changed).\
                             """)
                     .reached(Reached.TRIED)
+                    .at(new Point(1700, 0))
                     .shot("screens/RESET_CONFIRM.png")
                     .from(Screens.CHARACTER_CUSTOMIZATION.customizationReset);
         }
@@ -480,6 +497,7 @@ public final class Screens {
                             """)
                     .reached(Reached.SURVEYED)
                     .owes(List.of("LET'S GO! (leaves, about to be pressed)", "the back arrow (untried)"))
+                    .at(new Point(2380, 1414))
                     .shot("screens/CHARACTER_NAME.png")
                     .from(Screens.CHARACTER_CUSTOMIZATION.customizationNext);
         }
@@ -500,6 +518,7 @@ public final class Screens {
                     .owes(List
                             .of("marker — the scene moves on by itself before a still part can be cut",
                                     "the crate (Open) not tried"))
+                    .at(new Point(0, 0))
                     .from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
         }
     }
@@ -525,6 +544,7 @@ public final class Screens {
                             Tapping it (540,1480) sent the reply: the bar went and Akane answered "Whoa! The Goddess made the perfect pick, and that's exactly why I'm here, too!".\
                             """)
                     .reached(Reached.SURVEYED)
+                    .at(new Point(2040, 0))
                     .shot("screens/DIALOGUE_CHOICE.png")
                     .from(Screens.TUTORIAL_DIALOGUE.dialoguePanel);
         }
@@ -545,6 +565,7 @@ public final class Screens {
                             Tapping the card opens Unlock cart.\
                             """)
                     .reached(Reached.TRIED)
+                    .at(new Point(3338, 0))
                     .shot("screens/CART_BLUEPRINT.png")
                     .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
@@ -566,6 +587,7 @@ public final class Screens {
                             Unlock opens Feature unlocked.\
                             """)
                     .reached(Reached.TRIED)
+                    .at(new Point(3380, 617))
                     .shot("screens/UNLOCK_CART.png")
                     .from(Screens.CART_BLUEPRINT.cartBlueprintCard);
         }
@@ -586,6 +608,7 @@ public final class Screens {
                             Tap to Continue closes it; in the tutorial Akane's dialogue follows.\
                             """)
                     .reached(Reached.TRIED)
+                    .at(new Point(3380, 1234))
                     .takes(Duration.ofMillis(7200L))
                     .shot("screens/CART_UNLOCKED.png")
                     .from(Screens.UNLOCK_FURNITURE.unlockButton);
@@ -599,7 +622,11 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup.named("Island").shot("screens/ISLAND.png").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+            return Setup
+                    .named("Island")
+                    .at(new Point(2753, 0))
+                    .shot("screens/ISLAND.png")
+                    .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
     }
 
@@ -625,6 +652,7 @@ public final class Screens {
                             The tutorial dims all but the highlighted button, so pictures cut then score low after it.\
                             """)
                     .reached(Reached.TRIED)
+                    .at(new Point(2753, 602))
                     .takes(Duration.ofMillis(5900L))
                     .shot("screens/CART.png")
                     .from(Screens.ISLAND.islandCartButton);
@@ -639,9 +667,13 @@ public final class Screens {
         @Override
         public Setup setup() {
             return Setup.named("You received").back(Screens.YOU_RECEIVED.youReceivedTitle).notes("""
-                    Shows what was just claimed (Cart's Claim All: Rolla, Stone, Wood). A tap on it closes it.
-                    It opens a few seconds after the claim.\
-                    """).reached(Reached.TRIED).shot("screens/YOU_RECEIVED.png").from(Screens.CART.cartClaimAll);
+                            Shows what was just claimed (Cart's Claim All: Rolla, Stone, Wood). A tap on it closes it.
+                            It opens a few seconds after the claim.\
+                            """)
+                    .reached(Reached.TRIED)
+                    .at(new Point(2998, 1219))
+                    .shot("screens/YOU_RECEIVED.png")
+                    .from(Screens.CART.cartClaimAll);
         }
     }
 
@@ -666,6 +698,7 @@ public final class Screens {
                             """)
                     .reached(Reached.TRIED)
                     .owes(List.of("upgrade_tab_rolla: the coin shines, so no still picture yet"))
+                    .at(new Point(2720, 1219))
                     .shot("screens/FURNITURE_UPGRADE.png")
                     .from(Screens.CART.cartRowUpgrade);
         }
@@ -679,7 +712,11 @@ public final class Screens {
         public final Mark houseArchWindow = Mark.of(Pictures.HOUSE_ARCH_WINDOW);
         @Override
         public Setup setup() {
-            return Setup.named("House").shot("screens/HOUSE.png").from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
+            return Setup
+                    .named("House")
+                    .at(new Point(4407, -1065))
+                    .shot("screens/HOUSE.png")
+                    .from(Screens.TUTORIAL_DIALOGUE.dialogueNextArrow);
         }
     }
 
@@ -702,6 +739,7 @@ public final class Screens {
                     .owes(List
                             .of("marker — the tutorial dimmed the screen; cut the Type filter or the bag tab when it is not",
                                     "inputs — Type filter and the bottom tabs, untried"))
+                    .at(new Point(3658, 617))
                     .takes(Duration.ofMillis(12100L))
                     .shot("screens/STORAGE_CHEST.png")
                     .from(Screens.HOUSE.houseStorageChest);
@@ -738,6 +776,7 @@ public final class Screens {
                             Tutorial: equip the Novice Staff from the left slot (ATK 60 to 84, SPD 48 to 55), then Skill.\
                             """)
                     .reached(Reached.SURVEYED)
+                    .at(new Point(6587, 2840))
                     .takes(Duration.ofMillis(7600L))
                     .shot("screens/CHARACTER.png")
                     .from(Screens.HOME.navCharacter);
@@ -761,6 +800,7 @@ public final class Screens {
                             First item: Novice Staff (Common, power 81, Level 3), given for picking Staff.\
                             """)
                     .reached(Reached.TRIED)
+                    .at(new Point(5863, 3513))
                     .takes(Duration.ofMillis(5100L))
                     .shot("screens/EQUIP_WEAPON.png")
                     .from(Screens.CHARACTER.slotRightTop);
@@ -787,6 +827,7 @@ public final class Screens {
                             Replace (shown for worn gear) opens Replace gear for the slot; it is not a way back.\
                             """)
                     .reached(Reached.SURVEYED)
+                    .at(new Point(5884, 4136))
                     .takes(Duration.ofMillis(10700L))
                     .shot("screens/GEAR_DETAILS.png")
                     .from(Screens.REPLACE_GEAR.gearNoviceStaff);
@@ -817,6 +858,7 @@ public final class Screens {
                     .reached(Reached.SURVEYED)
                     .owes(List
                             .of("inputs — loadout arrows, Charm and Shard tabs, All, Goals: untried while the tutorial leads"))
+                    .at(new Point(6374, 3513))
                     .takes(Duration.ofMillis(7900L))
                     .shot("screens/SKILLS.png")
                     .from(Screens.CHARACTER.charSkillIcon);
@@ -841,6 +883,7 @@ public final class Screens {
                             """)
                     .reached(Reached.SURVEYED)
                     .owes(List.of("technique_enhance — its frame moved when cut; cut and try after the tutorial"))
+                    .at(new Point(6162, 4136))
                     .takes(Duration.ofMillis(5500L))
                     .shot("screens/TECHNIQUE_DETAILS.png")
                     .from(Screens.SKILLS.skillsWaterShot);
@@ -859,6 +902,7 @@ public final class Screens {
             return Setup
                     .named("World")
                     .alsoFrom(List.of(Way.of(Screens.HOME.navPortal)))
+                    .at(new Point(5565, 3521))
                     .takes(Duration.ofMillis(8600L))
                     .shot("screens/NAV_PORTAL.png")
                     .from(Screens.CHARACTER.navPortal);
@@ -904,6 +948,7 @@ public final class Screens {
                                     "quest claim gift — the tutorial's highlight pulses over it; cut it after the tutorial",
                                     "stage_quest_tracker — same icon as the marker stage_quest_icon; keep one",
                                     "stage_plant_monster — monsters animate; cut from leaves, weak; needs a still part or several looks"))
+                    .at(new Point(7899, 1578))
                     .shot("screens/STAGE.png")
                     .after(Screens.SCENE_LOADING);
         }
@@ -932,6 +977,7 @@ public final class Screens {
                             The loadout swap opens Skill Loadout (4 loadouts, Edit, OK). Edit opens the loadout editor, where Escape is refused: "Cannot return while in battle".\
                             """)
                     .reached(Reached.SURVEYED)
+                    .at(new Point(4453, 2221))
                     .takes(Duration.ofMillis(4500L))
                     .shot("screens/BATTLE.png")
                     .from(Screens.STAGE.stageBoar);
@@ -952,6 +998,7 @@ public final class Screens {
                     .named("Stage quest tracker")
                     .alsoFrom(List.of(Way.of(Screens.HOME.stageQuestTracker)))
                     .back(Screens.STAGE_QUEST_TRACKER.keyEsc)
+                    .at(new Point(4880, 2838))
                     .takes(Duration.ofMillis(4200L))
                     .shot("screens/STAGE_QUEST_TRACKER.png")
                     .from(Screens.STAGE.stageQuestTracker);
@@ -970,6 +1017,7 @@ public final class Screens {
             return Setup
                     .named("Battle loadout swap")
                     .back(Screens.BATTLE_LOADOUT_SWAP.loadoutOk)
+                    .at(new Point(4453, 2847))
                     .takes(Duration.ofMillis(5900L))
                     .shot("screens/BATTLE_LOADOUT_SWAP.png")
                     .from(Screens.BATTLE.battleLoadoutSwap);
@@ -991,6 +1039,7 @@ public final class Screens {
             return Setup
                     .named("Loadout edit")
                     .back(Screens.LOADOUT_EDIT.upgradeBack)
+                    .at(new Point(4453, 3513))
                     .takes(Duration.ofMillis(4800L))
                     .shot("screens/LOADOUT_EDIT.png")
                     .from(Screens.BATTLE_LOADOUT_SWAP.loadoutEdit);
@@ -1010,6 +1059,7 @@ public final class Screens {
                     .named("Quit confirm")
                     .back(Screens.QUIT_CONFIRM.resetConfirmCancel)
                     .popup()
+                    .at(new Point(680, 0))
                     .shot("screens/QUIT_CONFIRM.png")
                     .from(Screens.TITLE.keyEsc);
         }
@@ -1043,6 +1093,7 @@ public final class Screens {
                                     "profile_stats_search, profile_dish: untried",
                                     "profile_quick_heal: spends a healing item, the user's call",
                                     "gear, technique and charm slots, like thumb, player ID copy: not cut"))
+                    .at(new Point(5158, 2839))
                     .takes(Duration.ofMillis(8400L))
                     .shot("screens/TOP_AVATAR.png")
                     .from(Screens.STAGE.topAvatar);
@@ -1058,6 +1109,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Profile power search")
+                    .at(new Point(4731, 3513))
                     .takes(Duration.ofMillis(2500L))
                     .shot("screens/PROFILE_POWER_SEARCH.png")
                     .from(Screens.TOP_AVATAR.profilePowerSearch);
@@ -1081,6 +1133,7 @@ public final class Screens {
                     .named("Stage package")
                     .alsoFrom(List.of(Way.of(Screens.HOME.stagePackage)))
                     .back(Screens.STAGE_PACKAGE.upgradeBack)
+                    .at(new Point(7969, 2850))
                     .takes(Duration.ofMillis(6600L))
                     .shot("screens/STAGE_PACKAGE.png")
                     .from(Screens.STAGE.stagePackage);
@@ -1109,6 +1162,7 @@ public final class Screens {
                     .owes(List
                             .of("quest_go: one per row, each leads elsewhere; try one",
                                     "quest_tab_achievement: untried"))
+                    .at(new Point(8042, 3513))
                     .takes(Duration.ofMillis(7100L))
                     .shot("screens/MENU_QUEST.png")
                     .from(Screens.STAGE_PACKAGE.menuQuest);
@@ -1128,6 +1182,7 @@ public final class Screens {
             return Setup
                     .named("Menu photo")
                     .back(Screens.MENU_PHOTO.noticeBack)
+                    .at(new Point(7764, 3513))
                     .takes(Duration.ofMillis(4300L))
                     .shot("screens/MENU_PHOTO.png")
                     .from(Screens.STAGE_PACKAGE.menuPhoto);
@@ -1150,6 +1205,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Menu user center")
+                    .at(new Point(7247, 3525))
                     .takes(Duration.ofMillis(3400L))
                     .shot("screens/MENU_USER_CENTER.png")
                     .from(Screens.STAGE_PACKAGE.menuUserCenter);
@@ -1169,6 +1225,7 @@ public final class Screens {
             return Setup
                     .named("Achievement")
                     .back(Screens.ACHIEVEMENT.noticeBack)
+                    .at(new Point(7552, 4136))
                     .takes(Duration.ofMillis(4200L))
                     .shot("screens/ACHIEVEMENT.png")
                     .from(Screens.MENU_QUEST.questTabAchievement);
@@ -1187,6 +1244,7 @@ public final class Screens {
             return Setup
                     .named("Return home confirm")
                     .back(Screens.RETURN_HOME_CONFIRM.resetConfirmCancel)
+                    .at(new Point(8108, 4136))
                     .takes(Duration.ofMillis(4300L))
                     .shot("screens/QUEST_GO.png")
                     .from(Screens.MENU_QUEST.questGo);
@@ -1210,6 +1268,7 @@ public final class Screens {
                     .named("Character stats")
                     .alsoFrom(List.of(Way.of(Screens.CHARACTER.charStatsBar)))
                     .back(Screens.CHARACTER_STATS.statsOutside)
+                    .at(new Point(5287, 3513))
                     .takes(Duration.ofMillis(4100L))
                     .shot("screens/CHARACTER_STATS.png")
                     .from(Screens.TOP_AVATAR.profileStatsSearch);
@@ -1235,6 +1294,7 @@ public final class Screens {
             return Setup
                     .named("Home")
                     .alsoFrom(List.of(Way.of(Screens.TOP_AVATAR.profileOutside)))
+                    .at(new Point(7599, 2233))
                     .takes(Duration.ofMillis(4900L))
                     .shot("screens/HOME.png")
                     .from(Screens.STAGE.noticeBack);
@@ -1255,6 +1315,7 @@ public final class Screens {
             return Setup
                     .named("Enhance")
                     .back(Screens.ENHANCE.noticeBack)
+                    .at(new Point(5884, 4753))
                     .takes(Duration.ofMillis(7100L))
                     .shot("screens/ENHANCE.png")
                     .from(Screens.GEAR_DETAILS.gearEnhance);
@@ -1274,6 +1335,7 @@ public final class Screens {
             return Setup
                     .named("Enhancement goals")
                     .back(Screens.ENHANCEMENT_GOALS.noticeBack)
+                    .at(new Point(5673, 5372))
                     .takes(Duration.ofMillis(2700L))
                     .shot("screens/GOALS.png")
                     .from(Screens.ENHANCE.enhanceTabGoals);
@@ -1293,6 +1355,7 @@ public final class Screens {
             return Setup
                     .named("Resonance")
                     .back(Screens.RESONANCE.noticeBack)
+                    .at(new Point(5951, 5372))
                     .takes(Duration.ofMillis(2700L))
                     .shot("screens/RESONANCE.png")
                     .from(Screens.ENHANCE.enhanceResonance);
@@ -1322,6 +1385,7 @@ public final class Screens {
                             """)
                     .reached(Reached.TRIED)
                     .owes(List.of("claim look of the goal button: only greyed Incomplete seen"))
+                    .at(new Point(6440, 4136))
                     .takes(Duration.ofMillis(3800L))
                     .shot("screens/SKILL_GOALS.png")
                     .from(Screens.SKILLS.enhanceTabGoals);
@@ -1339,6 +1403,7 @@ public final class Screens {
             return Setup
                     .named("Resource download")
                     .back(Screens.RESOURCE_DOWNLOAD.resourceDownloadClaim)
+                    .at(new Point(7691, 2838))
                     .takes(Duration.ofMillis(3700L))
                     .shot("screens/STAGE_DOWNLOAD_REWARD.png")
                     .from(Screens.HOME.stageDownloadReward);
@@ -1362,6 +1427,7 @@ public final class Screens {
                             """)
                     .reached(Reached.SURVEYED)
                     .owes(List.of("log rows and Instructions: not cut, read only"))
+                    .at(new Point(6996, 4136))
                     .takes(Duration.ofMillis(3500L))
                     .shot("screens/UC_SELF_SERVICE.png")
                     .from(Screens.MENU_USER_CENTER.ucSelfService);
@@ -1381,6 +1447,7 @@ public final class Screens {
             return Setup
                     .named("Gift code")
                     .back(Screens.GIFT_CODE.resetConfirmCancel)
+                    .at(new Point(7274, 4136))
                     .takes(Duration.ofMillis(2600L))
                     .shot("screens/UC_GIFT_CODE.png")
                     .from(Screens.MENU_USER_CENTER.ucGiftCode);
@@ -1400,6 +1467,7 @@ public final class Screens {
             return Setup
                     .named("World chest")
                     .back(Screens.WORLD_CHEST.explorationBack)
+                    .at(new Point(5606, 4144))
                     .takes(Duration.ofMillis(3800L))
                     .shot("screens/WORLD_CHEST.png")
                     .from(Screens.WORLD.worldChest);
@@ -1418,6 +1486,7 @@ public final class Screens {
             return Setup
                     .named("Destiny exploration")
                     .back(Screens.DESTINY_EXPLORATION.explorationBack)
+                    .at(new Point(5606, 4753))
                     .shot("screens/DESTINY_EXPLORATION.png")
                     .from(Screens.WORLD_CHEST.explorationExploreTab);
         }
@@ -1441,6 +1510,7 @@ public final class Screens {
                             Bottom bar: back arrow, Rank, Goals (opens Rank Goals).\
                             """)
                     .reached(Reached.SURVEYED)
+                    .at(new Point(6718, 3513))
                     .takes(Duration.ofMillis(6100L))
                     .shot("screens/CHAR_RANK_BUTTON.png")
                     .from(Screens.CHARACTER.charRankButton);
@@ -1465,6 +1535,7 @@ public final class Screens {
                             """)
                     .reached(Reached.SURVEYED)
                     .owes(List.of("claim look of a met goal: only greyed Incomplete seen"))
+                    .at(new Point(6718, 4136))
                     .takes(Duration.ofMillis(3200L))
                     .shot("screens/RANK_TAB_GOALS.png")
                     .from(Screens.RANK_ADVANCEMENT.rankTabGoals);
@@ -1485,6 +1556,7 @@ public final class Screens {
             return Setup
                     .named("Dish")
                     .back(Screens.DISH.dishOutside)
+                    .at(new Point(5009, 3513))
                     .takes(Duration.ofMillis(5500L))
                     .shot("screens/PROFILE_DISH.png")
                     .from(Screens.TOP_AVATAR.profileDish);

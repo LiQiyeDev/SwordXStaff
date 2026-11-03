@@ -1201,6 +1201,7 @@ public final class Screens {
                 .looks(List.of(Look.of(Pictures.STATS_TAB_GENERAL, State.SELECTED)));
         public final Button detailsCharacterStats = Button.of(Pictures.DETAILS_CHARACTER_STATS).tried();
         public final Button detailsGearStats = Button.of(Pictures.DETAILS_GEAR_STATS).tried();
+        public final Button statsOutside = Button.beside(Pictures.CHARACTER_STATS_TITLE, 0.0, 27.0);
 
         @Override
         public Setup setup() {

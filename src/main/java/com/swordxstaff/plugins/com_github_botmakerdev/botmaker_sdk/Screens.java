@@ -733,11 +733,11 @@ public final class Screens {
                             The character: class emblem (No Class at first), gear slots around the hero (left: weapon; right: three more), a locked slot under the weapon.
                             Skill and Class buttons under the hero; level, rank and stats (ATK, DEF, HP, SPD) below.
                             Opened from the bottom bar's first tab (the hero's face).
+                            Class (char_class_icon, also the marker) only says "Ascend to Warrior/Mage to unlock" until the hero ascends.
+                            No Rank opens Rank Advancement; the Stats bar opens Character stats.
                             Tutorial: equip the Novice Staff from the left slot (ATK 60 to 84, SPD 48 to 55), then Skill.\
                             """)
                     .reached(Reached.SURVEYED)
-                    .owes(List
-                            .of("inputs — Class button, the right gear slots and the rank, untried while the tutorial leads"))
                     .takes(Duration.ofMillis(7600L))
                     .shot("screens/CHARACTER.png")
                     .from(Screens.HOME.navCharacter);

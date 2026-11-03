@@ -1160,7 +1160,7 @@ public final class Screens {
 
     public static final class Achievement extends Screen {
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
-        public final Button questTabQuest = Button.of(Pictures.QUEST_TAB_QUEST);
+        public final Button questTabQuest = Button.of(Pictures.QUEST_TAB_QUEST).leaving();
         public final Button achievementCard = Button.of(Pictures.ACHIEVEMENT_CARD);
         public final Mark achievementTitle = Mark.of(Pictures.ACHIEVEMENT_TITLE);
 

@@ -1197,7 +1197,8 @@ public final class Screens {
         public final Button statsTabDetails = Button.of(Pictures.STATS_TAB_DETAILS).tried();
         public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
         public final Mark characterStatsTitle = Mark.of(Pictures.CHARACTER_STATS_TITLE);
-        public final Button statsTabGeneralOff = Button.of(Pictures.STATS_TAB_GENERAL_OFF).tried();
+        public final Button statsTabGeneralOff = Button.of(Pictures.STATS_TAB_GENERAL_OFF).tried()
+                .looks(List.of(Look.of(Pictures.STATS_TAB_GENERAL, State.SELECTED)));
         public final Button detailsCharacterStats = Button.of(Pictures.DETAILS_CHARACTER_STATS).tried();
         public final Button detailsGearStats = Button.of(Pictures.DETAILS_GEAR_STATS).tried();
 

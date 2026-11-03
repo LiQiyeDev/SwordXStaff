@@ -994,6 +994,9 @@ public final class Screens {
             return Setup
                     .named("Loadout edit")
                     .back(Screens.LOADOUT_EDIT.upgradeBack)
+                    .owes(List
+                            .of(
+                                    "loadoutEditTechniqueTab — untried: Battle needs a roaming monster on Stage, none in view on 2026-11-03"))
                     .takes(Duration.ofMillis(4800L))
                     .shot("screens/LOADOUT_EDIT.png")
                     .from(Screens.BATTLE_LOADOUT_SWAP.loadoutEdit);

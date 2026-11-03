@@ -253,6 +253,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Official Community")
+                    .back(Screens.OFFICIAL_COMMUNITY.communityOutside)
                     .shot("screens/OFFICIAL_COMMUNITY.png")
                     .from(Screens.TITLE.titleFollowUs);
         }

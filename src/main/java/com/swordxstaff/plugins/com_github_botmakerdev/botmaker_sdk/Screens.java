@@ -857,12 +857,14 @@ public final class Screens {
         public final Button worldIslandOriginisle = Button.of(Pictures.WORLD_ISLAND_ORIGINISLE);
         public final Button worldChest = Button.of(Pictures.WORLD_CHEST);
         public final Mark worldTabSelected = Mark.of(Pictures.WORLD_TAB_SELECTED);
+        public final Button navHome = Button.of(Pictures.NAV_HOME);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("World")
                     .alsoFrom(List.of(Way.of(Screens.HOME.navPortal)))
+                    .back(Screens.WORLD.navHome)
                     .takes(Duration.ofMillis(8600L))
                     .shot("screens/NAV_PORTAL.png")
                     .from(Screens.CHARACTER.navPortal);

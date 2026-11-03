@@ -1216,6 +1216,11 @@ public final class Screens {
                     .named("Character stats")
                     .alsoFrom(List.of(Way.of(Screens.CHARACTER.charStatsBar)))
                     .back(Screens.CHARACTER_STATS.statsOutside)
+                    .notes("""
+                            Stats panel from Character's stats bar: General tab and details for character and gear stats.
+                            No close button: a tap outside the panel closes it (statsOutside).\
+                            """)
+                    .reached(Reached.SURVEYED)
                     .takes(Duration.ofMillis(4100L))
                     .shot("screens/CHARACTER_STATS.png")
                     .from(Screens.TOP_AVATAR.profileStatsSearch);

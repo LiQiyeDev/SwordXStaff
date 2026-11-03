@@ -1495,18 +1495,18 @@ public final class Screens {
 
     public static final Dish DISH = new Dish();
 
-    public static final class QuestTrackerGo extends Screen {
+    public static final class TravelConfirm extends Screen {
         @Override
         public Setup setup() {
             return Setup
-                    .named("Quest tracker go")
+                    .named("Travel confirm")
                     .takes(Duration.ofMillis(3600L))
                     .shot("screens/QUEST_TRACKER_GO.png")
                     .from(Screens.STAGE_QUEST_TRACKER.questTrackerGo);
         }
     }
 
-    public static final QuestTrackerGo QUEST_TRACKER_GO = new QuestTrackerGo();
+    public static final TravelConfirm TRAVEL_CONFIRM = new TravelConfirm();
 
     private Screens() {
     }

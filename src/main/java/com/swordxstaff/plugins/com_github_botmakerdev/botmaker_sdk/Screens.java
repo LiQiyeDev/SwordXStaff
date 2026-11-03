@@ -1204,7 +1204,9 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Character stats")
+                    .alsoFrom(List.of(Way.of(Screens.CHARACTER.charStatsBar)))
                     .back(Screens.CHARACTER_STATS.keyEsc)
+                    .takes(Duration.ofMillis(4100L))
                     .shot("screens/CHARACTER_STATS.png")
                     .from(Screens.TOP_AVATAR.profileStatsSearch);
         }

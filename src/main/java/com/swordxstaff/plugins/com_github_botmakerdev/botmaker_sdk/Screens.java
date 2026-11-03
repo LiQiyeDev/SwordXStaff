@@ -749,6 +749,7 @@ public final class Screens {
     public static final class ReplaceGear extends Screen {
         public final Button gearNoviceStaff = Button.of(Pictures.GEAR_NOVICE_STAFF).occasional();
         public final Mark replaceGearTitle = Mark.of(Pictures.REPLACE_GEAR_TITLE);
+        public final Button replaceGearOutside = Button.beside(Pictures.REPLACE_GEAR_TITLE, 0.0, 22.2);
 
         @Override
         public Setup setup() {

@@ -775,6 +775,7 @@ public final class Screens {
         public final Button gearReplace = Button.of(Pictures.GEAR_REPLACE).tried().occasional();
         public final Button gearEnhance = Button.of(Pictures.GEAR_ENHANCE).occasional();
         public final Mark gearShare = Mark.of(Pictures.GEAR_SHARE);
+        public final Button gearDetailsOutside = Button.beside(Pictures.GEAR_SHARE, -7.25, 37.3);
 
         @Override
         public Setup setup() {

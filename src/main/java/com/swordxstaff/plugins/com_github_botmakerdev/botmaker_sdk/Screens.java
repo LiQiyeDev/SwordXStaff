@@ -1254,6 +1254,7 @@ public final class Screens {
         public final Button stageDownloadReward = Button.of(Pictures.STAGE_DOWNLOAD_REWARD).occasional();
         public final Mark navHomeSelected = Mark.of(Pictures.NAV_HOME_SELECTED);
         public final Button topPowerIcon = Button.of(Pictures.TOP_POWER_ICON);
+        public final Button topAvatarSpot = Button.beside(Pictures.TOP_POWER_ICON, -2.66, -1.35);
 
         @Override
         public Setup setup() {

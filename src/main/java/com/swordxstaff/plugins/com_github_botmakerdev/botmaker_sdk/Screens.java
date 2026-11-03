@@ -1030,7 +1030,7 @@ public final class Screens {
             return Setup
                     .named("Top avatar")
                     .alsoFrom(List.of(Way.of(Screens.HOME.topAvatar)))
-                    .back(Screens.TOP_AVATAR.keyEsc)
+                    .back(Screens.TOP_AVATAR.profileOutside)
                     .notes("""
                             The player's profile, opened by the avatar at the top left of Stage: power, class, player ID, rank, server (Cloudwold), stats, equipped gear, techniques and charms, HP bar.
                             No settings here: no graphics, sound or language option.

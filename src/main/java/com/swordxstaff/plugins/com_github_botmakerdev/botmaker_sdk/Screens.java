@@ -1468,6 +1468,11 @@ public final class Screens {
     public static final RankGoals RANK_GOALS = new RankGoals();
 
     public static final class Dish extends Screen {
+        public final Mark dishTitle = Mark.of(Pictures.DISH_TITLE);
+        public final Button dishTypeFilter = Button.of(Pictures.DISH_TYPE_FILTER);
+        public final Button dishAutoSelect = Button.of(Pictures.DISH_AUTO_SELECT);
+        public final Button dishUse = Button.of(Pictures.DISH_USE);
+
         @Override
         public Setup setup() {
             return Setup

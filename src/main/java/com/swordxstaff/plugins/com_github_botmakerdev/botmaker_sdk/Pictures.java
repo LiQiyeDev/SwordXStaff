@@ -403,6 +403,14 @@ public final class Pictures {
             .at(new Rect(140, 455, 300, 50));
     public static final ImageTemplate DETAILS_GEAR_STATS = new ImageTemplate("images/details_gear_stats.png")
             .at(new Rect(140, 605, 220, 50));
+    public static final ImageTemplate DISH_TITLE = new ImageTemplate("images/dish_title.png")
+            .at(new Rect(470, 275, 145, 60));
+    public static final ImageTemplate DISH_TYPE_FILTER = new ImageTemplate("images/dish_type_filter.png")
+            .at(new Rect(660, 835, 320, 52));
+    public static final ImageTemplate DISH_AUTO_SELECT = new ImageTemplate("images/dish_auto_select.png")
+            .at(new Rect(130, 1525, 390, 75));
+    public static final ImageTemplate DISH_USE = new ImageTemplate("images/dish_use.png")
+            .at(new Rect(560, 1525, 395, 75));
     private Pictures() {
     }
 }

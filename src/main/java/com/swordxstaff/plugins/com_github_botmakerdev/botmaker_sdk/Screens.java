@@ -1514,6 +1514,8 @@ public final class Screens {
     public static final TravelConfirm TRAVEL_CONFIRM = new TravelConfirm();
 
     public static final class VisageDetails extends Screen {
+        public final Mark visageBodyTypesLabel = Mark.of(Pictures.VISAGE_BODY_TYPES_LABEL);
+
         @Override
         public Setup setup() {
             return Setup

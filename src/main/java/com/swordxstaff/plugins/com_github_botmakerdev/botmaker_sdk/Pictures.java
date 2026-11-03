@@ -393,6 +393,10 @@ public final class Pictures {
             .at(new Rect(120, 52, 405, 56));
     public static final ImageTemplate RANK_TAB_GOALS = new ImageTemplate("images/rank_tab_goals.png")
             .at(new Rect(700, 1785, 330, 85));
+    public static final ImageTemplate RANK_GOALS_TAB_RANK = new ImageTemplate("images/rank_goals_tab_rank.png")
+            .at(new Rect(300, 1790, 280, 75));
+    public static final ImageTemplate RANK_GOALS_TAB_POWER = new ImageTemplate("images/rank_goals_tab_power.png")
+            .at(new Rect(560, 1650, 260, 65));
     private Pictures() {
     }
 }

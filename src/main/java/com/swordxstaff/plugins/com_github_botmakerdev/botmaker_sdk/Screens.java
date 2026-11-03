@@ -1433,6 +1433,9 @@ public final class Screens {
     public static final RankAdvancement RANK_ADVANCEMENT = new RankAdvancement();
 
     public static final class RankGoals extends Screen {
+        public final Mark rankGoalsTabRank = Mark.of(Pictures.RANK_GOALS_TAB_RANK);
+        public final Button rankGoalsTabPower = Button.of(Pictures.RANK_GOALS_TAB_POWER);
+
         @Override
         public Setup setup() {
             return Setup

@@ -1429,6 +1429,12 @@ public final class Screens {
             return Setup
                     .named("Rank Advancement")
                     .back(Screens.RANK_ADVANCEMENT.upgradeBack)
+                    .notes("""
+                            Rank up: No Rank to Apprentice I, base stats before and after, material cost (an ore 0/2, Rolla 1.18K/600).
+                            Locked until max level: "Reach Max Level to Unlock Next Rank".
+                            Bottom bar: back arrow, Rank, Goals (opens Rank Goals).\
+                            """)
+                    .reached(Reached.SURVEYED)
                     .takes(Duration.ofMillis(6100L))
                     .shot("screens/CHAR_RANK_BUTTON.png")
                     .from(Screens.CHARACTER.charRankButton);

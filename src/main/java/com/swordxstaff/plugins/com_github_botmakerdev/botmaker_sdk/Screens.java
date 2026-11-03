@@ -187,11 +187,16 @@ public final class Screens {
             return Setup
                     .named("Servers")
                     .back(Screens.SERVERS.serversRowSelected)
-                    .notes(
-                            "Two tabs: Character List (this account's character on Cloudwold, Lv. 1, 601, tagged Recent) and Available (every server by name with a status dot, a search box and its magnifier below). Dots: green Rcmd, orange Crowded, red Full, grey Maintenance. Tapping the highlighted server closes the list and returns to Title. The account plays on Cloudwold, the game's default. The mouse wheel does not scroll the Available list (30 notches moved it 2 px); more rows sit under the sixth.")
-                    .owes(List
-                            .of("Available list: scrolling it needs a drag, the wheel does nothing",
-                                    "servers_search, servers_search_go: not tried"))
+                    .notes("""
+                            Two tabs: Character List (this account's character on Cloudwold, Lv. 1, tagged Recent) and Available (every server by name with a status dot, a search box and its magnifier below).
+                            Dots: green Rcmd, orange Crowded, red Full, grey Maintenance.
+                            Tapping the highlighted server closes the list and returns to Title. The account plays on Cloudwold, the game's default; never pick another.
+                            Search: serversSearch types "Cloudwold" (clears, submits), serversSearchGo filters the Available list to that one row, shown selected.
+                            Typing opens Android's keyboard over the bottom half; Enter closes it.
+                            The mouse wheel does not scroll the Available list (30 notches moved it 2 px); more rows sit under the sixth.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List.of("Available list: scrolling it needs a drag, the wheel does nothing"))
                     .shot("screens/SERVERS.png")
                     .from(Screens.TITLE.titleServers);
         }

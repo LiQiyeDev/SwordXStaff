@@ -1467,18 +1467,18 @@ public final class Screens {
 
     public static final RankGoals RANK_GOALS = new RankGoals();
 
-    public static final class ProfileDish extends Screen {
+    public static final class Dish extends Screen {
         @Override
         public Setup setup() {
             return Setup
-                    .named("Profile dish")
+                    .named("Dish")
                     .takes(Duration.ofMillis(5500L))
                     .shot("screens/PROFILE_DISH.png")
                     .from(Screens.TOP_AVATAR.profileDish);
         }
     }
 
-    public static final ProfileDish PROFILE_DISH = new ProfileDish();
+    public static final Dish DISH = new Dish();
 
     private Screens() {
     }

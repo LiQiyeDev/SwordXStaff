@@ -211,6 +211,7 @@ public final class Screens {
         public final Button settingsTabGame = Button.of(Pictures.SETTINGS_TAB_GAME).tried();
         public final Button settingsTabGraphics = Button.of(Pictures.SETTINGS_TAB_GRAPHICS).tried().occasional();
         public final Mark settingsTitle = Mark.of(Pictures.SETTINGS_TITLE);
+        public final Button settingsOutside = Button.beside(Pictures.SETTINGS_TITLE, 0.0, 24.5);
 
         @Override
         public Setup setup() {

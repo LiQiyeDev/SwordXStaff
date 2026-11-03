@@ -1161,6 +1161,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Menu user center")
+                    .back(Screens.MENU_USER_CENTER.userCenterOutside)
                     .takes(Duration.ofMillis(3400L))
                     .shot("screens/MENU_USER_CENTER.png")
                     .from(Screens.STAGE_PACKAGE.menuUserCenter);

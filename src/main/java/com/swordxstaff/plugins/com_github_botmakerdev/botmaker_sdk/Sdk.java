@@ -61,4 +61,11 @@ public final class Sdk {
 
     private Sdk() {
     }
+
+    @Param(visibility = Param.PUBLIC)
+    public static String ddz = "";
+    @Param(category = "zfuiei", visibility = Param.PUBLIC)
+    public static String zefzf = "";
+    @Param(visibility = Param.PUBLIC)
+    public static String dzd = "";
 }

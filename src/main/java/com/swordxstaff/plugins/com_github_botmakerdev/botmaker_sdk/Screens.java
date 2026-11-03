@@ -890,6 +890,7 @@ public final class Screens {
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
         public final Mark stageQuestIcon = Mark.of(Pictures.STAGE_QUEST_ICON);
         public final Button topPowerIcon = Button.of(Pictures.TOP_POWER_ICON);
+        public final Button topAvatarSpot = Button.beside(Pictures.TOP_POWER_ICON, -2.66, -1.35);
         @Override
         public Setup setup() {
             return Setup

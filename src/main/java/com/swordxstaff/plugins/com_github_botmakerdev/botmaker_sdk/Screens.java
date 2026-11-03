@@ -1287,7 +1287,7 @@ public final class Screens {
     public static final class Resonance extends Screen {
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
         public final Button resonanceStatistics = Button.of(Pictures.RESONANCE_STATISTICS);
-        public final Button resonanceRowIcon = Button.of(Pictures.RESONANCE_ROW_ICON);
+        public final Button resonanceRowIcon = Button.of(Pictures.RESONANCE_ROW_ICON).tried();
         public final Mark gearResonanceTitle = Mark.of(Pictures.GEAR_RESONANCE_TITLE);
 
         @Override

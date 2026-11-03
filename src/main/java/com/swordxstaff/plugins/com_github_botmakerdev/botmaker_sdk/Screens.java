@@ -1516,6 +1516,13 @@ public final class Screens {
             return Setup
                     .named("Travel confirm")
                     .back(Screens.TRAVEL_CONFIRM.resetConfirmCancel)
+                    .notes("""
+                            "Travel to <place>?" confirm, opened by the quest tracker's Go.
+                            OK leaves for Scene loading and the destination; Cancel goes back.\
+                            """)
+                    .reached(Reached.SURVEYED)
+                    .owes(List
+                            .of("travel_confirm_text — holds part of the destination name (Ori); recut to \"Travel to\" only"))
                     .takes(Duration.ofMillis(3600L))
                     .shot("screens/QUEST_TRACKER_GO.png")
                     .from(Screens.STAGE_QUEST_TRACKER.questTrackerGo);

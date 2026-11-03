@@ -385,6 +385,10 @@ public final class Pictures {
             "images/destiny_exploration_title.png").at(new Rect(58, 55, 490, 52));
     public static final ImageTemplate DESTINY_PROGRESS_TAB = new ImageTemplate("images/destiny_progress_tab.png")
             .at(new Rect(360, 1795, 160, 60));
+    public static final ImageTemplate CHAR_RANK_BUTTON = new ImageTemplate("images/char_rank_button.png")
+            .at(new Rect(748, 1335, 280, 90));
+    public static final ImageTemplate CHAR_STATS_BAR = new ImageTemplate("images/char_stats_bar.png")
+            .at(new Rect(50, 1462, 185, 46));
     private Pictures() {
     }
 }

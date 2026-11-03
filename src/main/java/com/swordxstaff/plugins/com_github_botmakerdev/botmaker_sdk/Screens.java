@@ -720,6 +720,8 @@ public final class Screens {
         public final Button slotRightBottom = Button.beside(Pictures.CHAR_SKILL_ICON, 8.61, -3.21);
         public final Button charClassIcon2 = Button.of(Pictures.CHAR_CLASS_ICON).tried();
         public final Button navHome = Button.of(Pictures.NAV_HOME);
+        public final Button charRankButton = Button.of(Pictures.CHAR_RANK_BUTTON);
+        public final Button charStatsBar = Button.of(Pictures.CHAR_STATS_BAR);
 
         @Override
         public Setup setup() {

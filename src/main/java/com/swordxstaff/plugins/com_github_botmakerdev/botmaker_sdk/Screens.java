@@ -944,6 +944,7 @@ public final class Screens {
         public final Button questClaimButton = Button.of(Pictures.QUEST_CLAIM_BUTTON).tried();
         public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
         public final Mark questGoalLabel = Mark.of(Pictures.QUEST_GOAL_LABEL);
+        public final Button questTrackerGo = Button.of(Pictures.QUEST_TRACKER_GO);
 
         @Override
         public Setup setup() {

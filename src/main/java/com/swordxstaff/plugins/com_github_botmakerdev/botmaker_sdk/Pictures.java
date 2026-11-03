@@ -411,6 +411,8 @@ public final class Pictures {
             .at(new Rect(130, 1525, 390, 75));
     public static final ImageTemplate DISH_USE = new ImageTemplate("images/dish_use.png")
             .at(new Rect(560, 1525, 395, 75));
+    public static final ImageTemplate QUEST_TRACKER_GO = new ImageTemplate("images/quest_tracker_go.png")
+            .at(new Rect(362, 1330, 356, 76));
     private Pictures() {
     }
 }

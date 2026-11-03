@@ -942,7 +942,6 @@ public final class Screens {
 
     public static final class StageQuestTracker extends Screen {
         public final Button questClaimButton = Button.of(Pictures.QUEST_CLAIM_BUTTON).tried();
-        public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
         public final Mark questGoalLabel = Mark.of(Pictures.QUEST_GOAL_LABEL);
         public final Button questTrackerGo = Button.of(Pictures.QUEST_TRACKER_GO);
         public final Button questTrackerOutside = Button.beside(Pictures.QUEST_TRACKER_GO, 0.0, 5.0);

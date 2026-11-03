@@ -1597,6 +1597,19 @@ public final class Screens {
 
     public static final ResonanceStatistics RESONANCE_STATISTICS = new ResonanceStatistics();
 
+    public static final class ServersSearch extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Servers search")
+                    .takes(Duration.ofMillis(3200L))
+                    .shot("screens/SERVERS_SEARCH.png")
+                    .from(Screens.SERVERS.serversSearch);
+        }
+    }
+
+    public static final ServersSearch SERVERS_SEARCH = new ServersSearch();
+
     private Screens() {
     }
 }

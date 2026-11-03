@@ -417,6 +417,8 @@ public final class Pictures {
             .at(new Rect(337, 860, 190, 44));
     public static final ImageTemplate VISAGE_BODY_TYPES_LABEL = new ImageTemplate("images/visage_body_types_label.png")
             .at(new Rect(175, 848, 385, 50));
+    public static final ImageTemplate RESONANCE_BOOST_TITLE = new ImageTemplate("images/resonance_boost_title.png")
+            .at(new Rect(350, 195, 380, 52));
     private Pictures() {
     }
 }

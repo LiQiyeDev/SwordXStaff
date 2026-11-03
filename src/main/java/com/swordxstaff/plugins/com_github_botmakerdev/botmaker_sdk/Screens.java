@@ -1531,6 +1531,8 @@ public final class Screens {
     public static final VisageDetails VISAGE_DETAILS = new VisageDetails();
 
     public static final class ResonanceStatistics extends Screen {
+        public final Mark resonanceBoostTitle = Mark.of(Pictures.RESONANCE_BOOST_TITLE);
+
         @Override
         public Setup setup() {
             return Setup

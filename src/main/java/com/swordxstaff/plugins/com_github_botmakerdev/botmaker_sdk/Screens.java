@@ -1232,7 +1232,12 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup.named("Home").shot("screens/HOME.png").from(Screens.STAGE.noticeBack);
+            return Setup
+                    .named("Home")
+                    .alsoFrom(List.of(Way.of(Screens.TOP_AVATAR.profileOutside)))
+                    .takes(Duration.ofMillis(4900L))
+                    .shot("screens/HOME.png")
+                    .from(Screens.STAGE.noticeBack);
         }
     }
 

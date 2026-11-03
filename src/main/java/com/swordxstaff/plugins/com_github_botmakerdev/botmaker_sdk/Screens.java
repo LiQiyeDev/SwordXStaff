@@ -247,6 +247,7 @@ public final class Screens {
                 .never("Outside link, leaves the game");
         public final Button communityX = Button.of(Pictures.COMMUNITY_X).never("Outside link, leaves the game");
         public final Mark communityTitle = Mark.of(Pictures.COMMUNITY_TITLE);
+        public final Button communityOutside = Button.beside(Pictures.COMMUNITY_TITLE, 0.0, 16.5);
 
         @Override
         public Setup setup() {

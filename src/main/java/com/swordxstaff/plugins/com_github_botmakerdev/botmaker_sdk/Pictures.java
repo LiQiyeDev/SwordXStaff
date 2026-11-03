@@ -389,6 +389,10 @@ public final class Pictures {
             .at(new Rect(748, 1335, 280, 90));
     public static final ImageTemplate CHAR_STATS_BAR = new ImageTemplate("images/char_stats_bar.png")
             .at(new Rect(50, 1462, 185, 46));
+    public static final ImageTemplate RANK_ADVANCEMENT_TITLE = new ImageTemplate("images/rank_advancement_title.png")
+            .at(new Rect(120, 52, 405, 56));
+    public static final ImageTemplate RANK_TAB_GOALS = new ImageTemplate("images/rank_tab_goals.png")
+            .at(new Rect(700, 1785, 330, 85));
     private Pictures() {
     }
 }

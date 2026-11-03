@@ -1415,10 +1415,15 @@ public final class Screens {
     public static final DestinyExploration DESTINY_EXPLORATION = new DestinyExploration();
 
     public static final class RankAdvancement extends Screen {
+        public final Mark rankAdvancementTitle = Mark.of(Pictures.RANK_ADVANCEMENT_TITLE);
+        public final Button upgradeBack = Button.of(Pictures.UPGRADE_BACK);
+        public final Button rankTabGoals = Button.of(Pictures.RANK_TAB_GOALS);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Rank Advancement")
+                    .back(Screens.RANK_ADVANCEMENT.upgradeBack)
                     .takes(Duration.ofMillis(6100L))
                     .shot("screens/CHAR_RANK_BUTTON.png")
                     .from(Screens.CHARACTER.charRankButton);

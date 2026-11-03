@@ -421,6 +421,8 @@ public final class Pictures {
             .at(new Rect(350, 195, 380, 52));
     public static final ImageTemplate POWER_ROW_EXPAND = new ImageTemplate("images/power_row_expand.png")
             .at(new Rect(882, 480, 48, 48));
+    public static final ImageTemplate TOP_POWER_ICON = new ImageTemplate("images/top_power_icon.png")
+            .at(new Rect(183, 114, 44, 34));
     private Pictures() {
     }
 }

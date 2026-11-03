@@ -259,6 +259,11 @@ public final class Screens {
             return Setup
                     .named("Official Community")
                     .back(Screens.OFFICIAL_COMMUNITY.communityOutside)
+                    .notes("""
+                            Opened from Title. Links to the game's community pages; nothing to collect.
+                            No close button: a tap outside the panel closes it (communityOutside).\
+                            """)
+                    .reached(Reached.SURVEYED)
                     .shot("screens/OFFICIAL_COMMUNITY.png")
                     .from(Screens.TITLE.titleFollowUs);
         }

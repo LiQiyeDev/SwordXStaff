@@ -888,7 +888,7 @@ public final class Screens {
         public final Button stagePlantIdle = Button.of(Pictures.STAGE_PLANT_IDLE).occasional();
         public final Button noticeBack = Button.of(Pictures.NOTICE_BACK);
         public final Mark stageQuestIcon = Mark.of(Pictures.STAGE_QUEST_ICON);
-        public final Button topPowerIcon = Button.of(Pictures.TOP_POWER_ICON);
+        public final Button topPowerIcon = Button.of(Pictures.TOP_POWER_ICON).tried();
         public final Button topAvatarSpot = Button.beside(Pictures.TOP_POWER_ICON, -2.66, -1.35);
         @Override
         public Setup setup() {

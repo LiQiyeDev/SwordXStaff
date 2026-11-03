@@ -1023,6 +1023,7 @@ public final class Screens {
         public final Button profileQuickHeal = Button.of(Pictures.PROFILE_QUICK_HEAL).never("Spends a healing item; the user's call");
         public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
         public final Mark profilePlayerIdLabel = Mark.of(Pictures.PROFILE_PLAYER_ID_LABEL);
+        public final Button profileOutside = Button.beside(Pictures.PROFILE_PLAYER_ID_LABEL, -1.0, 31.0);
 
         @Override
         public Setup setup() {

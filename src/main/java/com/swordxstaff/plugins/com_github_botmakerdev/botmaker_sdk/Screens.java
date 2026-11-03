@@ -1414,6 +1414,19 @@ public final class Screens {
 
     public static final DestinyExploration DESTINY_EXPLORATION = new DestinyExploration();
 
+    public static final class CharRankButton extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Char rank button")
+                    .takes(Duration.ofMillis(6100L))
+                    .shot("screens/CHAR_RANK_BUTTON.png")
+                    .from(Screens.CHARACTER.charRankButton);
+        }
+    }
+
+    public static final CharRankButton CHAR_RANK_BUTTON = new CharRankButton();
+
     private Screens() {
     }
 }

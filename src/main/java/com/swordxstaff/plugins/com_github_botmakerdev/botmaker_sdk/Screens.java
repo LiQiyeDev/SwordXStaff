@@ -1435,11 +1435,13 @@ public final class Screens {
     public static final class RankGoals extends Screen {
         public final Mark rankGoalsTabRank = Mark.of(Pictures.RANK_GOALS_TAB_RANK);
         public final Button rankGoalsTabPower = Button.of(Pictures.RANK_GOALS_TAB_POWER).tried();
+        public final Button rankGoalsTabRank2 = Button.of(Pictures.RANK_GOALS_TAB_RANK);
 
         @Override
         public Setup setup() {
             return Setup
                     .named("Rank Goals")
+                    .back(Screens.RANK_GOALS.rankGoalsTabRank2)
                     .takes(Duration.ofMillis(3200L))
                     .shot("screens/RANK_TAB_GOALS.png")
                     .from(Screens.RANK_ADVANCEMENT.rankTabGoals);

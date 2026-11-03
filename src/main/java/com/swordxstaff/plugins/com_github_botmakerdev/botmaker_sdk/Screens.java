@@ -218,6 +218,7 @@ public final class Screens {
             return Setup
                     .named("Settings")
                     .alsoFrom(List.of(Way.of(Screens.STAGE_PACKAGE.menuSettings)))
+                    .back(Screens.SETTINGS.settingsOutside)
                     .notes("""
                             Opened from Title's Settings (tabs Game, Sound, Other) or, in game, from Stage's menu (tabs Game, Graphics, Sound, Other).
                             Game: text and voice language (English), chat channels shown on Home.

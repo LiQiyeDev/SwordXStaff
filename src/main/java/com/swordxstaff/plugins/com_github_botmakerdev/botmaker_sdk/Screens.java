@@ -1496,10 +1496,15 @@ public final class Screens {
     public static final Dish DISH = new Dish();
 
     public static final class TravelConfirm extends Screen {
+        public final Mark travelConfirmText = Mark.of(Pictures.TRAVEL_CONFIRM_TEXT);
+        public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
+        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
+
         @Override
         public Setup setup() {
             return Setup
                     .named("Travel confirm")
+                    .back(Screens.TRAVEL_CONFIRM.resetConfirmCancel)
                     .takes(Duration.ofMillis(3600L))
                     .shot("screens/QUEST_TRACKER_GO.png")
                     .from(Screens.STAGE_QUEST_TRACKER.questTrackerGo);

@@ -413,6 +413,8 @@ public final class Pictures {
             .at(new Rect(560, 1525, 395, 75));
     public static final ImageTemplate QUEST_TRACKER_GO = new ImageTemplate("images/quest_tracker_go.png")
             .at(new Rect(362, 1330, 356, 76));
+    public static final ImageTemplate TRAVEL_CONFIRM_TEXT = new ImageTemplate("images/travel_confirm_text.png")
+            .at(new Rect(337, 860, 190, 44));
     private Pictures() {
     }
 }

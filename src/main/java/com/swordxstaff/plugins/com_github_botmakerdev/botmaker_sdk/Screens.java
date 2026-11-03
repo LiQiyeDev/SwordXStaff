@@ -179,7 +179,7 @@ public final class Screens {
         public final Button serversTabAvailable = Button.of(Pictures.SERVERS_TAB_AVAILABLE).tried();
         public final Button serversTabCharacters = Button.of(Pictures.SERVERS_TAB_CHARACTERS).tried();
         public final Button serversSearch = Button.of(Pictures.SERVERS_SEARCH).clearing().submitting().types(Texts.CLOUDWOLD);
-        public final Button serversSearchGo = Button.of(Pictures.SERVERS_SEARCH_GO);
+        public final Button serversSearchGo = Button.of(Pictures.SERVERS_SEARCH_GO).tried();
         public final Mark serversTitle = Mark.of(Pictures.SERVERS_TITLE);
 
         @Override

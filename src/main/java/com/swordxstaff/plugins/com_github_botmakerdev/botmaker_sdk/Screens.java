@@ -1041,9 +1041,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Top avatar")
-                    .alsoFrom(List
-                            .of(Way.of(Screens.HOME.topAvatar), Way.of(Screens.HOME.stageDownloadReward),
-                                    Way.of(Screens.STAGE.topAvatarSpot)))
+                    .alsoFrom(List.of(Way.of(Screens.HOME.stageDownloadReward), Way.of(Screens.STAGE.topAvatarSpot)))
                     .back(Screens.TOP_AVATAR.profileOutside)
                     .notes("""
                             The player's profile, opened by the avatar at the top left of Stage or Home: power, class, player ID, rank, server (Cloudwold), stats, equipped gear, techniques and charms, HP bar.
@@ -1056,7 +1054,7 @@ public final class Screens {
                     .owes(List.of("gear, technique and charm slots, like thumb, player ID copy: not cut"))
                     .takes(Duration.ofMillis(8400L))
                     .shot("screens/TOP_AVATAR.png")
-                    .from(Screens.STAGE.topAvatar);
+                    .from(Screens.HOME.topAvatar);
         }
     }
 

@@ -1530,6 +1530,19 @@ public final class Screens {
 
     public static final VisageDetails VISAGE_DETAILS = new VisageDetails();
 
+    public static final class ResonanceStatistics extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Resonance statistics")
+                    .takes(Duration.ofMillis(5900L))
+                    .shot("screens/RESONANCE_STATISTICS.png")
+                    .from(Screens.RESONANCE.resonanceStatistics);
+        }
+    }
+
+    public static final ResonanceStatistics RESONANCE_STATISTICS = new ResonanceStatistics();
+
     private Screens() {
     }
 }

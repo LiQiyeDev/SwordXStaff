@@ -1545,6 +1545,12 @@ public final class Screens {
             return Setup
                     .named("Resonance statistics")
                     .back(Screens.RESONANCE_STATISTICS.resonanceBoostOutside)
+                    .notes("""
+                            Resonance Boost popup, opened by Resonance's Resonance Statistics.
+                            Lists the active resonance boosts; "No resonance activated" until gear reaches the first goal.
+                            No close button: a tap below the panel closes it (resonanceBoostOutside).\
+                            """)
+                    .reached(Reached.SURVEYED)
                     .takes(Duration.ofMillis(5900L))
                     .shot("screens/RESONANCE_STATISTICS.png")
                     .from(Screens.RESONANCE.resonanceStatistics);

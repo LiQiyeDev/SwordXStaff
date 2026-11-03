@@ -1155,6 +1155,7 @@ public final class Screens {
         public final Button ucSelfService = Button.of(Pictures.UC_SELF_SERVICE).info();
         public final Button ucGiftCode = Button.of(Pictures.UC_GIFT_CODE);
         public final Mark userCenterTitle = Mark.of(Pictures.USER_CENTER_TITLE);
+        public final Button userCenterOutside = Button.beside(Pictures.USER_CENTER_TITLE, 0.0, 17.7);
 
         @Override
         public Setup setup() {

@@ -1493,6 +1493,11 @@ public final class Screens {
             return Setup
                     .named("Dish")
                     .back(Screens.DISH.dishOutside)
+                    .notes("""
+                            Dish picker: a type filter, Auto Select and Use.
+                            No close button: a tap outside the panel closes it (dishOutside).\
+                            """)
+                    .reached(Reached.SURVEYED)
                     .takes(Duration.ofMillis(5500L))
                     .shot("screens/PROFILE_DISH.png")
                     .from(Screens.TOP_AVATAR.profileDish);

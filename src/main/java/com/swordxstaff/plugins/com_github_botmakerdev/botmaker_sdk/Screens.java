@@ -1194,7 +1194,6 @@ public final class Screens {
     public static final ReturnHomeConfirm RETURN_HOME_CONFIRM = new ReturnHomeConfirm();
 
     public static final class CharacterStats extends Screen {
-        public final Button statsTabGeneral = Button.of(Pictures.STATS_TAB_GENERAL);
         public final Button statsTabDetails = Button.of(Pictures.STATS_TAB_DETAILS).tried();
         public final Hotkey keyEsc = Hotkey.of(Key.ESCAPE);
         public final Mark characterStatsTitle = Mark.of(Pictures.CHARACTER_STATS_TITLE);

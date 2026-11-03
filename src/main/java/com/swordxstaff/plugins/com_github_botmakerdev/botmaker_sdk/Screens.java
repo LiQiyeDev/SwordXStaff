@@ -1179,7 +1179,7 @@ public final class Screens {
 
     public static final class ReturnHomeConfirm extends Screen {
         public final Button resetConfirmCancel = Button.of(Pictures.RESET_CONFIRM_CANCEL);
-        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK);
+        public final Button resetConfirmOk = Button.of(Pictures.RESET_CONFIRM_OK).leaving();
         public final Mark returnHomeText = Mark.of(Pictures.RETURN_HOME_TEXT);
 
         @Override

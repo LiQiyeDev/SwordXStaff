@@ -1432,6 +1432,19 @@ public final class Screens {
 
     public static final RankAdvancement RANK_ADVANCEMENT = new RankAdvancement();
 
+    public static final class RankTabGoals extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Rank tab goals")
+                    .takes(Duration.ofMillis(3200L))
+                    .shot("screens/RANK_TAB_GOALS.png")
+                    .from(Screens.RANK_ADVANCEMENT.rankTabGoals);
+        }
+    }
+
+    public static final RankTabGoals RANK_TAB_GOALS = new RankTabGoals();
+
     private Screens() {
     }
 }

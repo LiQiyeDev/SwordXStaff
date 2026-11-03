@@ -1538,6 +1538,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Resonance statistics")
+                    .back(Screens.RESONANCE_STATISTICS.resonanceBoostOutside)
                     .takes(Duration.ofMillis(5900L))
                     .shot("screens/RESONANCE_STATISTICS.png")
                     .from(Screens.RESONANCE.resonanceStatistics);

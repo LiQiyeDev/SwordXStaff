@@ -1070,6 +1070,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Profile power search")
+                    .back(Screens.PROFILE_POWER_SEARCH.powerOutside)
                     .takes(Duration.ofMillis(2500L))
                     .shot("screens/PROFILE_POWER_SEARCH.png")
                     .from(Screens.TOP_AVATAR.profilePowerSearch);

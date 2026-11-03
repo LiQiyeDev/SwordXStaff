@@ -1064,6 +1064,7 @@ public final class Screens {
     public static final class ProfilePowerSearch extends Screen {
         public final Mark powerBreakdownTitle = Mark.of(Pictures.POWER_BREAKDOWN_TITLE);
         public final Button powerRowExpand = Button.of(Pictures.POWER_ROW_EXPAND);
+        public final Button powerOutside = Button.beside(Pictures.POWER_BREAKDOWN_TITLE, 0.0, 30.2);
 
         @Override
         public Setup setup() {

@@ -1071,6 +1071,12 @@ public final class Screens {
             return Setup
                     .named("Profile power search")
                     .back(Screens.PROFILE_POWER_SEARCH.powerOutside)
+                    .notes("""
+                            Character Power popup from Top avatar's power magnifier: total power, then rows Character, Gear, Skill, Companion Power Bonus.
+                            Each row's chevron (power_row_expand, one per row) unfolds its parts in place: Character shows Level, Rank, Class Trait.
+                            No close button: a tap below the panel closes it (powerOutside).\
+                            """)
+                    .reached(Reached.SURVEYED)
                     .takes(Duration.ofMillis(2500L))
                     .shot("screens/PROFILE_POWER_SEARCH.png")
                     .from(Screens.TOP_AVATAR.profilePowerSearch);

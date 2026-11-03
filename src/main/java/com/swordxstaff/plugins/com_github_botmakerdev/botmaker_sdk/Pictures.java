@@ -397,6 +397,12 @@ public final class Pictures {
             .at(new Rect(300, 1790, 280, 75));
     public static final ImageTemplate RANK_GOALS_TAB_POWER = new ImageTemplate("images/rank_goals_tab_power.png")
             .at(new Rect(560, 1650, 260, 65));
+    public static final ImageTemplate STATS_TAB_GENERAL_OFF = new ImageTemplate("images/stats_tab_general_off.png")
+            .at(new Rect(200, 305, 250, 52));
+    public static final ImageTemplate DETAILS_CHARACTER_STATS = new ImageTemplate("images/details_character_stats.png")
+            .at(new Rect(140, 455, 300, 50));
+    public static final ImageTemplate DETAILS_GEAR_STATS = new ImageTemplate("images/details_gear_stats.png")
+            .at(new Rect(140, 605, 220, 50));
     private Pictures() {
     }
 }

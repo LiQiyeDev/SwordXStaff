@@ -1056,13 +1056,15 @@ public final class Screens {
                     .back(Screens.TOP_AVATAR.profileOutside)
                     .notes("""
                             The player's profile, opened by the avatar at the top left of Stage or Home: power, class, player ID, rank, server (Cloudwold), stats, equipped gear, techniques and charms, HP bar.
+                            The avatar is personalized: it is a spot (topAvatarSpot) anchored on top_power_icon, never a picture.
                             No settings here: no graphics, sound or language option.
                             No close button: a tap below the panel closes it (profileOutside).
                             The power magnifier opens Character Power; the stats magnifier opens Character stats; the dish opens Dish.
                             Quick Heal spends a healing item: never pressed.\
                             """)
                     .reached(Reached.SURVEYED)
-                    .owes(List.of("gear, technique and charm slots, like thumb, player ID copy: not cut"))
+                    .owes(List
+                            .of("gear, technique and charm slots, like thumb, player ID copy: spots anchored on a stable picture (their content changes), never pictures"))
                     .takes(Duration.ofMillis(8400L))
                     .shot("screens/TOP_AVATAR.png")
                     .from(Screens.STAGE.topAvatarSpot);

@@ -1515,6 +1515,7 @@ public final class Screens {
 
     public static final class VisageDetails extends Screen {
         public final Mark visageBodyTypesLabel = Mark.of(Pictures.VISAGE_BODY_TYPES_LABEL);
+        public final Button visageOutside = Button.beside(Pictures.VISAGE_BODY_TYPES_LABEL, 0.0, 15.0);
 
         @Override
         public Setup setup() {

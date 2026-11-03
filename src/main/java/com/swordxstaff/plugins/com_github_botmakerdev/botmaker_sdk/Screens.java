@@ -1042,17 +1042,14 @@ public final class Screens {
                     .alsoFrom(List.of(Way.of(Screens.HOME.topAvatar)))
                     .back(Screens.TOP_AVATAR.profileOutside)
                     .notes("""
-                            The player's profile, opened by the avatar at the top left of Stage: power, class, player ID, rank, server (Cloudwold), stats, equipped gear, techniques and charms, HP bar.
+                            The player's profile, opened by the avatar at the top left of Stage or Home: power, class, player ID, rank, server (Cloudwold), stats, equipped gear, techniques and charms, HP bar.
                             No settings here: no graphics, sound or language option.
-                            Escape closes it back to Stage.
-                            The power magnifier opens Character Power (power by source); Escape closes it.\
+                            No close button: a tap below the panel closes it (profileOutside).
+                            The power magnifier opens Character Power; the stats magnifier opens Character stats; the dish opens Dish.
+                            Quick Heal spends a healing item: never pressed.\
                             """)
                     .reached(Reached.SURVEYED)
-                    .owes(List
-                            .of("Escape as its way back (works, not recorded as an input)",
-                                    "profile_stats_search, profile_dish: untried",
-                                    "profile_quick_heal: spends a healing item, the user's call",
-                                    "gear, technique and charm slots, like thumb, player ID copy: not cut"))
+                    .owes(List.of("gear, technique and charm slots, like thumb, player ID copy: not cut"))
                     .takes(Duration.ofMillis(8400L))
                     .shot("screens/TOP_AVATAR.png")
                     .from(Screens.STAGE.topAvatar);

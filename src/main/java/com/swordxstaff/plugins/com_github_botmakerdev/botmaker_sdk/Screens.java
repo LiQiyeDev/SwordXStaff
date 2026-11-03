@@ -1540,6 +1540,11 @@ public final class Screens {
             return Setup
                     .named("Visage details")
                     .back(Screens.VISAGE_DETAILS.visageOutside)
+                    .notes("""
+                            One visage's details from an Achievement card: body types and what unlocks it.
+                            No buttons; a tap outside the panel closes it (visageOutside).\
+                            """)
+                    .reached(Reached.SURVEYED)
                     .takes(Duration.ofMillis(5600L))
                     .shot("screens/ACHIEVEMENT_CARD.png")
                     .from(Screens.ACHIEVEMENT.achievementCard);

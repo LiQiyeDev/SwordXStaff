@@ -1532,6 +1532,7 @@ public final class Screens {
 
     public static final class ResonanceStatistics extends Screen {
         public final Mark resonanceBoostTitle = Mark.of(Pictures.RESONANCE_BOOST_TITLE);
+        public final Button resonanceBoostOutside = Button.beside(Pictures.RESONANCE_BOOST_TITLE, 0.0, 31.0);
 
         @Override
         public Setup setup() {

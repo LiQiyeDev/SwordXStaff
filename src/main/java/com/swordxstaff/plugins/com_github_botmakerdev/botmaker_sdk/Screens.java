@@ -1472,6 +1472,7 @@ public final class Screens {
         public final Button dishTypeFilter = Button.of(Pictures.DISH_TYPE_FILTER);
         public final Button dishAutoSelect = Button.of(Pictures.DISH_AUTO_SELECT);
         public final Button dishUse = Button.of(Pictures.DISH_USE);
+        public final Button dishOutside = Button.beside(Pictures.DISH_TITLE, 0.0, 25.0);
 
         @Override
         public Setup setup() {

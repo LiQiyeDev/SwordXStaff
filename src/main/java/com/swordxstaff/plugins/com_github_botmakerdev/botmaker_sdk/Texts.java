@@ -25,6 +25,7 @@ public final class Texts {
     public static final Words MANAGE_COOKIES = Words.of("Manage Cookies");
     public static final Words DELETE_ACCOUNT = Words.of("Delete Account");
     public static final Words BOTMAKER = Words.of("BotMaker");
+    public static final Words CLOUDWOLD = Words.of("Cloudwold");
 
     private Texts() {
     }

@@ -16,7 +16,7 @@ public class Progress {
         return "";
     }
 
-    @Param.Shown(changes = Param.Changes.DURING_RUN)
+    @Param.Shown()
     public Outcome ffezf() {
         return Outcome.NONE;
     }

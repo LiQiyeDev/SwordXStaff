@@ -12,6 +12,7 @@ public class Progress {
         return 0;
     }
 
+    @Param.Shown(changes = Param.Changes.DURING_RUN)
     public String reg() {
         return "";
     }

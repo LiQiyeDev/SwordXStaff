@@ -10,4 +10,8 @@ public class Progress {
     public int gold() {
         return 0;
     }
+
+    public String reg() {
+        return "";
+    }
 }

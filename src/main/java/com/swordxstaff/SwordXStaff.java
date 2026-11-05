@@ -1,5 +1,8 @@
 package com.swordxstaff;
 
+import com.botmaker.sdk.api.params.Params;
+import com.swordxstaff.params.bot.Progress;
+
 /**
  * Your project.
  *
@@ -14,6 +17,8 @@ package com.swordxstaff;
 public class SwordXStaff {
 
     public static void main(String[] args) {
-        System.out.println("Hello from SwordXStaff!");
+        int before = Params.get(Progress::gold);
+        Params.set(Progress::gold, before + 100);
+        System.out.println("gold was " + before + ", now " + Params.get(Progress::gold));
     }
 }

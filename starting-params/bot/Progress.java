@@ -26,4 +26,9 @@ public class Progress {
     public int gems() {
         return 0;
     }
+
+    @Param.Shown(changes = Param.Changes.DURING_RUN)
+    public String energy() {
+        return "";
+    }
 }

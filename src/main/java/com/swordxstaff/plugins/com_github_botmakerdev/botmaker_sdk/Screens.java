@@ -1625,21 +1625,21 @@ public final class Screens {
 
     public static final ResonanceStatistics RESONANCE_STATISTICS = new ResonanceStatistics();
 
-    public static final class RollaIcon extends Screen {
+    public static final class RollaInfo extends Screen {
         public final Mark rollaInfoCoin = Mark.of(Pictures.ROLLA_INFO_COIN);
         public final Button itemSourceGo = Button.of(Pictures.ITEM_SOURCE_GO);
 
         @Override
         public Setup setup() {
             return Setup
-                    .named("Rolla icon")
+                    .named("Rolla info")
                     .takes(Duration.ofMillis(6400L))
                     .shot("screens/ROLLA_ICON.png")
                     .from(Screens.HOME.rollaIcon);
         }
     }
 
-    public static final RollaIcon ROLLA_ICON = new RollaIcon();
+    public static final RollaInfo ROLLA_INFO = new RollaInfo();
 
     private Screens() {
     }

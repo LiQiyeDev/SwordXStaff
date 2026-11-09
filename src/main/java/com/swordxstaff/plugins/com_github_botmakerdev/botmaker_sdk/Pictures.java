@@ -426,6 +426,8 @@ public final class Pictures {
     public static final ImageTemplate GEM_ICON = new ImageTemplate("images/gem_icon.png").at(new Rect(717, 59, 40, 42));
     public static final ImageTemplate ENERGY_ICON = new ImageTemplate("images/energy_icon.png")
             .at(new Rect(874, 57, 38, 44));
+    public static final ImageTemplate ROLLA_ICON = new ImageTemplate("images/rolla_icon.png")
+            .at(new Rect(561, 62, 38, 38));
     private Pictures() {
     }
 }

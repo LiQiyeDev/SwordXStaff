@@ -662,9 +662,13 @@ public final class Screens {
         @Override
         public Setup setup() {
             return Setup.named("You received").back(Screens.YOU_RECEIVED.youReceivedTitle).notes("""
-                            Shows what was just claimed (Cart's Claim All: Rolla, Stone, Wood). A tap on it closes it.
-                            It opens a few seconds after the claim.\
-                            """).reached(Reached.TRIED).shot("screens/YOU_RECEIVED.png").from(Screens.CART.cartClaimAll);
+                    Shows what was just claimed (Cart's Claim All: Rolla, Stone, Wood). A tap on it closes it.
+                    It opens a few seconds after the claim.\
+                    """)
+                    .reached(Reached.TRIED)
+                    .takes(Duration.ofMillis(6700L))
+                    .shot("screens/YOU_RECEIVED.png")
+                    .from(Screens.CART.cartClaimAll);
         }
     }
 

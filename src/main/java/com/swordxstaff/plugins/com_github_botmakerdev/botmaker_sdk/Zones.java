@@ -13,6 +13,7 @@ import com.botmaker.sdk.api.geometry.Anchor;
 public final class Zones {
     public static final Zone ROLLA = new Zone(612, 65, 84, 33).anchored(Anchor.TOP_RIGHT);
     public static final Zone GEMS = new Zone(778, 62, 70, 38).anchored(Anchor.TOP_RIGHT);
+    public static final Zone ENERGY = new Zone(905, 58, 160, 46).anchored(Anchor.TOP_RIGHT);
 
     private Zones() {
     }

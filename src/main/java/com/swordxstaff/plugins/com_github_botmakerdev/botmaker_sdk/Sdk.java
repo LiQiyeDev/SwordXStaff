@@ -2,9 +2,8 @@ package com.swordxstaff.plugins.com_github_botmakerdev.botmaker_sdk;
 
 import com.botmaker.sdk.api.bot.BotSettings;
 import com.botmaker.sdk.api.bot.Launcher;
+import com.botmaker.sdk.api.bot.Run;
 import com.botmaker.sdk.api.bot.SdkValue;
-import com.botmaker.sdk.api.flow.FlowLayout;
-import com.botmaker.sdk.api.flow.Run;
 import com.botmaker.sdk.api.geometry.Size;
 import java.util.List;
 import com.botmaker.sdk.api.screens.Shades;
@@ -27,11 +26,6 @@ public final class Sdk {
         return Run.NONE;
     }
 
-    @SdkValue(SdkValue.Id.FLOW_LAYOUT)
-    public static FlowLayout flowLayout() {
-        return FlowLayout.NONE;
-    }
-
     @SdkValue(SdkValue.Id.SETTINGS)
     public static BotSettings settings() {
         return BotSettings.defaults();
@@ -48,7 +42,11 @@ public final class Sdk {
                 .of(
                         new Shade(Shade.Kind.BRIGHT, new Shade.Channels(1.98, 1.99, 2.0),
                                 new Shade.Channels(0.02, 0.02, 0.02),
-                                0.08, Shade.Cause.GAME, State.SELECTED, new Shade.Geometry(0, 1.0, 1.0, 0, 0)));
+                                0.08, Shade.Cause.GAME, State.SELECTED, new Shade.Geometry(0, 1.0, 1.0, 0, 0)),
+                        new Shade(Shade.Kind.BRIGHT, new Shade.Channels(1.89, 1.88, 1.89),
+                                new Shade.Channels(0.05, 0.05, 0.05),
+                                0.08, Shade.Cause.GAME, States.Blocks.LOADOUT_1,
+                                new Shade.Geometry(0, 1.0, 1.0, 0, 0)));
     }
 
     private Sdk() {

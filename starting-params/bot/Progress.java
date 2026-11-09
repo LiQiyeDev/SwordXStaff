@@ -1,7 +1,6 @@
 package com.swordxstaff.params.bot;
 
 import com.botmaker.plugin.api.params.Param;
-import com.botmaker.sdk.api.bot.Outcome;
 
 /** What the bot keeps between runs. */
 @Param
@@ -15,11 +14,6 @@ public class Progress {
     @Param.Shown(changes = Param.Changes.DURING_RUN)
     public String reg() {
         return "";
-    }
-
-    @Param.Shown(changes = Param.Changes.DURING_RUN)
-    public Outcome ffezf() {
-        return Outcome.NONE;
     }
 
     public String fez() {

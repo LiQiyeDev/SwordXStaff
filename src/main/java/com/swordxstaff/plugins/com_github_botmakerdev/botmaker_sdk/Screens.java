@@ -18,6 +18,7 @@ import com.botmaker.sdk.api.screens.State;
 import com.botmaker.sdk.api.screens.Mark;
 import com.botmaker.sdk.api.screens.Readout;
 import com.swordxstaff.params.bot.Progress;
+import com.botmaker.sdk.api.screens.Area;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -1275,6 +1276,7 @@ public final class Screens {
         public final Mark navHomeSelected = Mark.of(Pictures.NAV_HOME_SELECTED);
         public final Button topPowerIcon = Button.of(Pictures.TOP_POWER_ICON).tried();
         public final Button topAvatarSpot = Button.beside(Pictures.TOP_POWER_ICON, -2.66, -1.35);
+        public final Readout gems = Readout.text(Area.of(Pictures.GEM_ICON, 1.075, 0.119, 2.3, 0.81));
         @Override
         public Setup setup() {
             return Setup

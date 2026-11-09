@@ -21,4 +21,8 @@ public class Progress {
     public Outcome ffezf() {
         return Outcome.NONE;
     }
+
+    public String fez() {
+        return "";
+    }
 }

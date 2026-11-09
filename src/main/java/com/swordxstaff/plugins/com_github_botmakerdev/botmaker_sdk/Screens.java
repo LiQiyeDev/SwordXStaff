@@ -1284,6 +1284,7 @@ public final class Screens {
                 .staleAfter(Duration.ofMillis(3600000L));
         public final Button navHome = Button.of(Pictures.NAV_HOME).tried();
         public final Button homeGate = Button.of(Pictures.HOME_GATE).tried();
+        public final Button rollaIcon = Button.of(Pictures.ROLLA_ICON);
         @Override
         public Setup setup() {
             return Setup

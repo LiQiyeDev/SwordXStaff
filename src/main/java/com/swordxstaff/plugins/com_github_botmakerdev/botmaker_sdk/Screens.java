@@ -1280,7 +1280,8 @@ public final class Screens {
                 .staleAfter(Duration.ofMillis(3600000L));
         public final Readout energy = Readout.text(Area.of(Pictures.ENERGY_ICON, 1.053, 0.114, 3.684, 0.864)).into(Progress::energy)
                 .staleAfter(Duration.ofMillis(600000L));
-        public final Readout rolla = Readout.text(Area.of(Pictures.ROLLA_ICON, 1.184, 0.0, 2.263, 1.0));
+        public final Readout rolla = Readout.text(Area.of(Pictures.ROLLA_ICON, 1.184, 0.0, 2.263, 1.0)).into(Progress::rolla)
+                .staleAfter(Duration.ofMillis(3600000L));
         @Override
         public Setup setup() {
             return Setup

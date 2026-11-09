@@ -1,6 +1,7 @@
 package com.swordxstaff.plugins.com_github_botmakerdev.botmaker_sdk;
 
 import com.botmaker.sdk.api.bot.SdkValue;
+import com.botmaker.sdk.api.screens.ButtonState;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -9,6 +10,10 @@ import com.botmaker.sdk.api.bot.SdkValue;
  */
 @SdkValue(SdkValue.Id.STATES)
 public final class States {
+    public enum Blocks implements ButtonState {
+        LOADOUT_1
+    }
+
     private States() {
     }
 }

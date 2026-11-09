@@ -1282,6 +1282,7 @@ public final class Screens {
                 .staleAfter(Duration.ofMillis(600000L));
         public final Readout rolla = Readout.text(Area.of(Pictures.ROLLA_ICON, 1.184, 0.0, 2.263, 1.0)).into(Progress::rolla)
                 .staleAfter(Duration.ofMillis(3600000L));
+        public final Button navHome = Button.of(Pictures.NAV_HOME).tried();
         @Override
         public Setup setup() {
             return Setup

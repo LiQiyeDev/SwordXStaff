@@ -31,4 +31,9 @@ public class Progress {
     public String energy() {
         return "";
     }
+
+    @Param.Shown(changes = Param.Changes.DURING_RUN)
+    public String rolla() {
+        return "";
+    }
 }

@@ -8,6 +8,8 @@ import com.botmaker.sdk.api.flow.Run;
 import com.botmaker.sdk.api.geometry.Size;
 import java.util.List;
 import com.botmaker.sdk.api.screens.Shades;
+import com.botmaker.sdk.api.screens.Shade;
+import com.botmaker.sdk.api.screens.State;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -42,7 +44,11 @@ public final class Sdk {
 
     @SdkValue(SdkValue.Id.SHADES)
     public static Shades shades() {
-        return Shades.of();
+        return Shades
+                .of(
+                        new Shade(Shade.Kind.BRIGHT, new Shade.Channels(1.98, 1.99, 2.0),
+                                new Shade.Channels(0.02, 0.02, 0.02),
+                                0.08, Shade.Cause.GAME, State.SELECTED, new Shade.Geometry(0, 1.0, 1.0, 0, 0)));
     }
 
     private Sdk() {

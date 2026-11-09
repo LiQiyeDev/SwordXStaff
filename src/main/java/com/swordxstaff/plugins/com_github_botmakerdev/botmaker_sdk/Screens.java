@@ -1634,6 +1634,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Rolla info")
+                    .back(Screens.ROLLA_INFO.rollaInfoOutside)
                     .takes(Duration.ofMillis(6400L))
                     .shot("screens/ROLLA_ICON.png")
                     .from(Screens.HOME.rollaIcon);

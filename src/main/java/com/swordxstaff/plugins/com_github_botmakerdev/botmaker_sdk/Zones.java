@@ -1,6 +1,8 @@
 package com.swordxstaff.plugins.com_github_botmakerdev.botmaker_sdk;
 
 import com.botmaker.sdk.api.bot.SdkValue;
+import com.botmaker.sdk.api.geometry.Zone;
+import com.botmaker.sdk.api.geometry.Anchor;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -9,6 +11,8 @@ import com.botmaker.sdk.api.bot.SdkValue;
  */
 @SdkValue(SdkValue.Id.ZONES)
 public final class Zones {
+    public static final Zone ROLLA = new Zone(612, 65, 84, 33).anchored(Anchor.TOP_RIGHT);
+
     private Zones() {
     }
 }

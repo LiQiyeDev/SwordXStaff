@@ -350,7 +350,13 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup.named("Logging in").loads(Duration.ofMillis(60000L)).shot("screens/LOGGING_IN.png");
+            return Setup
+                    .named("Logging in")
+                    .loads(Duration.ofMillis(60000L))
+                    .notes(
+                            "\"Logging in...\" in a dark band over Title, after Tap to Play. No inputs: it leaves by itself to Scene loading within a few seconds.")
+                    .reached(Reached.SURVEYED)
+                    .shot("screens/LOGGING_IN.png");
         }
     }
 

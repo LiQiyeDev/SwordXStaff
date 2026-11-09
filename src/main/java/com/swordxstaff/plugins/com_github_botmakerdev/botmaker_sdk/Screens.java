@@ -1277,6 +1277,7 @@ public final class Screens {
         public final Button topPowerIcon = Button.of(Pictures.TOP_POWER_ICON).tried();
         public final Button topAvatarSpot = Button.beside(Pictures.TOP_POWER_ICON, -2.66, -1.35);
         public final Readout gems = Readout.text(Area.of(Pictures.GEM_ICON, 1.125, 0.071, 2.0, 0.905));
+        public final Readout energy = Readout.text(Area.of(Pictures.ENERGY_ICON, 1.053, 0.114, 3.684, 0.864));
         @Override
         public Setup setup() {
             return Setup

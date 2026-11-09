@@ -1278,7 +1278,8 @@ public final class Screens {
         public final Button topAvatarSpot = Button.beside(Pictures.TOP_POWER_ICON, -2.66, -1.35);
         public final Readout gems = Readout.text(Area.of(Pictures.GEM_ICON, 1.125, 0.071, 2.0, 0.905)).into(Progress::gems)
                 .staleAfter(Duration.ofMillis(3600000L));
-        public final Readout energy = Readout.text(Area.of(Pictures.ENERGY_ICON, 1.053, 0.114, 3.684, 0.864));
+        public final Readout energy = Readout.text(Area.of(Pictures.ENERGY_ICON, 1.053, 0.114, 3.684, 0.864)).into(Progress::energy)
+                .staleAfter(Duration.ofMillis(600000L));
         public final Readout rolla = Readout.text(Area.of(Pictures.ROLLA_ICON, 1.184, 0.0, 2.263, 1.0));
         @Override
         public Setup setup() {

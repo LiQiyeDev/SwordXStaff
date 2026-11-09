@@ -428,6 +428,8 @@ public final class Pictures {
             .at(new Rect(874, 57, 38, 44));
     public static final ImageTemplate ROLLA_ICON = new ImageTemplate("images/rolla_icon.png")
             .at(new Rect(561, 62, 38, 38));
+    public static final ImageTemplate HOME_GATE = new ImageTemplate("images/home_gate.png")
+            .at(new Rect(860, 1260, 150, 100));
     private Pictures() {
     }
 }

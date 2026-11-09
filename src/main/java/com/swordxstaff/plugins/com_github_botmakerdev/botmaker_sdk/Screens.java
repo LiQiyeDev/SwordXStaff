@@ -351,7 +351,7 @@ public final class Screens {
 
         @Override
         public Setup setup() {
-            return Setup.named("Logging in").popup().shot("screens/LOGGING_IN.png");
+            return Setup.named("Logging in").shot("screens/LOGGING_IN.png");
         }
     }
 

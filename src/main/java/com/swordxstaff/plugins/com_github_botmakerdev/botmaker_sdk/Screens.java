@@ -1625,6 +1625,19 @@ public final class Screens {
 
     public static final ResonanceStatistics RESONANCE_STATISTICS = new ResonanceStatistics();
 
+    public static final class RollaIcon extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Rolla icon")
+                    .takes(Duration.ofMillis(6400L))
+                    .shot("screens/ROLLA_ICON.png")
+                    .from(Screens.HOME.rollaIcon);
+        }
+    }
+
+    public static final RollaIcon ROLLA_ICON = new RollaIcon();
+
     private Screens() {
     }
 }

@@ -1290,6 +1290,7 @@ public final class Screens {
         public final Button navHome = Button.of(Pictures.NAV_HOME).tried();
         public final Button homeGate = Button.of(Pictures.HOME_GATE).tried();
         public final Button rollaIcon = Button.of(Pictures.ROLLA_ICON);
+        public final Button energyIcon = Button.of(Pictures.ENERGY_ICON);
         @Override
         public Setup setup() {
             return Setup

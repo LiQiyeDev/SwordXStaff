@@ -1651,6 +1651,7 @@ public final class Screens {
 
     public static final class StaminaInfo extends Screen {
         public final Mark staminaInfoBolt = Mark.of(Pictures.STAMINA_INFO_BOLT);
+        public final Button staminaInfoOutside = Button.beside(Pictures.STAMINA_INFO_BOLT, 0.0, 5.0);
 
         @Override
         public Setup setup() {

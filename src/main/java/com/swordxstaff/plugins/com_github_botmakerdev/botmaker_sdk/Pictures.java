@@ -434,6 +434,8 @@ public final class Pictures {
             .at(new Rect(635, 450, 230, 230));
     public static final ImageTemplate ITEM_SOURCE_GO = new ImageTemplate("images/item_source_go.png")
             .at(new Rect(860, 1132, 60, 50));
+    public static final ImageTemplate STAMINA_INFO_BOLT = new ImageTemplate("images/stamina_info_bolt.png")
+            .at(new Rect(650, 540, 160, 225));
     private Pictures() {
     }
 }

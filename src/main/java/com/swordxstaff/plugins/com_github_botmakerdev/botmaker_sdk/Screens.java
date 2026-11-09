@@ -1275,7 +1275,6 @@ public final class Screens {
         public final Mark navHomeSelected = Mark.of(Pictures.NAV_HOME_SELECTED);
         public final Button topPowerIcon = Button.of(Pictures.TOP_POWER_ICON).tried();
         public final Button topAvatarSpot = Button.beside(Pictures.TOP_POWER_ICON, -2.66, -1.35);
-        public final Readout gems = Readout.text(Zones.GEMS).into(Progress::gems).staleAfter(Duration.ofMillis(3600000L));
         public final Readout energy = Readout.text(Zones.ENERGY).into(Progress::energy).staleAfter(Duration.ofMillis(600000L));
 
         @Override

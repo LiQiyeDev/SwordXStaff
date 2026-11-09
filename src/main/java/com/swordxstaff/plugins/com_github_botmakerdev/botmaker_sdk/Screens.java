@@ -638,6 +638,7 @@ public final class Screens {
         public Setup setup() {
             return Setup
                     .named("Cart")
+                    .alsoFrom(List.of(Way.of(Screens.ROLLA_INFO.itemSourceGo)))
                     .back(Screens.CART.cartoutside)
                     .notes("""
                             Cart: AFK resources pile up here. Rows: Rolla (+1000/h at Lv.1), Wood and Stone (+50/h each); Raw Ore and Battle Essence unlock at Lv. 3.

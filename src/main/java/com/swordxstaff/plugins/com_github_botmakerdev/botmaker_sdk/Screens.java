@@ -1628,6 +1628,7 @@ public final class Screens {
     public static final class RollaInfo extends Screen {
         public final Mark rollaInfoCoin = Mark.of(Pictures.ROLLA_INFO_COIN);
         public final Button itemSourceGo = Button.of(Pictures.ITEM_SOURCE_GO);
+        public final Button rollaInfoOutside = Button.beside(Pictures.ROLLA_INFO_COIN, 0.0, 5.0);
 
         @Override
         public Setup setup() {

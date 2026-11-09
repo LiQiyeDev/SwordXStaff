@@ -423,6 +423,7 @@ public final class Pictures {
             .at(new Rect(882, 480, 48, 48));
     public static final ImageTemplate TOP_POWER_ICON = new ImageTemplate("images/top_power_icon.png")
             .at(new Rect(183, 114, 44, 34));
+    public static final ImageTemplate GEM_ICON = new ImageTemplate("images/gem_icon.png").at(new Rect(717, 59, 40, 42));
     private Pictures() {
     }
 }

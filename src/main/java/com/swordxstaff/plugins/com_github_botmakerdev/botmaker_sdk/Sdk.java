@@ -7,6 +7,7 @@ import com.botmaker.sdk.api.flow.FlowLayout;
 import com.botmaker.sdk.api.flow.Run;
 import com.botmaker.sdk.api.geometry.Size;
 import java.util.List;
+import com.botmaker.sdk.api.screens.Shades;
 
 /**
  * Values com.github.BotMakerDev:botmaker-sdk keeps in step with its own windows.
@@ -18,6 +19,7 @@ public final class Sdk {
     public static List<Launcher> launchTargets() {
         return List.of(Launcher.of("emu-app:com.zjcs.android.us@Waydroid"));
     }
+
     @SdkValue(SdkValue.Id.RUN)
     public static Run run() {
         return Run.NONE;
@@ -36,6 +38,11 @@ public final class Sdk {
     @SdkValue(SdkValue.Id.SCREEN)
     public static Size screen() {
         return new Size(1080, 1920);
+    }
+
+    @SdkValue(SdkValue.Id.SHADES)
+    public static Shades shades() {
+        return Shades.of();
     }
 
     private Sdk() {

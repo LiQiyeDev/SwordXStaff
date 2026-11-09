@@ -1649,6 +1649,19 @@ public final class Screens {
 
     public static final RollaInfo ROLLA_INFO = new RollaInfo();
 
+    public static final class EnergyIcon extends Screen {
+        @Override
+        public Setup setup() {
+            return Setup
+                    .named("Energy icon")
+                    .takes(Duration.ofMillis(8100L))
+                    .shot("screens/ENERGY_ICON.png")
+                    .from(Screens.HOME.energyIcon);
+        }
+    }
+
+    public static final EnergyIcon ENERGY_ICON = new EnergyIcon();
+
     private Screens() {
     }
 }

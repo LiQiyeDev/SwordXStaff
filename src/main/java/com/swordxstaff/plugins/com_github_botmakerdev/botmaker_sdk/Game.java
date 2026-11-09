@@ -22,7 +22,7 @@ public class Game {
     @SdkValue(SdkValue.Id.CAPTURE)
         @Param.Shown(description = "The game's window: where the bot reads pixels from")
         public CaptureSource capture() {
-            return CaptureSource.desktop();
+            return CaptureSource.emulator("Waydroid");
         }
 
         @SdkValue(SdkValue.Id.GAME_ZONE)

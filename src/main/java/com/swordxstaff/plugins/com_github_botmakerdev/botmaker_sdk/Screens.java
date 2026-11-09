@@ -1626,6 +1626,8 @@ public final class Screens {
     public static final ResonanceStatistics RESONANCE_STATISTICS = new ResonanceStatistics();
 
     public static final class RollaIcon extends Screen {
+        public final Mark rollaInfoCoin = Mark.of(Pictures.ROLLA_INFO_COIN);
+
         @Override
         public Setup setup() {
             return Setup

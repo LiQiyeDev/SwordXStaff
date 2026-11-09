@@ -432,6 +432,8 @@ public final class Pictures {
             .at(new Rect(860, 1260, 150, 100));
     public static final ImageTemplate ROLLA_INFO_COIN = new ImageTemplate("images/rolla_info_coin.png")
             .at(new Rect(635, 450, 230, 230));
+    public static final ImageTemplate ITEM_SOURCE_GO = new ImageTemplate("images/item_source_go.png")
+            .at(new Rect(860, 1132, 60, 50));
     private Pictures() {
     }
 }

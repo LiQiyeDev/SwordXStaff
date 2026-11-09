@@ -1650,6 +1650,8 @@ public final class Screens {
     public static final RollaInfo ROLLA_INFO = new RollaInfo();
 
     public static final class StaminaInfo extends Screen {
+        public final Mark staminaInfoBolt = Mark.of(Pictures.STAMINA_INFO_BOLT);
+
         @Override
         public Setup setup() {
             return Setup

@@ -26,7 +26,7 @@ public class Game {
         }
 
         @SdkValue(SdkValue.Id.GAME_ZONE)
-        @Param.Shown(description = "The game server's time zone, such as Europe/Paris, that its daily reset is read in; blank for this computer's")
+        @Param.Shown(description = "The game server's time zone, that its daily reset is read in")
         public String gameZone() {
             return "";
         }

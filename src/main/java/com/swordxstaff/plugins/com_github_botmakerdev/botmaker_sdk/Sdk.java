@@ -1,6 +1,5 @@
 package com.swordxstaff.plugins.com_github_botmakerdev.botmaker_sdk;
 
-import com.botmaker.sdk.api.bot.BotSettings;
 import com.botmaker.sdk.api.bot.Launcher;
 import com.botmaker.sdk.api.bot.Run;
 import com.botmaker.sdk.api.bot.SdkValue;
@@ -24,11 +23,6 @@ public final class Sdk {
     @SdkValue(SdkValue.Id.RUN)
     public static Run run() {
         return Run.NONE;
-    }
-
-    @SdkValue(SdkValue.Id.SETTINGS)
-    public static BotSettings settings() {
-        return BotSettings.defaults();
     }
 
     @SdkValue(SdkValue.Id.SCREEN)
